@@ -17,6 +17,26 @@
 		B6D7E67D204976F300A5D803 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BaseViewController.swift */; };
 		B6D7E67F204976FF00A5D803 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BaseViewModel.swift */; };
 		B6D7E6812049770700A5D803 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BaseModel.swift */; };
+		B6D7E686204977BA00A5D803 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E685204977BA00A5D803 /* BaseProtocols.swift */; };
+		B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6882049782B00A5D803 /* String+BASwift.swift */; };
+		B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6892049782B00A5D803 /* Int+BASwift.swift */; };
+		B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */; };
+		B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68B2049782C00A5D803 /* Double+BASwift.swift */; };
+		B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68C2049782C00A5D803 /* Date+BASwift.swift */; };
+		B6D7E6972049795300A5D803 /* BASTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6922049795300A5D803 /* BASTree.swift */; };
+		B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6932049795300A5D803 /* BASQueue.swift */; };
+		B6D7E6992049795300A5D803 /* BASNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6942049795300A5D803 /* BASNode.swift */; };
+		B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6952049795300A5D803 /* BASStack.swift */; };
+		B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6962049795300A5D803 /* BASLinkedList.swift */; };
+		B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E69F2049CAAA00A5D803 /* Constant.swift */; };
+		B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */; };
+		B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */; };
+		B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */; };
+		B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */; };
+		B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */; };
+		B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */; };
+		B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */; };
+		B6D7E6B22049CAAB00A5D803 /* UIColor+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */; };
 		C3E96CC6A7024A4969F38E23 /* Pods_BASwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE67E1CFC395D50E17373A3 /* Pods_BASwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +68,26 @@
 		B6D7E67C204976F300A5D803 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B6D7E67E204976FF00A5D803 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B6D7E6802049770700A5D803 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		B6D7E685204977BA00A5D803 /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
+		B6D7E6882049782B00A5D803 /* String+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6892049782B00A5D803 /* Int+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E68B2049782C00A5D803 /* Double+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E68C2049782C00A5D803 /* Date+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6922049795300A5D803 /* BASTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASTree.swift; sourceTree = "<group>"; };
+		B6D7E6932049795300A5D803 /* BASQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASQueue.swift; sourceTree = "<group>"; };
+		B6D7E6942049795300A5D803 /* BASNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASNode.swift; sourceTree = "<group>"; };
+		B6D7E6952049795300A5D803 /* BASStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASStack.swift; sourceTree = "<group>"; };
+		B6D7E6962049795300A5D803 /* BASLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASLinkedList.swift; sourceTree = "<group>"; };
+		B6D7E69F2049CAAA00A5D803 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+BASwift.swift"; sourceTree = "<group>"; };
+		B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BASwift.swift"; sourceTree = "<group>"; };
 		DF7B422397EEC0B80E38F745 /* Pods-BASwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwift/Pods-BASwift.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8763895C138E4AFF85D546 /* Pods-BASwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +179,10 @@
 		B6D7E6762049768800A5D803 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7E6842049775F00A5D803 /* Data */,
+				B6D7E6842049775F00A5D803 /* Services */,
 				B6D7E6832049774200A5D803 /* Extensions */,
+				B6D7E69C20497BB200A5D803 /* Data Structures */,
+				B6D7E69D20497BFF00A5D803 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -150,7 +192,9 @@
 			children = (
 				B6D7E678204976AC00A5D803 /* Controller */,
 				B6D7E67A204976BD00A5D803 /* CustomView */,
+				B6D7E6872049780000A5D803 /* Adapters */,
 				B6D7E6822049770D00A5D803 /* Extensions */,
+				B6D7E69E20497C4100A5D803 /* Data */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,6 +217,7 @@
 		B6D7E67B204976D200A5D803 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E685204977BA00A5D803 /* BaseProtocols.swift */,
 				B6D7E67C204976F300A5D803 /* BaseViewController.swift */,
 				B6D7E67E204976FF00A5D803 /* BaseViewModel.swift */,
 				B6D7E6802049770700A5D803 /* BaseModel.swift */,
@@ -183,6 +228,14 @@
 		B6D7E6822049770D00A5D803 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */,
+				B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */,
+				B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */,
+				B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */,
+				B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */,
+				B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */,
+				B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */,
+				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,11 +243,50 @@
 		B6D7E6832049774200A5D803 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E68C2049782C00A5D803 /* Date+BASwift.swift */,
+				B6D7E68B2049782C00A5D803 /* Double+BASwift.swift */,
+				B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */,
+				B6D7E6892049782B00A5D803 /* Int+BASwift.swift */,
+				B6D7E6882049782B00A5D803 /* String+BASwift.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B6D7E6842049775F00A5D803 /* Data */ = {
+		B6D7E6842049775F00A5D803 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6D7E6872049780000A5D803 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		B6D7E69C20497BB200A5D803 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6962049795300A5D803 /* BASLinkedList.swift */,
+				B6D7E6942049795300A5D803 /* BASNode.swift */,
+				B6D7E6932049795300A5D803 /* BASQueue.swift */,
+				B6D7E6952049795300A5D803 /* BASStack.swift */,
+				B6D7E6922049795300A5D803 /* BASTree.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		B6D7E69D20497BFF00A5D803 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E69F2049CAAA00A5D803 /* Constant.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6D7E69E20497C4100A5D803 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -312,9 +404,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BASwift/Pods-BASwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,10 +520,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */,
+				B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */,
+				B6D7E6972049795300A5D803 /* BASTree.swift in Sources */,
 				B6140F662049762A003BF29F /* ViewController.swift in Sources */,
 				B6D7E67F204976FF00A5D803 /* BaseViewModel.swift in Sources */,
+				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
+				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
+				B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */,
+				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
+				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
+				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
+				B6D7E686204977BA00A5D803 /* BaseProtocols.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
+				B6D7E6B22049CAAB00A5D803 /* UIColor+BASwift.swift in Sources */,
+				B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */,
+				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
+				B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */,
+				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
+				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BaseViewController.swift in Sources */,
+				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
+				B6D7E6992049795300A5D803 /* BASNode.swift in Sources */,
+				B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */,
+				B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */,
 				B6D7E6812049770700A5D803 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
