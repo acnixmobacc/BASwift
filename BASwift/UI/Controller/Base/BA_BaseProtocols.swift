@@ -8,22 +8,22 @@
 
 import UIKit
 
-public protocol BaseViewProtocol : class {
-    weak var viewModel : BaseViewModelProtocol? {get set}
+public protocol BA_BaseViewProtocol : class {
+    weak var viewModel : BA_BaseViewModelProtocol? {get set}
     
-    init(viewModel:BaseViewModelProtocol?)
+    init(viewModel:BA_BaseViewModelProtocol?)
     
     func onUpdateView()
 }
 
-extension BaseViewProtocol where Self:UIViewController{
-    init(viewModel:BaseViewModelProtocol?) {
+extension BA_BaseViewProtocol where Self:UIViewController{
+    public init(viewModel:BA_BaseViewModelProtocol?) {
         self.init()
         self.viewModel = viewModel
     }
 }
 
-public protocol BaseViewModelProtocol : class {
+public protocol BA_BaseViewModelProtocol : class {
     init()
     
     func initWithData(data: [Any?])
@@ -46,6 +46,6 @@ public protocol BaseViewModelProtocol : class {
 
 }
 
-public protocol BaseModelProtocol : class {
+public protocol BA_BaseModelProtocol : class {
     
 }

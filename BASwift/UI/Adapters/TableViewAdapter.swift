@@ -7,6 +7,6 @@
 
 import UIKit
 
-open class TableViewAdapter<T: BaseViewModelProtocol> : BaseTableViewAdapter<T, BaseSectionModel> {
+open class TableViewAdapter<T: BA_BaseViewModelProtocol> : BaseTableViewAdapter<T, BaseSectionModel> {
 
 }

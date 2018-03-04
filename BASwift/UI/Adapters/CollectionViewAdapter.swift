@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class CollectionViewAdapter<T: BaseViewModelProtocol> : NSObject, UICollectionViewDataSource,
+open class CollectionViewAdapter<T: BA_BaseViewModelProtocol> : NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     public var collectionData: BaseCollectionDataModel {
         didSet {

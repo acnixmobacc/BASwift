@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class ExpandableTableViewAdapter<T: BaseViewModelProtocol> : BaseTableViewAdapter<T, BaseExpandableSectionModel> {
+open class ExpandableTableViewAdapter<T: BA_BaseViewModelProtocol> : BaseTableViewAdapter<T, BaseExpandableSectionModel> {
 
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)

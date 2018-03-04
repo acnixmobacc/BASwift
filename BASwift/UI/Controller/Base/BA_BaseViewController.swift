@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BaseViewController : UIViewController, BaseViewProtocol{
-    var viewModel: BaseViewModelProtocol?
+open class BA_BaseViewController : UIViewController, BA_BaseViewProtocol{
+    public var viewModel: BA_BaseViewModelProtocol?
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.onDidLoad()
     }

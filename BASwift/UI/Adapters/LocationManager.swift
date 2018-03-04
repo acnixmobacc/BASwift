@@ -13,7 +13,7 @@ public protocol LocationManagerDelegate: class {
     func onUserLocationUpdate(_ location: CLLocationCoordinate2D)
 }
 
-open class LocationManager<T: BaseViewModelProtocol> : NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
+open class LocationManager<T: BA_BaseViewModelProtocol> : NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
     weak var delegate: LocationManagerDelegate?
 

@@ -8,44 +8,44 @@
 
 import Foundation
 
-public class BaseViewModel : BaseViewModelProtocol{
+open class BA_BaseViewModel : BA_BaseViewModelProtocol{
     required public init() {
         
     }
     
-    public func initWithData(data: [Any?]) {
+    open func initWithData(data: [Any?]) {
         
     }
     
-    public func onDidLoad() {
+    open func onDidLoad() {
         
     }
     
-    public func onWillAppear() {
+    open func onWillAppear() {
         
     }
     
-    public func onDidAppear() {
+    open func onDidAppear() {
         
     }
     
-    public func onWillDisappear() {
+    open func onWillDisappear() {
         
     }
     
-    public func onDidDisappear() {
+    open func onDidDisappear() {
         
     }
     
-    public func onWillLayoutSubviews() {
+    open func onWillLayoutSubviews() {
         
     }
     
-    public func onDidLayoutSubviews() {
+    open func onDidLayoutSubviews() {
         
     }
     
-    public func onBackCompletion(_ data: [Any?]?) {
+    open func onBackCompletion(_ data: [Any?]?) {
         
     }
     
