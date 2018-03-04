@@ -6,4 +6,19 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BaseViewController : UIViewController, BaseViewProtocol{
+    var viewModel: BaseViewModelProtocol?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel?.onDidLoad()
+    }
+    
+    public func onUpdateView() {
+        
+    }
+    
+    
+}
