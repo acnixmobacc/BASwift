@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol BaseViewProtocol {
+public protocol BaseViewProtocol {
     
 }
 
-protocol BaseViewModelProtocol {
+public protocol BaseViewModelProtocol {
     
 }
 
-protocol BaseModelProtocol {
+public protocol BaseModelProtocol {
     
 }

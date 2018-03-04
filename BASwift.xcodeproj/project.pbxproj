@@ -60,6 +60,12 @@
 		B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */; };
 		B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */; };
 		B6D7E6EA204BF31F00A5D803 /* ICellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E9204BF31F00A5D803 /* ICellModel.swift */; };
+		B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F1204BF97000A5D803 /* LocationManager.swift */; };
+		B6D7E6F8204BF97100A5D803 /* BaseTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F2204BF97100A5D803 /* BaseTableViewAdapter.swift */; };
+		B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */; };
+		B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */; };
+		B6D7E6FB204BF97100A5D803 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */; };
+		B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */; };
 		C3E96CC6A7024A4969F38E23 /* Pods_BASwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE67E1CFC395D50E17373A3 /* Pods_BASwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +140,12 @@
 		B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionModel.swift; sourceTree = "<group>"; };
 		B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseExpandableSectionModel.swift; sourceTree = "<group>"; };
 		B6D7E6E9204BF31F00A5D803 /* ICellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICellModel.swift; sourceTree = "<group>"; };
+		B6D7E6F1204BF97000A5D803 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B6D7E6F2204BF97100A5D803 /* BaseTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewAdapter.swift; sourceTree = "<group>"; };
+		B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
+		B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewAdapter.swift; sourceTree = "<group>"; };
 		DF7B422397EEC0B80E38F745 /* Pods-BASwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwift/Pods-BASwift.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8763895C138E4AFF85D546 /* Pods-BASwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,6 +330,12 @@
 		B6D7E6872049780000A5D803 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E6F2204BF97100A5D803 /* BaseTableViewAdapter.swift */,
+				B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */,
+				B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */,
+				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
+				B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */,
+				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -672,6 +690,7 @@
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
 				B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */,
 				B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */,
+				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
 				B6D7E6BA2049E71400A5D803 /* IBaseResponse.swift in Sources */,
@@ -682,6 +701,7 @@
 				B6D7E6CA204A073A00A5D803 /* IndicatorManager.swift in Sources */,
 				B6D7E6BC2049E82700A5D803 /* BaseErrorResponse.swift in Sources */,
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
+				B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */,
 				B6D7E6D3204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
 				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
@@ -700,14 +720,18 @@
 				B6D7E6D0204A126B00A5D803 /* BaseProgressHUD.swift in Sources */,
 				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
+				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
 				B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
+				B6D7E6F8204BF97100A5D803 /* BaseTableViewAdapter.swift in Sources */,
+				B6D7E6FB204BF97100A5D803 /* TableViewAdapter.swift in Sources */,
 				B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */,
 				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
 				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6EA204BF31F00A5D803 /* ICellModel.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */,
+				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BaseViewController.swift in Sources */,
 				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
