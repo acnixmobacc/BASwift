@@ -52,6 +52,14 @@
 		B6D7E6D3204A126B00A5D803 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */; };
 		B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */; };
 		B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */; };
+		B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */; };
+		B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */; };
+		B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DD204BF2A600A5D803 /* BaseTableDataModel.swift */; };
+		B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DE204BF2A700A5D803 /* BaseCollectionSectionModel.swift */; };
+		B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */; };
+		B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */; };
+		B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */; };
+		B6D7E6EA204BF31F00A5D803 /* ICellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E9204BF31F00A5D803 /* ICellModel.swift */; };
 		C3E96CC6A7024A4969F38E23 /* Pods_BASwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE67E1CFC395D50E17373A3 /* Pods_BASwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +126,14 @@
 		B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVProgressHUD.swift; sourceTree = "<group>"; };
+		B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellModel.swift; sourceTree = "<group>"; };
+		B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionCellModel.swift; sourceTree = "<group>"; };
+		B6D7E6DD204BF2A600A5D803 /* BaseTableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableDataModel.swift; sourceTree = "<group>"; };
+		B6D7E6DE204BF2A700A5D803 /* BaseCollectionSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionSectionModel.swift; sourceTree = "<group>"; };
+		B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionDataModel.swift; sourceTree = "<group>"; };
+		B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionModel.swift; sourceTree = "<group>"; };
+		B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseExpandableSectionModel.swift; sourceTree = "<group>"; };
+		B6D7E6E9204BF31F00A5D803 /* ICellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICellModel.swift; sourceTree = "<group>"; };
 		DF7B422397EEC0B80E38F745 /* Pods-BASwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwift/Pods-BASwift.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8763895C138E4AFF85D546 /* Pods-BASwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,6 +346,10 @@
 		B6D7E69E20497C4100A5D803 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E6F0204BF3C600A5D803 /* TableView */,
+				B6D7E6EF204BF3C000A5D803 /* CollectionView */,
+				B6D7E6EE204BF3B600A5D803 /* Section */,
+				B6D7E6ED204BF3B000A5D803 /* Cell */,
 				B6D7E6C6204A05CF00A5D803 /* BaseAlert.swift */,
 			);
 			path = Data;
@@ -384,6 +404,42 @@
 				B6D7E6C9204A073A00A5D803 /* IndicatorManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B6D7E6ED204BF3B000A5D803 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6E9204BF31F00A5D803 /* ICellModel.swift */,
+				B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */,
+				B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B6D7E6EE204BF3B600A5D803 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */,
+				B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */,
+				B6D7E6DE204BF2A700A5D803 /* BaseCollectionSectionModel.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		B6D7E6EF204BF3C000A5D803 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		B6D7E6F0204BF3C600A5D803 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6DD204BF2A600A5D803 /* BaseTableDataModel.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,8 +672,11 @@
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
 				B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */,
 				B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */,
+				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
+				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
 				B6D7E6BA2049E71400A5D803 /* IBaseResponse.swift in Sources */,
 				B6D7E6972049795300A5D803 /* BASTree.swift in Sources */,
+				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
 				B6140F662049762A003BF29F /* ViewController.swift in Sources */,
 				B6D7E67F204976FF00A5D803 /* BaseViewModel.swift in Sources */,
 				B6D7E6CA204A073A00A5D803 /* IndicatorManager.swift in Sources */,
@@ -625,6 +684,7 @@
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
 				B6D7E6D3204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
+				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
 				B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */,
@@ -638,12 +698,15 @@
 				B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */,
 				B6D7E6C4204A03D600A5D803 /* Device.swift in Sources */,
 				B6D7E6D0204A126B00A5D803 /* BaseProgressHUD.swift in Sources */,
+				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
 				B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
 				B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */,
+				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
 				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
+				B6D7E6EA204BF31F00A5D803 /* ICellModel.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */,
 				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BaseViewController.swift in Sources */,
@@ -652,6 +715,7 @@
 				B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */,
 				B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */,
 				B6D7E6812049770700A5D803 /* BaseModel.swift in Sources */,
+				B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */,
 				B6D7E6C3204A03D600A5D803 /* Device+Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
