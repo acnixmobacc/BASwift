@@ -9,15 +9,15 @@
 import UIKit
 
 public protocol BaseViewProtocol : class {
-    weak var viewModel : BaseViewModelProtocol {get set}
+    weak var viewModel : BaseViewModelProtocol? {get set}
     
-    init(viewModel:BaseViewModelProtocol)
+    init(viewModel:BaseViewModelProtocol?)
     
     func onUpdateView()
 }
 
 extension BaseViewProtocol where Self:UIViewController{
-    init(viewModel:BaseViewModelProtocol) {
+    init(viewModel:BaseViewModelProtocol?) {
         self.init()
         self.viewModel = viewModel
     }

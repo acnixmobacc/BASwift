@@ -23,11 +23,6 @@
 		B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */; };
 		B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68B2049782C00A5D803 /* Double+BASwift.swift */; };
 		B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68C2049782C00A5D803 /* Date+BASwift.swift */; };
-		B6D7E6972049795300A5D803 /* BASTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6922049795300A5D803 /* BASTree.swift */; };
-		B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6932049795300A5D803 /* BASQueue.swift */; };
-		B6D7E6992049795300A5D803 /* BASNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6942049795300A5D803 /* BASNode.swift */; };
-		B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6952049795300A5D803 /* BASStack.swift */; };
-		B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6962049795300A5D803 /* BASLinkedList.swift */; };
 		B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E69F2049CAAA00A5D803 /* Constant.swift */; };
 		B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */; };
 		B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */; };
@@ -66,6 +61,11 @@
 		B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */; };
 		B6D7E6FB204BF97100A5D803 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */; };
 		B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */; };
+		B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B095204C264C00110985 /* BASQueue.swift */; };
+		B6F4B09B204C264C00110985 /* BASNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B096204C264C00110985 /* BASNode.swift */; };
+		B6F4B09C204C264C00110985 /* BASTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B097204C264C00110985 /* BASTree.swift */; };
+		B6F4B09D204C264C00110985 /* BASStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B098204C264C00110985 /* BASStack.swift */; };
+		B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B099204C264C00110985 /* BASLinkedList.swift */; };
 		C3E96CC6A7024A4969F38E23 /* Pods_BASwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE67E1CFC395D50E17373A3 /* Pods_BASwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,11 +103,6 @@
 		B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E68B2049782C00A5D803 /* Double+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E68C2049782C00A5D803 /* Date+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+BASwift.swift"; sourceTree = "<group>"; };
-		B6D7E6922049795300A5D803 /* BASTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASTree.swift; sourceTree = "<group>"; };
-		B6D7E6932049795300A5D803 /* BASQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASQueue.swift; sourceTree = "<group>"; };
-		B6D7E6942049795300A5D803 /* BASNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASNode.swift; sourceTree = "<group>"; };
-		B6D7E6952049795300A5D803 /* BASStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASStack.swift; sourceTree = "<group>"; };
-		B6D7E6962049795300A5D803 /* BASLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASLinkedList.swift; sourceTree = "<group>"; };
 		B6D7E69F2049CAAA00A5D803 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BASwift.swift"; sourceTree = "<group>"; };
@@ -146,6 +141,11 @@
 		B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
 		B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewAdapter.swift; sourceTree = "<group>"; };
+		B6F4B095204C264C00110985 /* BASQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASQueue.swift; sourceTree = "<group>"; };
+		B6F4B096204C264C00110985 /* BASNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASNode.swift; sourceTree = "<group>"; };
+		B6F4B097204C264C00110985 /* BASTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASTree.swift; sourceTree = "<group>"; };
+		B6F4B098204C264C00110985 /* BASStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASStack.swift; sourceTree = "<group>"; };
+		B6F4B099204C264C00110985 /* BASLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASLinkedList.swift; sourceTree = "<group>"; };
 		DF7B422397EEC0B80E38F745 /* Pods-BASwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwift/Pods-BASwift.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8763895C138E4AFF85D546 /* Pods-BASwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,9 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6BD204A03BC00A5D803 /* iOS */,
+				B6F4B094204C264C00110985 /* DataStructures */,
 				B6D7E6842049775F00A5D803 /* AppData */,
 				B6D7E6832049774200A5D803 /* Extensions */,
-				B6D7E69C20497BB200A5D803 /* Data Structures */,
 				B6D7E69D20497BFF00A5D803 /* Utils */,
 			);
 			path = Core;
@@ -338,18 +338,6 @@
 				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
 			);
 			path = Adapters;
-			sourceTree = "<group>";
-		};
-		B6D7E69C20497BB200A5D803 /* Data Structures */ = {
-			isa = PBXGroup;
-			children = (
-				B6D7E6962049795300A5D803 /* BASLinkedList.swift */,
-				B6D7E6942049795300A5D803 /* BASNode.swift */,
-				B6D7E6932049795300A5D803 /* BASQueue.swift */,
-				B6D7E6952049795300A5D803 /* BASStack.swift */,
-				B6D7E6922049795300A5D803 /* BASTree.swift */,
-			);
-			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 		B6D7E69D20497BFF00A5D803 /* Utils */ = {
@@ -458,6 +446,18 @@
 				B6D7E6DD204BF2A600A5D803 /* BaseTableDataModel.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		B6F4B094204C264C00110985 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4B095204C264C00110985 /* BASQueue.swift */,
+				B6F4B096204C264C00110985 /* BASNode.swift */,
+				B6F4B097204C264C00110985 /* BASTree.swift */,
+				B6F4B098204C264C00110985 /* BASStack.swift */,
+				B6F4B099204C264C00110985 /* BASLinkedList.swift */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,13 +688,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
-				B6D7E69A2049795300A5D803 /* BASStack.swift in Sources */,
-				B6D7E69B2049795300A5D803 /* BASLinkedList.swift in Sources */,
 				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
+				B6F4B09B204C264C00110985 /* BASNode.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
+				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6BA2049E71400A5D803 /* IBaseResponse.swift in Sources */,
-				B6D7E6972049795300A5D803 /* BASTree.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
 				B6140F662049762A003BF29F /* ViewController.swift in Sources */,
 				B6D7E67F204976FF00A5D803 /* BaseViewModel.swift in Sources */,
@@ -710,6 +709,8 @@
 				B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
 				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
+				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
+				B6F4B09C204C264C00110985 /* BASTree.swift in Sources */,
 				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
 				B6D7E686204977BA00A5D803 /* BaseProtocols.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
@@ -721,7 +722,7 @@
 				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
 				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
-				B6D7E6982049795300A5D803 /* BASQueue.swift in Sources */,
+				B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
 				B6D7E6F8204BF97100A5D803 /* BaseTableViewAdapter.swift in Sources */,
 				B6D7E6FB204BF97100A5D803 /* TableViewAdapter.swift in Sources */,
@@ -735,7 +736,6 @@
 				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BaseViewController.swift in Sources */,
 				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
-				B6D7E6992049795300A5D803 /* BASNode.swift in Sources */,
 				B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */,
 				B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */,
 				B6D7E6812049770700A5D803 /* BaseModel.swift in Sources */,
@@ -894,11 +894,14 @@
 			baseConfigurationReference = DF7B422397EEC0B80E38F745 /* Pods-BASwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4X5EATXHP;
 				INFOPLIST_FILE = BASwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brkakkaya.BASwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -909,11 +912,14 @@
 			baseConfigurationReference = 5A082A11D1F26580DF964BFF /* Pods-BASwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4X5EATXHP;
 				INFOPLIST_FILE = BASwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brkakkaya.BASwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
