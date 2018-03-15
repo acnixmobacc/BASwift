@@ -8,14 +8,23 @@
 
 import UIKit
 
-class HomeCoordinator : Coordinator{
+protocol HomeCoordinatorDelegate : class{
+    func showProductDetail()
+}
+
+
+class HomeCoordinator : Coordinator {
+    
+    weak var delegate:HomeCoordinatorDelegate?
     
     let navigationController:UINavigationController
-    let homeViewController:HomeViewController
+    var mainViewController:MainViewController
     
     init(with navigationController : UINavigationController) {
         self.navigationController = navigationController
-        self.homeViewController = HomeViewController.init()
+        self.mainViewController = MainViewController.init()
+        super.init()
+        self.mainViewController.routerDelegate = self
     }
     
     func start(){
@@ -23,6 +32,16 @@ class HomeCoordinator : Coordinator{
     }
     
     fileprivate func showHome(){
-        navigationController.show(homeViewController, sender: self)
+        navigationController.show(mainViewController, sender: self)
     }
 }
+
+extension HomeCoordinator : MainRouterDelegate{
+    func showProductDetail() {
+        delegate?.showProductDetail()
+    }
+    
+    
+}
+
+

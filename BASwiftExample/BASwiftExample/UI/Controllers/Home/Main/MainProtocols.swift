@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol MainRouterDelegate:class{
+    func showProductDetail()
+}

@@ -32,7 +32,18 @@ class AppCoordinator{
     
     fileprivate func showHome(){
         let homeCoordinator = HomeCoordinator(with: navigationController)
+        homeCoordinator.delegate = self
         homeCoordinator.start()
         childCoordinators.append(homeCoordinator)
     }
+}
+
+extension AppCoordinator :   HomeCoordinatorDelegate{
+    func showProductDetail() {
+        let detailCoordinator = DetailCoordinator.init(with: navigationController)
+        detailCoordinator.start()
+        childCoordinators.append(detailCoordinator)
+    }
+    
+    
 }
