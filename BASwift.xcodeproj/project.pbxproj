@@ -14,6 +14,12 @@
 		B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6A2049762A003BF29F /* Assets.xcassets */; };
 		B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6C2049762A003BF29F /* LaunchScreen.storyboard */; };
 		B6140F792049762A003BF29F /* BASwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F782049762A003BF29F /* BASwiftTests.swift */; };
+		B638D69820629A4200657087 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69720629A4200657087 /* UIView+XIB.swift */; };
+		B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69920629B5A00657087 /* DependencyManager.swift */; };
+		B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* LoadableView.swift */; };
+		B6A807EB2063CEC300E03C26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EA2063CEC300E03C26 /* DetailViewController.swift */; };
+		B6A807ED2063D1F700E03C26 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EC2063D1F700E03C26 /* ProgressManager.swift */; };
+		B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* IProgressHUD.swift */; };
 		B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */; };
 		B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */; };
 		B6D7E6812049770700A5D803 /* BA_BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BA_BaseModel.swift */; };
@@ -94,6 +100,12 @@
 		B6140F742049762A003BF29F /* BASwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BASwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6140F782049762A003BF29F /* BASwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASwiftTests.swift; sourceTree = "<group>"; };
 		B6140F7A2049762A003BF29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B638D69720629A4200657087 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
+		B638D69920629B5A00657087 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		B6A807DD206381D900E03C26 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		B6A807EA2063CEC300E03C26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = BASwift/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		B6A807EC2063D1F700E03C26 /* ProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
+		B6A807F12063E17D00E03C26 /* IProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressHUD.swift; sourceTree = "<group>"; };
 		B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewController.swift; sourceTree = "<group>"; };
 		B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewModel.swift; sourceTree = "<group>"; };
 		B6D7E6802049770700A5D803 /* BA_BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseModel.swift; sourceTree = "<group>"; };
@@ -216,6 +228,7 @@
 				B6D7E6762049768800A5D803 /* Core */,
 				B6D7E6772049768F00A5D803 /* UI */,
 				B6140F632049762A003BF29F /* AppDelegate.swift */,
+				B6A807EA2063CEC300E03C26 /* DetailViewController.swift */,
 				B6140F652049762A003BF29F /* ViewController.swift */,
 				B6140F672049762A003BF29F /* Main.storyboard */,
 				B6140F6A2049762A003BF29F /* Assets.xcassets */,
@@ -232,6 +245,16 @@
 				B6140F7A2049762A003BF29F /* Info.plist */,
 			);
 			path = BASwiftTests;
+			sourceTree = "<group>";
+		};
+		B6A807F02063E16600E03C26 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B6A807F12063E17D00E03C26 /* IProgressHUD.swift */,
+				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
+				B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		B6D7E6762049768800A5D803 /* Core */ = {
@@ -270,8 +293,8 @@
 		B6D7E67A204976BD00A5D803 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
-				B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */,
+				B6A807F02063E16600E03C26 /* ProgressHUD */,
+				B6A807DD206381D900E03C26 /* LoadableView.swift */,
 				B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */,
 				B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */,
 				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
@@ -300,6 +323,7 @@
 				B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */,
 				B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */,
 				B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */,
+				B638D69720629A4200657087 /* UIView+XIB.swift */,
 				B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */,
 				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
 			);
@@ -336,6 +360,7 @@
 				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
 				B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */,
 				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
+				B6A807EC2063D1F700E03C26 /* ProgressManager.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -345,6 +370,7 @@
 			children = (
 				B6D7E6B32049E59400A5D803 /* MockDataUtilities.swift */,
 				B6D7E69F2049CAAA00A5D803 /* Constant.swift */,
+				B638D69920629B5A00657087 /* DependencyManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -473,6 +499,7 @@
 				B6140F5E2049762A003BF29F /* Resources */,
 				0D2B1469FEAA5A660ADD32C1 /* [CP] Embed Pods Frameworks */,
 				7B0856DA822BF68E83F848B2 /* [CP] Copy Pods Resources */,
+				B6A807E92063A2F900E03C26 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -662,6 +689,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6A807E92063A2F900E03C26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		FE019B9418F3658751F01753 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -691,10 +731,12 @@
 				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
 				B6F4B09B204C264C00110985 /* BASNode.swift in Sources */,
+				B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
 				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6BA2049E71400A5D803 /* IBaseResponse.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
+				B6A807EB2063CEC300E03C26 /* DetailViewController.swift in Sources */,
 				B6140F662049762A003BF29F /* ViewController.swift in Sources */,
 				B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */,
 				B6D7E6CA204A073A00A5D803 /* IndicatorManager.swift in Sources */,
@@ -707,11 +749,13 @@
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
 				B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */,
+				B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
 				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
 				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
 				B6F4B09C204C264C00110985 /* BASTree.swift in Sources */,
 				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
+				B6A807ED2063D1F700E03C26 /* ProgressManager.swift in Sources */,
 				B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
 				B6D7E6C7204A05D000A5D803 /* BaseAlert.swift in Sources */,
@@ -719,6 +763,7 @@
 				B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */,
 				B6D7E6C4204A03D600A5D803 /* Device.swift in Sources */,
 				B6D7E6D0204A126B00A5D803 /* BaseProgressHUD.swift in Sources */,
+				B638D69820629A4200657087 /* UIView+XIB.swift in Sources */,
 				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
 				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
@@ -734,6 +779,7 @@
 				B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
+				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */,
 				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
 				B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */,

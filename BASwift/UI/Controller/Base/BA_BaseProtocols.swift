@@ -8,44 +8,34 @@
 
 import UIKit
 
-public protocol BA_BaseViewProtocol : class {
-    weak var viewModel : BA_BaseViewModelProtocol? {get set}
-    
-    init(viewModel:BA_BaseViewModelProtocol?)
-    
+public protocol BA_BaseViewProtocol: class {
     func onUpdateView()
+
+    func showProgress()
+
+    func hideProgress()
 }
 
-extension BA_BaseViewProtocol where Self:UIViewController{
-    public init(viewModel:BA_BaseViewModelProtocol?) {
-        self.init()
-        self.viewModel = viewModel
-    }
-}
-
-public protocol BA_BaseViewModelProtocol : class {
+public protocol BA_BaseViewModelProtocol: class {
     init()
-    
-    func initWithData(data: [Any?])
-    
-    func onDidLoad()
-    
-    func onWillAppear()
-    
-    func onDidAppear()
-    
-    func onWillDisappear()
-    
-    func onDidDisappear()
-    
-    func onWillLayoutSubviews()
-    
-    func onDidLayoutSubviews()
-    
-    func onBackCompletion(_ data: [Any?]?)
 
+    func initWithData(data: [Any?])
+
+    func onDidLoad()
+
+    func onWillAppear()
+
+    func onDidAppear()
+
+    func onWillDisappear()
+
+    func onDidDisappear()
+
+    func onWillLayoutSubviews()
+
+    func onDidLayoutSubviews()
 }
 
-public protocol BA_BaseModelProtocol : class {
-    
+public protocol BA_BaseModelProtocol: class {
+
 }

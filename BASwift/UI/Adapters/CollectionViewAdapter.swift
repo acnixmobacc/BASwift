@@ -89,8 +89,7 @@ open class CollectionViewAdapter<T: BA_BaseViewModelProtocol> : NSObject, UIColl
         return CGSize(width: item.cellWidth, height: item.cellHeight )
     }
 
-    open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
-    {
+    open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         return UICollectionReusableView()
     }
 

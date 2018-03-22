@@ -1,0 +1,104 @@
+{
+  "brands" :[
+    {
+      "id" : "0",
+      "name" : "Toyota",
+      "logo" : "https://www.toyota.com.tr/images/toyota-logo.jpg"
+    },
+    {
+      "id" : "1",
+      "name" : "Renault",
+      "logo" : "http://logo-load.com/uploads/posts/2016-04/renault-logo.png"
+    },
+    {
+      "id" : "2",
+      "name" : "Opel",
+      "logo" : "http://www.stolesraceshop.com/wp-content/uploads/2015/07/opel_x.png"
+    },
+    {
+      "id" : "3",
+      "name" : "Hyundai",
+      "logo" : "https://img00.deviantart.net/e5a2/i/2011/237/e/9/hyundai_windows_icon_ico_by_mahesh69a-d47uoc9.png"
+    },
+    {
+      "id" : "4",
+      "name" : "Honda",
+      "logo" : "https://img00.deviantart.net/daa7/i/2011/237/0/b/honda_logo_windows_icon_ico_by_mahesh69a-d47uohb.png"
+    },
+    {
+      "id" : "5",
+      "name" : "BMW",
+      "logo" : "https://www.123-stickers.com/5687-6024-large/stickers-bmw.jpg"
+    },
+    {
+      "id" : "6",
+      "name" : "Mercedes-Benz",
+      "logo" : "http://www.erickuster.com/uploads/page/mercedes-benz-by-eric-kuster.jpg"
+    },
+    {
+      "id" : "7",
+      "name" : "Audi",
+      "logo" : "https://ocdn.eu/images/pulscms/NzQ7MDA_/95cc724df6f764e3eed03d1761296cfe.jpg"
+    },
+    {
+      "id" : "8",
+      "name" : "Kia",
+      "logo" : "https://nawigacje.eu/wp-content/uploads/2016/06/kia-logo.png"
+    },
+    {
+      "id" : "9",
+      "name" : "Nissan",
+      "logo" : "https://vignette.wikia.nocookie.net/thecrew/images/6/6f/Nissan-icon.png/revision/latest?cb=20140831095558"
+    },
+    {
+      "id" : "10",
+      "name" : "Volkswagen",
+      "logo" : "https://www.allistonvw.com/wp-content/uploads/sites/420/2017/08/cropped-volkswagen-icon.png"
+    },
+    {
+      "id" : "11",
+      "name" : "Volvo",
+      "logo" : "http://www.digitach.dk/wp-content/uploads/2015/03/volvo_2006-260x260.png"
+    },
+    {
+      "id" : "12",
+      "name" : "Tesla",
+      "logo" : "http://iconshow.me/media/images/logo/brand-logo-icon/png/512/tesla-512.png"
+    },
+    {
+      "id" : "13",
+      "name" : "Suzuki",
+      "logo" : "https://i.ebayimg.com/images/g/9VYAAOSwo4pYLzNV/s-l300.jpg"
+    },
+    {
+      "id" : "14",
+      "name" : "Ford",
+      "logo" : "https://static.wixstatic.com/media/0b040e_44c755646cfd42f184139b8cb7bc71d9.png/v1/fill/w_400,h_400,al_c/0b040e_44c755646cfd42f184139b8cb7bc71d9.png"
+    },
+    {
+      "id" : "15",
+      "name" : "Fiat",
+      "logo" : "https://iaahbr.tmgrup.com.tr/b5c634/0/0/0/0/0/0?u=http://i.ahaber.com.tr/galeri/otomobil/en-az-sorun-cikaran-otomobiller/2.jpg&mw=730"
+    },
+    {
+      "id" : "16",
+      "name" : "Citroen",
+      "logo" : "http://webiconspng.com/wp-content/uploads/2017/09/Citroen-PNG-Image-90462.png"
+    },
+    {
+      "id" : "17",
+      "name" : "Mazda",
+      "logo" : "http://www.freelogovectors.net/wp-content/uploads/2011/11/mazda-logo.jpg"
+    },
+    {
+      "id" : "18",
+      "name" : "Maserati",
+      "logo" : "https://vignette.wikia.nocookie.net/thecrew/images/e/ea/Maserati-icon.png/revision/latest?cb=20140831092907"
+    },
+    {
+      "id" : "19",
+      "name" : "Porsche",
+      "logo" : "https://pre00.deviantart.net/8491/th/pre/i/2013/087/2/e/porsche_icon_by_slamiticon-d5zbp88.png"
+    }
+  ]
+}

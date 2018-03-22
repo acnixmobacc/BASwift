@@ -53,7 +53,7 @@ open class BaseCollectionSectionModel: BaseSectionModel {
                 landscapeHeaderHeight: CGFloat! = nil, headerWidth: CGFloat = 0,
                 landscapeHeaderWidth: CGFloat! = nil, footerHeight: CGFloat = 0,
                 landscapeFooterHeight: CGFloat! = nil, footerWidth: CGFloat = 0,
-                landscapeFooterWidth: CGFloat! = nil , sectionText: String! = nil) {
+                landscapeFooterWidth: CGFloat! = nil, sectionText: String! = nil) {
 
         self.headerType = type
         _headerWidth = headerWidth

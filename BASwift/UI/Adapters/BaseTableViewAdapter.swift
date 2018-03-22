@@ -7,8 +7,7 @@
 
 import UIKit
 
-open class BaseTableViewAdapter<T: BA_BaseViewModelProtocol, U: BaseSectionModel> : NSObject, UITableViewDataSource, UITableViewDelegate
-{
+open class BaseTableViewAdapter<T: BA_BaseViewModelProtocol, U: BaseSectionModel> : NSObject, UITableViewDataSource, UITableViewDelegate {
     public var tableDataModel: BaseTableDataModel<U> {
         didSet {
             tableView.reloadData()

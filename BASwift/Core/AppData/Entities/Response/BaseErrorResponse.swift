@@ -10,15 +10,15 @@ import SwiftyJSON
 
 open class BaseErrorResponse: NSObject {
     let unexpectedMessage: String = "Beklenmedik bir hata oluştu lütfen daha sonra tekrar deneyiniz."
-    
+
     public var serviceError: Error?
     public var httpUrlResponse: HTTPURLResponse?
     public var baseErrorMessage: String
-    
+
     required public init(httpResponse: HTTPURLResponse? = nil, serviceError: Error? = nil, errorMessage: String? = nil) {
         self.serviceError = serviceError
         self.httpUrlResponse = httpResponse
-        
+
         if let message = errorMessage {
             self.baseErrorMessage = message
         } else if let error = serviceError {
@@ -30,7 +30,7 @@ open class BaseErrorResponse: NSObject {
         } else {
             self.baseErrorMessage = unexpectedMessage
         }
-        
+
     }
-    
+
 }

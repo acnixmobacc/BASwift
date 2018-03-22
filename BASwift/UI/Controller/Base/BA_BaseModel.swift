@@ -8,6 +8,6 @@
 
 import Foundation
 
-open class BA_BaseModel : BA_BaseModelProtocol{
-    
+open class BA_BaseModel: BA_BaseModelProtocol {
+
 }

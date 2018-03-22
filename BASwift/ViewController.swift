@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BA_BaseViewController<ViewModel> {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var childView: LoadableView!
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        //self.childView.showLoading()
+        //showProgress()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func stopChildProgress(_ sender: Any) {
+        //childView.hideLoading()
+        hideProgress()
     }
-
-
 }
 
+class ViewModel: BA_BaseViewModel {
+
+}

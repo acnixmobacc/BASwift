@@ -33,6 +33,6 @@ open class BaseCollectionCellModel: BaseCellModel {
                 cellWidth: CGFloat = 44, landscapeCellWidth: CGFloat! = nil, type: AnyClass) {
         _cellWidth = cellWidth
         _landscapeCellWidth = landscapeCellWidth
-        super.init(type, model: model, cellHeight:cellHeight, landscapeCellHeight: landscapeCellHeight)
+        super.init(type, model: model, cellHeight: cellHeight, landscapeCellHeight: landscapeCellHeight)
     }
 }
