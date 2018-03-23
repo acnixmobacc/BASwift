@@ -12,6 +12,10 @@ extension BA_BaseViewController: BA_BaseViewProtocol {
     public func onUpdateView() {
     }
 
+    public func showAlert(_ alert: BaseAlert) {
+        alertManager.showAlert(withAlert: alert)
+    }
+    
     public func showProgress() {
         progressManager.showLoading()
     }
@@ -25,7 +29,11 @@ open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController
     public var viewModel: T?
 
     lazy var progressManager : ProgressHUDManager = {[unowned self] in
-        return ProgressHUDManager.init(forView: self.view)
+        return ProgressHUDManager(forView: self.view)
+    }()
+    
+    lazy var alertManager : AlertViewManager = {[unowned self] in
+        return AlertViewManager(withViewController: self)
     }()
     
     open override func viewDidLoad() {

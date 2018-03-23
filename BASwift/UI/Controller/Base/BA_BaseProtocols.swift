@@ -12,6 +12,8 @@ public protocol BA_BaseViewProtocol: class {
     func onUpdateView()
 
     func showProgress()
+    
+    func showAlert(_ alert:BaseAlert)
 
     func hideProgress()
 }

@@ -14,13 +14,14 @@ class ViewController: BA_BaseViewController<ViewModel> {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        //self.childView.showLoading()
-        //showProgress()
     }
 
-    @IBAction func stopChildProgress(_ sender: Any) {
-        //childView.hideLoading()
-        hideProgress()
+
+    @IBAction func showAlertAction(_ sender: Any) {
+        showAlert(BaseAlert.init(message: "Change color", title: "Alert Action", handler: {[unowned self] _ in
+            let colorCode = CGFloat(Int(arc4random_uniform(255)))/255
+            self.childView.backgroundColor = UIColor(white: colorCode, alpha: 1.0)
+        }))
     }
 }
 

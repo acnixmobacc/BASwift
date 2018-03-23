@@ -16,6 +16,8 @@
 		B6140F792049762A003BF29F /* BASwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F782049762A003BF29F /* BASwiftTests.swift */; };
 		B638D69820629A4200657087 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69720629A4200657087 /* UIView+XIB.swift */; };
 		B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69920629B5A00657087 /* DependencyManager.swift */; };
+		B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* IAlertView.swift */; };
+		B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22F20651FD100FD397F /* AlertViewManager.swift */; };
 		B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* LoadableView.swift */; };
 		B6A807EB2063CEC300E03C26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EA2063CEC300E03C26 /* DetailViewController.swift */; };
 		B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */; };
@@ -102,6 +104,8 @@
 		B6140F7A2049762A003BF29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B638D69720629A4200657087 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
 		B638D69920629B5A00657087 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		B68ED22C20651D0C00FD397F /* IAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertView.swift; sourceTree = "<group>"; };
+		B68ED22F20651FD100FD397F /* AlertViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewManager.swift; sourceTree = "<group>"; };
 		B6A807DD206381D900E03C26 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		B6A807EA2063CEC300E03C26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = BASwift/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDManager.swift; sourceTree = "<group>"; };
@@ -247,9 +251,29 @@
 			path = BASwiftTests;
 			sourceTree = "<group>";
 		};
+		B68ED22B20651C7D00FD397F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B68ED22F20651FD100FD397F /* AlertViewManager.swift */,
+				B68ED22C20651D0C00FD397F /* IAlertView.swift */,
+				B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		B68ED22E20651D4700FD397F /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
+				B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		B6A807F02063E16600E03C26 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */,
 				B6A807F12063E17D00E03C26 /* IProgressHUD.swift */,
 				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
 				B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */,
@@ -293,12 +317,11 @@
 		B6D7E67A204976BD00A5D803 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				B68ED22B20651C7D00FD397F /* Alert */,
 				B6A807F02063E16600E03C26 /* ProgressHUD */,
+				B68ED22E20651D4700FD397F /* Picker */,
 				B6A807DD206381D900E03C26 /* LoadableView.swift */,
-				B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */,
 				B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */,
-				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
-				B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -360,7 +383,6 @@
 				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
 				B6D7E6F5204BF97100A5D803 /* TableViewAdapter.swift */,
 				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
-				B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -755,6 +777,8 @@
 				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
 				B6F4B09C204C264C00110985 /* BASTree.swift in Sources */,
 				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
+				B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */,
+				B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */,
 				B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */,
 				B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,

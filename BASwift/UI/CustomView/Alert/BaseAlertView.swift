@@ -7,15 +7,12 @@
 //
 import UIKit
 
-public protocol IAlertView {
-    func show(vc: UIViewController, alert: BaseAlert)
-}
 
 class BaseAlertView: IAlertView {
     func show(vc: UIViewController, alert: BaseAlert) {
-        let alert = UIAlertController(title: alert.title, message: alert.message,
+        let alertController = UIAlertController(title: alert.title, message: alert.message,
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default, handler: nil))
-        vc.present(alert, animated: true, completion: nil)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: alert.handler))
+        vc.present(alertController, animated: true, completion: nil)
     }
 }

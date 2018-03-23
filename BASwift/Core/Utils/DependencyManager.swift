@@ -25,8 +25,8 @@ open class BA_DependencyManager {
     fileprivate static let `default`: Container = {
         return Container {c in
             c.register(IProgressHUD.self) { _ in NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault) }
+            c.register(IAlertView.self) { _ in BaseAlertView() }
 //            c.register(INavigationProvider.self) { _ in BaseNavigationProvider() }
-//            c.register(IAlertManager.self) { _ in BaseAlertView() }
 //            c.register(INavigationUtilities.self) { _ in BaseNavigationUtilities() }
         }
     }()

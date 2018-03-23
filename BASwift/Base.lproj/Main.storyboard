@@ -37,13 +37,22 @@
                                     <constraint firstAttribute="height" constant="177" id="sd8-9t-Ntp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ww-TK-GpJ">
+                                <rect key="frame" x="150" y="318" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KEX-3U-uTX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uld-PX-m2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6MI-rJ-SWk"/>
                             <constraint firstItem="uld-PX-m2K" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6ZE-yu-gE6"/>
+                            <constraint firstItem="1Ww-TK-GpJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82b-CT-Lc9"/>
                             <constraint firstItem="hwC-Ms-gm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BG6-ub-ZhQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hwC-Ms-gm6" secondAttribute="bottom" constant="67" id="MOu-4q-U3K"/>
+                            <constraint firstItem="1Ww-TK-GpJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oc7-Gg-9We"/>
                             <constraint firstItem="uld-PX-m2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oq8-5r-wA7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
