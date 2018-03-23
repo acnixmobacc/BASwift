@@ -73,7 +73,19 @@
                     <view key="view" contentMode="scaleToFill" id="Yle-E2-7gw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-Hb-YVc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.36078431370000003" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q4C-Hb-YVc" firstAttribute="leading" secondItem="vcQ-oP-tiC" secondAttribute="leading" id="EF5-O3-8c0"/>
+                            <constraint firstItem="Q4C-Hb-YVc" firstAttribute="top" secondItem="vcQ-oP-tiC" secondAttribute="top" id="LyB-Tx-HFn"/>
+                            <constraint firstItem="vcQ-oP-tiC" firstAttribute="bottom" secondItem="Q4C-Hb-YVc" secondAttribute="bottom" id="nP2-el-9TT"/>
+                            <constraint firstItem="vcQ-oP-tiC" firstAttribute="trailing" secondItem="Q4C-Hb-YVc" secondAttribute="trailing" id="t2j-lL-uLp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vcQ-oP-tiC"/>
                     </view>
                     <toolbarItems/>

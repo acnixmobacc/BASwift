@@ -32,6 +32,8 @@ open class NVProgressOptions : ProgressOptions{
 }
 
 open class NVProgressHUD: IProgressHUD {
+    public var isLoading: Bool
+    
     public var options: ProgressOptions
     
     var activityIndicator: NVActivityIndicatorView!
@@ -43,11 +45,13 @@ open class NVProgressHUD: IProgressHUD {
     public required init(withOptions options: ProgressOptions)
     {
         self.options = options
+        self.isLoading = false
         setActivityIndicatorOption()
     }
 
     public func start(inView view: UIView) {
         parentView = view
+        isLoading = true
         options.showTransparentView ? startWithTransparentView(inView: view)
             : startWithoutTransparentView(inView: view)
         setActivityIndicatorCenterPoint()
@@ -56,6 +60,7 @@ open class NVProgressHUD: IProgressHUD {
     }
     
     public func stop() {
+        isLoading = false
         transparentView?.removeFromSuperview()
         parentView?.isUserInteractionEnabled = true
         parentView = nil

@@ -16,7 +16,6 @@ public enum ProgressStrategy{
 
 
 open class ProgressHUDManager : ILoadable{
-    
     private var bussyCount: Int = 0{
         willSet{
             if(newValue == 1 && bussyCount == 0){
@@ -48,6 +47,10 @@ open class ProgressHUDManager : ILoadable{
         }else{
             bussyCount -= 1
         }
+    }
+    
+    public func isLoading() -> Bool {
+        return progressHUD.isLoading
     }
     
 }

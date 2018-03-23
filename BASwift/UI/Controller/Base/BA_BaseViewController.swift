@@ -10,6 +10,7 @@ import UIKit
 
 extension BA_BaseViewController: BA_BaseViewProtocol {
     public func onUpdateView() {
+        
     }
 
     public func showAlert(_ alert: BaseAlert) {
@@ -23,17 +24,32 @@ extension BA_BaseViewController: BA_BaseViewProtocol {
     public func hideProgress() {
         progressManager.hideLoading()
     }
+    
+    public func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
+        contentManager.showMessage(withMessage: message, handler: { [unowned self] in
+            self.contentManager.view.removeFromSuperview()
+            if let handler = handler{
+                handler()
+            }
+        })
+        contentManager.view.frame = self.view.frame
+        self.view.addSubview(contentManager.view)
+    }
 }
 
 open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController {
     public var viewModel: T?
 
-    lazy var progressManager : ProgressHUDManager = {[unowned self] in
+    lazy var progressManager : ILoadable = {[unowned self] in
         return ProgressHUDManager(forView: self.view)
     }()
     
-    lazy var alertManager : AlertViewManager = {[unowned self] in
+    lazy var alertManager : IAlertManager = {[unowned self] in
         return AlertViewManager(withViewController: self)
+    }()
+    
+    lazy var contentManager : IContentManager = {[unowned self] in
+        return ContentManager(withView: MessageView.fromNib())
     }()
     
     open override func viewDidLoad() {

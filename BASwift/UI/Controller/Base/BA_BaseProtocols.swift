@@ -16,6 +16,8 @@ public protocol BA_BaseViewProtocol: class {
     func showAlert(_ alert:BaseAlert)
 
     func hideProgress()
+    
+    func showContentMessage(withMessage message:String, handler:(()->Void)?)
 }
 
 public protocol BA_BaseViewModelProtocol: class {

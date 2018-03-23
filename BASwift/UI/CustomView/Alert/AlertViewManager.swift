@@ -19,13 +19,16 @@ public protocol IAlertManager {
 open class AlertViewManager : IAlertManager{
     public var alertView: IAlertView = BA_DependencyManager.sharedInstance.container.resolve(IAlertView.self)!
     
-    private var viewController : UIViewController
+    private var viewController : UIViewController?
     
     public required init(withViewController viewController: UIViewController) {
         self.viewController = viewController
     }
     
     public func showAlert(withAlert alert:BaseAlert) {
+        guard let viewController = self.viewController else {
+            return
+        }
         alertView.show(vc: viewController, alert: alert)
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
-    override lazy var progressManager: ProgressHUDManager = {[unowned self] in
+    override lazy var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager.init(forView: self.view, dismissStrategy: .immediately)
     }()
     
@@ -24,7 +24,8 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
     }
     
     @IBAction func startAction(_ sender: Any) {
-        showProgress()
+        //showProgress()
+        showContentMessage(withMessage: "Empty Message", handler: nil)
     }
 }
 

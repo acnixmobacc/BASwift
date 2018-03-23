@@ -14,6 +14,8 @@ public protocol ILoadable {
     func showLoading()
 
     func hideLoading()
+    
+    func isLoading() -> Bool
 }
 
 extension ILoadable where Self:UIView {
@@ -24,8 +26,14 @@ extension ILoadable where Self:UIView {
     public func hideLoading() {
         progressHUD.stop()
     }
+
+    public func isLoading() -> Bool {
+        return progressHUD.isLoading
+    }
 }
 
 public class LoadableView: UIView, ILoadable {
     public var progressHUD = BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
+    
+    
 }

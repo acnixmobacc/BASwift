@@ -24,6 +24,8 @@ open class NativeProgressOptions : ProgressOptions{
 }
 
 public class BaseProgressHUD: IProgressHUD {
+    public var isLoading: Bool
+    
     public var options: ProgressOptions
     
     var activityIndicator: UIActivityIndicatorView!
@@ -32,6 +34,7 @@ public class BaseProgressHUD: IProgressHUD {
     
     public required init(withOptions options: ProgressOptions) {
         self.options = options
+        self.isLoading = false
         setProgressOptions()
     }
     
@@ -55,6 +58,7 @@ public class BaseProgressHUD: IProgressHUD {
     }
     
     public func start(inView view:UIView) {
+        isLoading = true
         options.showTransparentView ? startWithTransparentView(inView: view) 
             : startWithoutTransparentView(inView: view)
         
@@ -74,6 +78,7 @@ public class BaseProgressHUD: IProgressHUD {
     }
 
     public func stop() {
+        isLoading = false
         transparentView?.removeFromSuperview()
         self.activityIndicator.stopAnimating()
     }
