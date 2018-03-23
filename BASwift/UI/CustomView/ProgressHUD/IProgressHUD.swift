@@ -10,9 +10,12 @@ import UIKit
 
 open class ProgressOptions{
     var frame: CGRect
+    var showTransparentView : Bool
     
-    init(withFrame frame:CGRect = CGRect(x: 100, y: 100, width: 100, height: 100)) {
+    init(withFrame frame:CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
+         showTransparentView:Bool = true) {
         self.frame = frame
+        self.showTransparentView = showTransparentView
     }
     
     static let `default`: ProgressOptions = {

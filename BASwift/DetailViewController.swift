@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
     override lazy var progressManager: ProgressHUDManager = {[unowned self] in
-        return ProgressHUDManager.init(forView: self.view, dismissStrategy: .countable)
+        return ProgressHUDManager.init(forView: self.view, dismissStrategy: .immediately)
     }()
     
     override func viewDidAppear(_ animated: Bool) {
