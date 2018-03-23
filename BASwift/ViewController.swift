@@ -14,14 +14,19 @@ class ViewController: BA_BaseViewController<ViewModel> {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
     }
 
 
     @IBAction func showAlertAction(_ sender: Any) {
-        showAlert(BaseAlert.init(message: "Change color", title: "Alert Action", handler: {[unowned self] _ in
+        childView.showMessage(withMessage: "Empty view message", handler: {
             let colorCode = CGFloat(Int(arc4random_uniform(255)))/255
             self.childView.backgroundColor = UIColor(white: colorCode, alpha: 1.0)
-        }))
+        })
+//        showAlert(BaseAlert.init(message: "Change color", title: "Alert Action", handler: {[unowned self] _ in
+//            let colorCode = CGFloat(Int(arc4random_uniform(255)))/255
+//            self.childView.backgroundColor = UIColor(white: colorCode, alpha: 1.0)
+//        }))
     }
 }
 

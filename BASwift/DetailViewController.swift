@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override lazy var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager.init(forView: self.view, dismissStrategy: .immediately)
     }()
@@ -25,7 +27,10 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
     @IBAction func startAction(_ sender: Any) {
         //showProgress()
-        showContentMessage(withMessage: "Empty Message", handler: nil)
+        showContentMessage(withMessage: "Empty Message", handler: {[unowned self] in
+            let colorCode = CGFloat(Int(arc4random_uniform(255)))/255
+            self.tableView.backgroundColor = UIColor(white: colorCode, alpha: 1.0)
+        })
     }
 }
 

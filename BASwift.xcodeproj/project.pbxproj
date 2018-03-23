@@ -22,6 +22,8 @@
 		B68ED23620653CBB00FD397F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23520653CBB00FD397F /* MessageView.swift */; };
 		B68ED23820653D0200FD397F /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68ED23720653D0200FD397F /* MessageView.xib */; };
 		B68ED23A2065429400FD397F /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED2392065429400FD397F /* ContentManager.swift */; };
+		B68ED23E20654FB500FD397F /* ILoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23D20654FB500FD397F /* ILoadable.swift */; };
+		B68ED24020654FF500FD397F /* IContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23F20654FF500FD397F /* IContentable.swift */; };
 		B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* LoadableView.swift */; };
 		B6A807EB2063CEC300E03C26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EA2063CEC300E03C26 /* DetailViewController.swift */; };
 		B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */; };
@@ -113,6 +115,8 @@
 		B68ED23520653CBB00FD397F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B68ED23720653D0200FD397F /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		B68ED2392065429400FD397F /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		B68ED23D20654FB500FD397F /* ILoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoadable.swift; sourceTree = "<group>"; };
+		B68ED23F20654FF500FD397F /* IContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IContentable.swift; sourceTree = "<group>"; };
 		B6A807DD206381D900E03C26 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		B6A807EA2063CEC300E03C26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = BASwift/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDManager.swift; sourceTree = "<group>"; };
@@ -287,6 +291,16 @@
 			path = ContentMessage;
 			sourceTree = "<group>";
 		};
+		B68ED23C20654F9E00FD397F /* Loadable */ = {
+			isa = PBXGroup;
+			children = (
+				B68ED23D20654FB500FD397F /* ILoadable.swift */,
+				B68ED23F20654FF500FD397F /* IContentable.swift */,
+				B6A807DD206381D900E03C26 /* LoadableView.swift */,
+			);
+			path = Loadable;
+			sourceTree = "<group>";
+		};
 		B6A807F02063E16600E03C26 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,11 +348,11 @@
 		B6D7E67A204976BD00A5D803 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				B68ED23C20654F9E00FD397F /* Loadable */,
 				B68ED23B206542CD00FD397F /* ContentMessage */,
 				B68ED22B20651C7D00FD397F /* Alert */,
 				B6A807F02063E16600E03C26 /* ProgressHUD */,
 				B68ED22E20651D4700FD397F /* Picker */,
-				B6A807DD206381D900E03C26 /* LoadableView.swift */,
 				B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */,
 			);
 			path = CustomView;
@@ -770,6 +784,7 @@
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
 				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
+				B68ED24020654FF500FD397F /* IContentable.swift in Sources */,
 				B6F4B09B204C264C00110985 /* BASNode.swift in Sources */,
 				B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */,
 				B68ED23A2065429400FD397F /* ContentManager.swift in Sources */,
@@ -808,6 +823,7 @@
 				B638D69820629A4200657087 /* UIView+XIB.swift in Sources */,
 				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */,
+				B68ED23E20654FB500FD397F /* ILoadable.swift in Sources */,
 				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
 				B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
