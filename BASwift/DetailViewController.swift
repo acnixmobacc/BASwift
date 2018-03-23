@@ -10,15 +10,21 @@ import UIKit
 
 class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
+    override lazy var progressManager: ProgressHUDManager = {[unowned self] in
+        return ProgressHUDManager.init(forView: self.view, dismissStrategy: .countable)
+    }()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        showProgress()
+        
+    }
+
+    @IBAction func stopAction(_ sender: Any) {
+        hideProgress()
     }
     
-    @IBAction func stopChildProgress(_ sender: Any) {
-    
-        hideProgress()
+    @IBAction func startAction(_ sender: Any) {
+        showProgress()
     }
 }
 

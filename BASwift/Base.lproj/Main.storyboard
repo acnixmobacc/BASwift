@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,16 +57,31 @@
             </objects>
             <point key="canvasLocation" x="122" y="-84"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail-->
         <scene sceneID="y3H-2m-MVz">
             <objects>
-                <viewController id="tbn-4d-aoh" customClass="DetailViewController" customModule="BASwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="tbn-4d-aoh" customClass="DetailViewController" customModule="BASwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yle-E2-7gw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vcQ-oP-tiC"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LcU-G9-2tK">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="YJP-Bz-aMr">
+                                <connections>
+                                    <action selector="startAction:" destination="tbn-4d-aoh" id="lAT-Te-Mnk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="-" id="62E-EI-YZT">
+                                <connections>
+                                    <action selector="stopAction:" destination="tbn-4d-aoh" id="i7o-WB-fDs"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZw-ij-MOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

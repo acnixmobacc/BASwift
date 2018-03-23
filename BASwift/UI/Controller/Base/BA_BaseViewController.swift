@@ -13,18 +13,21 @@ extension BA_BaseViewController: BA_BaseViewProtocol {
     }
 
     public func showProgress() {
-        progressHUD.start(inView: self.view)
+        progressManager.showLoading()
     }
 
     public func hideProgress() {
-        progressHUD.stop()
+        progressManager.hideLoading()
     }
 }
 
 open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController {
     public var viewModel: T?
-    public var progressHUD: IProgressHUD! = BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)
 
+    lazy var progressManager : ProgressHUDManager = {[unowned self] in
+        return ProgressHUDManager.init(forView: self.view)
+    }()
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.onDidLoad()

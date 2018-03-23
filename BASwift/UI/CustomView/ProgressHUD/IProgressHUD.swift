@@ -8,12 +8,6 @@
 
 import UIKit
 
-public enum ProgressStrategy{
-    public enum DismissStrategy {
-        case countable, immediately
-    }
-}
-
 open class ProgressOptions{
     var frame: CGRect
     
