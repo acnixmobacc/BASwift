@@ -31,6 +31,7 @@
 		B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBB620691D75000DBAB3 /* UISampleItem.swift */; };
 		B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBB820692213000DBAB3 /* SampleItemCollectionViewCell.swift */; };
 		B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */; };
+		B6CDBBBD20692838000DBAB3 /* SampleCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBBC20692838000DBAB3 /* SampleCollectionViewDelegate.swift */; };
 		B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0AB204C281000110985 /* AppDelegate.swift */; };
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		B6CDBBB620691D75000DBAB3 /* UISampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISampleItem.swift; sourceTree = "<group>"; };
 		B6CDBBB820692213000DBAB3 /* SampleItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6CDBBBC20692838000DBAB3 /* SampleCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		B6F4B0A8204C281000110985 /* BASwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0AB204C281000110985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F4B0B2204C281000110985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				B6CDBBB020691D30000DBAB3 /* SampleCollectionViewAdapter.swift */,
+				B6CDBBBC20692838000DBAB3 /* SampleCollectionViewDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
+				B6CDBBBD20692838000DBAB3 /* SampleCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -713,7 +717,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -729,6 +733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4X5EATXHP;
 				INFOPLIST_FILE = "$(SRCROOT)/BASwiftExample/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brkakkaya.BASwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -745,6 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4X5EATXHP;
 				INFOPLIST_FILE = "$(SRCROOT)/BASwiftExample/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brkakkaya.BASwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

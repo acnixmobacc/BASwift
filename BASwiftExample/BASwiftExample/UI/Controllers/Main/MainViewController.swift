@@ -15,13 +15,12 @@ class MainViewController: BA_BaseViewController<MainViewModel> {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.childView.showLoading()
-        //self.view.showProgress()
     }
 
     @IBAction func stopChildProgress(_ sender: Any) {
-        childView.hideLoading()
     }
+    
+    
     @IBAction func stopParentProgress(_ sender: Any) {
         
     }

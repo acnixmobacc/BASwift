@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="R5E-W8-ARg">
             <objects>
                 <viewController id="w73-tq-154" customClass="MainViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dmB-iA-GAU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yla-E2-nTR"/>
+                    <navigationItem key="navigationItem" title="Main" id="yla-E2-nTR"/>
                     <connections>
                         <outlet property="childView" destination="Nue-vO-6k7" id="hIZ-IP-VBD"/>
                     </connections>
@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="222" y="-25"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Table Adapter-->
         <scene sceneID="jf9-Ca-RGm">
             <objects>
-                <viewController id="k7F-Fz-Xaa" customClass="DetailViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Table Adapter" id="k7F-Fz-Xaa" customClass="DetailViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWJ-H3-p8X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1025" y="-26"/>
         </scene>
-        <!--SampleViewController-->
+        <!--Collection Adapter-->
         <scene sceneID="E5C-Xg-9pb">
             <objects>
-                <viewController title="SampleViewController" id="g9x-Mp-Ctu" customClass="SampleViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Collection Adapter" id="g9x-Mp-Ctu" customClass="SampleViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPL-hi-wR3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,11 +136,27 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Dsh-kR-fsW" id="80b-Ew-9ld"/>
+                        <segue destination="9rf-zI-FDJ" kind="show" identifier="toPicker" id="ZTD-Sa-pog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6B-bR-7tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1862" y="-26"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="vt2-7L-hTI">
+            <objects>
+                <viewController title="Picker" id="9rf-zI-FDJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybs-0U-xoO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RIf-xB-K0K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lo6-Jb-aXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2618" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oOP-SB-6Se">

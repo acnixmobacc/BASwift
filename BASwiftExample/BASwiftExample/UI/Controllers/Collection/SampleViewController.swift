@@ -19,6 +19,12 @@ class SampleViewController: BA_BaseViewController<SampleViewModel> {
         
         collectionAdapter = SampleCollectionViewAdapter(collectionView, data: [UISampleItem(), UISampleItem(),
                                                                                UISampleItem() , UISampleItem()])
-        
+        collectionAdapter.delegate = self
+    }
+}
+
+extension SampleViewController : SampleCollectionViewDelegate{
+    func onSelectItem() {
+        performSegue(withIdentifier: "toPicker", sender: nil)
     }
 }
