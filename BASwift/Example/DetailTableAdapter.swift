@@ -26,8 +26,17 @@ class UIItem : ICellData{
     }
 }
 
+class UICustomSection : BaseSectionModel{
+    override func headerView() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .blue
+        
+        return view
+    }
+}
 
-class DetailTableAdapter : TableViewAdapter<[ICellData], BaseSectionModel>{
+
+class DetailTableAdapter : TableViewAdapter<[ICellData]>{
 
     override func registerNibs() {
         ItemTableViewCell.registerSelf(tableView)
@@ -47,8 +56,8 @@ class DetailTableAdapter : TableViewAdapter<[ICellData], BaseSectionModel>{
         tableDataModel.sections.append(getItemSection(items: itemCellModels))
     }
     
-    func getDetailSection(items: [ICellData]) -> BaseSectionModel{
-        let section : BaseSectionModel = BaseSectionModel()
+    func getDetailSection(items: [ICellData]) -> UICustomSection{
+        let section : UICustomSection = UICustomSection(headerHeight:44)
         for item in items{
             section.cellModels.append(getDetailCell(item: item))
         }

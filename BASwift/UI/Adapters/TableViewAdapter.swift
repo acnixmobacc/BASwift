@@ -7,9 +7,9 @@
 
 import UIKit
 
-open class TableViewAdapter<T:Any, U: BaseSectionModel> : NSObject, UITableViewDataSource, UITableViewDelegate {
+open class TableViewAdapter<T:Any> : NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    public var tableDataModel: BaseTableDataModel<U> {
+    public var tableDataModel: BaseTableDataModel<BaseSectionModel> {
         didSet {
             tableView.reloadData()
         }
@@ -40,7 +40,7 @@ open class TableViewAdapter<T:Any, U: BaseSectionModel> : NSObject, UITableViewD
         return tableDataModel.sections[indexPath.section].cellModels[indexPath.row]
     }
 
-    open func getSectionDataModel(atIndexPath indexPath: IndexPath) -> U {
+    open func getSectionDataModel(atIndexPath indexPath: IndexPath) -> BaseSectionModel {
         return tableDataModel.sections[indexPath.section]
     }
 

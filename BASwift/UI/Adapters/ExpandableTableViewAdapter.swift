@@ -7,11 +7,13 @@
 
 import UIKit
 
-open class ExpandableTableViewAdapter<T:Any> : TableViewAdapter<T, BaseExpandableSectionModel> {
+open class ExpandableTableViewAdapter<T:Any> : TableViewAdapter<T> {
 
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
-        let section = tableDataModel.sections[indexPath.section]
+        guard let section = tableDataModel.sections[indexPath.section] as? BaseExpandableSectionModel else{
+            return
+        }
         let row = section.cellModels[indexPath.row]
 
         if row.cellType == .expand {
@@ -21,7 +23,9 @@ open class ExpandableTableViewAdapter<T:Any> : TableViewAdapter<T, BaseExpandabl
     }
 
     public func run(_ isExpand: Bool, _ indexPath: IndexPath) {
-        let section: BaseExpandableSectionModel = tableDataModel.sections[indexPath.section]
+        guard let section = tableDataModel.sections[indexPath.section] as? BaseExpandableSectionModel else{
+            fatalError("Section must be baseexpandablesection")
+        }
 
         tableView.beginUpdates()
 
