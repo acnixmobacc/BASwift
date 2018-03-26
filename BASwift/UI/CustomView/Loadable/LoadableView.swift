@@ -11,7 +11,7 @@ import UIKit
 public class LoadableView: UIView, ILoadable, IContentable{
     public var progressHUD = BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
 
-    lazy public var contentManager : IContentManager = {
+    lazy open var contentManager : IContentManager = {
         var messageView = MessageView.fromNib()
         messageView.frame = CGRect(origin: .zero, size: self.frame.size)
         return ContentManager.init(withView: messageView)

@@ -32,7 +32,7 @@ open class ProgressHUDManager : ILoadable{
     
     private var dismissStrategy : ProgressStrategy.DismissStrategy
     
-    init(forView view:UIView, dismissStrategy:ProgressStrategy.DismissStrategy = .immediately) {
+    public init(forView view:UIView, dismissStrategy:ProgressStrategy.DismissStrategy = .immediately) {
         self.dismissStrategy = dismissStrategy
         self.view = view
     }

@@ -8,27 +8,32 @@
 
 import UIKit
 
-open class CollectionViewAdapter<T: BA_BaseViewModelProtocol> : NSObject, UICollectionViewDataSource,
+open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     public var collectionData: BaseCollectionDataModel {
         didSet {
             collectionView.reloadData()
         }
     }
+    
     public var collectionView: UICollectionView
-    public var viewModel: T
+    
+    public var data : T?
 
-    public init(_ collectionView: UICollectionView, viewModel: T) {
+    public init(_ collectionView: UICollectionView, data: T?) {
 
         self.collectionView = collectionView
-        self.viewModel = viewModel
         collectionData = BaseCollectionDataModel()
         super.init()
 
+        
+        self.data = data
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
 
         registerNibs()
+        setCollectionData()
 
     }
 
@@ -36,15 +41,15 @@ open class CollectionViewAdapter<T: BA_BaseViewModelProtocol> : NSObject, UIColl
 
     open func setCollectionData() {}
 
-    open func updateData(_ collectionData: BaseCollectionDataModel) {
-        self.collectionData = collectionData
+    open func updateData(_ data: T?) {
+        setCollectionData()
     }
 
-    open func getCellData(_ indexPath: IndexPath) -> BaseCellModel {
+    open func getCellModel(_ indexPath: IndexPath) -> BaseCellModel {
         return collectionData.sections[indexPath.section].cellModels[indexPath.row]
     }
 
-    open func getSectionData(atIndexPath indexPath: IndexPath) -> BaseCollectionSectionModel {
+    open func getSectionModel(atIndexPath indexPath: IndexPath) -> BaseCollectionSectionModel {
         return collectionData.sections[indexPath.section]
     }
 

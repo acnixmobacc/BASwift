@@ -11,18 +11,18 @@ import BASwift
 
 class MainViewController: BA_BaseViewController<MainViewModel> {
 
-    @IBOutlet weak var childView: UIView!
+    @IBOutlet weak var childView: LoadableView!
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.childView.showProgress()
+        self.childView.showLoading()
         //self.view.showProgress()
     }
 
     @IBAction func stopChildProgress(_ sender: Any) {
-        childView.hideProgress()
+        childView.hideLoading()
     }
     @IBAction func stopParentProgress(_ sender: Any) {
-        view.hideProgress()
+        
     }
 }

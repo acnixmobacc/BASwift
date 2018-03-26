@@ -36,11 +36,11 @@ open class TableViewAdapter<T:Any> : NSObject, UITableViewDataSource, UITableVie
 
     open func setTableData() {}
 
-    open func getCellDataModel(_ indexPath: IndexPath) -> BaseCellModel {
+    open func getCellModel(_ indexPath: IndexPath) -> BaseCellModel {
         return tableDataModel.sections[indexPath.section].cellModels[indexPath.row]
     }
 
-    open func getSectionDataModel(atIndexPath indexPath: IndexPath) -> BaseSectionModel {
+    open func getSectionModel(atIndexPath indexPath: IndexPath) -> BaseSectionModel {
         return tableDataModel.sections[indexPath.section]
     }
 

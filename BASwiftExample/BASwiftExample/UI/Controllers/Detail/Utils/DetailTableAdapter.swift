@@ -6,38 +6,12 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import UIKit
-
-class UIDetailItem : ICellData{
-    var title : String
-    var description : String
-
-    init(_ title:String = "", _ description:String = "") {
-        self.title = title
-        self.description = description
-    }
-}
-
-class UIItem : ICellData{
-    var value:  String
-    
-    init(_ value:String = "") {
-        self.value = value
-    }
-}
-
-class UICustomSection : BaseSectionModel{
-    override func headerView() -> UIView {
-        let view = UIView()
-        view.backgroundColor = .blue
-        
-        return view
-    }
-}
-
+import BASwift
 
 class DetailTableAdapter : TableViewAdapter<[ICellData]>{
 
+    weak var delegate : DetailTableViewDelegate?
+    
     override func registerNibs() {
         ItemTableViewCell.registerSelf(tableView)
         DetailItemTableViewCell.registerSelf(tableView)
@@ -82,7 +56,7 @@ class DetailTableAdapter : TableViewAdapter<[ICellData]>{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = getCellDataModel(indexPath)
+        let cell = getCellModel(indexPath)
         
         switch cell.type {
         case is ItemTableViewCell.Type:
@@ -112,5 +86,10 @@ class DetailTableAdapter : TableViewAdapter<[ICellData]>{
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        delegate?.onSelectItem()
     }
 }

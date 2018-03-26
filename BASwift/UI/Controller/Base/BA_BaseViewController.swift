@@ -40,15 +40,15 @@ extension BA_BaseViewController: BA_BaseViewProtocol {
 open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController {
     public var viewModel: T?
 
-    lazy var progressManager : ILoadable = {[unowned self] in
+    lazy open var progressManager : ILoadable = {[unowned self] in
         return ProgressHUDManager(forView: self.view)
     }()
     
-    lazy var alertManager : IAlertManager = {[unowned self] in
+    lazy open var alertManager : IAlertManager = {[unowned self] in
         return AlertViewManager(withViewController: self)
     }()
     
-    lazy var contentManager : IContentManager = {[unowned self] in
+    lazy open var contentManager : IContentManager = {[unowned self] in
         return ContentManager(withView: MessageView.fromNib())
     }()
     

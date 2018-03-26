@@ -18,7 +18,7 @@ public protocol ILoadable {
     func isLoading() -> Bool
 }
 
-extension ILoadable where Self:UIView {
+public extension ILoadable where Self:UIView {
     public func showLoading() {
         progressHUD.start(inView: self)
     }
