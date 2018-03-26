@@ -48,8 +48,8 @@ open class CollectionViewAdapter<T: BA_BaseViewModelProtocol> : NSObject, UIColl
         return collectionData.sections[indexPath.section]
     }
 
-    open func getModel(atIndexPath indexPath: IndexPath) -> ICellModel! {
-        return collectionData.sections[indexPath.section].cellModels[indexPath.row].cellModel
+    open func getData(atIndexPath indexPath: IndexPath) -> ICellData! {
+        return collectionData.sections[indexPath.section].cellModels[indexPath.row].cellData
     }
 
     open func numberOfSections(in collectionView: UICollectionView) -> Int {

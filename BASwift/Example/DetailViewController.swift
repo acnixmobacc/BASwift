@@ -12,12 +12,17 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var tableViewAdapter : DetailTableAdapter?
+    
     override lazy var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager.init(forView: self.view, dismissStrategy: .immediately)
     }()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        tableViewAdapter = DetailTableAdapter.init(tableView, [UIDetailItem(), UIItem(),
+                                                               UIDetailItem(), UIDetailItem(),
+                                                               UIItem(), UIDetailItem()])
         
     }
 

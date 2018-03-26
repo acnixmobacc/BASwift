@@ -16,7 +16,7 @@ public enum IXCellType {
 open class BaseCellModel: NSObject {
     private var _landscapeCellHeight: CGFloat!
     private var _cellHeight: CGFloat
-    public var cellModel: ICellModel!
+    public var cellData: ICellData!
     public var type: AnyClass
     public var cellType: IXCellType
 
@@ -36,11 +36,11 @@ open class BaseCellModel: NSObject {
         }
     }
 
-    public init(_ type: AnyClass, model: ICellModel! = nil, cellHeight: CGFloat = 44,
+    public init(_ type: AnyClass, data: ICellData! = nil, cellHeight: CGFloat = 44,
                 landscapeCellHeight: CGFloat! = nil, cellType: IXCellType = .default) {
         _cellHeight = cellHeight
         _landscapeCellHeight = landscapeCellHeight
-        self.cellModel = model
+        self.cellData = data
         self.type = type
         self.cellType = cellType
     }
