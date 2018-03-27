@@ -54,8 +54,7 @@
 		B6D7E6D0204A126B00A5D803 /* BaseProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */; };
 		B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CC204A126B00A5D803 /* Picker.swift */; };
 		B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */; };
-		B6D7E6D3204A126B00A5D803 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */; };
-		B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */; };
+		B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6CF204A126B00A5D803 /* PickerTextField.swift */; };
 		B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */; };
 		B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */; };
 		B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */; };
@@ -143,8 +142,7 @@
 		B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProgressHUD.swift; sourceTree = "<group>"; };
 		B6D7E6CC204A126B00A5D803 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAlertView.swift; sourceTree = "<group>"; };
-		B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
-		B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		B6D7E6CF204A126B00A5D803 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVProgressHUD.swift; sourceTree = "<group>"; };
 		B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellModel.swift; sourceTree = "<group>"; };
 		B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionCellModel.swift; sourceTree = "<group>"; };
@@ -264,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
-				B6D7E6CE204A126B00A5D803 /* PickerTextField.swift */,
+				B6D7E6CF204A126B00A5D803 /* PickerTextField.swift */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
@@ -350,7 +348,6 @@
 				B68ED22B20651C7D00FD397F /* Alert */,
 				B6A807F02063E16600E03C26 /* ProgressHUD */,
 				B68ED22E20651D4700FD397F /* Picker */,
-				B6D7E6CF204A126B00A5D803 /* BaseTextField.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -791,7 +788,6 @@
 				B6D7E6BC2049E82700A5D803 /* BaseErrorResponse.swift in Sources */,
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
 				B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */,
-				B6D7E6D3204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
 				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
@@ -827,7 +823,7 @@
 				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */,
-				B6D7E6D4204A126B00A5D803 /* BaseTextField.swift in Sources */,
+				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,

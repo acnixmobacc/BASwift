@@ -32,6 +32,8 @@
 		B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBB820692213000DBAB3 /* SampleItemCollectionViewCell.swift */; };
 		B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */; };
 		B6CDBBBD20692838000DBAB3 /* SampleCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBBC20692838000DBAB3 /* SampleCollectionViewDelegate.swift */; };
+		B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */; };
+		B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */; };
 		B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0AB204C281000110985 /* AppDelegate.swift */; };
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
@@ -77,6 +79,8 @@
 		B6CDBBB820692213000DBAB3 /* SampleItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6CDBBBC20692838000DBAB3 /* SampleCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
 		B6F4B0A8204C281000110985 /* BASwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0AB204C281000110985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F4B0B2204C281000110985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
+		B6CDBBBE20692997000DBAB3 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */,
+				B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		B6DE6E5B204C2990009B1718 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				B6A807DF2063863300E03C26 /* Storyboards */,
-				B6CDBB9620691024000DBAB3 /* View */,
 				B6DE6E72204C2CB2009B1718 /* Controllers */,
+				B6CDBB9620691024000DBAB3 /* View */,
 				B6CDBBA020691A87000DBAB3 /* Data */,
 			);
 			path = UI;
@@ -269,6 +282,7 @@
 		B6DE6E72204C2CB2009B1718 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6CDBBBE20692997000DBAB3 /* Picker */,
 				B6CDBBAA20691BEE000DBAB3 /* Collection */,
 				B6CDBB8E20690CCB000DBAB3 /* Detail */,
 				B6A807E8206386E200E03C26 /* Main */,
@@ -576,10 +590,12 @@
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
+				B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */,
 				B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
 				B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */,
+				B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,

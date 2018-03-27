@@ -9,14 +9,14 @@
 import UIKit
 
 protocol PickerDelegate: class {
-    func onSelectItem(row: Int)
+    func onSelectItem(value: String)
 }
 
 open class Picker: NSObject {
     var data: [String]!
+    
     var lastSelectedRow: Int?
-    var inputTextField: PickerTextField!
-
+    
     private var _pickerView: UIPickerView!
 
     var pickerView: UIPickerView! {
@@ -38,17 +38,37 @@ open class Picker: NSObject {
 
     weak var delegate: PickerDelegate?
 
-    init(dataArray: [String], inputTextField: BaseTextField) {
+    public init(dataArray: [String], selectedItem:String? = nil) {
         super.init()
         self.pickerView = UIPickerView()
         pickerView.backgroundColor = .white
         self.data = dataArray
-        if let pickerTextField = inputTextField as? PickerTextField {
-            self.inputTextField = pickerTextField
-            self.inputTextField.inputView = self.pickerView
-            self.inputTextField.baseDelegate = self
+        
+        if let selectedItem = selectedItem{
+            lastSelectedRow = self.data.index(of: selectedItem)
+        }else{
+            lastSelectedRow = nil
         }
-        lastSelectedRow = data.index(of: inputTextField.text!)
+    }
+    
+    public func onClickDone(_ textField: PickerTextField) {
+        if (textField.text?.length == 0) {
+            self.pickerView.selectRow(0, inComponent: 0, animated: false)
+            self.pickerView(self.pickerView, didSelectRow: 0, inComponent: 0)
+            lastSelectedRow = 0
+        }
+        if (data.count != 0 && data != nil && textField.text?.length != 0) {
+            lastSelectedRow = data.index(of: textField.text!)!
+        }
+    }
+    
+    public func onClickCancel(_ textField: PickerTextField) {
+        if let selectedRow = lastSelectedRow {
+            pickerView.selectRow(selectedRow, inComponent: 0, animated: true)
+            textField.text = data[selectedRow]
+        } else {
+            textField.text = .Empty
+        }
     }
 
 }
@@ -70,38 +90,12 @@ extension Picker: UIPickerViewDelegate {
         if data.count != 0 && data != nil {
             return data[row]
         }
-        return ""
+        return .Empty
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if data.count != 0 && data != nil {
-            inputTextField.text = data[row]
-        }
-    }
-
-}
-
-extension Picker: BaseTextFieldDelegate {
-
-    public func cancelButtonClicked(_ textField: BaseTextField) {
-        if let selectedRow = lastSelectedRow {
-            inputTextField.text = data[selectedRow]
-            delegate?.onSelectItem(row: selectedRow)
-        } else {
-            inputTextField.text = .Empty
-        }
-
-    }
-
-    public func doneButtonClicked(_ textField: BaseTextField) {
-        if (textField.text?.length == 0) {
-            self.pickerView.selectRow(0, inComponent: 0, animated: false)
-            self.pickerView(self.pickerView, didSelectRow: 0, inComponent: 0)
-            lastSelectedRow = 0
-        }
-        if (data.count != 0 && data != nil && textField.text?.length != 0) {
-            delegate?.onSelectItem(row: data.index(of: textField.text!)!)
-            lastSelectedRow = data.index(of: textField.text!)!
+            delegate?.onSelectItem(value: data[row])
         }
     }
 

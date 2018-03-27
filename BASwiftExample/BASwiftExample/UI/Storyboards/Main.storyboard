@@ -146,13 +146,32 @@
         <!--Picker-->
         <scene sceneID="vt2-7L-hTI">
             <objects>
-                <viewController title="Picker" id="9rf-zI-FDJ" sceneMemberID="viewController">
+                <viewController title="Picker" id="9rf-zI-FDJ" customClass="PickerViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ybs-0U-xoO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-HZ-Ifn" customClass="PickerTextField" customModule="BASwift">
+                                <rect key="frame" x="8" y="94" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uOv-XO-sms"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GfS-HZ-Ifn" firstAttribute="top" secondItem="RIf-xB-K0K" secondAttribute="top" constant="30" id="CGp-ys-6zj"/>
+                            <constraint firstItem="GfS-HZ-Ifn" firstAttribute="leading" secondItem="RIf-xB-K0K" secondAttribute="leading" constant="8" id="Gj1-Gj-4Cg"/>
+                            <constraint firstItem="RIf-xB-K0K" firstAttribute="trailing" secondItem="GfS-HZ-Ifn" secondAttribute="trailing" constant="8" id="l0f-n4-E2D"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RIf-xB-K0K"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerField" destination="GfS-HZ-Ifn" id="aHn-Rj-ooq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lo6-Jb-aXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
