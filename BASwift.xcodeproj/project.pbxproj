@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8328C6A09180C5A393446EE9 /* Pods_BASwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A99AF4C1002E5D1029AC47E /* Pods_BASwift.framework */; };
+		B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6002057206A3ADF00488AB4 /* DatePicker.swift */; };
+		B600205A206A544D00488AB4 /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6002059206A544D00488AB4 /* DatePickerTextField.swift */; };
 		B6140F642049762A003BF29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F632049762A003BF29F /* AppDelegate.swift */; };
 		B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6A2049762A003BF29F /* Assets.xcassets */; };
 		B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6C2049762A003BF29F /* LaunchScreen.storyboard */; };
@@ -92,6 +94,8 @@
 		0EE67E1CFC395D50E17373A3 /* Pods_BASwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BASwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A082A11D1F26580DF964BFF /* Pods-BASwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwift/Pods-BASwift.release.xcconfig"; sourceTree = "<group>"; };
 		994615D20FCD98BF84CCBDCC /* Pods-BASwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6002057206A3ADF00488AB4 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		B6002059206A544D00488AB4 /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		B6140F602049762A003BF29F /* BASwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6140F632049762A003BF29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6140F6A2049762A003BF29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,7 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
+				B6002057206A3ADF00488AB4 /* DatePicker.swift */,
 				B6D7E6CF204A126B00A5D803 /* PickerTextField.swift */,
+				B6002059206A544D00488AB4 /* DatePickerTextField.swift */,
 			);
 			path = Picker;
 			sourceTree = "<group>";
@@ -781,6 +787,7 @@
 				B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */,
 				B68ED23A2065429400FD397F /* ContentManager.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
+				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
 				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6BA2049E71400A5D803 /* IBaseResponse.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
@@ -797,6 +804,7 @@
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
 				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
 				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
+				B600205A206A544D00488AB4 /* DatePickerTextField.swift in Sources */,
 				B6F4B09C204C264C00110985 /* BASTree.swift in Sources */,
 				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
 				B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */,

@@ -12,6 +12,7 @@ class PickerViewController : BA_BaseViewController<PickerViewModel>{
     
     @IBOutlet weak var pickerField: PickerTextField!
     
+    @IBOutlet weak var datePickerField: DatePickerTextField!
     
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class PickerViewController : BA_BaseViewController<PickerViewModel>{
     
         pickerField.setPickerView(withPicker: Picker(dataArray: ["Trabzonspor", "Man Utd", "Catamara FC", "Milan", "Real Madrid", "Barcelona"]))
         
+        datePickerField.setPickerView(withPicker: DatePicker.init())
     }
     
 }

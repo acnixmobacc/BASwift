@@ -160,16 +160,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-Nh-h8y" customClass="DatePickerTextField" customModule="BASwift">
+                                <rect key="frame" x="8" y="150" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GfS-HZ-Ifn" firstAttribute="top" secondItem="RIf-xB-K0K" secondAttribute="top" constant="30" id="CGp-ys-6zj"/>
                             <constraint firstItem="GfS-HZ-Ifn" firstAttribute="leading" secondItem="RIf-xB-K0K" secondAttribute="leading" constant="8" id="Gj1-Gj-4Cg"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="top" secondItem="GfS-HZ-Ifn" secondAttribute="bottom" constant="16" id="hqF-fx-mP9"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="trailing" secondItem="GfS-HZ-Ifn" secondAttribute="trailing" id="iDn-Cx-S2k"/>
                             <constraint firstItem="RIf-xB-K0K" firstAttribute="trailing" secondItem="GfS-HZ-Ifn" secondAttribute="trailing" constant="8" id="l0f-n4-E2D"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="leading" secondItem="GfS-HZ-Ifn" secondAttribute="leading" id="qSu-25-bEJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RIf-xB-K0K"/>
                     </view>
                     <connections>
+                        <outlet property="datePickerField" destination="gCz-Nh-h8y" id="0Xl-K3-2jP"/>
                         <outlet property="pickerField" destination="GfS-HZ-Ifn" id="aHn-Rj-ooq"/>
                     </connections>
                 </viewController>
