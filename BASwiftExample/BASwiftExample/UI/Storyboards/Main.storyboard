@@ -10,6 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Dashboard-->
+        <scene sceneID="pvT-to-wYA">
+            <objects>
+                <viewController id="9vk-4D-MAW" customClass="DashboardViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ypR-W4-odT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-nf-xtA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yzg-T8-orV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mvR-nf-xtA" firstAttribute="top" secondItem="ifi-vl-WMp" secondAttribute="top" id="DJK-Z9-kG4"/>
+                            <constraint firstItem="mvR-nf-xtA" firstAttribute="leading" secondItem="ifi-vl-WMp" secondAttribute="leading" id="MH7-cZ-Zo3"/>
+                            <constraint firstItem="ifi-vl-WMp" firstAttribute="bottom" secondItem="mvR-nf-xtA" secondAttribute="bottom" id="k19-d2-flZ"/>
+                            <constraint firstItem="ifi-vl-WMp" firstAttribute="trailing" secondItem="mvR-nf-xtA" secondAttribute="trailing" id="saV-NK-OeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ifi-vl-WMp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="txQ-1g-5lI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mvR-nf-xtA" id="TBq-bh-1GD"/>
+                        <segue destination="w73-tq-154" kind="show" identifier="toProgress" id="qK2-RZ-sTy"/>
+                        <segue destination="k7F-Fz-Xaa" kind="show" identifier="toTable" id="dq6-cZ-Sw0"/>
+                        <segue destination="g9x-Mp-Ctu" kind="show" identifier="toCollection" id="iKd-Ev-DHQ"/>
+                        <segue destination="9rf-zI-FDJ" kind="show" identifier="toPicker" id="OUM-Jt-Jwj"/>
+                        <segue destination="pRG-3W-TW4" kind="show" identifier="toLocation" id="idO-KQ-KLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dha-m9-RK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="-30"/>
+        </scene>
         <!--Main-->
         <scene sceneID="R5E-W8-ARg">
             <objects>
@@ -43,24 +86,15 @@
                                     <action selector="stopParentProgress:" destination="w73-tq-154" eventType="touchUpInside" id="EeU-dz-uiD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Ug-yOV">
-                                <rect key="frame" x="168" y="521" width="38" height="30"/>
-                                <state key="normal" title="Show"/>
-                                <connections>
-                                    <segue destination="k7F-Fz-Xaa" kind="show" id="yof-Pk-504"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.36078431370000003" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="leading" secondItem="dmB-iA-GAU" secondAttribute="leading" id="8Z7-Ym-lJY"/>
                             <constraint firstItem="LY1-fz-Kxm" firstAttribute="centerX" secondItem="LtL-L1-yEL" secondAttribute="centerX" id="EHw-ie-mIb"/>
-                            <constraint firstItem="Ie0-Ug-yOV" firstAttribute="centerX" secondItem="LY1-fz-Kxm" secondAttribute="centerX" id="GiU-G8-f9v"/>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="top" secondItem="dmB-iA-GAU" secondAttribute="top" id="QBB-kg-r20"/>
                             <constraint firstItem="e6P-lt-Mqs" firstAttribute="top" secondItem="LY1-fz-Kxm" secondAttribute="bottom" constant="15" id="dcp-cB-RKg"/>
                             <constraint firstItem="e6P-lt-Mqs" firstAttribute="centerX" secondItem="LY1-fz-Kxm" secondAttribute="centerX" id="jOY-nZ-7T5"/>
                             <constraint firstItem="dmB-iA-GAU" firstAttribute="bottom" secondItem="LY1-fz-Kxm" secondAttribute="bottom" constant="78" id="mOY-JT-hq2"/>
-                            <constraint firstItem="LY1-fz-Kxm" firstAttribute="top" secondItem="Ie0-Ug-yOV" secondAttribute="bottom" constant="8" id="n60-we-BQY"/>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="trailing" secondItem="dmB-iA-GAU" secondAttribute="trailing" id="wbz-Fy-LKZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dmB-iA-GAU"/>
@@ -98,7 +132,6 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="8bb-dQ-6FK" id="gHH-6a-grI"/>
-                        <segue destination="g9x-Mp-Ctu" kind="show" identifier="showCollectionSegue" id="Yrq-tU-pvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbx-lr-nUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,7 +169,6 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Dsh-kR-fsW" id="80b-Ew-9ld"/>
-                        <segue destination="9rf-zI-FDJ" kind="show" identifier="toPicker" id="ZTD-Sa-pog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6B-bR-7tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,14 +198,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olS-4X-Oo1">
-                                <rect key="frame" x="162" y="541" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To Map"/>
-                                <connections>
-                                    <segue destination="pRG-3W-TW4" kind="show" id="OoC-b1-deX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -237,12 +261,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="w73-tq-154" kind="relationship" relationship="rootViewController" id="zED-6a-H1X"/>
+                        <segue destination="9vk-4D-MAW" kind="relationship" relationship="rootViewController" id="aEn-58-5BJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSi-7F-weF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-545" y="-10"/>
+            <point key="canvasLocation" x="-1465" y="-30"/>
         </scene>
     </scenes>
 </document>

@@ -24,7 +24,6 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
         tableViewAdapter = DetailTableAdapter.init(tableView, [UIDetailItem(), UIItem(),
                                                                UIDetailItem(), UIDetailItem(),
                                                                UIItem(), UIDetailItem()])
-        tableViewAdapter?.delegate = self
         
     }
 
@@ -41,9 +40,5 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
     }
 }
 
-extension DetailViewController : DetailTableViewDelegate{
-    func onSelectItem() {
-        performSegue(withIdentifier: "showCollectionSegue", sender: nil)
-    }
-}
+
 

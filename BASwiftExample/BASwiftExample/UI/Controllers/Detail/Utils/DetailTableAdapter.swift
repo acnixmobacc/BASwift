@@ -10,7 +10,6 @@ import BASwift
 
 class DetailTableAdapter : TableViewAdapter<[ICellData]>{
 
-    weak var delegate : DetailTableViewDelegate?
     
     override func registerNibs() {
         ItemTableViewCell.registerSelf(tableView)
@@ -86,10 +85,5 @@ class DetailTableAdapter : TableViewAdapter<[ICellData]>{
         }
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        super.tableView(tableView, didSelectRowAt: indexPath)
-        delegate?.onSelectItem()
     }
 }
