@@ -13,6 +13,7 @@ enum DashboardItemType : String{
     case collection = "Collection Adapter"
     case table = "Table Adapter"
     case location = "Location Manager"
+    case login = "Login"
 }
 
 class UIDashboardItem : ICellData{

@@ -47,11 +47,20 @@
                         <segue destination="g9x-Mp-Ctu" kind="show" identifier="toCollection" id="iKd-Ev-DHQ"/>
                         <segue destination="9rf-zI-FDJ" kind="show" identifier="toPicker" id="OUM-Jt-Jwj"/>
                         <segue destination="pRG-3W-TW4" kind="show" identifier="toLocation" id="idO-KQ-KLt"/>
+                        <segue destination="QGa-bo-i5O" kind="presentation" identifier="toLogin" id="fDB-Oo-Fap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dha-m9-RK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-578" y="-30"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="cns-ps-CEQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="QGa-bo-i5O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpU-cS-QiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="549"/>
         </scene>
         <!--Main-->
         <scene sceneID="R5E-W8-ARg">

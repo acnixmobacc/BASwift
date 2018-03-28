@@ -85,7 +85,7 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
     
     private func setLocationManagerProperty() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     public func requestAlwaysAuthorization(){

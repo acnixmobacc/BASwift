@@ -13,7 +13,7 @@ class DashboardViewController : BA_BaseViewController<DashboardViewModel>{
     lazy var menuItems : [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),
                 UIDashboardItem(withType: .collection), UIDashboardItem(withType: .table),
-                UIDashboardItem(withType: .location)]
+                UIDashboardItem(withType: .location), UIDashboardItem(withType: .login)]
     }()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,6 +45,8 @@ extension DashboardViewController : DashboardCollectionAdapterDelegate{
             performSegue(withIdentifier: "toPicker", sender: nil)
         case .location:
             performSegue(withIdentifier: "toLocation", sender: nil)
+        case .login:
+            performSegue(withIdentifier: "toLogin", sender: nil)
         }
     }
 }
