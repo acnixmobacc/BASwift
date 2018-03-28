@@ -23,7 +23,7 @@ open class DatePicker : NSObject{
                 _pickerView.datePickerMode = .date
             }
             
-            return _pickerView;
+            return _pickerView
         }
         
         set(value){

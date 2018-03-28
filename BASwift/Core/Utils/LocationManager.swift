@@ -13,19 +13,21 @@ public protocol LocationManagerDelegate: class {
     func onUserLocationUpdate(_ location: CLLocationCoordinate2D)
 }
 
-open class LocationManager<T: BA_BaseViewModelProtocol> : NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
+open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
-    weak var delegate: LocationManagerDelegate?
+    fileprivate static let annotationID = "Pin"
+    
+    public weak var delegate: LocationManagerDelegate?
 
     private var locationManager: CLLocationManager = CLLocationManager()
-    private var _userLocationUpdateEnabled: Bool!
+    
+    private var _updateUserLocation: Bool!
 
     var leftPadding: CGFloat = 30.0
     var rightPadding: CGFloat = 30.0
     var topPadding: CGFloat = 30.0
     var bottomPadding: CGFloat = 30.0
 
-    var locationVM: T
     var mapView: MKMapView
 
     public var permissionStatus: CLAuthorizationStatus {
@@ -41,44 +43,70 @@ open class LocationManager<T: BA_BaseViewModelProtocol> : NSObject, CLLocationMa
         }
     }
 
-    public var isUserLocationUpdateEnabled: Bool {
+    public var updateUserLocation: Bool {
         set(value) {
-            _userLocationUpdateEnabled = value
+            _updateUserLocation = value
             value == true ? locationManager.startUpdatingLocation() : locationManager.stopUpdatingLocation()
         }
 
         get {
-            return _userLocationUpdateEnabled
+            return _updateUserLocation
         }
     }
 
-    public var userLocation: CLLocationCoordinate2D! {
+    public var userLocation: CLLocationCoordinate2D? {
         didSet {
-            delegate?.onUserLocationUpdate(userLocation)
-            didUpdateUserLocation()
+            if let userLocation = userLocation{
+                delegate?.onUserLocationUpdate(userLocation)
+                didUpdateUserLocation()
+            }
         }
     }
-
-    public init(_ viewModel: T, mapView: MKMapView) {
-        self.locationVM = viewModel
+    
+    public init(withMapView mapView: MKMapView) {
         self.mapView = mapView
         super.init()
+        self.setMapView()
+    }
+    
+    public func setMapView(){
         self.mapView.delegate = self
+        setVisiblePadding()
         setLocationManagerProperty()
     }
 
+    public func setVisiblePadding(top:CGFloat = 30.0, left:CGFloat = 30.0,
+                                  bottom:CGFloat = 30.0, right:CGFloat = 30.0){
+        self.topPadding = top
+        self.leftPadding = left
+        self.bottomPadding = bottom
+        self.rightPadding = right
+    }
+    
     private func setLocationManagerProperty() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        isUserLocationUpdateEnabled = true
-
+    }
+    
+    public func requestAlwaysAuthorization(){
+        locationManager.requestAlwaysAuthorization()
     }
 
+    public func requestWhenInUseAuthorization(){
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         userLocation = (manager.location?.coordinate)!
-
+    }
+    
+    public func zoomUserLocation(){
+        if let userLocation = self.userLocation{
+            let center = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+            region.center = mapView.userLocation.coordinate
+            mapView.setRegion(region, animated: true)
+        }
     }
 
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -111,8 +139,10 @@ open class LocationManager<T: BA_BaseViewModelProtocol> : NSObject, CLLocationMa
             return nil
         }
 
-        let pinIdent = "Pin"
+        let pinIdent = LocationManager.annotationID
+        
         var pinView: MKPinAnnotationView
+        
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdent) as? MKPinAnnotationView {
             dequeuedView.annotation = annotation
             pinView = dequeuedView
@@ -144,6 +174,10 @@ open class LocationManager<T: BA_BaseViewModelProtocol> : NSObject, CLLocationMa
             }
         }
 
+        setVisibility(zoomRect)
+    }
+    
+    private func setVisibility(_ zoomRect:MKMapRect){
         mapView.setVisibleMapRect(zoomRect,
                                   edgePadding: UIEdgeInsets(top: topPadding, left: leftPadding,
                                                             bottom: bottomPadding, right: rightPadding),

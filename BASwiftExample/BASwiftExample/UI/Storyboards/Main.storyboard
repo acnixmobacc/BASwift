@@ -166,6 +166,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olS-4X-Oo1">
+                                <rect key="frame" x="162" y="541" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="To Map"/>
+                                <connections>
+                                    <segue destination="pRG-3W-TW4" kind="show" id="OoC-b1-deX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -186,6 +194,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lo6-Jb-aXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2618" y="-27"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="as3-ZQ-Df2">
+            <objects>
+                <viewController title="Location" id="pRG-3W-TW4" customClass="LocationViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VjS-r4-phk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-kl-oTg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="kXU-2m-b77"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="leading" secondItem="Eds-6c-ho0" secondAttribute="leading" id="70g-Gr-MTh"/>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="top" secondItem="Eds-6c-ho0" secondAttribute="top" id="RlU-OL-YoW"/>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="trailing" secondItem="Eds-6c-ho0" secondAttribute="trailing" id="jVz-kn-s5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eds-6c-ho0"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="lv8-kl-oTg" id="h7N-3f-RYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAg-Oe-rrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412" y="-26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oOP-SB-6Se">

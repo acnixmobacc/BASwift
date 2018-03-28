@@ -412,7 +412,6 @@
 				B6D7E6F2204BF97100A5D803 /* TableViewAdapter.swift */,
 				B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */,
 				B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */,
-				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
 				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
 			);
 			path = Adapters;
@@ -421,6 +420,7 @@
 		B6D7E69D20497BFF00A5D803 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
 				B6D7E6B32049E59400A5D803 /* MockDataUtilities.swift */,
 				B6D7E69F2049CAAA00A5D803 /* Constant.swift */,
 				B638D69920629B5A00657087 /* DependencyManager.swift */,
