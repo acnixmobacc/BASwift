@@ -17,7 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="YgO-mB-5qS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-Y2-ur4">
+                                <rect key="frame" x="8" y="128" width="359" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ogb-Dz-Msq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-JT-U29">
+                                <rect key="frame" x="8" y="180" width="359" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gW8-Me-QAQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-rP-dUb">
+                                <rect key="frame" x="8" y="274" width="359" height="50"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pau-v2-6Iu"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginAction:" destination="LVD-JK-Tln" eventType="touchUpInside" id="frf-xw-aL8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O5h-Y2-ur4" firstAttribute="top" secondItem="oxE-bP-yie" secondAttribute="top" constant="64" id="AGF-t6-yw0"/>
+                            <constraint firstItem="Idf-JT-U29" firstAttribute="top" secondItem="O5h-Y2-ur4" secondAttribute="bottom" constant="8" id="Bkd-o4-HkC"/>
+                            <constraint firstItem="oxE-bP-yie" firstAttribute="trailing" secondItem="O5h-Y2-ur4" secondAttribute="trailing" constant="8" id="DWp-he-jKk"/>
+                            <constraint firstItem="Idf-JT-U29" firstAttribute="leading" secondItem="O5h-Y2-ur4" secondAttribute="leading" id="Snh-Ox-SKt"/>
+                            <constraint firstItem="54O-rP-dUb" firstAttribute="top" secondItem="Idf-JT-U29" secondAttribute="bottom" constant="50" id="WuQ-Oy-KEQ"/>
+                            <constraint firstItem="54O-rP-dUb" firstAttribute="leading" secondItem="Idf-JT-U29" secondAttribute="leading" id="kDb-LW-BC1"/>
+                            <constraint firstItem="54O-rP-dUb" firstAttribute="trailing" secondItem="Idf-JT-U29" secondAttribute="trailing" id="mcN-7e-UAo"/>
+                            <constraint firstItem="O5h-Y2-ur4" firstAttribute="leading" secondItem="oxE-bP-yie" secondAttribute="leading" constant="8" id="prd-I1-tr5"/>
+                            <constraint firstItem="Idf-JT-U29" firstAttribute="trailing" secondItem="O5h-Y2-ur4" secondAttribute="trailing" id="zwx-sc-4oQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oxE-bP-yie"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="RFM-1k-nHQ">
@@ -27,6 +76,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordField" destination="Idf-JT-U29" id="3Y6-x2-7ey"/>
+                        <outlet property="usernameField" destination="O5h-Y2-ur4" id="lEo-HA-gRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxq-qn-SrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

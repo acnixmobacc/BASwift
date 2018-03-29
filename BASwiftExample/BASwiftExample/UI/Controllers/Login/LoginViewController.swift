@@ -10,8 +10,23 @@ import BASwift
 
 class LoginViewController : BA_BaseViewController<LoginViewModel>{
     
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    lazy var touchIDManager : TouchIDManager = {
+        return TouchIDManager()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func loginAction(_ sender: Any) {
+        touchIDManager.authenticateUser(reasonText: "Test", successBlock: {[weak self] result in
+            self?.dismiss(animated: true, completion: nil)
+        }) {[weak self] error in
+            self?.showAlert(BaseAlert.init(message: error.localizedDescription))
+        }
     }
     
     @IBAction func closeAction(_ sender: Any) {
