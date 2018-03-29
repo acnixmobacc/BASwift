@@ -14,6 +14,26 @@ enum DashboardItemType : String{
     case table = "Table Adapter"
     case location = "Location Manager"
     case login = "Login"
+    case form = "Form"
+    
+    var segueIdentifier : String{
+        switch self {
+        case .progress:
+            return "toProgress"
+        case .picker:
+            return "toPicker"
+        case .collection:
+            return "toCollection"
+        case .table:
+            return "toTable"
+        case .location:
+            return "toLocation"
+        case .login:
+            return "toLogin"
+        case .form:
+            return "toForm"
+        }
+    }
 }
 
 class UIDashboardItem : ICellData{

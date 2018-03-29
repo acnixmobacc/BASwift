@@ -13,7 +13,8 @@ class DashboardViewController : BA_BaseViewController<DashboardViewModel>{
     lazy var menuItems : [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),
                 UIDashboardItem(withType: .collection), UIDashboardItem(withType: .table),
-                UIDashboardItem(withType: .location), UIDashboardItem(withType: .login)]
+                UIDashboardItem(withType: .location), UIDashboardItem(withType: .login),
+                UIDashboardItem(withType: .form)]
     }()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,20 +34,6 @@ class DashboardViewController : BA_BaseViewController<DashboardViewModel>{
 
 extension DashboardViewController : DashboardCollectionAdapterDelegate{    
     func onSelectItem(_ item: UIDashboardItem) {
-    
-        switch item.type {
-        case .progress:
-            performSegue(withIdentifier: "toProgress", sender: nil)
-        case .collection:
-            performSegue(withIdentifier: "toCollection", sender: nil)
-        case .table:
-            performSegue(withIdentifier: "toTable", sender: nil)
-        case .picker:
-            performSegue(withIdentifier: "toPicker", sender: nil)
-        case .location:
-            performSegue(withIdentifier: "toLocation", sender: nil)
-        case .login:
-            performSegue(withIdentifier: "toLogin", sender: nil)
-        }
+        performSegue(withIdentifier: item.type.segueIdentifier, sender: nil)
     }
 }

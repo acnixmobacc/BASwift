@@ -27,14 +27,13 @@ open class TouchIDManager {
             return
         }
 
-        context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
-                               localizedReason: reasonText, reply: { success, error in
+        context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonText,
+                               reply: { success, error in
                                 if success {
                                     successBlock(success)
                                 } else {
                                     errorBlock(error! as NSError)
                                 }
-
         })
 
     }
