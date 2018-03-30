@@ -61,7 +61,7 @@
                 <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="FormViewController" id="fGF-3J-NaI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOO-u4-zDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="549"/>
+            <point key="canvasLocation" x="-71" y="549"/>
         </scene>
         <!--Login-->
         <scene sceneID="cns-ps-CEQ">
@@ -81,18 +81,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-vO-6k7" customClass="LoadableView" customModule="BASwift">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.75686274509999996" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8ou-th-4sL"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY1-fz-Kxm">
-                                <rect key="frame" x="151" y="559" width="72" height="30"/>
+                                <rect key="frame" x="118" y="559" width="138" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="cs3-fB-Eay"/>
                                     <constraint firstAttribute="height" constant="30" id="pVf-Nz-dBg"/>
                                 </constraints>
-                                <state key="normal" title="Stop Child"/>
+                                <state key="normal" title="Start Child Progress"/>
+                                <state key="selected" title="Stop Child Progress"/>
                                 <connections>
                                     <action selector="stopChildProgress:" destination="w73-tq-154" eventType="touchUpInside" id="BwX-ni-PNv"/>
                                 </connections>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94901960780000005" green="0.36078431370000003" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="leading" secondItem="dmB-iA-GAU" secondAttribute="leading" id="8Z7-Ym-lJY"/>
                             <constraint firstItem="LY1-fz-Kxm" firstAttribute="centerX" secondItem="LtL-L1-yEL" secondAttribute="centerX" id="EHw-ie-mIb"/>
@@ -119,6 +119,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="yla-E2-nTR"/>
                     <connections>
+                        <outlet property="childProgressButton" destination="LY1-fz-Kxm" id="Wj6-ut-rjN"/>
                         <outlet property="childView" destination="Nue-vO-6k7" id="hIZ-IP-VBD"/>
                     </connections>
                 </viewController>

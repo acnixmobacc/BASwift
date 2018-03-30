@@ -12,12 +12,17 @@ import BASwift
 class MainViewController: BA_BaseViewController<MainViewModel> {
 
     @IBOutlet weak var childView: LoadableView!
-
+    @IBOutlet weak var childProgressButton: UIButton!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
     }
 
     @IBAction func stopChildProgress(_ sender: Any) {
+        childProgressButton.isSelected = !childProgressButton.isSelected
+        
+        childProgressButton.isSelected ? childView.showLoading() :
+            childView.hideLoading()
     }
     
     

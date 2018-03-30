@@ -26,6 +26,6 @@ public extension UIColor {
     }
 
     class var animationBackground: UIColor {
-        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)
+        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6)
     }
 }
