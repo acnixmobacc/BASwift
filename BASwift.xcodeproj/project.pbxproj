@@ -49,8 +49,6 @@
 		B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */; };
 		B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */; };
 		B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */; };
-		B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */; };
-		B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */; };
 		B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */; };
 		B6D7E6B02049CAAB00A5D803 /* UIImageView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */; };
 		B6D7E6B22049CAAB00A5D803 /* UIColor+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */; };
@@ -146,8 +144,6 @@
 		B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BASwift.swift"; sourceTree = "<group>"; };
-		B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+BASwift.swift"; sourceTree = "<group>"; };
-		B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BASwift.swift"; sourceTree = "<group>"; };
@@ -440,11 +436,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6A02049CAAA00A5D803 /* NSMutableAttributedString+BASwift.swift */,
-				B6D7E6A42049CAAB00A5D803 /* UIButton+BASwift.swift */,
 				B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */,
 				B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */,
 				B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */,
-				B6D7E6A32049CAAB00A5D803 /* UITextField+BASwift.swift */,
 				B638D69720629A4200657087 /* UIView+XIB.swift */,
 				B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */,
 				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
@@ -717,9 +711,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BASwift/Pods-BASwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -729,9 +720,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -863,7 +851,6 @@
 				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
-				B6D7E6AE2049CAAB00A5D803 /* UIButton+BASwift.swift in Sources */,
 				B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */,
 				B6B2E4D620724D8800E5FBB6 /* WebServiceFactory.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
@@ -899,7 +886,6 @@
 				B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
-				B6D7E6AD2049CAAB00A5D803 /* UITextField+BASwift.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,
 				B68ED23420653C7300FD397F /* IContentManager.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */,
