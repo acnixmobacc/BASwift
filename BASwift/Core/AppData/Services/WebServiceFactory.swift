@@ -10,9 +10,14 @@ import Alamofire
 import SwiftyJSON
 
 
-public class DataProvider : IDataProvider{
+public class WebServiceFactory : IWebServiceFactory{
+    
+    public required init(){
+        
+    }
+    
     @discardableResult
-    func loadList<T:IEntity>(request: ServiceResource, onSuccess: @escaping ([T]) -> Void,
+    public func loadList<T:IEntity>(request: ServiceResource, onSuccess: @escaping ([T]) -> Void,
                      onError: @escaping (Error?) -> Void) -> DataRequest
     {
         return Alamofire.request(request.url, method: request.method, parameters: request.param,
@@ -35,7 +40,7 @@ public class DataProvider : IDataProvider{
     
     
     @discardableResult
-    func load<T:IEntity>(request : ServiceResource, onSuccess:@escaping (T)->Void,
+    public func load<T:IEntity>(request : ServiceResource, onSuccess:@escaping (T)->Void,
                  onError:@escaping (Error?)->Void) ->  DataRequest{
         
         return Alamofire.request(request.url, method: request.method, parameters: request.param,

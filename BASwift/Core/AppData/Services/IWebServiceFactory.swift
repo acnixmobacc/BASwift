@@ -8,7 +8,9 @@
 
 import Alamofire
 
-protocol IDataProvider {
+public protocol IWebServiceFactory {
+    init()
+    
     func load<T:IEntity>(request : ServiceResource, onSuccess:@escaping (T)->Void,
                                   onError:@escaping (Error?)->Void) ->  DataRequest
     

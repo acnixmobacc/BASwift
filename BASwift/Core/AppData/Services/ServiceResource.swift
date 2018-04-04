@@ -12,19 +12,19 @@ public typealias JSONDictionary = [String : Any]?
 
 public typealias HeaderDictionary = [String : String]?
 
-class ServiceResource{
+public class ServiceResource{
     
-    var url:URL
+    public var url:URL
     
-    var header : HeaderDictionary
+    public var header : HeaderDictionary
     
-    var param : JSONDictionary
+    public var param : JSONDictionary
     
-    var method: HTTPMethod
+    public var method: HTTPMethod
     
-    var encoding : ParameterEncoding
+    public var encoding : ParameterEncoding
     
-    init(withURL url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
+    public init(withURL url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
          method:HTTPMethod = .get, encoding:ParameterEncoding = URLEncoding.default ) {
         
         guard let url = URL(string: url) else{
@@ -39,7 +39,7 @@ class ServiceResource{
     }
     
     
-    init(withPostUrl url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
+    public init(withPostUrl url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
          encoding:ParameterEncoding = URLEncoding.default)
     {
         guard let url = URL(string: url) else{
