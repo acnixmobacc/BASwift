@@ -1,0 +1,87 @@
+//
+//  MockDataUtilTests.swift
+//  BASwiftTests
+//
+//  Created by Burak Akkaya on 4.04.2018.
+//  Copyright © 2018 Burak Akkaya. All rights reserved.
+//
+
+import XCTest
+import BASwift
+import SwiftyJSON
+
+class BrandObject : IEntity{
+    var brands : [Brand]
+    
+    required init(withData data: JSON) {
+        brands = data["brands"].arrayValue.map{ item in
+            return Brand.init(withData: item)
+        }
+    }
+}
+
+class Brand : IEntity{
+    var id : String
+    var name : String
+    var logoURL : String
+
+    required init(withData data: JSON) {
+        self.id = data["id"].stringValue
+        self.name = data["name"].stringValue
+        self.logoURL = data["logo"].stringValue
+    }
+}
+
+
+class MockDataUtilTests: XCTestCase {
+        
+    override func setUp() {
+        super.setUp()
+        
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        // In UI tests it is usually best to stop immediately when a failure occurs.
+        continueAfterFailure = false
+
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    
+    func testJSONDataFromFile(){
+        MockDataUtilities.getData(fileName: "data", onSuccess: { (brandObj:BrandObject) in
+            XCTAssertTrue(brandObj.brands[0].name == "Toyota" && brandObj.brands[0].id == "0")
+        }, onFailure: { _ in
+            XCTFail("JSON converter fail")
+        })
+    }
+    
+    func testJSONDataArrayFromFile(){
+        MockDataUtilities.getListData(fileName: "data_array", onSuccess: { (brand:[Brand]) in
+            XCTAssertTrue(brand[1].name == "Renault" && brand[1].id == "1")
+        }, onFailure: { _ in
+            XCTFail("JSON converter fail")
+        })
+    }
+    
+    func testFileNotExist(){
+        MockDataUtilities.getData(fileName: "notExistFileName", onSuccess: { (brandObj:BrandObject) in
+            XCTFail("Not Exist File Test Fail")
+        }, onFailure: { error in
+            XCTAssertTrue(error == FileError.fileNotExist)
+        })
+    }
+    
+    func testNotValidJSONFile(){
+        MockDataUtilities.getData(fileName: "not_valid", onSuccess: { (brandObj:BrandObject) in
+            XCTFail("Not Valid File Test Fail")
+        }, onFailure: { error in
+            XCTAssertTrue(error == FileError.contentsNotValid)
+        })
+    }
+    
+}

@@ -12,7 +12,7 @@ def core_pods
 end
 
 def ui_pods
-    pod 'ReactiveCocoa', '7.0.0-alpha.2'
+    pod 'ReactiveCocoa', '~> 7.0'
     pod 'NVActivityIndicatorView'
     pod 'SwiftyJSON', '~> 3.1'
     pod 'Alamofire', '~> 4.4'
