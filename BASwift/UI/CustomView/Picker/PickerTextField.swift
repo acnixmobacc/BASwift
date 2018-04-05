@@ -87,26 +87,4 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
         resignFirstResponder()
         picker?.onClickCancel(self)
     }
-
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resignFirstResponder()
-        return true
-    }
-
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return true
-    }
-
-    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return textRect(forBounds: bounds)
-    }
-
-    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        let textRect = super.rightViewRect(forBounds: bounds)
-        return textRect
-    }
-
-    override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width, height: bounds.size.height)
-    }
 }

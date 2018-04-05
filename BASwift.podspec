@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
   s.source_files = 'BASwift/Core/**/*.swift', 'BASwift/Core/**/**/*.swift', 'BASwift/Core/**/**/**/*.swift', 'BASwift/UI/**/*.swift', 'BASwift/UI/**/**/*.swift'
 
   s.dependency 'Swinject', '~> 2.1.0'
-  s.dependency 'ReactiveCocoa', '7.0.0-alpha.2'
   s.dependency 'NVActivityIndicatorView'
   s.dependency 'SwiftyJSON', '~> 3.1'
   s.dependency 'Alamofire', '~> 4.4'

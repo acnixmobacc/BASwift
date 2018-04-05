@@ -20,7 +20,7 @@ class PickerViewController : BA_BaseViewController<PickerViewModel>{
     
         pickerField.setPickerView(withPicker: Picker(dataArray: ["Trabzonspor", "Man Utd", "Catamara FC", "Milan", "Real Madrid", "Barcelona"]))
         
-        datePickerField.setPickerView(withPicker: DatePicker.init())
+        datePickerField.setDatePickerView(withPicker: DatePicker.init())
     }
     
 }

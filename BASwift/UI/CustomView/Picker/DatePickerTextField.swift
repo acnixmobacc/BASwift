@@ -32,17 +32,17 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
     }
     
     
-    open func setPickerView(withPicker picker:DatePicker){
+    open func setDatePickerView(withPicker picker:DatePicker){
         self.picker = picker
-        setPicker()
+        setDatePicker()
     }
     
-    open func setPickerView(withFormat format:String = "dd.MM.yyyy"){
+    open func setDatePickerView(withFormat format:String = "dd.MM.yyyy"){
         self.picker = DatePicker(withDateFormat : format)
-        setPicker()
+        setDatePicker()
     }
     
-    private func setPicker(){
+    private func setDatePicker(){
         guard let picker = self.picker else{
             fatalError("Picker view must be initialized")
         }

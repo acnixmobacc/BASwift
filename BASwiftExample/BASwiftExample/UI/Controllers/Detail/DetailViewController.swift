@@ -16,7 +16,7 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
     var tableViewAdapter : DetailTableAdapter?
     
     override lazy var progressManager: ILoadable = {[unowned self] in
-        return ProgressHUDManager.init(forView: self.view, dismissStrategy: .immediately)
+        return ProgressHUDManager.init(forView: self.view, dismissStrategy: .countable)
     }()
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,18 +26,15 @@ class DetailViewController: BA_BaseViewController<DetailViewModel> {
                                                                UIItem(), UIDetailItem()])
         
     }
-
-    @IBAction func stopAction(_ sender: Any) {
-        hideProgress()
+    
+    @IBAction func stop(_ sender: Any) {
+        progressManager.hideLoading()
     }
     
-    @IBAction func startAction(_ sender: Any) {
-        //showProgress()
-        showContentMessage(withMessage: "Empty Message", handler: {[unowned self] in
-            let colorCode = CGFloat(Int(arc4random_uniform(255)))/255
-            self.tableView.backgroundColor = UIColor(white: colorCode, alpha: 1.0)
-        })
+    @IBAction func progressAction(_ sender: UIBarButtonItem) {
+        progressManager.showLoading()
     }
+    
 }
 
 

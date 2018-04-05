@@ -24,9 +24,5 @@ class MainViewController: BA_BaseViewController<MainViewModel> {
         childProgressButton.isSelected ? childView.showLoading() :
             childView.hideLoading()
     }
-    
-    
-    @IBAction func stopParentProgress(_ sender: Any) {
-        
-    }
+
 }
