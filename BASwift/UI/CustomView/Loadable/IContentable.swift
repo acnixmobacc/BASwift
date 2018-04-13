@@ -14,6 +14,7 @@ public protocol IContentable{
     func showMessage(withMessage message:String, handler: (() -> Void)?)
 }
 
+//MARK: - Content View
 public extension IContentable where Self:UIView{
     
     public func showMessage(withMessage message:String, handler: (() -> Void)?){

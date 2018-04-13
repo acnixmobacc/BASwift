@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: - View Interface
 public protocol BA_BaseViewProtocol: class {
     func onUpdateView()
 
@@ -20,6 +21,7 @@ public protocol BA_BaseViewProtocol: class {
     func showContentMessage(withMessage message:String, handler:(()->Void)?)
 }
 
+//MARK: - View Model Interface
 public protocol BA_BaseViewModelProtocol: class {
     init()
 
@@ -40,6 +42,7 @@ public protocol BA_BaseViewModelProtocol: class {
     func onDidLayoutSubviews()
 }
 
+//MARK: - Model Interface
 public protocol BA_BaseModelProtocol: class {
 
 }

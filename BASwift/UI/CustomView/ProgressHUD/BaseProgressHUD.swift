@@ -7,23 +7,9 @@
 //
 import UIKit
 
-open class NativeProgressOptions : ProgressOptions{
-    var style : UIActivityIndicatorViewStyle
-    
-    init(withFrame frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
-         withStyle style: UIActivityIndicatorViewStyle = .white)
-    {
-        self.style = style
-        super.init(withFrame: frame)
-    }
-    
-    static let `nativeDefault`: ProgressOptions = {
-        return NativeProgressOptions()
-    }()
-    
-}
-
 public class BaseProgressHUD: IProgressHUD {
+    
+    //MARK: - Properties
     public var isLoading: Bool
     
     public var options: ProgressOptions
@@ -32,12 +18,30 @@ public class BaseProgressHUD: IProgressHUD {
     
     var transparentView: UIView?
     
+    //MARK: - Initialization
     public required init(withOptions options: ProgressOptions) {
         self.options = options
         self.isLoading = false
         setProgressOptions()
     }
     
+    //MARK: - Methods
+    public func start(inView view:UIView) {
+        isLoading = true
+        options.showTransparentView ? startWithTransparentView(inView: view)
+            : startWithoutTransparentView(inView: view)
+        
+        setActivityIndicatorCenterPoint(inView:view)
+        self.activityIndicator.startAnimating()
+    }
+    
+    public func stop() {
+        isLoading = false
+        transparentView?.removeFromSuperview()
+        self.activityIndicator.stopAnimating()
+    }
+    
+    //MARK: - Private Methods
     private func setProgressOptions(){
         guard let nativeProgressOption = options as? NativeProgressOptions else{
             fatalError("Option not for native indicatoır")
@@ -57,15 +61,6 @@ public class BaseProgressHUD: IProgressHUD {
         activityIndicator.center = CGPoint(x: centerX, y: centerY)
     }
     
-    public func start(inView view:UIView) {
-        isLoading = true
-        options.showTransparentView ? startWithTransparentView(inView: view) 
-            : startWithoutTransparentView(inView: view)
-        
-        setActivityIndicatorCenterPoint(inView:view)
-        self.activityIndicator.startAnimating()
-    }
-    
     private func startWithTransparentView(inView view:UIView){
         initTransparentView(withFrame: CGRect(x: 0, y: 0, width: view.frame.width,
                                               height: view.frame.height))
@@ -77,9 +72,5 @@ public class BaseProgressHUD: IProgressHUD {
         view.addSubview(activityIndicator)
     }
 
-    public func stop() {
-        isLoading = false
-        transparentView?.removeFromSuperview()
-        self.activityIndicator.stopAnimating()
-    }
+   
 }

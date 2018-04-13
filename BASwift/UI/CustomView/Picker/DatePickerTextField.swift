@@ -16,9 +16,10 @@ extension DatePickerTextField : PickerDelegate{
 
 open class DatePickerTextField: UITextField, UITextFieldDelegate {
     
+    //MARK: - Properties
     public var picker : DatePicker?
     
-    
+    //MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         delegate = self
@@ -31,7 +32,7 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         prepareViewComponent()
     }
     
-    
+    //MARK: - Methods
     open func setDatePickerView(withPicker picker:DatePicker){
         self.picker = picker
         setDatePicker()
@@ -42,15 +43,6 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         setDatePicker()
     }
     
-    private func setDatePicker(){
-        guard let picker = self.picker else{
-            fatalError("Picker view must be initialized")
-        }
-        
-        self.inputView = picker.pickerView
-        picker.delegate = self
-        
-    }
     
     public func prepareViewComponent() {
         addToolbar()
@@ -88,6 +80,16 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         picker?.onClickCancel(self)
     }
     
+    //MARK: - Private Methods
+    private func setDatePicker(){
+        guard let picker = self.picker else{
+            fatalError("Picker view must be initialized")
+        }
+        
+        self.inputView = picker.pickerView
+        picker.delegate = self
+        
+    }
     
 }
 

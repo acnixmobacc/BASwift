@@ -10,12 +10,15 @@ import UIKit
 
 class ContentManager : IContentManager{
 
+    //MARK: - Properties
     var view: UIView&IMessageView
     
+    //MARK: - Initialization
     required init(withView view: UIView&IMessageView) {
         self.view = view
     }
     
+    //MARK: - Methods
     func showMessage(withMessage message: String, handler: (() -> Void)? = nil) {
         self.view.showMessage(withMessage: message)
         self.view.handler = handler

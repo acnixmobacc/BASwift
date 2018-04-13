@@ -9,8 +9,11 @@
 import UIKit
 
 open class BaseCollectionDataModel: NSObject {
+    
+    //MARK: - Properties
     public var sections: [BaseCollectionSectionModel] = []
 
+    //MARK: - Initialization
     public init(_ sections: [BaseCollectionSectionModel] = []) {
         self.sections = sections
     }

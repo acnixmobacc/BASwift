@@ -9,11 +9,13 @@
 import UIKit
 
 open class BaseSectionModel: NSObject {
+    //MARK: - Private Properties
     private var _headerHeight: CGFloat
     private var _landscapeHeaderHeight: CGFloat!
     private var _footerHeight: CGFloat
     private var _landscapeFooterHeight: CGFloat!
 
+    //MARK: - Properties
     public var cellModels: [BaseCellModel]
     public var sectionText: String!
 
@@ -49,6 +51,7 @@ open class BaseSectionModel: NSObject {
         }
     }
 
+    //MARK: - Initialization
     public init(cellModels: [BaseCellModel] = [], headerHeight: CGFloat = 0,
                 landscapeHeaderHeight: CGFloat! = nil, footerHeight: CGFloat = 0,
                 landscapeFooterHeight: CGFloat! = nil, sectionText: String! = nil) {
@@ -60,6 +63,7 @@ open class BaseSectionModel: NSObject {
         self.sectionText = sectionText
     }
 
+    //MARK: - Methods
     open func headerView() -> UIView {
 
         let view = UIView()

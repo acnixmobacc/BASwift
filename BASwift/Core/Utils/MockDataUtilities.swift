@@ -26,6 +26,8 @@ public enum FileError: Error {
 }
 
 open class MockDataUtilities {
+    
+    //MARK: - Static Methods
     public static func getData<T: IEntity>(fileName: String, onSuccess: (T) -> Void,
                                                  onFailure:@escaping (FileError) -> Void) {
         do {
@@ -57,6 +59,7 @@ open class MockDataUtilities {
         }
     }
 
+    //MARK: - Private Static Methods
     private static func fileContentsToJSON(_ fileName: String) throws -> JSON {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {

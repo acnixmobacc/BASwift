@@ -8,17 +8,22 @@
 
 import UIKit
 
+//MARK: - Picker Delegate
 protocol PickerDelegate: class {
     func onSelectItem(value: String)
 }
 
+//MARK: - Picker
 open class Picker: NSObject {
+    
+    //MARK: - Private Methods
+    private var _pickerView: UIPickerView!
+    
+    //MARK: - Properties
     var data: [String]!
     
     var lastSelectedRow: Int?
     
-    private var _pickerView: UIPickerView!
-
     var pickerView: UIPickerView! {
         get {
             if _pickerView == nil {
@@ -38,6 +43,7 @@ open class Picker: NSObject {
 
     weak var delegate: PickerDelegate?
 
+    //MARK: - Initialization
     public init(dataArray: [String], selectedItem:String? = nil) {
         super.init()
         self.pickerView = UIPickerView()
@@ -51,6 +57,7 @@ open class Picker: NSObject {
         }
     }
     
+    //MARK: - Methods
     public func onClickDone(_ textField: PickerTextField) {
         if (textField.text?.length == 0) {
             self.pickerView.selectRow(0, inComponent: 0, animated: false)
@@ -73,6 +80,8 @@ open class Picker: NSObject {
 
 }
 
+
+//MARK: - UIPickerViewDataSource
 extension Picker: UIPickerViewDataSource {
 
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -84,6 +93,7 @@ extension Picker: UIPickerViewDataSource {
     }
 }
 
+//MARK: - UIPickerViewDelegate
 extension Picker: UIPickerViewDelegate {
 
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

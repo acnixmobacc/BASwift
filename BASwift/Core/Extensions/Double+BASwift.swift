@@ -10,7 +10,8 @@ import Foundation
 
 public extension Double {
 
-    var toString: String {
+    //MARK: - Properties
+    public var toString: String {
         return "\(self)"
     }
 

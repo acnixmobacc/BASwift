@@ -8,13 +8,16 @@
 import SDWebImage
 import UIKit
 
+//MARK: - Image View Loader
 public protocol ImageViewLoader {
     func setImage(withURLString urlString: String, isShowIndicator: Bool)
     func setImage(withURLString urlString: String, placeholder: UIImage, isShowIndicator: Bool)
 }
 
+//MARK: - UIImageView
 extension UIImageView: ImageViewLoader {
 
+    //MARK: - Methods
     public func setImage(withURLString urlString: String, isShowIndicator: Bool = false) {
         if let url = URL(string: urlString) {
             self.sd_setShowActivityIndicatorView(isShowIndicator)

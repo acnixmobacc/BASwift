@@ -14,6 +14,7 @@ public typealias HeaderDictionary = [String : String]?
 
 public class ServiceResource{
     
+    //MARK: - Properties
     public var url:URL
     
     public var header : HeaderDictionary
@@ -24,6 +25,8 @@ public class ServiceResource{
     
     public var encoding : ParameterEncoding
     
+    
+    //MARK: - Initialization
     public init(withURL url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
          method:HTTPMethod = .get, encoding:ParameterEncoding = URLEncoding.default ) {
         

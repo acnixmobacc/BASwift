@@ -8,17 +8,20 @@
 
 import UIKit
 
+//MARK: - Picker Delegate
 extension PickerTextField : PickerDelegate{
     func onSelectItem(value: String) {
         self.text = value
     }
 }
 
+//MARK: - Picker Text Field
 open class PickerTextField: UITextField, UITextFieldDelegate {
 
+    //MARK: - Properties
     public var picker : Picker?
     
-    
+    //MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         delegate = self
@@ -32,6 +35,7 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
     }
     
     
+    //MARK: - Methods
     open func setPickerView(withPicker picker:Picker){
         self.picker = picker
         setPicker()
@@ -42,16 +46,6 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
         setPicker()
     }
     
-    private func setPicker(){
-        guard let picker = self.picker else{
-            fatalError("Picker view must be initialized")
-        }
-        
-        self.inputView = picker.pickerView
-        picker.delegate = self
-        
-    }
-
     public func prepareViewComponent() {
         addToolbar()
     }
@@ -86,5 +80,16 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
     @objc public func cancelPressed() {
         resignFirstResponder()
         picker?.onClickCancel(self)
+    }
+    
+    //MARK: - Private Methods
+    private func setPicker(){
+        guard let picker = self.picker else{
+            fatalError("Picker view must be initialized")
+        }
+        
+        self.inputView = picker.pickerView
+        picker.delegate = self
+        
     }
 }

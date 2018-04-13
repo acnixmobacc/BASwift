@@ -16,6 +16,8 @@ public enum ProgressStrategy{
 
 
 open class ProgressHUDManager : ILoadable{
+    
+    //MARK: - Private Properties
     private var bussyCount: Int = 0{
         willSet{
             if(newValue == 1 && bussyCount == 0){
@@ -26,17 +28,21 @@ open class ProgressHUDManager : ILoadable{
         }
     }
     
-    public var progressHUD: IProgressHUD =  BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
-    
     private var view: UIView
     
     private var dismissStrategy : ProgressStrategy.DismissStrategy
     
+    //MARK: - Properties
+    public var progressHUD: IProgressHUD =  BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
+    
+    
+    //MARK: - Initialization
     public init(forView view:UIView, dismissStrategy:ProgressStrategy.DismissStrategy = .immediately) {
         self.dismissStrategy = dismissStrategy
         self.view = view
     }
     
+    //MARK: - Methods
     public func showLoading() {
         bussyCount += 1
     }

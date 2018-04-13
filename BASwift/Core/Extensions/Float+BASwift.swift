@@ -9,7 +9,9 @@
 import Foundation
 
 public extension Float {
-    var toString: String {
+    
+    //MARK: - Properties
+    public var toString: String {
         return "\(self)"
     }
 }

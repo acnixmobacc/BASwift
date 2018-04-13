@@ -16,16 +16,20 @@ public protocol  IMessageView{
 
 public class MessageView : UIView, IMessageView {
 
+    //MARK: - Properties
     public var handler: (() -> Void)?
     
+    //MARK: - UIElement
     @IBOutlet weak var messageLabel: UILabel!
 
+    //MARK: - UI Actions
     @IBAction func action(_ sender: UIButton) {
         if let handler = self.handler{
             handler()
         }
     }
     
+    //MARK: - Methods
     public func showMessage(withMessage message: String) {
         messageLabel.text = message
     }

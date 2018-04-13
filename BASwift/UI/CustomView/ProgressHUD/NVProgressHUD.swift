@@ -8,30 +8,8 @@
 import NVActivityIndicatorView
 import UIKit
 
-open class NVProgressOptions : ProgressOptions{
-    var type : NVActivityIndicatorType
-    
-    var userInteractionEnabled:Bool
-    
-    var color : UIColor
-    
-    
-    init(withFrame frame: CGRect = CGRect(x: 0, y: 0, width: 60, height: 60),
-         type: NVActivityIndicatorType = .ballGridPulse, color: UIColor = .white,
-         userInteractionEnabled:Bool = true)
-    {
-        self.type = type
-        self.color = color
-        self.userInteractionEnabled = userInteractionEnabled
-        super.init(withFrame: frame)
-    }
-    
-    static let `nvProgressDefault`: ProgressOptions = {
-        return NVProgressOptions()
-    }()
-}
-
 open class NVProgressHUD: IProgressHUD {
+    //MARK: - Properties
     public var isLoading: Bool
     
     public var options: ProgressOptions
@@ -42,6 +20,7 @@ open class NVProgressHUD: IProgressHUD {
     
     var transparentView: UIView?
     
+    //MARK: - Initalization
     public required init(withOptions options: ProgressOptions)
     {
         self.options = options
@@ -49,6 +28,7 @@ open class NVProgressHUD: IProgressHUD {
         setActivityIndicatorOption()
     }
 
+    //MARK: - Methods
     public func start(inView view: UIView) {
         parentView = view
         isLoading = true
@@ -67,6 +47,7 @@ open class NVProgressHUD: IProgressHUD {
         activityIndicator.stopAnimating()
     }
     
+    //MARK: - Private Methods
     private func startWithTransparentView(inView view:UIView){
         initTransparentView(withFrame: CGRect(x: 0, y: 0, width: view.frame.width,
                                               height: view.frame.height))

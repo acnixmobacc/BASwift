@@ -10,11 +10,13 @@ import UIKit
 
 open class DatePicker : NSObject{
     
-    var dateFormat : String
-    
+    //MARK: - Private Methods
     private var _pickerView: UIDatePicker!
     
+    //MARK: - Properties
     weak var delegate : PickerDelegate?
+    
+    var dateFormat : String
     
     var pickerView : UIDatePicker!{
         get{
@@ -41,7 +43,7 @@ open class DatePicker : NSObject{
         }
     }
     
-    
+    //MARK: - Initialization
     public init(withDateFormat dateFormat:String = "dd.MM.yyyy"){
         self.dateFormat = dateFormat
         super.init()
@@ -49,6 +51,7 @@ open class DatePicker : NSObject{
         
     }
     
+    //MARK: - Methods
     private func setPicker(){
         pickerView.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }

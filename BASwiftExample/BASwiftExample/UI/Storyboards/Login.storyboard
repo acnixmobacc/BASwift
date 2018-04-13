@@ -119,7 +119,7 @@
                                 <rect key="frame" x="8" y="72" width="359" height="595"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6c8-06-LLW">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="422"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="is1-nP-ZhG">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
@@ -217,98 +217,32 @@
                                                     <outlet property="delegate" destination="deG-mB-jTC" id="kni-r9-Q9f"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fC-jG-IVS">
-                                                <rect key="frame" x="0.0" y="432" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="ybX-A1-W8j"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="teb-mk-0Sz"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="re4-5b-itJ">
-                                                <rect key="frame" x="0.0" y="486" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="fKg-fq-CWh"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="wdb-aT-Id2"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Position" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-jE-0vt">
-                                                <rect key="frame" x="0.0" y="540" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="wMV-AS-y1g"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="CvS-I3-k6z"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NB-JE-DUA">
-                                                <rect key="frame" x="0.0" y="594" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="eab-7L-HGN"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="aP2-Hp-pu2"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ili-uX-gK6">
-                                                <rect key="frame" x="0.0" y="648" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="GQD-Pn-qWE"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="jQK-Sn-ENN"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-Iu-srn">
-                                                <rect key="frame" x="0.0" y="702" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="Yqv-zo-5yn"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="Lz2-dj-P4a"/>
-                                                </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJz-sQ-HX8">
-                                                <rect key="frame" x="0.0" y="756" width="359" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="cU3-Z9-Zm6"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="deG-mB-jTC" id="Yqb-OR-Xfu"/>
-                                                </connections>
-                                            </textField>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-z7-ayg">
+                                        <rect key="frame" x="0.0" y="430" width="359" height="60"/>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jiW-ML-Mgs"/>
+                                        </constraints>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6c8-06-LLW" firstAttribute="width" secondItem="CWE-uV-anN" secondAttribute="width" id="HdT-0v-E2d"/>
+                                    <constraint firstAttribute="bottom" secondItem="C7q-z7-ayg" secondAttribute="bottom" priority="750" constant="8" id="N1k-XE-Ss7"/>
                                     <constraint firstAttribute="trailing" secondItem="6c8-06-LLW" secondAttribute="trailing" id="hfB-Qg-XFC"/>
                                     <constraint firstItem="6c8-06-LLW" firstAttribute="top" secondItem="CWE-uV-anN" secondAttribute="top" id="iG3-i1-e79"/>
-                                    <constraint firstAttribute="bottom" secondItem="6c8-06-LLW" secondAttribute="bottom" id="oAo-9A-9uN"/>
+                                    <constraint firstItem="C7q-z7-ayg" firstAttribute="leading" secondItem="CWE-uV-anN" secondAttribute="leading" id="kJY-FB-EfT"/>
+                                    <constraint firstItem="C7q-z7-ayg" firstAttribute="top" secondItem="6c8-06-LLW" secondAttribute="bottom" priority="750" constant="8" id="pEc-lf-UoY"/>
+                                    <constraint firstAttribute="trailing" secondItem="C7q-z7-ayg" secondAttribute="trailing" id="qI0-47-LVe"/>
                                     <constraint firstItem="6c8-06-LLW" firstAttribute="leading" secondItem="CWE-uV-anN" secondAttribute="leading" id="x3j-gr-IIM"/>
                                 </constraints>
                             </scrollView>
@@ -325,19 +259,13 @@
                     <connections>
                         <outlet property="addressField" destination="A5n-SK-TAz" id="ZbO-8S-9Qo"/>
                         <outlet property="birthdateField" destination="j9d-9n-Pex" id="nq2-Zd-qSr"/>
-                        <outlet property="budgetField" destination="2NB-JE-DUA" id="VWh-m6-rhe"/>
                         <outlet property="cityField" destination="Qzj-WT-mdf" id="EWC-XS-BTo"/>
-                        <outlet property="companyField" destination="re4-5b-itJ" id="Pbp-5S-28U"/>
-                        <outlet property="customField" destination="yJz-sQ-HX8" id="29z-ls-DtD"/>
-                        <outlet property="ibanField" destination="6fC-jG-IVS" id="RIL-Yu-ddo"/>
                         <outlet property="nameField" destination="is1-nP-ZhG" id="vv2-cB-jg1"/>
-                        <outlet property="noteField" destination="ili-uX-gK6" id="jQk-wV-56l"/>
                         <outlet property="passwordField" destination="Ewq-Oi-ZHf" id="JH5-rj-NT8"/>
                         <outlet property="phoneField" destination="hBx-1j-XLB" id="PEO-Ym-UWi"/>
-                        <outlet property="positionField" destination="Ict-jE-0vt" id="rET-Yi-rXG"/>
+                        <outlet property="saveButton" destination="C7q-z7-ayg" id="t7X-3k-IJE"/>
                         <outlet property="scrollView" destination="CWE-uV-anN" id="1QL-PU-kaN"/>
                         <outlet property="surnameField" destination="ps6-8j-gme" id="Tkd-0S-bMW"/>
-                        <outlet property="teamField" destination="YB4-Iu-srn" id="S2X-8e-htm"/>
                         <outlet property="townField" destination="huK-ry-9Sy" id="L3b-dI-OwR"/>
                     </connections>
                 </viewController>

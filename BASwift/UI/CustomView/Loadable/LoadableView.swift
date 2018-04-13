@@ -9,6 +9,7 @@
 import UIKit
 
 public class LoadableView: UIView, ILoadable, IContentable{
+    //MARK: - Properties
     public var progressHUD = BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
 
     lazy open var contentManager : IContentManager = {

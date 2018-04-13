@@ -10,7 +10,7 @@ import UIKit
 
 open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+    //MARK: - Properties
     public var collectionData: BaseCollectionDataModel {
         didSet {
             collectionView.reloadData()
@@ -21,6 +21,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
     
     public var data : T?
 
+    //MARK: - Initialization
     public init(_ collectionView: UICollectionView, data: T?) {
 
         self.collectionView = collectionView
@@ -37,6 +38,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
 
     }
 
+    //MARK: - Methods
     open func registerNibs() {}
 
     open func setCollectionData() {}
@@ -57,6 +59,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
         return collectionData.sections[indexPath.section].cellModels[indexPath.row].cellData
     }
 
+    //MARK: - UICollectionView DataSource & Delegate
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
         return collectionData.sections.count
     }

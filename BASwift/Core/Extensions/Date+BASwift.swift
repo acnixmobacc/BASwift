@@ -9,26 +9,33 @@
 import UIKit
 
 public extension Date {
+    
+    //MARK: - Formats
+    public static var dd_mm_yyyy: String = "dd.MM.yyyy"
+    public static var dd_mm_yyyy_hh_mm: String = "dd.MM.yyyy HH:mm"
+    public static var dd_mm_yyyy_hh_mm_ss: String = "dd.MM.yyyy HH:mm:ss"
+    public static var mm_yyyy: String = "MM.yyyy"
+    public static var mm_yy: String = "MM/yy"
+    
+    //MARK: - Initialization
     init(fromText text: String, withFormat format: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-
+        let dateFormatter = Date.createFormatter(withDateFormat: format)
         let d = dateFormatter.date(from: text)!
         self = Date(timeInterval: 0, since: d)
     }
 
-    var defaultFormat: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        formatter.locale = Locale(identifier: "tr-TR")
-        return  formatter.string(from: self)
+    //MARK: - Methods
+    public func formattedText(withFormat format:String = Date.dd_mm_yyyy) -> String{
+        let formatter = Date.createFormatter(withDateFormat: format)
+        return formatter.string(from: self)
     }
 
-    var chequeFormat: String {
+    //MARK: - Private Methods
+    fileprivate static func createFormatter(withDateFormat dateFormat:String) -> DateFormatter{
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy HH:mm"
-        formatter.locale = Locale(identifier: "tr-TR")
-        return  formatter.string(from: self)
+        formatter.dateFormat = dateFormat
+        return formatter
     }
 
 }
+

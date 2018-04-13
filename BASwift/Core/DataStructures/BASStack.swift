@@ -10,6 +10,7 @@ import Foundation
 
 open class BASStack<T> {
 
+    //MARK: - Properties
     fileprivate var array: [T]
 
     public var isEmpty: Bool {
@@ -20,10 +21,12 @@ open class BASStack<T> {
         return array.count
     }
 
+    //MARK: - Initialization
     init() {
         array = []
     }
 
+    //MARK: - Methods
     public func push(_ element: T) {
         array.append(element)
     }

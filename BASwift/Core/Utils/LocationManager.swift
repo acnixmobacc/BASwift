@@ -15,8 +15,10 @@ public protocol LocationManagerDelegate: class {
 
 open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    //MARK: -Static Variables
     fileprivate static let annotationID = "Pin"
     
+    //MARK: - Properties
     public weak var delegate: LocationManagerDelegate?
 
     private var locationManager: CLLocationManager = CLLocationManager()
@@ -24,8 +26,11 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
     private var _updateUserLocation: Bool!
 
     var leftPadding: CGFloat = 30.0
+    
     var rightPadding: CGFloat = 30.0
+    
     var topPadding: CGFloat = 30.0
+    
     var bottomPadding: CGFloat = 30.0
 
     var mapView: MKMapView
@@ -63,12 +68,16 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
         }
     }
     
+    
+    //MARK: - Initialization
     public init(withMapView mapView: MKMapView) {
         self.mapView = mapView
         super.init()
         self.setMapView()
     }
     
+    
+    //MARK: - Methods
     public func setMapView(){
         self.mapView.delegate = self
         setVisiblePadding()
@@ -81,11 +90,6 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
         self.leftPadding = left
         self.bottomPadding = bottom
         self.rightPadding = right
-    }
-    
-    private func setLocationManagerProperty() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     public func requestAlwaysAuthorization(){
@@ -175,6 +179,13 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
         }
 
         setVisibility(zoomRect)
+    }
+    
+    
+    //MARK: - Private Methods
+    private func setLocationManagerProperty() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     private func setVisibility(_ zoomRect:MKMapRect){

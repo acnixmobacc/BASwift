@@ -9,8 +9,10 @@
 import UIKit
 
 public extension NSMutableAttributedString {
+    
+    //MARK: - Methods
     @discardableResult
-    func bold(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
+    public func bold(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
         let attrs: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
         let boldString = NSMutableAttributedString(string: "\(text)", attributes: attrs)
         self.append(boldString)
@@ -18,7 +20,7 @@ public extension NSMutableAttributedString {
     }
 
     @discardableResult
-    func normal(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
+    public func normal(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
         let attrs: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
         let normal = NSMutableAttributedString(string: "\(text)", attributes: attrs)
         self.append(normal)

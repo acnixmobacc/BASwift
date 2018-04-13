@@ -10,9 +10,12 @@ import UIKit
 
 public class BaseExpandableSectionModel: BaseSectionModel {
 
+    //MARK: - Private Properties
     private var _isExpand: Bool!
 
+    //MARK: - Properties
     public var expandedCellModels: [BaseCellModel]
+    
     public var collapsedCellModels: [BaseCellModel]
 
     public var isExpand: Bool {
@@ -27,6 +30,7 @@ public class BaseExpandableSectionModel: BaseSectionModel {
         }
     }
 
+    //MARK: - Initialization
     public init(cellModels: [BaseCellModel] = [], headerHeight: CGFloat = 0,
                 landscapeHeaderHeight: CGFloat! = nil, footerHeight: CGFloat = 0,
                 landscapeFooterHeight: CGFloat! = nil, sectionText: String! = nil,

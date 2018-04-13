@@ -36,6 +36,7 @@
 		B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */; };
 		B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* IProgressHUD.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* WebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* WebServiceFactory.swift */; };
+		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
 		B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */; };
 		B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */; };
 		B6D7E6812049770700A5D803 /* BA_BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BA_BaseModel.swift */; };
@@ -76,6 +77,10 @@
 		B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */; };
 		B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */; };
 		B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */; };
+		B6F16DBA2080DB8B009A2848 /* ProgressOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F16DB92080DB8A009A2848 /* ProgressOption.swift */; };
+		B6F16DBC2080DBB1009A2848 /* NativeProgressOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F16DBB2080DBB1009A2848 /* NativeProgressOption.swift */; };
+		B6F16DBE2080DC4D009A2848 /* NVProgressOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F16DBD2080DC4D009A2848 /* NVProgressOption.swift */; };
+		B6F16DC02080E3CB009A2848 /* UICollectionViewCell+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F16DBF2080E3CB009A2848 /* UICollectionViewCell+BASwift.swift */; };
 		B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B095204C264C00110985 /* BASQueue.swift */; };
 		B6F4B09B204C264C00110985 /* BASNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B096204C264C00110985 /* BASNode.swift */; };
 		B6F4B09C204C264C00110985 /* BASTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B097204C264C00110985 /* BASTree.swift */; };
@@ -131,6 +136,7 @@
 		B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDManager.swift; sourceTree = "<group>"; };
 		B6A807F12063E17D00E03C26 /* IProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressHUD.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* WebServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
+		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
 		B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewController.swift; sourceTree = "<group>"; };
 		B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewModel.swift; sourceTree = "<group>"; };
 		B6D7E6802049770700A5D803 /* BA_BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseModel.swift; sourceTree = "<group>"; };
@@ -171,6 +177,10 @@
 		B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
 		B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
 		B6D7E6F6204BF97100A5D803 /* ExpandableTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewAdapter.swift; sourceTree = "<group>"; };
+		B6F16DB92080DB8A009A2848 /* ProgressOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressOption.swift; sourceTree = "<group>"; };
+		B6F16DBB2080DBB1009A2848 /* NativeProgressOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeProgressOption.swift; sourceTree = "<group>"; };
+		B6F16DBD2080DC4D009A2848 /* NVProgressOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVProgressOption.swift; sourceTree = "<group>"; };
+		B6F16DBF2080E3CB009A2848 /* UICollectionViewCell+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+BASwift.swift"; sourceTree = "<group>"; };
 		B6F4B095204C264C00110985 /* BASQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASQueue.swift; sourceTree = "<group>"; };
 		B6F4B096204C264C00110985 /* BASNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASNode.swift; sourceTree = "<group>"; };
 		B6F4B097204C264C00110985 /* BASTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASTree.swift; sourceTree = "<group>"; };
@@ -309,17 +319,18 @@
 			isa = PBXGroup;
 			children = (
 				B6A558512074EF4A00698AEA /* AppData */,
-				B6A5584E2074EF0400698AEA /* Util */,
+				B6BCFA47207F970900EA9A05 /* Extensions */,
+				B6A5584E2074EF0400698AEA /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		B6A5584E2074EF0400698AEA /* Util */ = {
+		B6A5584E2074EF0400698AEA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				B6A5584F2074EF1700698AEA /* MockDataUtilTests.swift */,
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B6A558512074EF4A00698AEA /* AppData */ = {
@@ -360,12 +371,23 @@
 		B6A807F02063E16600E03C26 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				B6F16DB92080DB8A009A2848 /* ProgressOption.swift */,
 				B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */,
 				B6A807F12063E17D00E03C26 /* IProgressHUD.swift */,
+				B6F16DBB2080DBB1009A2848 /* NativeProgressOption.swift */,
 				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
+				B6F16DBD2080DC4D009A2848 /* NVProgressOption.swift */,
 				B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		B6BCFA47207F970900EA9A05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B6CDBB842068CD08000DBAB3 /* Support */ = {
@@ -379,9 +401,9 @@
 		B6D7E6762049768800A5D803 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7E6842049775F00A5D803 /* AppData */,
 				B6D7E6BD204A03BC00A5D803 /* iOS */,
 				B6F4B094204C264C00110985 /* DataStructures */,
-				B6D7E6842049775F00A5D803 /* AppData */,
 				B6D7E6832049774200A5D803 /* Extensions */,
 				B6D7E69D20497BFF00A5D803 /* Utils */,
 			);
@@ -439,6 +461,7 @@
 				B6D7E6A82049CAAB00A5D803 /* UIColor+BASwift.swift */,
 				B6D7E6A62049CAAB00A5D803 /* UIImageView+BASwift.swift */,
 				B6D7E6A12049CAAB00A5D803 /* UITableViewCell+BASwift.swift */,
+				B6F16DBF2080E3CB009A2848 /* UICollectionViewCell+BASwift.swift */,
 				B638D69720629A4200657087 /* UIView+XIB.swift */,
 				B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */,
 				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
@@ -833,6 +856,7 @@
 			files = (
 				B6A5584C2074E77F00698AEA /* IWebServiceFactory.swift in Sources */,
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
+				B6F16DBE2080DC4D009A2848 /* NVProgressOption.swift in Sources */,
 				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
 				B68ED24020654FF500FD397F /* IContentable.swift in Sources */,
@@ -845,6 +869,7 @@
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
 				B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */,
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
+				B6F16DBA2080DB8B009A2848 /* ProgressOption.swift in Sources */,
 				B6A558482074C54700698AEA /* ServiceResource.swift in Sources */,
 				B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */,
 				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
@@ -866,6 +891,7 @@
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
 				B6D7E6C7204A05D000A5D803 /* BaseAlert.swift in Sources */,
 				B6A5584A2074E74D00698AEA /* IEntity.swift in Sources */,
+				B6F16DC02080E3CB009A2848 /* UICollectionViewCell+BASwift.swift in Sources */,
 				B6D7E6B22049CAAB00A5D803 /* UIColor+BASwift.swift in Sources */,
 				B6D7E6912049782C00A5D803 /* Date+BASwift.swift in Sources */,
 				B6D7E6C4204A03D600A5D803 /* Device.swift in Sources */,
@@ -882,6 +908,7 @@
 				B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */,
 				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
 				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
+				B6F16DBC2080DBB1009A2848 /* NativeProgressOption.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
@@ -903,6 +930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A558502074EF1700698AEA /* MockDataUtilTests.swift in Sources */,
+				B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */,
 				B6A5585E2074FF3F00698AEA /* Brand.swift in Sources */,
 				B6A558542074EF7000698AEA /* WebServiceFactoryTests.swift in Sources */,
 			);

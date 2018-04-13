@@ -12,10 +12,12 @@ import SwiftyJSON
 
 public class WebServiceFactory : IWebServiceFactory{
     
+    //MARK: - Initialization
     public required init(){
         
     }
     
+    //MARK: - Service Methods
     @discardableResult
     public func loadList<T:IEntity>(request: ServiceResource, onSuccess: @escaping ([T]) -> Void,
                      onError: @escaping (Error?) -> Void) -> DataRequest

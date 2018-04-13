@@ -9,10 +9,12 @@
 import Foundation
 
 open class BaseAlert {
+    //MARK: - Properties
     public var message: String
     public var title: String
     public var handler: ((Any) -> Void)?
 
+    //MARK: - Initialization
     public init(message: String = "", title: String = "", handler: ((Any) -> Void)? = nil) {
         self.message = message
         self.title = title

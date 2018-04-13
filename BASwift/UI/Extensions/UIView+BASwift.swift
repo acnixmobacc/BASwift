@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIView {
 
+    //MARK: - Inspectable Variables
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -21,6 +22,7 @@ public extension UIView {
         }
     }
 
+    //MARK: - Static Properties
     static var className: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }

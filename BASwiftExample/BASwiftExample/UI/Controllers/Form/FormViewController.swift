@@ -7,6 +7,8 @@
 //
 
 import BASwift
+import RxSwift
+import RxCocoa
 
 class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDelegate {
     
@@ -18,21 +20,17 @@ class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDeleg
     @IBOutlet weak var townField: PickerTextField!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
-    @IBOutlet weak var ibanField: UITextField!
-    @IBOutlet weak var companyField: UITextField!
-    @IBOutlet weak var positionField: UITextField!
-    @IBOutlet weak var budgetField: UITextField!
     @IBOutlet weak var birthdateField: DatePickerTextField!
-    @IBOutlet weak var noteField: UITextField!
-    @IBOutlet weak var teamField: UITextField!
-    @IBOutlet weak var customField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var textFieldList : [UITextField]!
+    
+    var disposeBag : DisposeBag = DisposeBag()
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,15 +41,34 @@ class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDeleg
                                                name: Notification.Name.UIKeyboardDidHide, object: nil)
         
         textFieldList = [nameField, surnameField, passwordField, birthdateField, cityField, townField,
-                         addressField, phoneField, ibanField, companyField, positionField, budgetField,
-                         noteField, teamField, customField]
+                         addressField, phoneField]
         
+        setBinding()
         setPickers()
+    }
+    
+
+    private func setBinding(){
+        nameField.rx.text.orEmpty.bind(to: viewModel.username).disposed(by: disposeBag)
+        surnameField.rx.text.orEmpty.bind(to: viewModel.surname).disposed(by: disposeBag)
+        passwordField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
+        cityField.rx.text.orEmpty.bind(to: viewModel.city).disposed(by: disposeBag)
+        townField.rx.text.orEmpty.bind(to: viewModel.town).disposed(by: disposeBag)
+        addressField.rx.text.orEmpty.bind(to: viewModel.address).disposed(by: disposeBag)
+        phoneField.rx.text.orEmpty.bind(to: viewModel.phone).disposed(by: disposeBag)
+        birthdateField.rx.text.orEmpty.bind(to: viewModel.birthdate).disposed(by: disposeBag)
+        
+        
+        
+        
+        saveButton.rx.tap.bind(onNext : { [weak self] in
+            self?.viewModel.onClickSave()
+        }).disposed(by: disposeBag)
     }
     
     private func setPickers(){
         birthdateField.setDatePickerView(withPicker: DatePicker.init())
-        cityField.setPickerView(withData: ["İstanbul", "Trabzon", "İzmir", "Ankara", "Artvin", "Mardin", "Diyarbakır"])
+        cityField.setPickerView(withData: viewModel.getCities())
         townField.setPickerView(withData: [])
     }
     

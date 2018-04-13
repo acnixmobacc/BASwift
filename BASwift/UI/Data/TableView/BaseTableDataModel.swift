@@ -9,8 +9,10 @@
 import UIKit
 
 open class BaseTableDataModel<T: BaseSectionModel> : NSObject {
+    //MARK: - Properties
     public var sections: [T] = []
 
+    //MARK: - Initialization
     public init(_ sections: [T] = []) {
         self.sections = sections
     }

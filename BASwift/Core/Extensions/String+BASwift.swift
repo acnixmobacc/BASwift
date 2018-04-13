@@ -9,6 +9,8 @@
 import UIKit
 
 public extension String {
+
+    //MARK: - Properties
     var length: Int {
         return self.count
     }
@@ -21,15 +23,17 @@ public extension String {
         return ""
     }
 
-    func removeWhitespace() -> String {
+    
+    //MARK: - Methods
+    public func removeWhitespace() -> String {
         return self.replace(" ", replacement: "")
     }
 
-    func replace(_ string: String, replacement: String) -> String {
+    public func replace(_ string: String, replacement: String) -> String {
         return self.replacingOccurrences(of: string, with: replacement, options: .literal, range: nil)
     }
 
-    func substring(from: Int = 0, to: Int) -> String {
+    public func substring(from: Int = 0, to: Int) -> String {
         if (from > self.length || to > self.length || from > to) {
             return ""
         }
@@ -39,16 +43,16 @@ public extension String {
         return String(self[startIndex..<endIndex])
     }
 
-    func contains(find: String, ignoreCase: Bool = false) -> Bool {
+    public func contains(find: String, ignoreCase: Bool = false) -> Bool {
         return ignoreCase ? self.range(of: find, options: .caseInsensitive) != nil : self.range(of: find) != nil
     }
 
-    func isDecimal() -> Bool {
+    public func isDecimal() -> Bool {
         return self.rangeOfCharacter(from: NSCharacterSet.decimalDigits.inverted,
                                      options: String.CompareOptions.caseInsensitive) == nil
     }
 
-    func isNumber() -> Bool {
+    public func isNumber() -> Bool {
         let aSet = NSCharacterSet(charactersIn: "0123456789").inverted
         let compSepByCharInSet = self.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")

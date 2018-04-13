@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIViewController {
 
+    //MARK: - Static Properties
     static var className: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }

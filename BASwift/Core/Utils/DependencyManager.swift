@@ -10,18 +10,22 @@ import Swinject
 
 open class BA_DependencyManager {
 
-    public var container: Container
-
+    //MARK: - Static Variables
     public static let sharedInstance: BA_DependencyManager = {
         let instance = BA_DependencyManager()
-
+        
         return instance
     }()
+    
+    //MARK: - Properties
+    public var container: Container
 
+    //MARK: - Initialization
     private init() {
         container = BA_DependencyManager.default
     }
 
+    //MARK: - Default Container
     fileprivate static let `default`: Container = {
         return Container {c in
             c.register(IProgressHUD.self) { _ in NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault) }

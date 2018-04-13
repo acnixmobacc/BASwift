@@ -11,10 +11,9 @@ import LocalAuthentication
 public typealias TouchIDSuccessBlock = (Bool) -> Void
 public typealias TouchIDErrorBlock = (NSError) -> Void
 
-open class TouchIDManager {
-
-    public init(){}
+open class TouchIDManager:NSObject {
     
+    //MARK: - Methods
     public func authenticateUser(reasonText: String, successBlock:@escaping TouchIDSuccessBlock,
                            errorBlock:@escaping TouchIDErrorBlock) {
         let context = LAContext()
