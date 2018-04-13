@@ -37,9 +37,9 @@
 		B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* IProgressHUD.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* WebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* WebServiceFactory.swift */; };
 		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
-		B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */; };
-		B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */; };
-		B6D7E6812049770700A5D803 /* BA_BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BA_BaseModel.swift */; };
+		B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BABaseViewController.swift */; };
+		B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */; };
+		B6D7E6812049770700A5D803 /* BABaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BABaseModel.swift */; };
 		B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */; };
 		B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6882049782B00A5D803 /* String+BASwift.swift */; };
 		B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6892049782B00A5D803 /* Int+BASwift.swift */; };
@@ -137,9 +137,9 @@
 		B6A807F12063E17D00E03C26 /* IProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressHUD.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* WebServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceFactory.swift; sourceTree = "<group>"; };
 		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
-		B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewController.swift; sourceTree = "<group>"; };
-		B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseViewModel.swift; sourceTree = "<group>"; };
-		B6D7E6802049770700A5D803 /* BA_BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseModel.swift; sourceTree = "<group>"; };
+		B6D7E67C204976F300A5D803 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
+		B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewModel.swift; sourceTree = "<group>"; };
+		B6D7E6802049770700A5D803 /* BABaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseModel.swift; sourceTree = "<group>"; };
 		B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseProtocols.swift; sourceTree = "<group>"; };
 		B6D7E6882049782B00A5D803 /* String+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6892049782B00A5D803 /* Int+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+BASwift.swift"; sourceTree = "<group>"; };
@@ -447,9 +447,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */,
-				B6D7E67C204976F300A5D803 /* BA_BaseViewController.swift */,
-				B6D7E67E204976FF00A5D803 /* BA_BaseViewModel.swift */,
-				B6D7E6802049770700A5D803 /* BA_BaseModel.swift */,
+				B6D7E67C204976F300A5D803 /* BABaseViewController.swift */,
+				B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */,
+				B6D7E6802049770700A5D803 /* BABaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -827,7 +827,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		FE019B9418F3658751F01753 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -867,7 +867,7 @@
 				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
 				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
-				B6D7E67F204976FF00A5D803 /* BA_BaseViewModel.swift in Sources */,
+				B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */,
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
 				B6F16DBA2080DB8B009A2848 /* ProgressOption.swift in Sources */,
 				B6A558482074C54700698AEA /* ServiceResource.swift in Sources */,
@@ -915,11 +915,11 @@
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,
 				B68ED23420653C7300FD397F /* IContentManager.swift in Sources */,
-				B6D7E67D204976F300A5D803 /* BA_BaseViewController.swift in Sources */,
+				B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */,
 				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
 				B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */,
 				B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */,
-				B6D7E6812049770700A5D803 /* BA_BaseModel.swift in Sources */,
+				B6D7E6812049770700A5D803 /* BABaseModel.swift in Sources */,
 				B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */,
 				B6D7E6C3204A03D600A5D803 /* Device+Type.swift in Sources */,
 			);

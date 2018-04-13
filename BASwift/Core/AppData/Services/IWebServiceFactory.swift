@@ -10,10 +10,10 @@ import Alamofire
 
 public protocol IWebServiceFactory {
     init()
-    
-    func load<T:IEntity>(request : ServiceResource, onSuccess:@escaping (T)->Void,
-                                  onError:@escaping (Error?)->Void) ->  DataRequest
-    
-    func loadList<T:IEntity>(request : ServiceResource, onSuccess:@escaping ([T])->Void,
-                                      onError:@escaping (Error?)->Void) ->  DataRequest
+
+    func load<T: IEntity>(request: ServiceResource, onSuccess:@escaping (T) -> Void,
+                          onError:@escaping (Error?) -> Void) -> DataRequest
+
+    func loadList<T: IEntity>(request: ServiceResource, onSuccess:@escaping ([T]) -> Void,
+                              onError:@escaping (Error?) -> Void) -> DataRequest
 }

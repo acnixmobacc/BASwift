@@ -15,22 +15,22 @@ public protocol LocationManagerDelegate: class {
 
 open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
-    //MARK: -Static Variables
+    // MARK: - Static Variables
     fileprivate static let annotationID = "Pin"
-    
-    //MARK: - Properties
+
+    // MARK: - Properties
     public weak var delegate: LocationManagerDelegate?
 
     private var locationManager: CLLocationManager = CLLocationManager()
-    
+
     private var _updateUserLocation: Bool!
 
     var leftPadding: CGFloat = 30.0
-    
+
     var rightPadding: CGFloat = 30.0
-    
+
     var topPadding: CGFloat = 30.0
-    
+
     var bottomPadding: CGFloat = 30.0
 
     var mapView: MKMapView
@@ -61,51 +61,49 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
 
     public var userLocation: CLLocationCoordinate2D? {
         didSet {
-            if let userLocation = userLocation{
+            if let userLocation = userLocation {
                 delegate?.onUserLocationUpdate(userLocation)
                 didUpdateUserLocation()
             }
         }
     }
-    
-    
-    //MARK: - Initialization
+
+    // MARK: - Initialization
     public init(withMapView mapView: MKMapView) {
         self.mapView = mapView
         super.init()
         self.setMapView()
     }
-    
-    
-    //MARK: - Methods
-    public func setMapView(){
+
+    // MARK: - Methods
+    public func setMapView() {
         self.mapView.delegate = self
         setVisiblePadding()
         setLocationManagerProperty()
     }
 
-    public func setVisiblePadding(top:CGFloat = 30.0, left:CGFloat = 30.0,
-                                  bottom:CGFloat = 30.0, right:CGFloat = 30.0){
+    public func setVisiblePadding(top: CGFloat = 30.0, left: CGFloat = 30.0,
+                                  bottom: CGFloat = 30.0, right: CGFloat = 30.0) {
         self.topPadding = top
         self.leftPadding = left
         self.bottomPadding = bottom
         self.rightPadding = right
     }
-    
-    public func requestAlwaysAuthorization(){
+
+    public func requestAlwaysAuthorization() {
         locationManager.requestAlwaysAuthorization()
     }
 
-    public func requestWhenInUseAuthorization(){
+    public func requestWhenInUseAuthorization() {
         locationManager.requestWhenInUseAuthorization()
     }
-    
+
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         userLocation = (manager.location?.coordinate)!
     }
-    
-    public func zoomUserLocation(){
-        if let userLocation = self.userLocation{
+
+    public func zoomUserLocation() {
+        if let userLocation = self.userLocation {
             let center = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
             var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
             region.center = mapView.userLocation.coordinate
@@ -144,9 +142,9 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
         }
 
         let pinIdent = LocationManager.annotationID
-        
+
         var pinView: MKPinAnnotationView
-        
+
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdent) as? MKPinAnnotationView {
             dequeuedView.annotation = annotation
             pinView = dequeuedView
@@ -180,15 +178,14 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
 
         setVisibility(zoomRect)
     }
-    
-    
-    //MARK: - Private Methods
+
+    // MARK: - Private Methods
     private func setLocationManagerProperty() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
-    private func setVisibility(_ zoomRect:MKMapRect){
+
+    private func setVisibility(_ zoomRect: MKMapRect) {
         mapView.setVisibleMapRect(zoomRect,
                                   edgePadding: UIEdgeInsets(top: topPadding, left: leftPadding,
                                                             bottom: bottomPadding, right: rightPadding),

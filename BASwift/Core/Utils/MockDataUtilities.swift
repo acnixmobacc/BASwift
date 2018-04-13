@@ -26,13 +26,13 @@ public enum FileError: Error {
 }
 
 open class MockDataUtilities {
-    
-    //MARK: - Static Methods
+
+    // MARK: - Static Methods
     public static func getData<T: IEntity>(fileName: String, onSuccess: (T) -> Void,
-                                                 onFailure:@escaping (FileError) -> Void) {
+                                           onFailure:@escaping (FileError) -> Void) {
         do {
             let data = try fileContentsToJSON(fileName)
-            onSuccess(T(withData:data))
+            onSuccess(T(withData: data))
         } catch FileError.contentsNotValid {
             onFailure(FileError.contentsNotValid)
         } catch FileError.fileNotExist {
@@ -43,14 +43,14 @@ open class MockDataUtilities {
     }
 
     public static func getListData<T: IEntity>(fileName: String, onSuccess: ([T]) -> Void,
-                                                     onFailure:@escaping (FileError) -> Void) {
+                                               onFailure:@escaping (FileError) -> Void) {
         do {
             let data = try fileContentsToJSON(fileName)
             let response = data.arrayValue.map({ item in
-                return T(withData:item)
+                return T(withData: item)
             })
             onSuccess(response)
-        }  catch FileError.contentsNotValid {
+        } catch FileError.contentsNotValid {
             onFailure(FileError.contentsNotValid)
         } catch FileError.fileNotExist {
             onFailure(FileError.fileNotExist)
@@ -59,17 +59,17 @@ open class MockDataUtilities {
         }
     }
 
-    //MARK: - Private Static Methods
+    // MARK: - Private Static Methods
     private static func fileContentsToJSON(_ fileName: String) throws -> JSON {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {
                 let text = try String(contentsOfFile: path, encoding: .utf8)
                 let json = JSON(parseJSON: text)
-                
-                if json.type == .null{
+
+                if json.type == .null {
                     throw FileError.contentsNotValid
                 }
-                
+
                 return json
             } catch {
                 throw FileError.contentsNotValid

@@ -8,23 +8,23 @@
 
 import UIKit
 
-public protocol IContentable{
-    var contentManager : IContentManager {get}
-    
-    func showMessage(withMessage message:String, handler: (() -> Void)?)
+public protocol IContentable {
+    var contentManager: IContentManager { get }
+
+    func showMessage(withMessage message: String, handler: (() -> Void)?)
 }
 
-//MARK: - Content View
-public extension IContentable where Self:UIView{
-    
-    public func showMessage(withMessage message:String, handler: (() -> Void)?){
+// MARK: - Content View
+public extension IContentable where Self: UIView {
+
+    func showMessage(withMessage message: String, handler: (() -> Void)?) {
         contentManager.showMessage(withMessage: message) {[unowned self] in
             self.contentManager.view.removeFromSuperview()
-            if let handler = handler{
+            if let handler = handler {
                 handler()
             }
         }
-        
+
         self.addSubview(contentManager.view)
     }
 }

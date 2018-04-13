@@ -8,46 +8,45 @@
 
 import UIKit
 
-extension DatePickerTextField : PickerDelegate{
+extension DatePickerTextField: PickerDelegate {
     func onSelectItem(value: String) {
         self.text = value
     }
 }
 
 open class DatePickerTextField: UITextField, UITextFieldDelegate {
-    
-    //MARK: - Properties
-    public var picker : DatePicker?
-    
-    //MARK: - Initialization
+
+    // MARK: - Properties
+    public var picker: DatePicker?
+
+    // MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         delegate = self
         prepareViewComponent()
     }
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         delegate = self
         prepareViewComponent()
     }
-    
-    //MARK: - Methods
-    open func setDatePickerView(withPicker picker:DatePicker){
+
+    // MARK: - Methods
+    open func setDatePickerView(withPicker picker: DatePicker) {
         self.picker = picker
         setDatePicker()
     }
-    
-    open func setDatePickerView(withFormat format:String = "dd.MM.yyyy"){
-        self.picker = DatePicker(withDateFormat : format)
+
+    open func setDatePickerView(withFormat format: String = "dd.MM.yyyy") {
+        self.picker = DatePicker(withDateFormat: format)
         setDatePicker()
     }
-    
-    
+
     public func prepareViewComponent() {
         addToolbar()
     }
-    
+
     public func addToolbar() {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -63,33 +62,31 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         toolBar.sizeToFit()
-        
+
         delegate = self
         inputAccessoryView = toolBar
     }
-    
-    
+
     @objc public func donePressed() {
         resignFirstResponder()
         picker?.onClickDone(self)
-        
+
     }
-    
+
     @objc public func cancelPressed() {
         resignFirstResponder()
         picker?.onClickCancel(self)
     }
-    
-    //MARK: - Private Methods
-    private func setDatePicker(){
-        guard let picker = self.picker else{
+
+    // MARK: - Private Methods
+    private func setDatePicker() {
+        guard let picker = self.picker else {
             fatalError("Picker view must be initialized")
         }
-        
+
         self.inputView = picker.pickerView
         picker.delegate = self
-        
-    }
-    
-}
 
+    }
+
+}

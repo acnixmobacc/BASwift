@@ -8,22 +8,22 @@
 
 import Foundation
 
-open class BA_BaseViewModel: BA_BaseViewModelProtocol {
+open class BABaseViewModel: BA_BaseViewModelProtocol {
 
-    //MARK: - Properties
+    // MARK: - Properties
     weak public var baseViewDelegate: BA_BaseViewProtocol?
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     required public init() {
 
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     open func initWithData(data: [Any?]) {
 
     }
 
-    //MARK: - View Model Lifecycle
+    // MARK: - View Model Lifecycle
     open func onDidLoad() {
 
     }
@@ -52,7 +52,7 @@ open class BA_BaseViewModel: BA_BaseViewModelProtocol {
 
     }
 
-    //MARK: - Completion
+    // MARK: - Completion
     open func onBackCompletion(_ data: [Any?]?) {
 
     }

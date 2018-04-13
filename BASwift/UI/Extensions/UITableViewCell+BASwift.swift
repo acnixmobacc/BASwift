@@ -9,13 +9,11 @@
 import UIKit
 
 public extension UITableViewCell {
-    
-    //MARK: - Static Methods
+
+    // MARK: - Static Methods
     static func registerSelf(_ toTableView: UITableView?) {
         let nib = UINib(nibName: self.className, bundle: nil)
         toTableView?.register(nib, forCellReuseIdentifier: self.className)
     }
 
 }
-
-

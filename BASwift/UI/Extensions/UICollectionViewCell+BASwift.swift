@@ -9,11 +9,9 @@
 import UIKit
 
 public extension UICollectionViewCell {
-    
-    //MARK: - Static Methods
+    // MARK: - Static Methods
     static func registerSelf(_ collectionView: UICollectionView?) {
         let nib = UINib(nibName: self.className, bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: self.className)
     }
-    
 }

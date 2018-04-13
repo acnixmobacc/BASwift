@@ -10,12 +10,12 @@ import UIKit
 
 public extension UIView {
 
-    //MARK: - Properties
+    // MARK: - Properties
     class var myNibName: String {
         let name = "\(self)".components(separatedBy: ".").first ?? ""
         return name
     }
-    
+
     class var nib: UINib? {
         if let _ = Bundle.main.path(forResource: myNibName, ofType: "nib") {
             return UINib(nibName: myNibName, bundle: nil)
@@ -23,8 +23,8 @@ public extension UIView {
             return nil
         }
     }
-    
-    //MARK: - Methods
+
+    // MARK: - Methods
     class func fromNib(nibNameOrNil: String? = nil) -> Self {
         return fromNib(nibNameOrNil: nibNameOrNil, type: self)
     }
@@ -55,5 +55,4 @@ public extension UIView {
         return view
     }
 
-    
 }

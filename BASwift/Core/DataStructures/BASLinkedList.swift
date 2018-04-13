@@ -8,27 +8,27 @@
 
 import Foundation
 
-//MARK: - Linked Node
+// MARK: - Linked Node
 open class BASLinkedNode<T> {
-    //MARK: - Properties
+    // MARK: - Properties
     var value: T
 
     var next: BASLinkedNode<T>?
 
     weak var previous: BASLinkedNode<T>?
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     init(value: T) {
         self.value = value
     }
 
 }
 
-//MARK: - Linked List
+// MARK: - Linked List
 open class BASLinkedList<T> {
-    //MARK: - Properties
+    // MARK: - Properties
     fileprivate var head: BASLinkedNode<T>?
-    
+
     private var tail: BASLinkedNode<T>?
 
     public var isEmpty: Bool {
@@ -43,7 +43,7 @@ open class BASLinkedList<T> {
         return tail
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     public func append(value: T) {
         let newNode = BASLinkedNode(value: value)
 
@@ -100,8 +100,7 @@ open class BASLinkedList<T> {
     }
 }
 
-
-//MARK: - Custom String Convertible
+// MARK: - Custom String Convertible
 extension BASLinkedList: CustomStringConvertible {
     public var description: String {
         var text = "["

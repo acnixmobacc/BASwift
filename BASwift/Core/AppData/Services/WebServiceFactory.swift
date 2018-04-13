@@ -9,27 +9,25 @@
 import Alamofire
 import SwiftyJSON
 
+public class WebServiceFactory: IWebServiceFactory {
 
-public class WebServiceFactory : IWebServiceFactory{
-    
-    //MARK: - Initialization
-    public required init(){
-        
+    // MARK: - Initialization
+    public required init() {
+
     }
-    
-    //MARK: - Service Methods
+
+    // MARK: - Service Methods
     @discardableResult
-    public func loadList<T:IEntity>(request: ServiceResource, onSuccess: @escaping ([T]) -> Void,
-                     onError: @escaping (Error?) -> Void) -> DataRequest
-    {
+    public func loadList<T: IEntity>(request: ServiceResource, onSuccess: @escaping ([T]) -> Void,
+                                     onError: @escaping (Error?) -> Void) -> DataRequest {
         return Alamofire.request(request.url, method: request.method, parameters: request.param,
                                  encoding: request.encoding, headers: request.header).validate()
             .responseJSON(completionHandler: { response in
-                switch response.result{
+                switch response.result {
                 case .success:
-                    if let value = response.result.value{
+                    if let value = response.result.value {
                         let data = JSON(value)
-                        let response = data.arrayValue.map{ json in
+                        let response = data.arrayValue.map { json in
                             return T(withData: json)
                         }
                         onSuccess(response)
@@ -39,20 +37,19 @@ public class WebServiceFactory : IWebServiceFactory{
                 }
             })
     }
-    
-    
+
     @discardableResult
-    public func load<T:IEntity>(request : ServiceResource, onSuccess:@escaping (T)->Void,
-                 onError:@escaping (Error?)->Void) ->  DataRequest{
-        
+    public func load<T: IEntity>(request: ServiceResource, onSuccess:@escaping (T) -> Void,
+                                 onError:@escaping (Error?) -> Void) -> DataRequest {
+
         return Alamofire.request(request.url, method: request.method, parameters: request.param,
                                  encoding: request.encoding, headers: request.header).validate()
             .responseJSON(completionHandler: { response in
-                switch response.result{
+                switch response.result {
                 case .success:
-                    if let value = response.result.value{
+                    if let value = response.result.value {
                         let json = JSON(value)
-                        onSuccess(T.init(withData: json))
+                        onSuccess(T(withData: json))
                     }
                 case .failure:
                     onError(response.error)

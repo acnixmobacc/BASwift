@@ -8,27 +8,26 @@ import Foundation
 
 open class BASNode<T> {
 
-    //MARK: - Properties
+    // MARK: - Properties
     public var value: T
-    
+
     weak var parent: BASNode?
 
     public var children: [BASNode] = []
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     public init(value: T) {
         self.value = value
     }
 
-    
-    //MARK: - Methods
+    // MARK: - Methods
     public func add(child: BASNode) {
         children.append(child)
         child.parent = self
     }
 }
 
-//MARK: - Search
+// MARK: - Search
 public extension BASNode where T: Equatable {
 
     func search(value: T) -> BASNode? {

@@ -10,11 +10,11 @@ import UIKit
 
 open class BaseCollectionCellModel: BaseCellModel {
 
-    //MARK: - Private Properties
+    // MARK: - Private Properties
     private var _cellWidth: CGFloat
     private var _landscapeCellWidth: CGFloat!
 
-    //MARK: - Properties
+    // MARK: - Properties
     var landscapeCellWidth: CGFloat {
         if let landscapeWidth = _landscapeCellWidth {
             return landscapeWidth
@@ -31,7 +31,7 @@ open class BaseCollectionCellModel: BaseCellModel {
         }
     }
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     public init(data: ICellData! = nil, cellHeight: CGFloat = 44, landscapeCellHeight: CGFloat! = nil,
                 cellWidth: CGFloat = 44, landscapeCellWidth: CGFloat! = nil, type: AnyClass) {
         _cellWidth = cellWidth

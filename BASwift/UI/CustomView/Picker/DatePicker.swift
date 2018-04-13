@@ -8,68 +8,68 @@
 
 import UIKit
 
-open class DatePicker : NSObject{
-    
-    //MARK: - Private Methods
+open class DatePicker: NSObject {
+
+    // MARK: - Private Methods
     private var _pickerView: UIDatePicker!
-    
-    //MARK: - Properties
-    weak var delegate : PickerDelegate?
-    
-    var dateFormat : String
-    
-    var pickerView : UIDatePicker!{
-        get{
+
+    // MARK: - Properties
+    weak var delegate: PickerDelegate?
+
+    var dateFormat: String
+
+    var pickerView: UIDatePicker! {
+        get {
             if _pickerView == nil {
-                _pickerView = UIDatePicker.init()
+                _pickerView = UIDatePicker()
                 _pickerView.datePickerMode = .date
             }
-            
+
             return _pickerView
         }
-        
-        set(value){
+
+        set(value) {
             _pickerView = value
         }
     }
-    
-    var lastSelectedDate : Date?
-    
-    var value : String{
-        get{
+
+    var lastSelectedDate: Date?
+
+    var value: String {
+        get {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = self.dateFormat
             return dateFormatter.string(from: pickerView.date)
         }
     }
-    
-    //MARK: - Initialization
-    public init(withDateFormat dateFormat:String = "dd.MM.yyyy"){
+
+    // MARK: - Initialization
+    public init(withDateFormat dateFormat: String = "dd.MM.yyyy") {
         self.dateFormat = dateFormat
         super.init()
         setPicker()
-        
+
     }
-    
-    //MARK: - Methods
-    private func setPicker(){
+
+    // MARK: - Methods
+    private func setPicker() {
         pickerView.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
-    
-    @objc func datePickerValueChanged(_ sender:UIDatePicker) {
+
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         delegate?.onSelectItem(value: value)
     }
-    
+
     public func onClickDone(_ textField: DatePickerTextField) {
         textField.text = value
         lastSelectedDate = pickerView.date
     }
-    
+
     public func onClickCancel(_ textField: DatePickerTextField) {
-        if let lastSelectedDate = self.lastSelectedDate{
+        if let lastSelectedDate = self.lastSelectedDate {
             pickerView.setDate(lastSelectedDate, animated: true)
             textField.text = value
-        }else{
+        } else {
             textField.text = .Empty
         }
     }

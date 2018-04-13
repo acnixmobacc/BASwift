@@ -10,25 +10,24 @@ import UIKit
 
 open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    //MARK: - Properties
+    // MARK: - Properties
     public var collectionData: BaseCollectionDataModel {
         didSet {
             collectionView.reloadData()
         }
     }
-    
-    public var collectionView: UICollectionView
-    
-    public var data : T?
 
-    //MARK: - Initialization
+    public var collectionView: UICollectionView
+
+    public var data: T?
+
+    // MARK: - Initialization
     public init(_ collectionView: UICollectionView, data: T?) {
 
         self.collectionView = collectionView
         collectionData = BaseCollectionDataModel()
         super.init()
 
-        
         self.data = data
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -38,7 +37,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
 
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     open func registerNibs() {}
 
     open func setCollectionData() {}
@@ -59,7 +58,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
         return collectionData.sections[indexPath.section].cellModels[indexPath.row].cellData
     }
 
-    //MARK: - UICollectionView DataSource & Delegate
+    // MARK: - UICollectionView DataSource & Delegate
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
         return collectionData.sections.count
     }
@@ -72,7 +71,8 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
         return UICollectionViewCell()
     }
 
-    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                             referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionData.sections[section].headerWidth,
                       height: collectionData.sections[section].headerHeight)
     }
@@ -83,11 +83,13 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
                       height: collectionData.sections[section].footerHeight)
     }
 
-    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                             insetForSectionAt section: Int) -> UIEdgeInsets {
         return .zero
     }
 
-    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                             sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         guard let item = collectionData.sections[indexPath.section].cellModels[indexPath.row] as? BaseCollectionCellModel
             else {
@@ -97,7 +99,8 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
         return CGSize(width: item.cellWidth, height: item.cellHeight )
     }
 
-    open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
+                             at indexPath: IndexPath) -> UICollectionReusableView {
         return UICollectionReusableView()
     }
 

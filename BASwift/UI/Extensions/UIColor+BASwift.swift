@@ -8,13 +8,13 @@
 import UIKit
 
 public extension UIColor {
-    
-    //MARK: - Properties
+
+    // MARK: - Properties
     class var animationBackground: UIColor {
         return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6)
     }
-    
-    //MARK: - Methods
+
+    // MARK: - Methods
     class func UIColorFromHex(_ rgbValue: UInt32) -> UIColor {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8) / 256.0

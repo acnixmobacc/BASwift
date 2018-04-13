@@ -8,28 +8,28 @@
 
 import UIKit
 
-public protocol  IMessageView{
-    var handler: (() -> Void)? {get set}
-    
-    func showMessage(withMessage message:String)
+public protocol  IMessageView {
+    var handler: (() -> Void)? { get set }
+
+    func showMessage(withMessage message: String)
 }
 
-public class MessageView : UIView, IMessageView {
+public class MessageView: UIView, IMessageView {
 
-    //MARK: - Properties
+    // MARK: - Properties
     public var handler: (() -> Void)?
-    
-    //MARK: - UIElement
+
+    // MARK: - UIElement
     @IBOutlet weak var messageLabel: UILabel!
 
-    //MARK: - UI Actions
+    // MARK: - UI Actions
     @IBAction func action(_ sender: UIButton) {
-        if let handler = self.handler{
+        if let handler = self.handler {
             handler()
         }
     }
-    
-    //MARK: - Methods
+
+    // MARK: - Methods
     public func showMessage(withMessage message: String) {
         messageLabel.text = message
     }

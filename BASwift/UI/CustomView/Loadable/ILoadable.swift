@@ -10,25 +10,25 @@ import UIKit
 
 public protocol ILoadable {
     var progressHUD: IProgressHUD { get set }
-    
+
     func showLoading()
-    
+
     func hideLoading()
-    
+
     func isLoading() -> Bool
 }
 
-//MARK: - Loadable View
-public extension ILoadable where Self:UIView {
-    public func showLoading() {
+// MARK: - Loadable View
+public extension ILoadable where Self: UIView {
+    func showLoading() {
         progressHUD.start(inView: self)
     }
-    
-    public func hideLoading() {
+
+    func hideLoading() {
         progressHUD.stop()
     }
-    
-    public func isLoading() -> Bool {
+
+    func isLoading() -> Bool {
         return progressHUD.isLoading
     }
 }

@@ -9,20 +9,20 @@
 import Foundation
 
 open class BASQueue<T> {
-    
-    //MARK: - Properties
+
+    // MARK: - Properties
     fileprivate var list: BASLinkedList<T>
 
     public var isEmpty: Bool {
         return list.isEmpty
     }
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     init() {
         list = BASLinkedList()
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     public func enqueue(_ element: T) {
         list.append(value: element)
     }
@@ -42,7 +42,7 @@ open class BASQueue<T> {
     }
 }
 
-//MARK: - Custom String Convertible
+// MARK: - Custom String Convertible
 extension BASQueue: CustomStringConvertible {
     public var description: String {
         return list.description

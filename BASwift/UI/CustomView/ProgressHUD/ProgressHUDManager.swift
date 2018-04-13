@@ -8,55 +8,53 @@
 
 import UIKit
 
-public enum ProgressStrategy{
+public enum ProgressStrategy {
     public enum DismissStrategy {
         case countable, immediately
     }
 }
 
+open class ProgressHUDManager: ILoadable {
 
-open class ProgressHUDManager : ILoadable{
-    
-    //MARK: - Private Properties
-    private var bussyCount: Int = 0{
-        willSet{
-            if(newValue == 1 && bussyCount == 0){
+    // MARK: - Private Properties
+    private var bussyCount: Int = 0 {
+        willSet {
+            if(newValue == 1 && bussyCount == 0) {
                 progressHUD.start(inView: self.view)
-            }else if(newValue == 0 && bussyCount > 0){
+            } else if(newValue == 0 && bussyCount > 0) {
                 progressHUD.stop()
             }
         }
     }
-    
+
     private var view: UIView
-    
-    private var dismissStrategy : ProgressStrategy.DismissStrategy
-    
-    //MARK: - Properties
-    public var progressHUD: IProgressHUD =  BA_DependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
-    
-    
-    //MARK: - Initialization
-    public init(forView view:UIView, dismissStrategy:ProgressStrategy.DismissStrategy = .immediately) {
+
+    private var dismissStrategy: ProgressStrategy.DismissStrategy
+
+    // MARK: - Properties
+    public var progressHUD: IProgressHUD = BADependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
+
+    // MARK: - Initialization
+    public init(forView view: UIView, dismissStrategy: ProgressStrategy.DismissStrategy = .immediately) {
         self.dismissStrategy = dismissStrategy
         self.view = view
     }
-    
-    //MARK: - Methods
+
+    // MARK: - Methods
     public func showLoading() {
         bussyCount += 1
     }
-    
+
     public func hideLoading() {
-        if(dismissStrategy == .immediately){
+        if(dismissStrategy == .immediately) {
             bussyCount = 0
-        }else{
+        } else {
             bussyCount -= 1
         }
     }
-    
+
     public func isLoading() -> Bool {
         return progressHUD.isLoading
     }
-    
+
 }

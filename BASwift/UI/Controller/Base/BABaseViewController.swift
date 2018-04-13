@@ -8,26 +8,24 @@
 
 import UIKit
 
+open class BABaseViewController<T: BA_BaseViewModelProtocol> : UIViewController {
 
-
-open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController {
-
-    //MARK: - Properties
+    // MARK: - Properties
     public var viewModel: T = T()
 
-    lazy open var progressManager : ILoadable = {[unowned self] in
+    lazy open var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager(forView: self.view)
     }()
-    
-    lazy open var alertManager : IAlertManager = {[unowned self] in
+
+    lazy open var alertManager: IAlertManager = {[unowned self] in
         return AlertViewManager(withViewController: self)
     }()
-    
-    lazy open var contentManager : IContentManager = {[unowned self] in
+
+    lazy open var contentManager: IContentManager = {[unowned self] in
         return ContentManager(withView: MessageView.fromNib())
     }()
-    
-    //MARK: View Controller Lifecycle
+
+    // MARK: View Controller Lifecycle
     open override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.onDidLoad()
@@ -64,28 +62,28 @@ open class BA_BaseViewController<T: BA_BaseViewModelProtocol> : UIViewController
     }
 }
 
-//MARK: - BA_BaseViewProtocol
-extension BA_BaseViewController: BA_BaseViewProtocol {
+// MARK: - BA_BaseViewProtocol
+extension BABaseViewController: BA_BaseViewProtocol {
     public func onUpdateView() {
-        
+
     }
-    
+
     public func showAlert(_ alert: BaseAlert) {
         alertManager.showAlert(withAlert: alert)
     }
-    
+
     public func showProgress() {
         progressManager.showLoading()
     }
-    
+
     public func hideProgress() {
         progressManager.hideLoading()
     }
-    
+
     public func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
         contentManager.showMessage(withMessage: message, handler: { [unowned self] in
             self.contentManager.view.removeFromSuperview()
-            if let handler = handler{
+            if let handler = handler {
                 handler()
             }
         })

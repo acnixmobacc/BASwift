@@ -9,9 +9,9 @@
 import UIKit
 
 public protocol IContentManager {
-    var view: UIView&IMessageView {get set}
-    
-    init(withView view:UIView&IMessageView)
-    
-    func showMessage(withMessage message:String, handler:(() -> Void)?)
+    var view: UIView & IMessageView { get set }
+
+    init(withView view: UIView & IMessageView)
+
+    func showMessage(withMessage message: String, handler:(() -> Void)?)
 }

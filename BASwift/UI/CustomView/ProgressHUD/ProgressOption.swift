@@ -8,20 +8,20 @@
 
 import UIKit
 
-open class ProgressOptions{
-    //MARK: - Properties
+open class ProgressOptions {
+    // MARK: - Properties
     var frame: CGRect
-    
-    var showTransparentView : Bool
-    
-    //MARK: - Initialization
-    init(withFrame frame:CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
-         showTransparentView:Bool = true) {
+
+    var showTransparentView: Bool
+
+    // MARK: - Initialization
+    init(withFrame frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
+         showTransparentView: Bool = true) {
         self.frame = frame
         self.showTransparentView = showTransparentView
     }
-    
-    //MARK: - Default Value
+
+    // MARK: - Default Value
     static let `default`: ProgressOptions = {
         return ProgressOptions()
     }()

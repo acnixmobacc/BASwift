@@ -8,29 +8,28 @@
 
 import Alamofire
 
-public typealias JSONDictionary = [String : Any]?
+public typealias JSONDictionary = [String: Any]?
 
-public typealias HeaderDictionary = [String : String]?
+public typealias HeaderDictionary = [String: String]?
 
-public class ServiceResource{
-    
-    //MARK: - Properties
-    public var url:URL
-    
-    public var header : HeaderDictionary
-    
-    public var param : JSONDictionary
-    
+public class ServiceResource {
+
+    // MARK: - Properties
+    public var url: URL
+
+    public var header: HeaderDictionary
+
+    public var param: JSONDictionary
+
     public var method: HTTPMethod
-    
-    public var encoding : ParameterEncoding
-    
-    
-    //MARK: - Initialization
-    public init(withURL url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
-         method:HTTPMethod = .get, encoding:ParameterEncoding = URLEncoding.default ) {
-        
-        guard let url = URL(string: url) else{
+
+    public var encoding: ParameterEncoding
+
+    // MARK: - Initialization
+    public init(withURL url: String, header: HeaderDictionary = nil, param: JSONDictionary = nil,
+                method: HTTPMethod = .get, encoding: ParameterEncoding = URLEncoding.default ) {
+
+        guard let url = URL(string: url) else {
             fatalError("URL not valid")
         }
         self.url = url
@@ -38,22 +37,20 @@ public class ServiceResource{
         self.param = param
         self.method = method
         self.encoding = encoding
-        
+
     }
-    
-    
-    public init(withPostUrl url:String, header:HeaderDictionary = nil, param:JSONDictionary = nil,
-         encoding:ParameterEncoding = URLEncoding.default)
-    {
-        guard let url = URL(string: url) else{
+
+    public init(withPostUrl url: String, header: HeaderDictionary = nil, param: JSONDictionary = nil,
+                encoding: ParameterEncoding = URLEncoding.default) {
+        guard let url = URL(string: url) else {
             fatalError("URL not valid")
         }
-        
+
         self.url = url
         self.header = header
         self.param = param
         self.method = .post
         self.encoding = encoding
     }
-    
+
 }

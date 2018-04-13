@@ -7,34 +7,34 @@
 
 import UIKit
 
-open class TableViewAdapter<T:Any> : NSObject, UITableViewDataSource, UITableViewDelegate {
-    
-    //MARK: - Properties
+open class TableViewAdapter<T: Any> : NSObject, UITableViewDataSource, UITableViewDelegate {
+
+    // MARK: - Properties
     public var tableDataModel: BaseTableDataModel<BaseSectionModel> {
         didSet {
             tableView.reloadData()
         }
     }
-    
+
     public var tableView: UITableView
-    
-    public var data : T?
-    
-    //MARK: - Initialization
-    public init(_ tableView: UITableView,_ data: T?) {
+
+    public var data: T?
+
+    // MARK: - Initialization
+    public init(_ tableView: UITableView, _ data: T?) {
         self.tableView = tableView
         self.tableDataModel = BaseTableDataModel()
         super.init()
-        
+
         self.data = data
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+
         registerNibs()
         setTableData()
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     open func registerNibs() {}
 
     open func setTableData() {}
@@ -62,7 +62,7 @@ open class TableViewAdapter<T:Any> : NSObject, UITableViewDataSource, UITableVie
         setTableData()
     }
 
-    //MARK: - UITableView Delegate & DataSource
+    // MARK: - UITableView Delegate & DataSource
     open func numberOfSections(in tableView: UITableView) -> Int {
         return tableDataModel.sections.count
     }

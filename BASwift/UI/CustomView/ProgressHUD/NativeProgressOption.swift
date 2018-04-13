@@ -8,22 +8,21 @@
 
 import UIKit
 
-open class NativeProgressOptions : ProgressOptions{
-    
-    //MARK: - Properties
-    var style : UIActivityIndicatorViewStyle
-    
-    //MARK: - Initialization
+open class NativeProgressOptions: ProgressOptions {
+
+    // MARK: - Properties
+    var style: UIActivityIndicatorViewStyle
+
+    // MARK: - Initialization
     init(withFrame frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
-         withStyle style: UIActivityIndicatorViewStyle = .white)
-    {
+         withStyle style: UIActivityIndicatorViewStyle = .white) {
         self.style = style
         super.init(withFrame: frame)
     }
-    
-    //MARK: - Default Value
+
+    // MARK: - Default Value
     static let `nativeDefault`: ProgressOptions = {
         return NativeProgressOptions()
     }()
-    
+
 }

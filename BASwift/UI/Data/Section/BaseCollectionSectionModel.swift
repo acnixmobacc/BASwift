@@ -10,15 +10,15 @@ import UIKit
 
 open class BaseCollectionSectionModel: BaseSectionModel {
 
-    //MARK: - Private Properties
+    // MARK: - Private Properties
     private var _headerWidth: CGFloat
     private var _landscapeHeaderWidth: CGFloat!
     private var _footerWidth: CGFloat
     private var _landscapeFooterWidth: CGFloat!
 
-    //MARK: - Properties
+    // MARK: - Properties
     var headerType: AnyClass!
-    
+
     var landscapeHeaderWidth: CGFloat {
         if let landscapeWidth = _landscapeHeaderWidth {
             return landscapeWidth
@@ -51,7 +51,7 @@ open class BaseCollectionSectionModel: BaseSectionModel {
         }
     }
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     public init(type: AnyClass! = nil, cellModels: [BaseCellModel], headerHeight: CGFloat = 0,
                 landscapeHeaderHeight: CGFloat! = nil, headerWidth: CGFloat = 0,
                 landscapeHeaderWidth: CGFloat! = nil, footerHeight: CGFloat = 0,

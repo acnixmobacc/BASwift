@@ -8,6 +8,6 @@
 
 import SwiftyJSON
 
-public protocol IEntity{
-    init(withData data:JSON)
+public protocol IEntity {
+    init(withData data: JSON)
 }

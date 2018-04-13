@@ -6,6 +6,8 @@ disabled_rules:
   - identifier_name
   - let_var_whitespace
   - nesting
+included:
+  - BASwift
 excluded:
   - Pods
 opt_in_rules:

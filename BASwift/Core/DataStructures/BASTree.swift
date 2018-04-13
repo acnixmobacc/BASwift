@@ -9,22 +9,22 @@
 import Foundation
 
 open class BASTree<T> {
-    //MARK: - Properties
+    // MARK: - Properties
     public var rootObject: BASNode<T>
 
-    //MARK: - Initialization
+    // MARK: - Initialization
     public init(withRootValue value: T) {
         rootObject = BASNode(value: value)
     }
 
-    //MARK: - Methods
+    // MARK: - Methods
     public func add(value: T, toNode: BASNode<T>) {
         toNode.add(child: BASNode(value: value))
     }
 }
 
-//MARK: - Add & Search
-public extension BASTree where T:Equatable {
+// MARK: - Add & Search
+public extension BASTree where T: Equatable {
     func add(value: T, toValue: T) {
         if let node = search(value: toValue) {
             add(value: value, toNode: node)

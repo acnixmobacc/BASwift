@@ -9,9 +9,9 @@
 import Foundation
 
 public extension Int {
-    
-    //MARK: - Properties
-    public var toString: String {
+
+    // MARK: - Properties
+    var toString: String {
         return "\(self)"
     }
 
