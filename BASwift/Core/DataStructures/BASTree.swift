@@ -17,9 +17,17 @@ open class BASTree<T> {
         rootObject = BASNode(value: value)
     }
 
+    public init(withRootNode node: BASNode<T>) {
+        rootObject = node
+    }
+
     // MARK: - Methods
     public func add(value: T, toNode: BASNode<T>) {
         toNode.add(child: BASNode(value: value))
+    }
+
+    public func add(node: BASNode<T>, toNode: BASNode<T>) {
+        toNode.add(child: node)
     }
 }
 

@@ -27,7 +27,7 @@ public extension Device {
             let characters = CharacterSet(charactersIn: "01234567890.")
             let string = version.trimmingCharacters(in: characters.inverted)
             let clearedString = version.trimmingCharacters(in: characters)
-            if clearedString.length > 0 {
+            if clearedString.count > 0 {
                 print("WARNING: Wrong delimiter used for AppVersion: \(version). Will remove it.")
             }
             self.version = string

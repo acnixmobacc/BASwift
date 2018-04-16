@@ -67,13 +67,15 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         inputAccessoryView = toolBar
     }
 
-    @objc public func donePressed() {
+    @objc
+    public func donePressed() {
         resignFirstResponder()
         picker?.onClickDone(self)
 
     }
 
-    @objc public func cancelPressed() {
+    @objc
+    public func cancelPressed() {
         resignFirstResponder()
         picker?.onClickCancel(self)
     }

@@ -59,12 +59,12 @@ open class Picker: NSObject {
 
     // MARK: - Methods
     public func onClickDone(_ textField: PickerTextField) {
-        if (textField.text?.length == 0) {
+        if (textField.text?.count == 0) {
             self.pickerView.selectRow(0, inComponent: 0, animated: false)
             self.pickerView(self.pickerView, didSelectRow: 0, inComponent: 0)
             lastSelectedRow = 0
         }
-        if (data.count != 0 && data != nil && textField.text?.length != 0) {
+        if (data.count != 0 && data != nil && textField.text?.count != 0) {
             lastSelectedRow = data.index(of: textField.text!)!
         }
     }

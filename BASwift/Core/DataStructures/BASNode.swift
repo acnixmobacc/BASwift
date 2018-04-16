@@ -30,7 +30,7 @@ open class BASNode<T> {
 // MARK: - Search
 public extension BASNode where T: Equatable {
 
-    func search(value: T) -> BASNode? {
+    func search(value: T) -> BASNode<T>? {
         if value == self.value {
             return self
         }

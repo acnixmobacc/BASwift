@@ -18,7 +18,7 @@ open class BASQueue<T> {
     }
 
     // MARK: - Initialization
-    init() {
+    public init() {
         list = BASLinkedList()
     }
 
@@ -27,6 +27,7 @@ open class BASQueue<T> {
         list.append(value: element)
     }
 
+    @discardableResult
     public func dequeue() -> T? {
         guard !list.isEmpty, let element = list.first else {
             return nil
@@ -38,7 +39,10 @@ open class BASQueue<T> {
     }
 
     public func peek() -> T? {
-        return list.first?.value
+        guard let firstElement = list.first else {
+            return nil
+        }
+        return firstElement.value
     }
 }
 

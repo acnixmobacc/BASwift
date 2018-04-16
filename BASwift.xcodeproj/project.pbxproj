@@ -13,6 +13,14 @@
 		B6140F642049762A003BF29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F632049762A003BF29F /* AppDelegate.swift */; };
 		B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6A2049762A003BF29F /* Assets.xcassets */; };
 		B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6C2049762A003BF29F /* LaunchScreen.storyboard */; };
+		B633D7AD2084D5E5007A9BA6 /* DoubleExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7AC2084D5E5007A9BA6 /* DoubleExtensionTest.swift */; };
+		B633D7AF2084D64B007A9BA6 /* FloatExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7AE2084D64B007A9BA6 /* FloatExtensionTest.swift */; };
+		B633D7B12084D683007A9BA6 /* IntExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B02084D683007A9BA6 /* IntExtensionTest.swift */; };
+		B633D7B32084D7B9007A9BA6 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B22084D7B9007A9BA6 /* StringExtensionTest.swift */; };
+		B633D7B62084E383007A9BA6 /* QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B52084E383007A9BA6 /* QueueTest.swift */; };
+		B633D7B82084E9D2007A9BA6 /* LinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B72084E9D2007A9BA6 /* LinkedListTest.swift */; };
+		B633D7BA2084EF27007A9BA6 /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B92084EF27007A9BA6 /* StackTest.swift */; };
+		B633D7BC2084F196007A9BA6 /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7BB2084F196007A9BA6 /* TreeTest.swift */; };
 		B638D69820629A4200657087 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69720629A4200657087 /* UIView+XIB.swift */; };
 		B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69920629B5A00657087 /* DependencyManager.swift */; };
 		B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* IAlertView.swift */; };
@@ -113,6 +121,14 @@
 		B6140F6F2049762A003BF29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6140F742049762A003BF29F /* BASwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BASwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6140F7A2049762A003BF29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B633D7AC2084D5E5007A9BA6 /* DoubleExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTest.swift; sourceTree = "<group>"; };
+		B633D7AE2084D64B007A9BA6 /* FloatExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensionTest.swift; sourceTree = "<group>"; };
+		B633D7B02084D683007A9BA6 /* IntExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTest.swift; sourceTree = "<group>"; };
+		B633D7B22084D7B9007A9BA6 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
+		B633D7B52084E383007A9BA6 /* QueueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTest.swift; sourceTree = "<group>"; };
+		B633D7B72084E9D2007A9BA6 /* LinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTest.swift; sourceTree = "<group>"; };
+		B633D7B92084EF27007A9BA6 /* StackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
+		B633D7BB2084F196007A9BA6 /* TreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
 		B638D69720629A4200657087 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
 		B638D69920629B5A00657087 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		B68ED22C20651D0C00FD397F /* IAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertView.swift; sourceTree = "<group>"; };
@@ -273,6 +289,17 @@
 			path = BASwiftTests;
 			sourceTree = "<group>";
 		};
+		B633D7B42084E355007A9BA6 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B633D7B52084E383007A9BA6 /* QueueTest.swift */,
+				B633D7B72084E9D2007A9BA6 /* LinkedListTest.swift */,
+				B633D7B92084EF27007A9BA6 /* StackTest.swift */,
+				B633D7BB2084F196007A9BA6 /* TreeTest.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		B68ED22B20651C7D00FD397F /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				B6A558512074EF4A00698AEA /* AppData */,
+				B633D7B42084E355007A9BA6 /* DataStructures */,
 				B6BCFA47207F970900EA9A05 /* Extensions */,
 				B6A5584E2074EF0400698AEA /* Utils */,
 			);
@@ -386,6 +414,10 @@
 			isa = PBXGroup;
 			children = (
 				B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */,
+				B633D7AC2084D5E5007A9BA6 /* DoubleExtensionTest.swift */,
+				B633D7AE2084D64B007A9BA6 /* FloatExtensionTest.swift */,
+				B633D7B02084D683007A9BA6 /* IntExtensionTest.swift */,
+				B633D7B22084D7B9007A9BA6 /* StringExtensionTest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -607,11 +639,11 @@
 		B6F4B094204C264C00110985 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				B6F4B099204C264C00110985 /* BASLinkedList.swift */,
 				B6F4B095204C264C00110985 /* BASQueue.swift */,
+				B6F4B098204C264C00110985 /* BASStack.swift */,
 				B6F4B096204C264C00110985 /* BASNode.swift */,
 				B6F4B097204C264C00110985 /* BASTree.swift */,
-				B6F4B098204C264C00110985 /* BASStack.swift */,
-				B6F4B099204C264C00110985 /* BASLinkedList.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -929,9 +961,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B633D7B32084D7B9007A9BA6 /* StringExtensionTest.swift in Sources */,
+				B633D7AD2084D5E5007A9BA6 /* DoubleExtensionTest.swift in Sources */,
 				B6A558502074EF1700698AEA /* MockDataUtilTests.swift in Sources */,
+				B633D7BA2084EF27007A9BA6 /* StackTest.swift in Sources */,
 				B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */,
+				B633D7B82084E9D2007A9BA6 /* LinkedListTest.swift in Sources */,
+				B633D7B12084D683007A9BA6 /* IntExtensionTest.swift in Sources */,
+				B633D7B62084E383007A9BA6 /* QueueTest.swift in Sources */,
 				B6A5585E2074FF3F00698AEA /* Brand.swift in Sources */,
+				B633D7BC2084F196007A9BA6 /* TreeTest.swift in Sources */,
+				B633D7AF2084D64B007A9BA6 /* FloatExtensionTest.swift in Sources */,
 				B6A558542074EF7000698AEA /* WebServiceFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

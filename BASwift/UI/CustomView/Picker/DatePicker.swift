@@ -56,7 +56,8 @@ open class DatePicker: NSObject {
         pickerView.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
 
-    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+    @objc
+    func datePickerValueChanged(_ sender: UIDatePicker) {
         delegate?.onSelectItem(value: value)
     }
 

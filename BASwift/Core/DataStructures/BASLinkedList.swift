@@ -11,14 +11,14 @@ import Foundation
 // MARK: - Linked Node
 open class BASLinkedNode<T> {
     // MARK: - Properties
-    var value: T
+    public var value: T
 
-    var next: BASLinkedNode<T>?
+    public var next: BASLinkedNode<T>?
 
-    weak var previous: BASLinkedNode<T>?
+    weak public var previous: BASLinkedNode<T>?
 
     // MARK: - Initialization
-    init(value: T) {
+    public init(value: T) {
         self.value = value
     }
 
@@ -43,10 +43,27 @@ open class BASLinkedList<T> {
         return tail
     }
 
+    // MARK: - Initialization
+    public init() {
+        head = nil
+        tail = nil
+    }
+
     // MARK: - Methods
     public func append(value: T) {
         let newNode = BASLinkedNode(value: value)
 
+        if let tailNode = tail {
+            newNode.previous = tailNode
+            tailNode.next = newNode
+        } else {
+            head = newNode
+        }
+
+        tail = newNode
+    }
+
+    public func append(newNode: BASLinkedNode<T>) {
         if let tailNode = tail {
             newNode.previous = tailNode
             tailNode.next = newNode
@@ -78,6 +95,7 @@ open class BASLinkedList<T> {
         tail = nil
     }
 
+    @discardableResult
     public func remove(node: BASLinkedNode<T>) -> T? {
         let prev = node.previous
         let next = node.next

@@ -22,7 +22,7 @@ open class BASStack<T> {
     }
 
     // MARK: - Initialization
-    init() {
+    public init() {
         array = []
     }
 
@@ -31,6 +31,7 @@ open class BASStack<T> {
         array.append(element)
     }
 
+    @discardableResult
     public func pop() -> T? {
         return array.popLast()
     }
