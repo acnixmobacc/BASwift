@@ -8,6 +8,6 @@
 
 import BASwift
 
-class MainModel: BA_BaseModel {
+class MainModel: BABaseModel {
 
 }

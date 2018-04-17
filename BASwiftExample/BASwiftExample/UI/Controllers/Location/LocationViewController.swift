@@ -9,7 +9,7 @@
 import BASwift
 import MapKit
 
-class LocationViewController : BA_BaseViewController<LocationViewModel>{
+class LocationViewController : BABaseViewController<LocationViewModel>{
     
     @IBOutlet weak var mapView: MKMapView!
     

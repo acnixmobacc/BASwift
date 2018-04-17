@@ -9,7 +9,7 @@
 import BASwift
 import UIKit
 
-class DetailViewController: BA_BaseViewController<DetailViewModel> {
+class DetailViewController: BABaseViewController<DetailViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
     

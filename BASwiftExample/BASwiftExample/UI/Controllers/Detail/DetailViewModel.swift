@@ -8,6 +8,6 @@
 
 import BASwift
 
-class DetailViewModel: BA_BaseViewModel {
+class DetailViewModel: BABaseViewModel {
     
 }

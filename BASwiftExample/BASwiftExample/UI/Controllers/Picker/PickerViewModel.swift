@@ -8,6 +8,6 @@
 
 import BASwift
 
-class PickerViewModel : BA_BaseViewModel{
+class PickerViewModel : BABaseViewModel{
     
 }

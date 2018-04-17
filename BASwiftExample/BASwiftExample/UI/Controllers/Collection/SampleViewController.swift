@@ -8,7 +8,7 @@
 
 import BASwift
 
-class SampleViewController: BA_BaseViewController<SampleViewModel> {
+class SampleViewController: BABaseViewController<SampleViewModel> {
     
     @IBOutlet weak var collectionView: UICollectionView!
     

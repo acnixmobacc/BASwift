@@ -9,7 +9,7 @@
 import UIKit
 import BASwift
 
-class MainViewController: BA_BaseViewController<MainViewModel> {
+class MainViewController: BABaseViewController<MainViewModel> {
 
     @IBOutlet weak var childView: LoadableView!
     @IBOutlet weak var childProgressButton: UIButton!

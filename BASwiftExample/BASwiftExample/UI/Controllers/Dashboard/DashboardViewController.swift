@@ -8,7 +8,7 @@
 
 import BASwift
 
-class DashboardViewController : BA_BaseViewController<DashboardViewModel>{
+class DashboardViewController : BABaseViewController<DashboardViewModel>{
 
     lazy var menuItems : [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),

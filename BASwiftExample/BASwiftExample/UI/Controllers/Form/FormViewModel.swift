@@ -9,7 +9,7 @@
 import BASwift
 import RxSwift
 
-class FormViewModel : BA_BaseViewModel{
+class FormViewModel : BABaseViewModel{
     
     var username = Variable<String>("")
     var surname = Variable<String>("")

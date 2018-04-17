@@ -10,7 +10,7 @@ import BASwift
 import RxSwift
 import RxCocoa
 
-class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDelegate {
+class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameField: UITextField!
@@ -23,30 +23,34 @@ class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDeleg
     @IBOutlet weak var birthdateField: DatePickerTextField!
     @IBOutlet weak var saveButton: UIButton!
     
+    var keyboardManager : KeyboardManager!
+    
     var textFieldList : [UITextField]!
     
     var disposeBag : DisposeBag = DisposeBag()
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(_:)),
-                                               name: Notification.Name.UIKeyboardDidShow, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)),
-                                               name: Notification.Name.UIKeyboardDidHide, object: nil)
         
         textFieldList = [nameField, surnameField, passwordField, birthdateField, cityField, townField,
                          addressField, phoneField]
+        
+        keyboardManager = KeyboardManager(withScrollView: scrollView)
         
         setBinding()
         setPickers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        keyboardManager.startObservingKeyboard()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        keyboardManager.stopObservingKeyboard()
+    }
 
     private func setBinding(){
         nameField.rx.text.orEmpty.bind(to: viewModel.username).disposed(by: disposeBag)
@@ -57,9 +61,6 @@ class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDeleg
         addressField.rx.text.orEmpty.bind(to: viewModel.address).disposed(by: disposeBag)
         phoneField.rx.text.orEmpty.bind(to: viewModel.phone).disposed(by: disposeBag)
         birthdateField.rx.text.orEmpty.bind(to: viewModel.birthdate).disposed(by: disposeBag)
-        
-        
-        
         
         saveButton.rx.tap.bind(onNext : { [weak self] in
             self?.viewModel.onClickSave()
@@ -72,26 +73,7 @@ class FormViewController: BA_BaseViewController<FormViewModel>, UITextFieldDeleg
         townField.setPickerView(withData: [])
     }
     
-    
-    @objc
-    func keyboardDidShow(_ notification:NSNotification){
-        
-        if let userInfo = notification.userInfo , let value = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue{
-            let keyboardFrame = value.cgRectValue
-            var contentInset = scrollView.contentInset
-            contentInset.bottom = keyboardFrame.size.height
-            scrollView.contentInset = contentInset
-        }
-        
-    }
-    
-    @objc
-    func keyboardDidHide(_ notification:NSNotification){
-        scrollView.contentInset = .zero
-    }
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //textField.resignFirstResponder()
         if let index = textFieldList.index(of: textField){
             if textFieldList.count > index + 1{
                 textFieldList[index + 1].becomeFirstResponder()

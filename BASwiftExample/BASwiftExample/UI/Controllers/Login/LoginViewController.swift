@@ -8,7 +8,7 @@
 
 import BASwift
 
-class LoginViewController : BA_BaseViewController<LoginViewModel>{
+class LoginViewController : BABaseViewController<LoginViewModel>{
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
