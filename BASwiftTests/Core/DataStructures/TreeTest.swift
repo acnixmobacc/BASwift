@@ -46,5 +46,81 @@ class TreeTest: XCTestCase {
         
         XCTAssertNotNil(appleTree.search(value: "Mobile"))
     }
+    
+    func testAddRoot(){
+        let appleTree = BASTree<String>()
+        let rootNode = BASNode<String>(value: "Apple")
+        appleTree.addRoot(node: rootNode)
+        XCTAssertFalse(appleTree.isEmpty)
+    }
+    
+    func testInitWithValue(){
+        let appleTree = BASTree<String>(withRootValue: "Apple")
+        XCTAssertFalse(appleTree.isEmpty)
+    }
+    
+    func testAddNodeWithValue(){
+        let appleTree = BASTree<String>(withRootValue: "Apple")
+        appleTree.add(value: "Mobile", toValue:"Apple")
+        XCTAssertNotNil(appleTree.search(value: "Mobile"))
+    }
+    
+    
+    func testAddNodeToRoot(){
+        let appleTree = BASTree<String>()
+        let rootNode = BASNode<String>(value: "Apple")
+        let node = BASNode<String>(value: "Mobile")
+        appleTree.addRoot(node: rootNode)
+        appleTree.add(node:node, toNode: rootNode)
+        XCTAssertTrue(appleTree.contains(node: node))
+    }
+
+    
+    func testChildCorrect(){
+        XCTAssertTrue( parentNode.children.contains(child1))
+        XCTAssertTrue( parentNode.children.contains(child2))
+    }
+    
+    func testChildFalse(){
+        let child = BASNode<String>(value: "iPhone")
+        XCTAssertFalse( parentNode.children.contains(child))
+    }
+    
+    func testIsEmptyTrue(){
+        let appleTree = BASTree<String>()
+        XCTAssertTrue(appleTree.isEmpty)
+    }
+    
+    func testIsEmptyFalse(){
+        XCTAssertFalse(tree.isEmpty)
+    }
+    
+    func testSearchValueCorrect(){
+        XCTAssertEqual(tree.search(value: "Swift"), child2)
+    }
+    
+    func testSearchValueNil(){
+        XCTAssertNil(tree.search(value: "Test"))
+    }
+    
+    func testContainsNodeCorrect(){
+        XCTAssertTrue(tree.contains(node: child2))
+    }
+    
+    func testEmptyTreeContains(){
+        let appleTree = BASTree<String>()
+        XCTAssertFalse(appleTree.contains(node: child1))
+    }
+    
+    func testEmptyTreeSearch(){
+        let appleTree = BASTree<String>()
+        XCTAssertNil(appleTree.search(value: "Test"))
+    }
+    
+    func testContainsNodeFalse(){
+        let node = BASNode<String>(value:"Test")
+        XCTAssertFalse(tree.contains(node: node))
+    }
+    
         
 }

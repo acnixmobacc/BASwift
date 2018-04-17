@@ -7,7 +7,6 @@
 import Foundation
 
 open class BASNode<T> {
-
     // MARK: - Properties
     public var value: T
 
@@ -28,7 +27,10 @@ open class BASNode<T> {
 }
 
 // MARK: - Search
-public extension BASNode where T: Equatable {
+extension BASNode: Equatable where T: Equatable {
+    public static func == (lhs: BASNode<T>, rhs: BASNode<T>) -> Bool {
+        return lhs.value == rhs.value
+    }
 
     func search(value: T) -> BASNode<T>? {
         if value == self.value {
@@ -40,5 +42,18 @@ public extension BASNode where T: Equatable {
             }
         }
         return nil
+    }
+
+    func contains(node: BASNode<T>) -> Bool {
+        if(self == node) {
+            return true
+        }
+
+        for child in children {
+            if child.contains(node: node) {
+                return true
+            }
+        }
+        return false
     }
 }

@@ -10,9 +10,17 @@ import Foundation
 
 open class BASTree<T> {
     // MARK: - Properties
-    public var rootObject: BASNode<T>
+    fileprivate var rootObject: BASNode<T>?
+
+    public var isEmpty: Bool {
+        return rootObject == nil
+    }
 
     // MARK: - Initialization
+    public init() {
+        rootObject = nil
+    }
+
     public init(withRootValue value: T) {
         rootObject = BASNode(value: value)
     }
@@ -22,17 +30,33 @@ open class BASTree<T> {
     }
 
     // MARK: - Methods
+    public func addRoot(value: T) {
+        rootObject = BASNode(value: value)
+    }
+
+    public func addRoot(node: BASNode<T>) {
+        rootObject = node
+    }
+
     public func add(value: T, toNode: BASNode<T>) {
+        guard let _ = rootObject else {
+            fatalError("Cannot add new node to tree when root object is null")
+        }
+
         toNode.add(child: BASNode(value: value))
     }
 
     public func add(node: BASNode<T>, toNode: BASNode<T>) {
+        guard let _ = rootObject else {
+            fatalError("Cannot add new node to tree when root object is null")
+        }
         toNode.add(child: node)
     }
 }
 
 // MARK: - Add & Search
 public extension BASTree where T: Equatable {
+
     func add(value: T, toValue: T) {
         if let node = search(value: toValue) {
             add(value: value, toNode: node)
@@ -42,7 +66,19 @@ public extension BASTree where T: Equatable {
     }
 
     func search(value: T) -> BASNode<T>? {
-        return rootObject.search(value: value)
+        if let rootObject = self.rootObject {
+            return rootObject.search(value: value)
+        }
+
+        return nil
+    }
+
+    func contains(node: BASNode<T>) -> Bool {
+        if let rootObject = self.rootObject {
+            return rootObject.contains(node: node)
+        }
+
+        return false
     }
 
 }

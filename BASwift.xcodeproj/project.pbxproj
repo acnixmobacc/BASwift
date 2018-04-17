@@ -434,7 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6842049775F00A5D803 /* AppData */,
-				B6D7E6BD204A03BC00A5D803 /* iOS */,
+				B6D7E6BD204A03BC00A5D803 /* Device */,
 				B6F4B094204C264C00110985 /* DataStructures */,
 				B6D7E6832049774200A5D803 /* Extensions */,
 				B6D7E69D20497BFF00A5D803 /* Utils */,
@@ -582,7 +582,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		B6D7E6BD204A03BC00A5D803 /* iOS */ = {
+		B6D7E6BD204A03BC00A5D803 /* Device */ = {
 			isa = PBXGroup;
 			children = (
 				B6D7E6C0204A03D600A5D803 /* Device.swift */,
@@ -590,7 +590,7 @@
 				B6D7E6C1204A03D600A5D803 /* Device+Screen.swift */,
 				B6D7E6BF204A03D600A5D803 /* Device+Type.swift */,
 			);
-			path = iOS;
+			path = Device;
 			sourceTree = "<group>";
 		};
 		B6D7E6C8204A070D00A5D803 /* Utils */ = {
