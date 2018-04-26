@@ -14,13 +14,14 @@ class PickerViewController : BABaseViewController<PickerViewModel>{
     
     @IBOutlet weak var datePickerField: DatePickerTextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         pickerField.setPickerView(withPicker: Picker(dataArray: ["Trabzonspor", "Man Utd", "Catamara FC", "Milan", "Real Madrid", "Barcelona"]))
         
-        datePickerField.setDatePickerView(withPicker: DatePicker.init())
+        datePickerField.setDatePickerView(withPicker: DatePicker.init(minimumDate: Date.init(fromText: "20.04.2018", withFormat: Date.dd_mm_yyyy), maximumDate: Date.init(fromText: "20.05.2018", withFormat: Date.dd_mm_yyyy)))
+        
+        
     }
     
 }
