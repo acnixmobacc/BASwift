@@ -35,20 +35,21 @@ class LoginCoordinator : Coordinator{
     
     //MARK: - Private Methods
     private func showLogin(){
-        guard let controller = loginStoryboard.instantiateViewController(withIdentifier: LoginViewController.className) as? LoginViewController else{
-            fatalError("Cannot instantiate login view controller")
-        }
+        let controller : LoginViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         self.navigationController =  UINavigationController(rootViewController: controller)
         rootNavigationController.present(navigationController, animated: true, completion: nil)
     }
+    
+    private func instantiateLoginStoryboardController<T : UIViewController>() -> T{
+        return instantiateController(withStoryboard: loginStoryboard)
+    }
 }
 
+//MARK: - Login Coordinator Delegate
 extension LoginCoordinator : LoginCoordinatorDelegate{
     func showRegister() {
-        guard let controller = loginStoryboard.instantiateViewController(withIdentifier: FormViewController.className) as? FormViewController else{
-            fatalError("Cannot instantiate form view controller")
-        }
+        let controller : FormViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }

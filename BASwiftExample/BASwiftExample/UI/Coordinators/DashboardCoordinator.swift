@@ -39,7 +39,7 @@ class DashboardCoordinator : Coordinator{
     }
 }
 
-//MARK: - DashboardViewControllerDelegate
+//MARK: - Dashboard Coordinator Delegate
 extension DashboardCoordinator : DashboardCoordinatorDelegate{
     func perform(withType type: DashboardItemType) {
         switch type {
@@ -55,17 +55,13 @@ extension DashboardCoordinator : DashboardCoordinatorDelegate{
     }
     
     func showPicker(){
-        guard let controller = mainStoryboard.instantiateViewController(withIdentifier: PickerViewController.className) as? PickerViewController else{
-            fatalError("Cannot instantiate main view controller")
-        }
+        let controller : PickerViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
     
     func showProgress(){
-        guard let controller = mainStoryboard.instantiateViewController(withIdentifier: MainViewController.className) as? MainViewController else{
-            fatalError("Cannot instantiate main view controller")
-        }
+        let controller : MainViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
@@ -75,10 +71,13 @@ extension DashboardCoordinator : DashboardCoordinatorDelegate{
         appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
         loginCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         loginCoordinator.start()
-        
     }
     
     func showRegister(){
         
+    }
+    
+    private func instantiateMainStoryboardController<T : UIViewController>() -> T{
+        return instantiateController(withStoryboard: mainStoryboard)
     }
 }
