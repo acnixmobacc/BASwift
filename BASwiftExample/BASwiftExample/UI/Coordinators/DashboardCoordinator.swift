@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DashboardViewControllerDelegate : class{
+protocol DashboardCoordinatorDelegate : class{
     func perform(withType type:DashboardItemType)
 }
 
@@ -40,16 +40,26 @@ class DashboardCoordinator : Coordinator{
 }
 
 //MARK: - DashboardViewControllerDelegate
-extension DashboardCoordinator : DashboardViewControllerDelegate{
+extension DashboardCoordinator : DashboardCoordinatorDelegate{
     func perform(withType type: DashboardItemType) {
         switch type {
         case .progress:
             showProgress()
         case .login:
             showLogin()
+        case .picker:
+            showPicker()
         default:
             break
         }
+    }
+    
+    func showPicker(){
+        guard let controller = mainStoryboard.instantiateViewController(withIdentifier: PickerViewController.className) as? PickerViewController else{
+            fatalError("Cannot instantiate main view controller")
+        }
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
     }
     
     func showProgress(){

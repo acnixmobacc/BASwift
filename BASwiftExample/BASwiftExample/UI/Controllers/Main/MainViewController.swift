@@ -11,7 +11,7 @@ import BASwift
 
 class MainViewController: BABaseViewController<MainViewModel> {
 
-    weak var coordinatorDelegate : DashboardViewControllerDelegate?
+    weak var coordinatorDelegate : DashboardCoordinatorDelegate?
     
     @IBOutlet weak var childView: LoadableView!
     @IBOutlet weak var childProgressButton: UIButton!

@@ -10,7 +10,7 @@ import BASwift
 
 class DashboardViewController : BABaseViewController<DashboardViewModel>{
 
-    weak var coordinatorDelegate : DashboardViewControllerDelegate?
+    weak var coordinatorDelegate : DashboardCoordinatorDelegate?
     
     lazy var menuItems : [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),

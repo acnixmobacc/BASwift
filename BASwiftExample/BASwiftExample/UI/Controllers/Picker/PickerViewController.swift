@@ -14,6 +14,8 @@ class PickerViewController : BABaseViewController<PickerViewModel>{
     
     @IBOutlet weak var datePickerField: DatePickerTextField!
     
+    weak var coordinatorDelegate : DashboardCoordinatorDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
