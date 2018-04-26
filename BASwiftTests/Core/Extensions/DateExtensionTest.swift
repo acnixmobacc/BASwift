@@ -64,4 +64,22 @@ class DateExtensionTest: XCTestCase {
         XCTAssertEqual(mm_yy, "04/18")
     }
     
+    func test_eeee_mmm_d_yyyy(){
+        let eeee_mmm_d_yyyy = april_12_2018.formattedText(withFormat: Date.eeee_mmm_d_yyyy)
+        
+        XCTAssertEqual(eeee_mmm_d_yyyy, "Thursday, Apr 12, 2018")
+    }
+    
+    func test_e_d_mmm_yyyy_hh_mm_ss_z(){
+        let e_d_mmm_yyyy_hh_mm_ss_z = april_12_2018.formattedText(withFormat: Date.e_d_mmm_yyyy_hh_mm_ss_z)
+        
+        XCTAssertEqual(e_d_mmm_yyyy_hh_mm_ss_z, "Thu, 12 Apr 2018 16:35:38 +0300")
+    }
+    
+    func test_yyyy_mm_dd_t_hh_mm_ss_z(){
+        let yyyy_mm_dd_t_hh_mm_ss_z = april_12_2018.formattedText(withFormat: Date.yyyy_mm_dd_t_hh_mm_ss_z)
+        
+        XCTAssertEqual(yyyy_mm_dd_t_hh_mm_ss_z, "2018-04-12T16:35:38+0300")
+    }
+    
 }

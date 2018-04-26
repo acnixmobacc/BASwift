@@ -16,6 +16,9 @@ public extension Date {
     public static var dd_mm_yyyy_hh_mm_ss: String = "dd.MM.yyyy HH:mm:ss"
     public static var mm_yyyy: String = "MM.yyyy"
     public static var mm_yy: String = "MM/yy"
+    public static var eeee_mmm_d_yyyy: String = "EEEE, MMM d, yyyy"
+    public static var e_d_mmm_yyyy_hh_mm_ss_z: String = "E, d MMM yyyy HH:mm:ss Z"
+    public static var yyyy_mm_dd_t_hh_mm_ss_z: String = "yyyy-MM-dd'T'HH:mm:ssZ"
 
     // MARK: - Initialization
     init(fromText text: String, withFormat format: String) {
