@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fhu-I5-fMR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,13 +14,13 @@
         <!--Dashboard-->
         <scene sceneID="pvT-to-wYA">
             <objects>
-                <viewController id="9vk-4D-MAW" customClass="DashboardViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="9vk-4D-MAW" customClass="DashboardViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ypR-W4-odT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-nf-xtA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yzg-T8-orV">
                                     <size key="itemSize" width="50" height="50"/>
@@ -43,45 +43,22 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="txQ-1g-5lI"/>
                     <connections>
                         <outlet property="collectionView" destination="mvR-nf-xtA" id="TBq-bh-1GD"/>
-                        <segue destination="w73-tq-154" kind="show" identifier="toProgress" id="qK2-RZ-sTy"/>
-                        <segue destination="k7F-Fz-Xaa" kind="show" identifier="toTable" id="dq6-cZ-Sw0"/>
-                        <segue destination="g9x-Mp-Ctu" kind="show" identifier="toCollection" id="iKd-Ev-DHQ"/>
-                        <segue destination="9rf-zI-FDJ" kind="show" identifier="toPicker" id="OUM-Jt-Jwj"/>
-                        <segue destination="pRG-3W-TW4" kind="show" identifier="toLocation" id="idO-KQ-KLt"/>
-                        <segue destination="QGa-bo-i5O" kind="presentation" identifier="toLogin" id="fDB-Oo-Fap"/>
-                        <segue destination="fGF-3J-NaI" kind="show" identifier="toForm" id="w4w-LK-x9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dha-m9-RK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-578" y="-30"/>
-        </scene>
-        <!--FormViewController-->
-        <scene sceneID="5mm-lh-eHB">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="FormViewController" id="fGF-3J-NaI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YOO-u4-zDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-71" y="549"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="cns-ps-CEQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="QGa-bo-i5O" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CpU-cS-QiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-578" y="549"/>
+            <point key="canvasLocation" x="-650" y="-27"/>
         </scene>
         <!--Main-->
         <scene sceneID="R5E-W8-ARg">
             <objects>
-                <viewController id="w73-tq-154" customClass="MainViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="w73-tq-154" customClass="MainViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LtL-L1-yEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-vO-6k7" customClass="LoadableView" customModule="BASwift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.75686274509999996" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8ou-th-4sL"/>
@@ -122,13 +99,13 @@
         <!--Table Adapter-->
         <scene sceneID="jf9-Ca-RGm">
             <objects>
-                <viewController title="Table Adapter" id="k7F-Fz-Xaa" customClass="DetailViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="Table Adapter" id="k7F-Fz-Xaa" customClass="DetailViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWJ-H3-p8X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8bb-dQ-6FK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -166,13 +143,13 @@
         <!--Collection Adapter-->
         <scene sceneID="E5C-Xg-9pb">
             <objects>
-                <viewController title="Collection Adapter" id="g9x-Mp-Ctu" customClass="SampleViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleViewController" title="Collection Adapter" id="g9x-Mp-Ctu" customClass="SampleViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPL-hi-wR3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-kR-fsW">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Yn-G7-K1j">
                                     <size key="itemSize" width="50" height="50"/>
@@ -203,13 +180,13 @@
         <!--Picker-->
         <scene sceneID="vt2-7L-hTI">
             <objects>
-                <viewController title="Picker" id="9rf-zI-FDJ" customClass="PickerViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickerViewController" title="Picker" id="9rf-zI-FDJ" customClass="PickerViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ybs-0U-xoO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-HZ-Ifn" customClass="PickerTextField" customModule="BASwift">
-                                <rect key="frame" x="8" y="94" width="359" height="40"/>
+                                <rect key="frame" x="8" y="50" width="359" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uOv-XO-sms"/>
                                 </constraints>
@@ -218,7 +195,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-Nh-h8y" customClass="DatePickerTextField" customModule="BASwift">
-                                <rect key="frame" x="8" y="150" width="359" height="30"/>
+                                <rect key="frame" x="8" y="106" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -247,13 +224,13 @@
         <!--Location-->
         <scene sceneID="as3-ZQ-Df2">
             <objects>
-                <viewController title="Location" id="pRG-3W-TW4" customClass="LocationViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" title="Location" id="pRG-3W-TW4" customClass="LocationViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VjS-r4-phk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-kl-oTg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="262"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="262"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="262" id="kXU-2m-b77"/>
                                 </constraints>
@@ -274,24 +251,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAg-Oe-rrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3412" y="-26.53673163418291"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oOP-SB-6Se">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fhu-I5-fMR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Wy-oP-Shk">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9vk-4D-MAW" kind="relationship" relationship="rootViewController" id="aEn-58-5BJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lSi-7F-weF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1465" y="-30"/>
         </scene>
     </scenes>
 </document>

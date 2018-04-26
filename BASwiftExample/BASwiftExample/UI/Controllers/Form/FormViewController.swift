@@ -12,6 +12,7 @@ import RxCocoa
 
 class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelegate {
     
+    //MARK: - UI Properties
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var surnameField: UITextField!
@@ -23,12 +24,17 @@ class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelega
     @IBOutlet weak var birthdateField: DatePickerTextField!
     @IBOutlet weak var saveButton: UIButton!
     
+    //MARK: - Properties
+    weak var coordinatorDelegate : LoginCoordinatorDelegate?
+    
     var keyboardManager : KeyboardManager!
     
     var textFieldList : [UITextField]!
     
     var disposeBag : DisposeBag = DisposeBag()
     
+    
+    //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +58,7 @@ class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelega
         keyboardManager.stopObservingKeyboard()
     }
 
+    //MARK: - Private Methods
     private func setBinding(){
         nameField.rx.text.orEmpty.bind(to: viewModel.username).disposed(by: disposeBag)
         surnameField.rx.text.orEmpty.bind(to: viewModel.surname).disposed(by: disposeBag)
@@ -73,6 +80,7 @@ class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelega
         townField.setPickerView(withData: [])
     }
     
+    //MARK: - Text Field Delegation Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let index = textFieldList.index(of: textField){
             if textFieldList.count > index + 1{

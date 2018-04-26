@@ -10,6 +10,8 @@ import BASwift
 
 class DashboardViewController : BABaseViewController<DashboardViewModel>{
 
+    weak var coordinatorDelegate : DashboardViewControllerDelegate?
+    
     lazy var menuItems : [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),
                 UIDashboardItem(withType: .collection), UIDashboardItem(withType: .table),
@@ -34,6 +36,6 @@ class DashboardViewController : BABaseViewController<DashboardViewModel>{
 
 extension DashboardViewController : DashboardCollectionAdapterDelegate{    
     func onSelectItem(_ item: UIDashboardItem) {
-        performSegue(withIdentifier: item.type.segueIdentifier, sender: nil)
+        coordinatorDelegate?.perform(withType: item.type)
     }
 }

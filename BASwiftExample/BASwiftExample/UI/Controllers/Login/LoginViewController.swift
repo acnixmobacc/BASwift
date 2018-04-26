@@ -7,29 +7,58 @@
 //
 
 import BASwift
+import RxSwift
+import RxCocoa
 
 class LoginViewController : BABaseViewController<LoginViewModel>{
     
+    //MARK: - UI Fields
     @IBOutlet weak var usernameField: UITextField!
+    
     @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var registerButton: UIButton!
+    
+    @IBOutlet weak var closeButton: UIBarButtonItem!
+    
+    //MARK: - Properties
+    weak var coordinatorDelegate : LoginCoordinatorDelegate?
     
     lazy var touchIDManager : TouchIDManager = {
         return TouchIDManager()
     }()
     
+    var disposeBag : DisposeBag = DisposeBag()
+    
+    //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUIBindings()
     }
     
-    @IBAction func loginAction(_ sender: Any) {
+    //MARK: - Private Methods
+    private func setUIBindings(){
+        registerButton.rx.tap.bind(onNext : { [weak self] in
+            self?.coordinatorDelegate?.showRegister()
+        }).disposed(by: disposeBag)
+        
+        loginButton.rx.tap.bind(onNext : { [weak self] in
+            self?.authenticateWithTouchID()
+        }).disposed(by: disposeBag)
+        
+        closeButton.rx.tap.bind(onNext : { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+    }
+    
+    func authenticateWithTouchID(){
         touchIDManager.authenticateUser(reasonText: "Test", successBlock: {[weak self] result in
             self?.dismiss(animated: true, completion: nil)
         }) {[weak self] error in
             self?.showAlert(BaseAlert.init(message: error.localizedDescription))
         }
     }
-    
-    @IBAction func closeAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+
 }
