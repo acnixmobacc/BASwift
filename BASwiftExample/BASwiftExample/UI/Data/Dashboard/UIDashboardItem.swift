@@ -7,7 +7,7 @@
 //
 
 import BASwift
-enum DashboardItemType : String{
+enum DashboardItemType: String {
     case progress = "Progress"
     case picker = "Picker"
     case collection = "Collection Adapter"
@@ -17,15 +17,15 @@ enum DashboardItemType : String{
     case form = "Form"
 }
 
-class UIDashboardItem : ICellData{
-    
-    var type : DashboardItemType
-    
-    var title : String{
+class UIDashboardItem: ICellData {
+
+    var type: DashboardItemType
+
+    var title: String {
         return type.rawValue
     }
-    
-    init(withType type:DashboardItemType) {
+
+    init(withType type: DashboardItemType) {
         self.type = type
     }
 }

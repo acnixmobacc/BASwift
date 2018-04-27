@@ -8,6 +8,6 @@
 
 import BASwift
 
-class LocationViewModel : BaseViewModel{
-    
+class LocationViewModel: BaseViewModel {
+
 }

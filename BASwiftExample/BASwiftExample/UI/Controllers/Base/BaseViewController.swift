@@ -8,6 +8,6 @@
 
 import BASwift
 
-class BaseViewController<T:BaseViewModel> : BABaseViewController<T>{
-    
+class BaseViewController<T: BaseViewModel> : BABaseViewController<T> {
+
 }

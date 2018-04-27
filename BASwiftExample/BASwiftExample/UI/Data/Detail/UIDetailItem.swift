@@ -8,11 +8,11 @@
 
 import BASwift
 
-class UIDetailItem : ICellData{
-    var title : String
-    var description : String
-    
-    init(_ title:String = "", _ description:String = "") {
+class UIDetailItem: ICellData {
+    var title: String
+    var description: String
+
+    init(_ title: String = "", _ description: String = "") {
         self.title = title
         self.description = description
     }

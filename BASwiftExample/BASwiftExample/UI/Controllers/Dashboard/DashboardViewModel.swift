@@ -8,6 +8,6 @@
 
 import Foundation
 
-class DashboardViewModel: BaseViewModel{
-    
+class DashboardViewModel: BaseViewModel {
+
 }

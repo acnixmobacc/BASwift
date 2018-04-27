@@ -10,14 +10,14 @@ import UIKit
 
 class DashboardItemCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak private var titleLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    func setView(withData data:UIDashboardItem){
+
+    func setView(withData data: UIDashboardItem) {
         titleLabel.text = data.title
     }
 

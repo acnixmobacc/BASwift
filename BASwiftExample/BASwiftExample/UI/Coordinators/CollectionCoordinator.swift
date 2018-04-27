@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CollectionCoordinator : Coordinator{
-    //MARK: - Properties
-    lazy var adapterStoryboard : UIStoryboard = {
+class CollectionCoordinator: Coordinator {
+    // MARK: - Properties
+    lazy var adapterStoryboard: UIStoryboard = {
        return UIStoryboard(name: "Adapter", bundle: nil)
     }()
 
-    //MARK: - Methods
-    func start(withType type:DashboardItemType){
+    // MARK: - Methods
+    func start(withType type: DashboardItemType) {
         switch type {
         case .collection:
             showCollection()
@@ -25,21 +25,21 @@ class CollectionCoordinator : Coordinator{
             break
         }
     }
-    
-    //MARK: - Private Methods
+
+    // MARK: - Private Methods
     private func showTable() {
-        let controller : DetailViewController = instantiateAdapterStoryboardController()
+        let controller: DetailViewController = instantiateAdapterStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
-    
+
     private func showCollection() {
-        let controller : SampleViewController = instantiateAdapterStoryboardController()
+        let controller: SampleViewController = instantiateAdapterStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
-    
-    private func instantiateAdapterStoryboardController<T : UIViewController>() -> T{
+
+    private func instantiateAdapterStoryboardController<T: UIViewController>() -> T {
         return instantiateController(withStoryboard: adapterStoryboard)
     }
 

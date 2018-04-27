@@ -8,31 +8,31 @@
 
 import UIKit
 
-protocol DashboardCoordinatorDelegate : CoordinatorDelegate{
-    func perform(withType type:DashboardItemType)
+protocol DashboardCoordinatorDelegate: CoordinatorDelegate {
+    func perform(withType type: DashboardItemType)
 }
 
-class DashboardCoordinator : Coordinator{
-    
-    //MARK: - Properties
-    lazy var mainStoryboard : UIStoryboard = {
-        return UIStoryboard.init(name: "Main", bundle: nil)
+class DashboardCoordinator: Coordinator {
+
+    // MARK: - Properties
+    lazy var mainStoryboard: UIStoryboard = {
+        return UIStoryboard(name: "Main", bundle: nil)
     }()
-    
-    //MARK: - Methods
-    func start(){
+
+    // MARK: - Methods
+    func start() {
         guard let controller = mainStoryboard.instantiateViewController(withIdentifier: DashboardViewController.className)
-            as? DashboardViewController else{
+            as? DashboardViewController else {
                 fatalError("Cannot instantiate dashboard view controller")
         }
-        
+
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
 }
 
-//MARK: - Dashboard Coordinator Delegate
-extension DashboardCoordinator : DashboardCoordinatorDelegate{
+// MARK: - Dashboard Coordinator Delegate
+extension DashboardCoordinator: DashboardCoordinatorDelegate {
     func perform(withType type: DashboardItemType) {
         switch type {
         case .progress:
@@ -47,38 +47,38 @@ extension DashboardCoordinator : DashboardCoordinatorDelegate{
             break
         }
     }
-    
-    private func showCollection(_ type:DashboardItemType){
+
+    private func showCollection(_ type: DashboardItemType) {
         let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)
         collectionCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         collectionCoordinator.start(withType: type)
     }
-    
-    private func showPicker(){
-        let controller : PickerViewController = instantiateMainStoryboardController()
+
+    private func showPicker() {
+        let controller: PickerViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
-    
-    private func showProgress(){
-        let controller : MainViewController = instantiateMainStoryboardController()
+
+    private func showProgress() {
+        let controller: MainViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
-    
-    private func showLogin(){
+
+    private func showLogin() {
         let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
         loginCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         loginCoordinator.start()
     }
-    
-    private func showRegister(){
-        
+
+    private func showRegister() {
+
     }
-    
-    private func instantiateMainStoryboardController<T : UIViewController>() -> T{
+
+    private func instantiateMainStoryboardController<T: UIViewController>() -> T {
         return instantiateController(withStoryboard: mainStoryboard)
     }
 }

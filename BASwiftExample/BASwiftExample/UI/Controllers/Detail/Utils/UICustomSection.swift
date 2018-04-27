@@ -8,13 +8,11 @@
 
 import BASwift
 
-class UICustomSection : BaseSectionModel{
+class UICustomSection: BaseSectionModel {
     override func headerView() -> UIView {
         let view = UIView()
         view.backgroundColor = .blue
-        
+
         return view
     }
 }
-
-

@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol DashboardCollectionAdapterDelegate : class{
-    func onSelectItem(_ item:UIDashboardItem)
+protocol DashboardCollectionAdapterDelegate: class {
+    func onSelectItem(_ item: UIDashboardItem)
 }

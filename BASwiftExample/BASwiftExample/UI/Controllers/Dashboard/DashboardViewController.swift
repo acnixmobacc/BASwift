@@ -8,33 +8,33 @@
 
 import BASwift
 
-class DashboardViewController : BaseViewController<DashboardViewModel>{
+class DashboardViewController: BaseViewController<DashboardViewModel> {
 
-    weak var coordinatorDelegate : DashboardCoordinatorDelegate?
-    
-    lazy var menuItems : [UIDashboardItem] = {
+    weak var coordinatorDelegate: DashboardCoordinatorDelegate?
+
+    lazy var menuItems: [UIDashboardItem] = {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),
                 UIDashboardItem(withType: .collection), UIDashboardItem(withType: .table),
                 UIDashboardItem(withType: .location), UIDashboardItem(withType: .login),
                 UIDashboardItem(withType: .form)]
     }()
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    var collectionAdapter : DashboardCollectionAdapter?
-    
+
+    @IBOutlet weak private var collectionView: UICollectionView!
+
+    var collectionAdapter: DashboardCollectionAdapter?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDashboard()
     }
 
-    private func setupDashboard(){
+    private func setupDashboard() {
         collectionAdapter = DashboardCollectionAdapter(collectionView, data: menuItems)
         collectionAdapter?.delegate = self
     }
 }
 
-extension DashboardViewController : DashboardCollectionAdapterDelegate{    
+extension DashboardViewController: DashboardCollectionAdapterDelegate {
     func onSelectItem(_ item: UIDashboardItem) {
         coordinatorDelegate?.perform(withType: item.type)
     }

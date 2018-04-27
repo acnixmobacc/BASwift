@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol AppCoordinatorDelegate: class{
+protocol AppCoordinatorDelegate: class {
     func onPop()
-    
-    func onPush(coordinator:Coordinator)
-    
+
+    func onPush(coordinator: Coordinator)
+
 }

@@ -8,13 +8,13 @@
 
 import Foundation
 
-class AppConfigurator{
-    
-    class func config(){
+class AppConfigurator {
+
+    class func config() {
         Logger.isEnable = true
     }
-    
-    private init(){
-        
+
+    private init() {
+
     }
 }

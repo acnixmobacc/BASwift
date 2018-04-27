@@ -49,7 +49,7 @@ open class DatePicker: NSObject {
         super.init()
         setPicker()
     }
-    
+
     public init(withDateFormat dateFormat: String = "dd.MM.yyyy", minimumDate: Date? = nil, maximumDate: Date? = nil) {
         self.dateFormat = dateFormat
         super.init()
@@ -62,7 +62,6 @@ open class DatePicker: NSObject {
         pickerView.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
 
-    
     public func setAvailableDateRange(minimumDate: Date? = nil, maximumDate: Date? = nil) {
         pickerView.minimumDate = minimumDate
         pickerView.maximumDate = maximumDate

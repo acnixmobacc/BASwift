@@ -66,7 +66,6 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         delegate = self
         inputAccessoryView = toolBar
     }
-    
 
     @objc
     public func donePressed() {

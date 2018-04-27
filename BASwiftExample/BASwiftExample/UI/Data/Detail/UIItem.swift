@@ -8,10 +8,10 @@
 
 import BASwift
 
-class UIItem : ICellData{
-    var value:  String
-    
-    init(_ value:String = "") {
+class UIItem: ICellData {
+    var value: String
+
+    init(_ value: String = "") {
         self.value = value
     }
 }

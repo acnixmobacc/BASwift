@@ -8,6 +8,6 @@
 
 import Foundation
 
-class PickerViewModel : BaseViewModel{
-    
+class PickerViewModel: BaseViewModel {
+
 }

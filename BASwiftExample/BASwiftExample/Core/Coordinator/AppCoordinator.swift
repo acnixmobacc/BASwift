@@ -6,29 +6,29 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import UIKit
 import BASwift
+import UIKit
 
-class AppCoordinator : NSObject{
-    
+class AppCoordinator: NSObject {
+
     // MARK: - Properties
-    var navigationController : UINavigationController
-    
-    var childCoordinators : BASStack<Coordinator>
-    
+    var navigationController: UINavigationController
+
+    var childCoordinators: BASStack<Coordinator>
+
     // MARK: - Initialization
-    init(withNavigationController navigationController:UINavigationController) {
+    init(withNavigationController navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.childCoordinators = BASStack<Coordinator>()
     }
-    
-    //MARK: - Methods
-    func start(){
+
+    // MARK: - Methods
+    func start() {
         showDashboard()
     }
-    
-    //MARK: - Private Methods
-    private func showDashboard(){
+
+    // MARK: - Private Methods
+    private func showDashboard() {
         let dashboardCoordinator = DashboardCoordinator(withNavigationController: navigationController)
         dashboardCoordinator.appCoordinatorDelegate = self
         dashboardCoordinator.start()
@@ -36,18 +36,17 @@ class AppCoordinator : NSObject{
     }
 }
 
-//MARK: - AppCoordinator Delegate
-extension AppCoordinator : AppCoordinatorDelegate{
-    
+// MARK: - AppCoordinator Delegate
+extension AppCoordinator: AppCoordinatorDelegate {
+
     func onPop() {
         let coordinator = childCoordinators.pop()
         Logger.debug("Popped \(coordinator!)")
     }
-    
+
     func onPush(coordinator: Coordinator) {
         childCoordinators.push(coordinator)
         Logger.debug("Pushed \(coordinator)")
     }
-    
-    
+
 }

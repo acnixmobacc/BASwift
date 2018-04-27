@@ -8,6 +8,6 @@
 
 import Foundation
 
-class LoginViewModel : BaseViewModel{
-    
+class LoginViewModel: BaseViewModel {
+
 }

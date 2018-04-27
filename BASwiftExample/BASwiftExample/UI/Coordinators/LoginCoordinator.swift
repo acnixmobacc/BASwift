@@ -8,41 +8,41 @@
 
 import UIKit
 
-protocol LoginCoordinatorDelegate : CoordinatorDelegate{
+protocol LoginCoordinatorDelegate: CoordinatorDelegate {
     func showRegister()
 }
 
-class LoginCoordinator : Coordinator{
-    
-    //MARK: - Properties
-    lazy var loginStoryboard : UIStoryboard = {
-        return UIStoryboard.init(name: "Login", bundle: nil)
-    }()
-    
-    var loginNavigation : UINavigationController!
+class LoginCoordinator: Coordinator {
 
-    //MARK: - Public Methods
-    func start(){
+    // MARK: - Properties
+    lazy var loginStoryboard: UIStoryboard = {
+        return UIStoryboard(name: "Login", bundle: nil)
+    }()
+
+    var loginNavigation: UINavigationController!
+
+    // MARK: - Public Methods
+    func start() {
         showLogin()
     }
-    
-    //MARK: - Private Methods
-    private func showLogin(){
-        let controller : LoginViewController = instantiateLoginStoryboardController()
+
+    // MARK: - Private Methods
+    private func showLogin() {
+        let controller: LoginViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
-        loginNavigation =  UINavigationController(rootViewController: controller)
+        loginNavigation = UINavigationController(rootViewController: controller)
         navigationController.show(loginNavigation, sender: nil)
     }
-    
-    private func instantiateLoginStoryboardController<T : UIViewController>() -> T{
+
+    private func instantiateLoginStoryboardController<T: UIViewController>() -> T {
         return instantiateController(withStoryboard: loginStoryboard)
     }
 }
 
-//MARK: - Login Coordinator Delegate
-extension LoginCoordinator : LoginCoordinatorDelegate{
+// MARK: - Login Coordinator Delegate
+extension LoginCoordinator: LoginCoordinatorDelegate {
     func showRegister() {
-        let controller : FormViewController = instantiateLoginStoryboardController()
+        let controller: FormViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         loginNavigation.show(controller, sender: nil)
     }
