@@ -40,11 +40,13 @@ class AppCoordinator : NSObject{
 extension AppCoordinator : AppCoordinatorDelegate{
     
     func onPop() {
-        childCoordinators.pop()
+        let coordinator = childCoordinators.pop()
+        Logger.debug("Popped \(coordinator!)")
     }
     
     func onPush(coordinator: Coordinator) {
         childCoordinators.push(coordinator)
+        Logger.debug("Pushed \(coordinator)")
     }
     
     

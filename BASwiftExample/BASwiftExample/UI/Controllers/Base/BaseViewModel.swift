@@ -1,13 +1,13 @@
 //
-//  SampleViewModel.swift
+//  BaseViewModel.swift
 //  BASwiftExample
 //
-//  Created by Burak Akkaya on 26.03.2018.
+//  Created by Burak Akkaya on 27.04.2018.
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
 import BASwift
 
-class SampleViewModel : BaseViewModel{
+class BaseViewModel : BABaseViewModel{
     
 }

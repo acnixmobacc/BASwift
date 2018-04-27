@@ -41,31 +41,40 @@ extension DashboardCoordinator : DashboardCoordinatorDelegate{
             showLogin()
         case .picker:
             showPicker()
+        case .table, .collection:
+            showCollection(type)
         default:
             break
         }
     }
     
-    func showPicker(){
+    private func showCollection(_ type:DashboardItemType){
+        let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController)
+        appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)
+        collectionCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
+        collectionCoordinator.start(withType: type)
+    }
+    
+    private func showPicker(){
         let controller : PickerViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
     
-    func showProgress(){
+    private func showProgress(){
         let controller : MainViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
     }
     
-    func showLogin(){
+    private func showLogin(){
         let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
         loginCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         loginCoordinator.start()
     }
     
-    func showRegister(){
+    private func showRegister(){
         
     }
     

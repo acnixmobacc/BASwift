@@ -9,9 +9,10 @@
 import BASwift
 import UIKit
 
-class DetailViewController: BABaseViewController<DetailViewModel> {
+class DetailViewController: BaseViewController<DetailViewModel> {
     
-    @IBOutlet weak var tableView: UITableView!
+    //MARK: - Properties
+    weak var coordinatorDelegate : CoordinatorDelegate?
     
     var tableViewAdapter : DetailTableAdapter?
     
@@ -19,6 +20,12 @@ class DetailViewController: BABaseViewController<DetailViewModel> {
         return ProgressHUDManager.init(forView: self.view, dismissStrategy: .countable)
     }()
     
+    //MARK: - UI Fields
+    @IBOutlet weak var tableView: UITableView!
+    
+
+    
+    //MARK: - View Controller Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         tableViewAdapter = DetailTableAdapter.init(tableView, [UIDetailItem(), UIItem(),
@@ -27,6 +34,7 @@ class DetailViewController: BABaseViewController<DetailViewModel> {
         
     }
     
+    //MARK: - Button Actions
     @IBAction func stop(_ sender: Any) {
         progressManager.hideLoading()
     }

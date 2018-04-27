@@ -8,7 +8,7 @@
 
 import BASwift
 
-class PickerViewController : BABaseViewController<PickerViewModel>{
+class PickerViewController : BaseViewController<PickerViewModel>{
     
     @IBOutlet weak var pickerField: PickerTextField!
     

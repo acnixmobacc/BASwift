@@ -5,12 +5,11 @@
 //  Created by Burak Akkaya on 28.03.2018.
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
-
 import BASwift
 import RxSwift
 import RxCocoa
 
-class LoginViewController : BABaseViewController<LoginViewModel>{
+class LoginViewController : BaseViewController<LoginViewModel>{
     
     //MARK: - UI Fields
     @IBOutlet weak var usernameField: UITextField!
@@ -49,8 +48,6 @@ class LoginViewController : BABaseViewController<LoginViewModel>{
         }).disposed(by: disposeBag)
         
         closeButton.rx.tap.bind(onNext : { [weak self] in
-            //self?.dismiss(animated: true, completion: nil)
-            //self?.navigationController?.popViewController(animated: true)
             self?.coordinatorDelegate?.dismiss()
         }).disposed(by: disposeBag)
     }

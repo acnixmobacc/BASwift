@@ -5,11 +5,9 @@
 //  Created by Burak Akkaya on 29.03.2018.
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
-
-import BASwift
 import RxSwift
 
-class FormViewModel : BABaseViewModel{
+class FormViewModel : BaseViewModel{
     
     var username = Variable<String>("")
     var surname = Variable<String>("")

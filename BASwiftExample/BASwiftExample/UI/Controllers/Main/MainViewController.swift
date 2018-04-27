@@ -9,7 +9,7 @@
 import UIKit
 import BASwift
 
-class MainViewController: BABaseViewController<MainViewModel> {
+class MainViewController: BaseViewController<MainViewModel> {
 
     weak var coordinatorDelegate : DashboardCoordinatorDelegate?
     

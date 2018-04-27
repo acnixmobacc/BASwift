@@ -6,8 +6,8 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import BASwift
+import Foundation
 
-class DashboardViewModel: BABaseViewModel{
+class DashboardViewModel: BaseViewModel{
     
 }

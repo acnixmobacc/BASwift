@@ -10,7 +10,7 @@ import BASwift
 import RxSwift
 import RxCocoa
 
-class FormViewController: BABaseViewController<FormViewModel>, UITextFieldDelegate {
+class FormViewController: BaseViewController<FormViewModel>, UITextFieldDelegate {
     
     //MARK: - UI Properties
     @IBOutlet weak var scrollView: UIScrollView!

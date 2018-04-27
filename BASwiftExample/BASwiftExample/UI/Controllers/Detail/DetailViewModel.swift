@@ -6,8 +6,8 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import BASwift
+import Foundation
 
-class DetailViewModel: BABaseViewModel {
+class DetailViewModel: BaseViewModel {
     
 }

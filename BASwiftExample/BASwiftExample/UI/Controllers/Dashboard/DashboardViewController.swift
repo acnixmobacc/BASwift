@@ -8,7 +8,7 @@
 
 import BASwift
 
-class DashboardViewController : BABaseViewController<DashboardViewModel>{
+class DashboardViewController : BaseViewController<DashboardViewModel>{
 
     weak var coordinatorDelegate : DashboardCoordinatorDelegate?
     

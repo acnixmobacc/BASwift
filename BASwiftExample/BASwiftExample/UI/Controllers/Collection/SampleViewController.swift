@@ -8,12 +8,17 @@
 
 import BASwift
 
-class SampleViewController: BABaseViewController<SampleViewModel> {
+class SampleViewController: BaseViewController<SampleViewModel> {
     
+    //MARK: - UI Fields
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - Properties
     var collectionAdapter : SampleCollectionViewAdapter!
     
+    weak var coordinatorDelegate : CoordinatorDelegate?
+    
+    //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
