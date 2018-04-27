@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DashboardCoordinatorDelegate : class{
+protocol DashboardCoordinatorDelegate : CoordinatorDelegate{
     func perform(withType type:DashboardItemType)
 }
 
@@ -18,14 +18,6 @@ class DashboardCoordinator : Coordinator{
     lazy var mainStoryboard : UIStoryboard = {
         return UIStoryboard.init(name: "Main", bundle: nil)
     }()
-    
-    var navigationController : UINavigationController
-    
-    
-    //MARK: - Initialization
-    init(withNavigationController navigationController:UINavigationController) {
-        self.navigationController = navigationController
-    }
     
     //MARK: - Methods
     func start(){

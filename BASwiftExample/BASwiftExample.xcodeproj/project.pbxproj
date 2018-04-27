@@ -22,6 +22,9 @@
 		B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC0EE206BD59A00A69F08 /* Login.storyboard */; };
 		B614D969206A89A300F97145 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614D968206A89A300F97145 /* LocationViewController.swift */; };
 		B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614D96A206A89AF00F97145 /* LocationViewModel.swift */; };
+		B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD3E20933D0500A2B931 /* Logger.swift */; };
+		B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD4120933D2300A2B931 /* AppConfigurator.swift */; };
+		B64ADD442093671A00A2B931 /* Adapter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64ADD432093671A00A2B931 /* Adapter.storyboard */; };
 		B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0765206D2501007194B5 /* FormViewModel.swift */; };
 		B64F0768206D250C007194B5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0767206D250C007194B5 /* FormViewController.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
@@ -86,6 +89,9 @@
 		B60BC0EE206BD59A00A69F08 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B614D968206A89A300F97145 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B614D96A206A89AF00F97145 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		B64ADD3E20933D0500A2B931 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B64ADD4120933D2300A2B931 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		B64ADD432093671A00A2B931 /* Adapter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adapter.storyboard; sourceTree = "<group>"; };
 		B64F0765206D2501007194B5 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		B64F0767206D250C007194B5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
@@ -200,6 +206,22 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		B64ADD3D20933CF400A2B931 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B64ADD3E20933D0500A2B931 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		B64ADD4020933D0F00A2B931 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B64ADD4120933D2300A2B931 /* AppConfigurator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B64F0764206D24EE007194B5 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +252,7 @@
 			children = (
 				B6A807E02063864000E03C26 /* Main.storyboard */,
 				B60BC0EE206BD59A00A69F08 /* Login.storyboard */,
+				B64ADD432093671A00A2B931 /* Adapter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -362,6 +385,8 @@
 		B6DE6E5B204C2990009B1718 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B64ADD4020933D0F00A2B931 /* Utils */,
+				B64ADD3D20933CF400A2B931 /* Logger */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -553,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64ADD442093671A00A2B931 /* Adapter.storyboard in Resources */,
 				B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */,
 				B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */,
 				B60BC0E6206BAA3500A69F08 /* DashboardItemCollectionViewCell.xib in Resources */,
@@ -721,6 +747,7 @@
 				B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
+				B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */,
 				B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */,
 				B60BC0ED206BD58A00A69F08 /* LoginViewModel.swift in Sources */,
 				B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */,
@@ -728,6 +755,7 @@
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
+				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
 				B60BC0E1206BA9A900A69F08 /* DashboardCollectionAdapter.swift in Sources */,
 				B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */,

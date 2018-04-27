@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appCoordinator : AppCoordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        AppConfigurator.config()
+        
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController.init()
         self.appCoordinator = AppCoordinator(withNavigationController: self.window?.rootViewController as! UINavigationController)
         self.appCoordinator.start()
+        
+        
         
         self.window?.makeKeyAndVisible()
         return true

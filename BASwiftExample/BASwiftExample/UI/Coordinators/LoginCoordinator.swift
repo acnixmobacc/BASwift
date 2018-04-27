@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginCoordinatorDelegate : class{
+protocol LoginCoordinatorDelegate : CoordinatorDelegate{
     func showRegister()
 }
 
@@ -19,15 +19,8 @@ class LoginCoordinator : Coordinator{
         return UIStoryboard.init(name: "Login", bundle: nil)
     }()
     
-    var rootNavigationController : UINavigationController
-    
-    var navigationController : UINavigationController!
-    
-    //MARK: - Initialization
-    init(withNavigationController navigationController: UINavigationController) {
-        self.rootNavigationController = navigationController
-    }
-    
+    var loginNavigation : UINavigationController!
+
     //MARK: - Public Methods
     func start(){
         showLogin()
@@ -37,8 +30,8 @@ class LoginCoordinator : Coordinator{
     private func showLogin(){
         let controller : LoginViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
-        self.navigationController =  UINavigationController(rootViewController: controller)
-        rootNavigationController.present(navigationController, animated: true, completion: nil)
+        loginNavigation =  UINavigationController(rootViewController: controller)
+        navigationController.show(loginNavigation, sender: nil)
     }
     
     private func instantiateLoginStoryboardController<T : UIViewController>() -> T{
@@ -51,6 +44,6 @@ extension LoginCoordinator : LoginCoordinatorDelegate{
     func showRegister() {
         let controller : FormViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
-        navigationController.show(controller, sender: nil)
+        loginNavigation.show(controller, sender: nil)
     }
 }

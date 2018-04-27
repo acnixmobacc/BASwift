@@ -49,7 +49,9 @@ class LoginViewController : BABaseViewController<LoginViewModel>{
         }).disposed(by: disposeBag)
         
         closeButton.rx.tap.bind(onNext : { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
+            //self?.dismiss(animated: true, completion: nil)
+            //self?.navigationController?.popViewController(animated: true)
+            self?.coordinatorDelegate?.dismiss()
         }).disposed(by: disposeBag)
     }
     
