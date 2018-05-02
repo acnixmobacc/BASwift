@@ -10,4 +10,8 @@ import BASwift
 
 class BaseViewController<T: BaseViewModel> : BABaseViewController<T> {
 
+    deinit {
+        Logger.debug("Deinit \(self)")
+    }
+
 }

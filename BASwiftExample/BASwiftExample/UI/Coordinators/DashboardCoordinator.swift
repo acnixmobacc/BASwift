@@ -46,17 +46,20 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
         switch type {
         case .progress:
             showProgress()
-        case .login:
-            showLogin()
+        case .login, .form:
+            showAuthScreen(type)
         case .picker:
             showPicker()
         case .table, .collection:
             showCollection(type)
-        default:
-            break
+        case .location:
+            showLocation()
         }
     }
+}
 
+// MARK: - Private Methods
+extension DashboardCoordinator {
     private func showCollection(_ type: DashboardItemType) {
         let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)
@@ -76,15 +79,17 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
         navigationController.show(controller, sender: nil)
     }
 
-    private func showLogin() {
+    private func showAuthScreen(_ type: DashboardItemType) {
         let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
         loginCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
-        loginCoordinator.start()
+        loginCoordinator.start(withType: type)
     }
 
-    private func showRegister() {
-
+    private func showLocation() {
+        let controller: LocationViewController = instantiateMainStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
     }
 
     private func instantiateMainStoryboardController<T: UIViewController>() -> T {

@@ -8,11 +8,13 @@
 
 import UIKit
 
+// MARK: - Login Coordinator Delegate
 protocol LoginCoordinatorDelegate: CoordinatorDelegate {
     @discardableResult
     func showRegister() -> UIViewController
 }
 
+// MARK: - Login Coordinator
 class LoginCoordinator: Coordinator {
 
     // MARK: - Properties
@@ -23,31 +25,59 @@ class LoginCoordinator: Coordinator {
     var loginNavigation: UINavigationController!
 
     // MARK: - Public Methods
-    func start() {
-        firstViewControllerInCoordinator = showLogin()
-    }
-
-    // MARK: - Private Methods
-    @discardableResult
-    private func showLogin() -> UIViewController {
-        let controller: LoginViewController = instantiateLoginStoryboardController()
-        controller.coordinatorDelegate = self
-        loginNavigation = UINavigationController(rootViewController: controller)
-        navigationController.show(loginNavigation, sender: nil)
-        return controller
-    }
-
-    private func instantiateLoginStoryboardController<T: UIViewController>() -> T {
-        return instantiateController(withStoryboard: loginStoryboard)
+    func start(withType type: DashboardItemType) {
+        switch type {
+        case .login:
+            firstViewControllerInCoordinator = presentLogin()
+        case .form:
+            firstViewControllerInCoordinator = presentRegister()
+        default:
+            break
+        }
     }
 }
 
 // MARK: - Login Coordinator Delegate
 extension LoginCoordinator: LoginCoordinatorDelegate {
     func showRegister() -> UIViewController {
-        let controller: FormViewController = instantiateLoginStoryboardController()
-        controller.coordinatorDelegate = self
+        let controller = createFormViewController()
         loginNavigation.show(controller, sender: nil)
         return controller
+    }
+}
+
+// MARK: - Private Methods
+extension LoginCoordinator {
+
+    @discardableResult
+    private func presentLogin() -> UIViewController {
+        let controller: LoginViewController = instantiateLoginStoryboardController()
+        controller.coordinatorDelegate = self
+        start(withRootController: controller)
+        return controller
+    }
+
+    @discardableResult
+    private func presentRegister() -> UIViewController {
+        let controller = createFormViewController()
+        start(withRootController: controller)
+        return controller
+    }
+
+    private func createFormViewController() -> FormViewController {
+        let controller: FormViewController = instantiateLoginStoryboardController()
+        controller.coordinatorDelegate = self
+        return controller
+    }
+
+    private func start(withRootController controller: UIViewController) {
+        loginNavigation = UINavigationController(rootViewController: controller)
+        let barButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismiss))
+        controller.navigationItem.setLeftBarButtonItems([barButton], animated: true)
+        navigationController.show(loginNavigation, sender: nil)
+    }
+
+    private func instantiateLoginStoryboardController<T: UIViewController>() -> T {
+        return instantiateController(withStoryboard: loginStoryboard)
     }
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="QMp-Ga-Nx9">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="LVD-JK-Tln" customClass="LoginViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,11 +84,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oxE-bP-yie"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="RFM-1k-nHQ">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="0kJ-24-xl1"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="closeButton" destination="0kJ-24-xl1" id="vr8-i4-4dr"/>
                         <outlet property="loginButton" destination="54O-rP-dUb" id="W7a-b6-lge"/>
                         <outlet property="passwordField" destination="Idf-JT-U29" id="3Y6-x2-7ey"/>
                         <outlet property="registerButton" destination="ZPY-Wf-16X" id="JMr-9b-Iq7"/>

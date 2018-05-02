@@ -18,6 +18,8 @@ class LocationViewController: BaseViewController<LocationViewModel> {
     fileprivate var maltepe: CLLocation = CLLocation(latitude: 40.9339, longitude: 29.1650)
     fileprivate var trabzon: CLLocation = CLLocation(latitude: 41.0, longitude: 39.733_330_4)
 
+    weak var coordinatorDelegate: DashboardCoordinatorDelegate?
+
     lazy var locationManager: LocationManager = {
         return LocationManager(withMapView: mapView)
     }()

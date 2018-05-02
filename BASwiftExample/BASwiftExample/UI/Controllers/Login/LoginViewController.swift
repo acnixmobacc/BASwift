@@ -20,8 +20,6 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
     @IBOutlet weak private var registerButton: UIButton!
 
-    @IBOutlet weak private var closeButton: UIBarButtonItem!
-
     // MARK: - Properties
     weak var coordinatorDelegate: LoginCoordinatorDelegate?
 
@@ -47,14 +45,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             self?.authenticateWithTouchID()
         }).disposed(by: disposeBag)
 
-        closeButton.rx.tap.bind(onNext: { [weak self] in
-            self?.coordinatorDelegate?.dismiss()
-        }).disposed(by: disposeBag)
     }
 
     func authenticateWithTouchID() {
         touchIDManager.authenticateUser(reasonText: "Test", successBlock: {[weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
+            self?.coordinatorDelegate?.dismiss()
         }, errorBlock: {[weak self] error in
             self?.showAlert(BaseAlert(message: error.localizedDescription))
         })
