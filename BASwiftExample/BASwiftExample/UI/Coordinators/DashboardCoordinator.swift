@@ -10,6 +10,7 @@ import UIKit
 
 protocol DashboardCoordinatorDelegate: CoordinatorDelegate {
     func perform(withType type: DashboardItemType)
+    func showService()
 }
 
 class DashboardCoordinator: Coordinator {
@@ -21,18 +22,26 @@ class DashboardCoordinator: Coordinator {
 
     // MARK: - Methods
     func start() {
-        guard let controller = mainStoryboard.instantiateViewController(withIdentifier: DashboardViewController.className)
-            as? DashboardViewController else {
-                fatalError("Cannot instantiate dashboard view controller")
-        }
+        firstViewControllerInCoordinator = showDashboard()
+    }
 
+    @discardableResult
+    func showDashboard() -> UIViewController {
+        let controller: DashboardViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
+        return controller
     }
 }
 
 // MARK: - Dashboard Coordinator Delegate
 extension DashboardCoordinator: DashboardCoordinatorDelegate {
+    func showService() {
+        let controller: ServiceViewController = instantiateMainStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
+    }
+
     func perform(withType type: DashboardItemType) {
         switch type {
         case .progress:

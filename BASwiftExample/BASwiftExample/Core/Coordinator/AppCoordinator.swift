@@ -20,6 +20,8 @@ class AppCoordinator: NSObject {
     init(withNavigationController navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.childCoordinators = BASStack<Coordinator>()
+        super.init()
+        self.navigationController.delegate = self
     }
 
     // MARK: - Methods
@@ -47,6 +49,25 @@ extension AppCoordinator: AppCoordinatorDelegate {
     func onPush(coordinator: Coordinator) {
         childCoordinators.push(coordinator)
         Logger.debug("Pushed \(coordinator)")
+    }
+
+}
+
+// MARK: - UINavigationController Delegate
+extension AppCoordinator: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        // Ensure the view controller is popping
+        guard let poppedViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
+            !navigationController.viewControllers.contains(poppedViewController) else {
+                return
+        }
+
+        guard let coordinator = childCoordinators.peek(),
+            coordinator.firstViewControllerInCoordinator == poppedViewController else {
+            return
+        }
+
+        onPop()
     }
 
 }

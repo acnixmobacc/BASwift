@@ -9,7 +9,8 @@
 import UIKit
 
 protocol LoginCoordinatorDelegate: CoordinatorDelegate {
-    func showRegister()
+    @discardableResult
+    func showRegister() -> UIViewController
 }
 
 class LoginCoordinator: Coordinator {
@@ -23,15 +24,17 @@ class LoginCoordinator: Coordinator {
 
     // MARK: - Public Methods
     func start() {
-        showLogin()
+        firstViewControllerInCoordinator = showLogin()
     }
 
     // MARK: - Private Methods
-    private func showLogin() {
+    @discardableResult
+    private func showLogin() -> UIViewController {
         let controller: LoginViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         loginNavigation = UINavigationController(rootViewController: controller)
         navigationController.show(loginNavigation, sender: nil)
+        return controller
     }
 
     private func instantiateLoginStoryboardController<T: UIViewController>() -> T {
@@ -41,9 +44,10 @@ class LoginCoordinator: Coordinator {
 
 // MARK: - Login Coordinator Delegate
 extension LoginCoordinator: LoginCoordinatorDelegate {
-    func showRegister() {
+    func showRegister() -> UIViewController {
         let controller: FormViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         loginNavigation.show(controller, sender: nil)
+        return controller
     }
 }

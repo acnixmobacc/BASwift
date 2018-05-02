@@ -21,6 +21,8 @@ class Coordinator: NSObject {
 
     var navigationController: UINavigationController!
 
+    var firstViewControllerInCoordinator: UIViewController!
+
     // MARK: - Deinit
     deinit {
         Logger.debug("Deinit \(self)")
@@ -30,7 +32,6 @@ class Coordinator: NSObject {
     init(withNavigationController navigationController: UINavigationController) {
         self.navigationController = navigationController
         super.init()
-        self.navigationController.delegate = self
         Logger.debug("Init \(self)")
     }
 
@@ -54,18 +55,4 @@ extension Coordinator: CoordinatorDelegate {
         navigationController.dismiss(animated: true, completion: nil)
         appCoordinatorDelegate?.onPop()
     }
-}
-
-// MARK: - UINavigationController Delegate
-extension Coordinator: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        // Ensure the view controller is popping
-        guard let poppedViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
-            !navigationController.viewControllers.contains(poppedViewController) else {
-                return
-        }
-
-        appCoordinatorDelegate?.onPop()
-    }
-
 }

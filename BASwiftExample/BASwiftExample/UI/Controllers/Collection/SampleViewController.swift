@@ -16,7 +16,7 @@ class SampleViewController: BaseViewController<SampleViewModel> {
     // MARK: - Properties
     var collectionAdapter: SampleCollectionViewAdapter!
 
-    weak var coordinatorDelegate: CoordinatorDelegate?
+    weak var coordinatorDelegate: CollectionCoordinatorDelegate?
 
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {

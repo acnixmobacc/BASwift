@@ -74,13 +74,22 @@
                                     <action selector="stopChildProgress:" destination="w73-tq-154" eventType="touchUpInside" id="BwX-ni-PNv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-MI-U4x">
+                                <rect key="frame" x="151" y="494" width="72" height="30"/>
+                                <state key="normal" title="To Service"/>
+                                <connections>
+                                    <action selector="toServiceAction:" destination="w73-tq-154" eventType="touchUpInside" id="Ny9-nm-NjR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4EU-MI-U4x" firstAttribute="centerX" secondItem="LY1-fz-Kxm" secondAttribute="centerX" id="6Ia-g4-fDe"/>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="leading" secondItem="dmB-iA-GAU" secondAttribute="leading" id="8Z7-Ym-lJY"/>
                             <constraint firstItem="LY1-fz-Kxm" firstAttribute="centerX" secondItem="LtL-L1-yEL" secondAttribute="centerX" id="EHw-ie-mIb"/>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="top" secondItem="dmB-iA-GAU" secondAttribute="top" id="QBB-kg-r20"/>
                             <constraint firstItem="dmB-iA-GAU" firstAttribute="bottom" secondItem="LY1-fz-Kxm" secondAttribute="bottom" constant="78" id="mOY-JT-hq2"/>
+                            <constraint firstItem="LY1-fz-Kxm" firstAttribute="top" secondItem="4EU-MI-U4x" secondAttribute="bottom" constant="35" id="tWt-jb-VXc"/>
                             <constraint firstItem="Nue-vO-6k7" firstAttribute="trailing" secondItem="dmB-iA-GAU" secondAttribute="trailing" id="wbz-Fy-LKZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dmB-iA-GAU"/>
@@ -93,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1R-kF-itg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="-25"/>
+            <point key="canvasLocation" x="182" y="-27"/>
         </scene>
         <!--Picker-->
         <scene sceneID="vt2-7L-hTI">
@@ -169,6 +178,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAg-Oe-rrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3412" y="-26.53673163418291"/>
+        </scene>
+        <!--Service View Controller-->
+        <scene sceneID="xMO-jo-Kcf">
+            <objects>
+                <viewController storyboardIdentifier="ServiceViewController" id="MFw-ec-AbG" customClass="ServiceViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjb-q6-1fi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C1H-1u-q8M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vI2-IK-465" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4122" y="-27"/>
         </scene>
     </scenes>
 </document>

@@ -30,6 +30,8 @@
 		B64ADD4C20936C7A00A2B931 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD4B20936C7A00A2B931 /* BaseViewModel.swift */; };
 		B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0765206D2501007194B5 /* FormViewModel.swift */; };
 		B64F0768206D250C007194B5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0767206D250C007194B5 /* FormViewController.swift */; };
+		B64F25252094608500BC569B /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25242094608500BC569B /* ServiceViewController.swift */; };
+		B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* ServiceViewModel.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
 		B6A807E12063864000E03C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A807E02063864000E03C26 /* Main.storyboard */; };
 		B6A807E32063868700E03C26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E22063868700E03C26 /* MainViewController.swift */; };
@@ -100,6 +102,8 @@
 		B64ADD4B20936C7A00A2B931 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B64F0765206D2501007194B5 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		B64F0767206D250C007194B5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		B64F25242094608500BC569B /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		B64F25262094609100BC569B /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
 		B6A807E02063864000E03C26 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B6A807E22063868700E03C26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +258,15 @@
 				B64F0765206D2501007194B5 /* FormViewModel.swift */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		B64F25232094604B00BC569B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B64F25242094608500BC569B /* ServiceViewController.swift */,
+				B64F25262094609100BC569B /* ServiceViewModel.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B6616F8A205F91D100F81B4F /* Resources */ = {
@@ -449,6 +462,7 @@
 				B614D967206A898E00F97145 /* Location */,
 				B6CDBBBE20692997000DBAB3 /* Picker */,
 				B6CDBBAA20691BEE000DBAB3 /* Collection */,
+				B64F25232094604B00BC569B /* Service */,
 				B6CDBB8E20690CCB000DBAB3 /* Detail */,
 				B6A807E8206386E200E03C26 /* Main */,
 			);
@@ -772,6 +786,7 @@
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
+				B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */,
 				B614D969206A89A300F97145 /* LocationViewController.swift in Sources */,
 				B6CDBBAC20691C12000DBAB3 /* SampleViewController.swift in Sources */,
 				B60BC0D9206BA57500A69F08 /* DashboardViewController.swift in Sources */,
@@ -792,6 +807,7 @@
 				B60BC0ED206BD58A00A69F08 /* LoginViewModel.swift in Sources */,
 				B64ADD4C20936C7A00A2B931 /* BaseViewModel.swift in Sources */,
 				B64ADD46209367D700A2B931 /* CollectionCoordinator.swift in Sources */,
+				B64F25252094608500BC569B /* ServiceViewController.swift in Sources */,
 				B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */,
 				B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,

@@ -12,7 +12,7 @@ import UIKit
 class DetailViewController: BaseViewController<DetailViewModel> {
 
     // MARK: - Properties
-    weak var coordinatorDelegate: CoordinatorDelegate?
+    weak var coordinatorDelegate: CollectionCoordinatorDelegate?
 
     var tableViewAdapter: DetailTableAdapter?
 
@@ -24,11 +24,12 @@ class DetailViewController: BaseViewController<DetailViewModel> {
     @IBOutlet weak private var tableView: UITableView!
 
     // MARK: - View Controller Lifecycle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         tableViewAdapter = DetailTableAdapter(tableView, [UIDetailItem(), UIItem(),
                                                                UIDetailItem(), UIDetailItem(),
                                                                UIItem(), UIDetailItem()])
+        tableViewAdapter?.delegate = self
 
     }
 
@@ -41,4 +42,10 @@ class DetailViewController: BaseViewController<DetailViewModel> {
         progressManager.showLoading()
     }
 
+}
+
+extension DetailViewController: DetailTableAdapterDelegate {
+    func onSelectItem() {
+        coordinatorDelegate?.showCollection()
+    }
 }

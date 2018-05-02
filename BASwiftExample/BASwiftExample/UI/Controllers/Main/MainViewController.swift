@@ -27,4 +27,7 @@ class MainViewController: BaseViewController<MainViewModel> {
             childView.hideLoading()
     }
 
+    @IBAction func toServiceAction(_ sender: Any) {
+        coordinatorDelegate?.showService()
+    }
 }

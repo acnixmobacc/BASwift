@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol CollectionCoordinatorDelegate: CoordinatorDelegate {
+    @discardableResult
+    func showCollection() -> UIViewController
+
+    @discardableResult
+    func showTable() -> UIViewController
+}
+
 class CollectionCoordinator: Coordinator {
     // MARK: - Properties
     lazy var adapterStoryboard: UIStoryboard = {
@@ -18,29 +26,34 @@ class CollectionCoordinator: Coordinator {
     func start(withType type: DashboardItemType) {
         switch type {
         case .collection:
-            showCollection()
+            firstViewControllerInCoordinator = showCollection()
         case .table:
-            showTable()
+            firstViewControllerInCoordinator = showTable()
         default:
             break
         }
     }
 
     // MARK: - Private Methods
-    private func showTable() {
-        let controller: DetailViewController = instantiateAdapterStoryboardController()
-        controller.coordinatorDelegate = self
-        navigationController.show(controller, sender: nil)
-    }
-
-    private func showCollection() {
-        let controller: SampleViewController = instantiateAdapterStoryboardController()
-        controller.coordinatorDelegate = self
-        navigationController.show(controller, sender: nil)
-    }
-
     private func instantiateAdapterStoryboardController<T: UIViewController>() -> T {
         return instantiateController(withStoryboard: adapterStoryboard)
     }
 
+}
+
+extension CollectionCoordinator: CollectionCoordinatorDelegate {
+
+    func showCollection() -> UIViewController {
+        let controller: SampleViewController = instantiateAdapterStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
+        return controller
+    }
+
+    func showTable() -> UIViewController {
+        let controller: DetailViewController = instantiateAdapterStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
+        return controller
+    }
 }
