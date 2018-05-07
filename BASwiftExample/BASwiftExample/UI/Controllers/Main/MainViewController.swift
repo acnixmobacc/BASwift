@@ -11,7 +11,7 @@ import UIKit
 
 class MainViewController: BaseViewController<MainViewModel> {
 
-    weak var coordinatorDelegate: DashboardCoordinatorDelegate?
+    weak var coordinatorDelegate: ProductCoordinatorDelegate?
 
     @IBOutlet weak private var childView: LoadableView!
     @IBOutlet weak private var childProgressButton: UIButton!

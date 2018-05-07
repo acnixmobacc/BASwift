@@ -10,7 +10,6 @@ import UIKit
 
 protocol DashboardCoordinatorDelegate: CoordinatorDelegate {
     func perform(withType type: DashboardItemType)
-    func showService()
 }
 
 class DashboardCoordinator: Coordinator {
@@ -21,8 +20,21 @@ class DashboardCoordinator: Coordinator {
     }()
 
     // MARK: - Methods
-    func start() {
-        firstViewControllerInCoordinator = showDashboard()
+    func start(withStartService service: Bool = false) {
+        if service {
+            firstViewControllerInCoordinator = showService()
+        } else {
+            firstViewControllerInCoordinator = showDashboard()
+        }
+
+    }
+
+    @discardableResult
+    func showService() -> ServiceViewController {
+        let controller: ServiceViewController = instantiateMainStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
+        return controller
     }
 
     @discardableResult
@@ -36,11 +48,6 @@ class DashboardCoordinator: Coordinator {
 
 // MARK: - Dashboard Coordinator Delegate
 extension DashboardCoordinator: DashboardCoordinatorDelegate {
-    func showService() {
-        let controller: ServiceViewController = instantiateMainStoryboardController()
-        controller.coordinatorDelegate = self
-        navigationController.show(controller, sender: nil)
-    }
 
     func perform(withType type: DashboardItemType) {
         switch type {
@@ -74,9 +81,11 @@ extension DashboardCoordinator {
     }
 
     private func showProgress() {
-        let controller: MainViewController = instantiateMainStoryboardController()
-        controller.coordinatorDelegate = self
-        navigationController.show(controller, sender: nil)
+        let productCoordinator = ProductCoordinator(withNavigationController: self.navigationController)
+        appCoordinatorDelegate?.onPush(coordinator: productCoordinator)
+        productCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
+        productCoordinator.start()
+
     }
 
     private func showAuthScreen(_ type: DashboardItemType) {

@@ -51,7 +51,8 @@ extension Coordinator: CoordinatorDelegate {
         navigationController.popViewController(animated: true)
     }
 
-    @objc func dismiss() {
+    @objc
+    func dismiss() {
         navigationController.dismiss(animated: true, completion: nil)
         appCoordinatorDelegate?.onPop()
     }

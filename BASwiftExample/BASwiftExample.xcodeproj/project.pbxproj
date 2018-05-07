@@ -33,6 +33,8 @@
 		B64F25252094608500BC569B /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25242094608500BC569B /* ServiceViewController.swift */; };
 		B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* ServiceViewModel.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
+		B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */; };
+		B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B699E9C520A08C0800FF42BB /* Product.storyboard */; };
 		B6A807E12063864000E03C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A807E02063864000E03C26 /* Main.storyboard */; };
 		B6A807E32063868700E03C26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E22063868700E03C26 /* MainViewController.swift */; };
 		B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E4206386D300E03C26 /* MainViewModel.swift */; };
@@ -105,6 +107,8 @@
 		B64F25242094608500BC569B /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		B64F25262094609100BC569B /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
+		B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
+		B699E9C520A08C0800FF42BB /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		B6A807E02063864000E03C26 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B6A807E22063868700E03C26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6A807E4206386D300E03C26 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				B6A807E02063864000E03C26 /* Main.storyboard */,
 				B60BC0EE206BD59A00A69F08 /* Login.storyboard */,
 				B64ADD432093671A00A2B931 /* Adapter.storyboard */,
+				B699E9C520A08C0800FF42BB /* Product.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				B6C6BC4A208649E100347053 /* DashboardCoordinator.swift */,
 				B60831082087918C009A5134 /* LoginCoordinator.swift */,
 				B64ADD45209367D700A2B931 /* CollectionCoordinator.swift */,
+				B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -623,6 +629,7 @@
 				B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */,
 				B60BC0E6206BAA3500A69F08 /* DashboardItemCollectionViewCell.xib in Resources */,
 				B6A807E12063864000E03C26 /* Main.storyboard in Resources */,
+				B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */,
 				B6616F8F205F922A00F81B4F /* brands.json in Resources */,
 				B6CDBB9F2069104B000DBAB3 /* DetailItemTableViewCell.xib in Resources */,
 				B6CDBB9D2069104B000DBAB3 /* ItemTableViewCell.xib in Resources */,
@@ -782,6 +789,7 @@
 				B64ADD4A20936C6F00A2B931 /* BaseViewController.swift in Sources */,
 				B6CDBBA520691AB1000DBAB3 /* UIItem.swift in Sources */,
 				B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */,
+				B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */,
 				B6C6BC4B208649E100347053 /* DashboardCoordinator.swift in Sources */,
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
