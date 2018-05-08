@@ -68,7 +68,8 @@ class FormViewController: BaseViewController<FormViewModel>, UITextFieldDelegate
         birthdateField.rx.text.orEmpty.bind(to: viewModel.birthdate).disposed(by: disposeBag)
 
         saveButton.rx.tap.bind(onNext: { [weak self] in
-            self?.viewModel.onClickSave()
+            guard let strongSelf = self else { return }
+            strongSelf.viewModel.onClickSave()
         }).disposed(by: disposeBag)
     }
 

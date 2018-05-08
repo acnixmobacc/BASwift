@@ -38,20 +38,24 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     // MARK: - Private Methods
     private func setUIBindings() {
         registerButton.rx.tap.bind(onNext: { [weak self] in
-            self?.coordinatorDelegate?.showRegister()
+            guard let strongSelf = self else {return}
+            strongSelf.coordinatorDelegate?.showRegister()
         }).disposed(by: disposeBag)
 
         loginButton.rx.tap.bind(onNext: { [weak self] in
-            self?.authenticateWithTouchID()
+            guard let strongSelf = self else {return}
+            strongSelf.authenticateWithTouchID()
         }).disposed(by: disposeBag)
 
     }
 
     func authenticateWithTouchID() {
         touchIDManager.authenticateUser(reasonText: "Test", successBlock: {[weak self] _ in
-            self?.coordinatorDelegate?.dismiss()
+            guard let strongSelf = self else { return }
+            strongSelf.coordinatorDelegate?.dismiss()
         }, errorBlock: {[weak self] error in
-            self?.showAlert(BaseAlert(message: error.localizedDescription))
+            guard let strongSelf = self else { return }
+            strongSelf.showAlert(BaseAlert(message: error.localizedDescription))
         })
     }
 
