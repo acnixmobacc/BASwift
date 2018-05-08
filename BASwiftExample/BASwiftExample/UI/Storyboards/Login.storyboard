@@ -259,7 +259,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctC-68-koY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216.8" y="71.514242878560722"/>
+            <point key="canvasLocation" x="1126" y="72"/>
+        </scene>
+        <!--Custom Form View Controller-->
+        <scene sceneID="xbw-Xp-z8x">
+            <objects>
+                <viewController storyboardIdentifier="CustomFormViewController" id="7KO-ib-kjl" customClass="CustomFormViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Zg-2t-I8C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Q10-sd-FNw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5o-il-6PO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="72"/>
         </scene>
     </scenes>
 </document>

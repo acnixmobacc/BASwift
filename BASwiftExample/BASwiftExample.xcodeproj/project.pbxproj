@@ -62,6 +62,13 @@
 		B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */; };
 		B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */; };
 		B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */; };
+		B6D4194A20A187A300B59EE3 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194920A187A300B59EE3 /* FormView.swift */; };
+		B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */; };
+		B6D4195020A1F1F100B59EE3 /* IFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */; };
+		B6D4195220A1F43300B59EE3 /* TextFieldItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4195120A1F43300B59EE3 /* TextFieldItemView.swift */; };
+		B6D4195420A1F44800B59EE3 /* TextFieldItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195320A1F44800B59EE3 /* TextFieldItemView.xib */; };
+		B6D4195620A1F97500B59EE3 /* ButtonFieldItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195520A1F97500B59EE3 /* ButtonFieldItemView.xib */; };
+		B6D4195820A1F98D00B59EE3 /* ButtonFieldItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4195720A1F98D00B59EE3 /* ButtonFieldItemView.swift */; };
 		B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0AB204C281000110985 /* AppDelegate.swift */; };
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
@@ -137,6 +144,13 @@
 		B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
+		B6D4194920A187A300B59EE3 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
+		B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFormItemView.swift; sourceTree = "<group>"; };
+		B6D4195120A1F43300B59EE3 /* TextFieldItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemView.swift; sourceTree = "<group>"; };
+		B6D4195320A1F44800B59EE3 /* TextFieldItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldItemView.xib; sourceTree = "<group>"; };
+		B6D4195520A1F97500B59EE3 /* ButtonFieldItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFieldItemView.xib; sourceTree = "<group>"; };
+		B6D4195720A1F98D00B59EE3 /* ButtonFieldItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFieldItemView.swift; sourceTree = "<group>"; };
 		B6F4B0A8204C281000110985 /* BASwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0AB204C281000110985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F4B0B2204C281000110985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +274,7 @@
 		B64F0764206D24EE007194B5 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */,
 				B64F0767206D250C007194B5 /* FormViewController.swift */,
 				B64F0765206D2501007194B5 /* FormViewModel.swift */,
 				B699E9C720A08F6A00FF42BB /* Utils */,
@@ -357,6 +372,7 @@
 				B60BC0E2206BAA1E00A69F08 /* Dashboard */,
 				B6CDBBB220691D3F000DBAB3 /* Collection */,
 				B6CDBB9720691030000DBAB3 /* Detail */,
+				B6D4194820A1875C00B59EE3 /* Form */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +449,19 @@
 				B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		B6D4194820A1875C00B59EE3 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				B6D4195120A1F43300B59EE3 /* TextFieldItemView.swift */,
+				B6D4195320A1F44800B59EE3 /* TextFieldItemView.xib */,
+				B6D4194920A187A300B59EE3 /* FormView.swift */,
+				B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */,
+				B6D4195720A1F98D00B59EE3 /* ButtonFieldItemView.swift */,
+				B6D4195520A1F97500B59EE3 /* ButtonFieldItemView.xib */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		B6DE6E5B204C2990009B1718 /* Core */ = {
@@ -644,6 +673,8 @@
 				B6616F8F205F922A00F81B4F /* brands.json in Resources */,
 				B6CDBB9F2069104B000DBAB3 /* DetailItemTableViewCell.xib in Resources */,
 				B6CDBB9D2069104B000DBAB3 /* ItemTableViewCell.xib in Resources */,
+				B6D4195620A1F97500B59EE3 /* ButtonFieldItemView.xib in Resources */,
+				B6D4195420A1F44800B59EE3 /* TextFieldItemView.xib in Resources */,
 				B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */,
 				B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */,
 			);
@@ -802,6 +833,7 @@
 				B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */,
 				B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */,
 				B6C6BC4B208649E100347053 /* DashboardCoordinator.swift in Sources */,
+				B6D4195220A1F43300B59EE3 /* TextFieldItemView.swift in Sources */,
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
@@ -813,12 +845,15 @@
 				B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */,
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
 				B64F0768206D250C007194B5 /* FormViewController.swift in Sources */,
+				B6D4195020A1F1F100B59EE3 /* IFormItemView.swift in Sources */,
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
+				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
 				B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */,
 				B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */,
+				B6D4195820A1F98D00B59EE3 /* ButtonFieldItemView.swift in Sources */,
 				B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
@@ -832,6 +867,7 @@
 				B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
+				B6D4194A20A187A300B59EE3 /* FormView.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,

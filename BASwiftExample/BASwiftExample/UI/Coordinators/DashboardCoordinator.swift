@@ -53,7 +53,7 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
         switch type {
         case .progress:
             showProgress()
-        case .login, .form:
+        case .login, .form, .customForm:
             showAuthScreen(type)
         case .picker:
             showPicker()

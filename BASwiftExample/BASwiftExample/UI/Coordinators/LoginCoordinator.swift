@@ -31,6 +31,8 @@ class LoginCoordinator: Coordinator {
             firstViewControllerInCoordinator = presentLogin()
         case .form:
             firstViewControllerInCoordinator = presentRegister()
+        case .customForm:
+            firstViewControllerInCoordinator = presentCustomForm()
         default:
             break
         }
@@ -52,6 +54,14 @@ extension LoginCoordinator {
     @discardableResult
     private func presentLogin() -> UIViewController {
         let controller: LoginViewController = instantiateLoginStoryboardController()
+        controller.coordinatorDelegate = self
+        start(withRootController: controller)
+        return controller
+    }
+
+    @discardableResult
+    private func presentCustomForm() -> UIViewController {
+        let controller: CustomFormViewController = instantiateLoginStoryboardController()
         controller.coordinatorDelegate = self
         start(withRootController: controller)
         return controller
