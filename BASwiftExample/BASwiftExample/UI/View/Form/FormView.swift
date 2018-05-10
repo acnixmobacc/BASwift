@@ -11,14 +11,14 @@ import UIKit
 class FormView: UIView {
 
     // MARK: - UIFields
-    private lazy var scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let instance = UIScrollView()
         instance.translatesAutoresizingMaskIntoConstraints = false
         instance.layoutMargins = .zero
         return instance
     }()
 
-    private lazy var stackView: UIStackView = {
+    lazy var stackView: UIStackView = {
         let instance = UIStackView()
         instance.translatesAutoresizingMaskIntoConstraints = false
         instance.axis = .vertical
@@ -53,9 +53,13 @@ class FormView: UIView {
 
     public func validate() {
         for item in stackView.arrangedSubviews {
-            guard let view = item as? IFormItemView else { continue }
-            guard let validation = view.onValidation else { continue }
-            validation()
+            guard let formItem = item as? IFormItemView else { continue }
+            guard let validation = formItem.onValidation else { continue }
+            if validation() {
+                formItem.showSuccess()
+            } else {
+                formItem.showError()
+            }
         }
     }
 
@@ -75,7 +79,8 @@ class FormView: UIView {
     }
 
     fileprivate func setStackViewContraint() {
-        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+
+        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8).isActive = true
         stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true

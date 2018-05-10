@@ -14,46 +14,39 @@ class CustomFormViewController: BaseViewController<FormViewModel> {
     // MARK: - Properties
     weak var coordinatorDelegate: LoginCoordinatorDelegate?
 
-    lazy var usernameItem = {
-      return TextFieldItemView.fromNib()
+    lazy var keyboardManager: KeyboardManager = {
+        let instance = KeyboardManager(withScrollView: formManager.formView.scrollView)
+        return instance
     }()
 
-    lazy var buttonItem = {
-        return ButtonFieldItemView.fromNib()
-    }()
-
-    lazy var formView = {
-        return FormView(frame: self.view.frame)
+    lazy var formManager: FormManager = {
+        let instance = FormManager(withView: self.view)
+        instance.delegate = self
+        return instance
     }()
 
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        addFormView()
+        formManager.setupFormPage()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        keyboardManager.startObservingKeyboard()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        keyboardManager.stopObservingKeyboard()
     }
 
 }
 
-// MARK: - Private Methods
-extension CustomFormViewController {
-    private func addFormView() {
-        view.addSubview(self.formView)
-
-        usernameItem.onValidation = { [weak self]  in
-            guard let strongSelf = self else { return }
-            strongSelf.usernameItem.setErrorView()
+extension CustomFormViewController: FormManagerDelegate {
+    func onDone(errorStack: BASStack<String>) {
+        if !errorStack.isEmpty {
+            alertManager.showAlert(withAlert: BaseAlert(message: errorStack.toString(), title: "Validation Error", handler: nil))
         }
-
-        self.formView.add(usernameItem)
-
-        buttonItem = ButtonFieldItemView.fromNib()
-
-        buttonItem.onClick = {[weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.formView.validate()
-        }
-
-        self.formView.add(buttonItem)
-
     }
 }

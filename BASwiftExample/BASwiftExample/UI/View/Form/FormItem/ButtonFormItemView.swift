@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ButtonFieldItemView: UIView, IFormItemView {
+class ButtonFormItemView: UIView, IFormItemView {
 
-    var onValidation: (() -> Void)?
+    // MARK: - Properties
+    var height: CGFloat = 60
 
+    // MARK: - Block Methods
     var onClick: (() -> Void)?
 
-    var height: CGFloat = 120.0
-
+    // MARK: - Action Methods
     @IBAction func action(_ sender: Any) {
         guard let onClick = onClick else {
             return

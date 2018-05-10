@@ -39,5 +39,21 @@ open class BASStack<T> {
     public func peek() -> T? {
         return array.last
     }
+    
+    public func removeAll(){
+        array.removeAll()
+    }
 
+}
+
+public extension BASStack{
+    func toString() -> String{
+        var value : String = .Empty
+        for item in array {
+            value.append("\(item)\n")
+        }
+        
+        value.removeLast()
+        return value
+    }
 }

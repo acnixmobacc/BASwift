@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerFormItemView" customModule="BASwiftExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-e1-bGf" customClass="DatePickerTextField" customModule="BASwift">
+                    <rect key="frame" x="8" y="0.0" width="372" height="64"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aw9-e1-bGf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="EdZ-Xc-RVt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aw9-e1-bGf" secondAttribute="bottom" id="KdP-Fs-bd8"/>
+                <constraint firstItem="aw9-e1-bGf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="WZD-lL-9zZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aw9-e1-bGf" secondAttribute="trailing" constant="8" id="ny1-au-DVv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="datePickerField" destination="aw9-e1-bGf" id="6uz-zI-7A5"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="-248"/>
+        </view>
+    </objects>
+</document>

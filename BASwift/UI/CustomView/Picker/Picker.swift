@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Picker Delegate
-protocol PickerDelegate: class {
+public protocol PickerDelegate: class {
     func onSelectItem(value: String)
 }
 

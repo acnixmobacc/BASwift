@@ -9,8 +9,9 @@
 import UIKit
 
 extension DatePickerTextField: PickerDelegate {
-    func onSelectItem(value: String) {
+    public func onSelectItem(value: String) {
         self.text = value
+        pickerDelegate?.onSelect(value: value)
     }
 }
 
@@ -18,6 +19,8 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
 
     // MARK: - Properties
     public var picker: DatePicker?
+
+    weak public var pickerDelegate: PickerTextFieldDelegate?
 
     // MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
@@ -71,6 +74,7 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
     public func donePressed() {
         resignFirstResponder()
         picker?.onClickDone(self)
+        pickerDelegate?.didSelect(value: text!)
 
     }
 
@@ -78,6 +82,7 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
     public func cancelPressed() {
         resignFirstResponder()
         picker?.onClickCancel(self)
+        pickerDelegate?.didCancel(value: text!)
     }
 
     // MARK: - Private Methods
