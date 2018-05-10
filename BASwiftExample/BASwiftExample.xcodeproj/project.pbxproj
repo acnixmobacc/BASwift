@@ -41,6 +41,8 @@
 		B6A807E32063868700E03C26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E22063868700E03C26 /* MainViewController.swift */; };
 		B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E4206386D300E03C26 /* MainViewModel.swift */; };
 		B6A807E7206386DE00E03C26 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E6206386DE00E03C26 /* MainModel.swift */; };
+		B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */; };
+		B6B31E4620A4878700C8D170 /* SwitchFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */; };
 		B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC442086475D00347053 /* AppCoordinator.swift */; };
 		B6C6BC47208647F100347053 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC46208647F100347053 /* Coordinator.swift */; };
 		B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */; };
@@ -126,6 +128,8 @@
 		B6A807E22063868700E03C26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6A807E4206386D300E03C26 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B6A807E6206386DE00E03C26 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFormItemView.swift; sourceTree = "<group>"; };
+		B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchFormItemView.xib; sourceTree = "<group>"; };
 		B6C6BC442086475D00347053 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B6C6BC46208647F100347053 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -469,6 +473,8 @@
 				B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */,
 				B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */,
 				B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */,
+				B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */,
+				B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */,
 			);
 			path = FormItem;
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 				B6A807E12063864000E03C26 /* Main.storyboard in Resources */,
 				B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */,
 				B6616F8F205F922A00F81B4F /* brands.json in Resources */,
+				B6B31E4620A4878700C8D170 /* SwitchFormItemView.xib in Resources */,
 				B6CDBB9F2069104B000DBAB3 /* DetailItemTableViewCell.xib in Resources */,
 				B6CDBB9D2069104B000DBAB3 /* ItemTableViewCell.xib in Resources */,
 				B6D4195620A1F97500B59EE3 /* ButtonFormItemView.xib in Resources */,
@@ -889,6 +896,7 @@
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
+				B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
 				B60BC0E1206BA9A900A69F08 /* DashboardCollectionAdapter.swift in Sources */,

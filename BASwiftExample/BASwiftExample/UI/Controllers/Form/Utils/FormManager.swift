@@ -73,7 +73,20 @@ public class FormManager {
     }()
 
     private lazy var saveButtonItem: ButtonFormItemView = {
-        return ButtonFormItemView.fromNib()
+        let instance = ButtonFormItemView.fromNib()
+        instance.setupUI(title: "Save")
+        return instance
+    }()
+
+    private lazy var addButtonItem: ButtonFormItemView = {
+        let instance = ButtonFormItemView.fromNib()
+        instance.setupUI(title: "Add Item", buttonColor: .blue)
+        return instance
+    }()
+
+    private lazy var switchButtonItem: SwitchFormItemView = {
+        let instance = SwitchFormItemView.fromNib()
+        return instance
     }()
 
     // MARK: - Initialization
@@ -87,7 +100,8 @@ public class FormManager {
     func setupFormPage() {
         parentView.addSubview(self.formView)
         setFormItemUI()
-        formView.add([usernameItem, surnameItem, passwordItem, birthdateItem, cityItem, townItem, addressItem, phoneItem, saveButtonItem])
+        formView.add([usernameItem, surnameItem, passwordItem, birthdateItem, cityItem, switchButtonItem, saveButtonItem])
+        setSwitchButtonItem()
     }
 
     func validate() {
@@ -104,6 +118,38 @@ private extension FormManager {
         setCityItem()
         setBirthdateItem()
         setSaveButtonItem()
+    }
+
+    func addExpandableItems() {
+        formView.add(townItem, after: switchButtonItem)
+        formView.add(addressItem, after: townItem)
+        formView.add(phoneItem, after: addressItem)
+    }
+
+    func removeExpandableItems() {
+        formView.remove(townItem)
+        formView.remove(addressItem)
+        formView.remove(phoneItem)
+    }
+
+    func setExpandableItems(status: Bool) {
+        if status {
+            addExpandableItems()
+        } else {
+            removeExpandableItems()
+        }
+    }
+
+    func setSwitchButtonItem() {
+        if let status = switchButtonItem.value as? Bool {
+            setExpandableItems(status: status)
+        }
+
+        switchButtonItem.onChange = {[weak self] status in
+            guard let strongSelf = self else { return }
+            guard let status = status as? Bool else { return }
+            strongSelf.setExpandableItems(status: status)
+        }
     }
 
     func setUsernameItem() {
