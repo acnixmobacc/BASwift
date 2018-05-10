@@ -6,7 +6,7 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import UIKit
+import BASwift
 
 class TextFormItemView: UIView, IFormItemView {
 
@@ -29,7 +29,7 @@ class TextFormItemView: UIView, IFormItemView {
         textField.delegate = self
     }
 
-    func showError() {
+    func onError() {
         Logger.debug("Show Error")
     }
 }

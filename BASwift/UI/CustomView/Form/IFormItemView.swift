@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol IFormItemView {
+public protocol IFormItemView {
     var value: Any? { get }
 
     var height: CGFloat { get }
@@ -23,13 +23,13 @@ protocol IFormItemView {
 
     var didCancel: ((Any?) -> Void)? { get }
 
-    func showSuccess()
+    func onSuccess()
 
-    func showError()
+    func onError()
 }
 
 // swiftlint:disable implicit_getter
-extension IFormItemView {
+public extension IFormItemView {
     var value: Any? {
         get {
             return nil
@@ -72,11 +72,11 @@ extension IFormItemView {
         }
     }
 
-    func showSuccess() {
+    func onSuccess() {
 
     }
 
-    func showError() {
+    func onError() {
 
     }
 

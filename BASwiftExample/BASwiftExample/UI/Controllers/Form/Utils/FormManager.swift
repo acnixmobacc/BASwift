@@ -12,14 +12,14 @@ protocol FormManagerDelegate: class {
     func onDone(errorStack: BASStack<String>)
 }
 
-class FormManager {
+public class FormManager {
 
     // MARK: - Properties
     fileprivate var parentView: UIView
 
     weak var delegate: FormManagerDelegate?
 
-    var formView: FormView
+    public var formView: FormView
 
     var errorStack: BASStack<String>
 

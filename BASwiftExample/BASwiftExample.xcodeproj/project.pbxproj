@@ -67,9 +67,7 @@
 		B6CF391120A2CA3A006FCD8A /* PickerFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */; };
 		B6CF391320A2CACB006FCD8A /* DatePickerFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */; };
 		B6CF391520A2CAD6006FCD8A /* DatePickerFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */; };
-		B6D4194A20A187A300B59EE3 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194920A187A300B59EE3 /* FormView.swift */; };
 		B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */; };
-		B6D4195020A1F1F100B59EE3 /* IFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */; };
 		B6D4195220A1F43300B59EE3 /* TextFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */; };
 		B6D4195420A1F44800B59EE3 /* TextFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */; };
 		B6D4195620A1F97500B59EE3 /* ButtonFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195520A1F97500B59EE3 /* ButtonFormItemView.xib */; };
@@ -154,9 +152,7 @@
 		B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerFormItemView.xib; sourceTree = "<group>"; };
 		B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerFormItemView.swift; sourceTree = "<group>"; };
 		B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerFormItemView.xib; sourceTree = "<group>"; };
-		B6D4194920A187A300B59EE3 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
-		B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFormItemView.swift; sourceTree = "<group>"; };
 		B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormItemView.swift; sourceTree = "<group>"; };
 		B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFormItemView.xib; sourceTree = "<group>"; };
 		B6D4195520A1F97500B59EE3 /* ButtonFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFormItemView.xib; sourceTree = "<group>"; };
@@ -465,7 +461,6 @@
 		B6CF390D20A2C416006FCD8A /* FormItem */ = {
 			isa = PBXGroup;
 			children = (
-				B6D4194F20A1F1F100B59EE3 /* IFormItemView.swift */,
 				B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */,
 				B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */,
 				B6D4195720A1F98D00B59EE3 /* ButtonFormItemView.swift */,
@@ -482,7 +477,6 @@
 			isa = PBXGroup;
 			children = (
 				B6CF390D20A2C416006FCD8A /* FormItem */,
-				B6D4194920A187A300B59EE3 /* FormView.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -872,7 +866,6 @@
 				B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */,
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
 				B64F0768206D250C007194B5 /* FormViewController.swift in Sources */,
-				B6D4195020A1F1F100B59EE3 /* IFormItemView.swift in Sources */,
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
@@ -895,7 +888,6 @@
 				B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
-				B6D4194A20A187A300B59EE3 /* FormView.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,

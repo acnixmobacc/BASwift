@@ -8,10 +8,10 @@
 
 import UIKit
 
-class FormView: UIView {
+public class FormView: UIView {
 
     // MARK: - UIFields
-    lazy var scrollView: UIScrollView = {
+    lazy public var scrollView: UIScrollView = {
         let instance = UIScrollView()
         instance.translatesAutoresizingMaskIntoConstraints = false
         instance.layoutMargins = .zero
@@ -28,12 +28,12 @@ class FormView: UIView {
     }()
 
     // MARK: - Initialization
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -56,9 +56,9 @@ class FormView: UIView {
             guard let formItem = item as? IFormItemView else { continue }
             guard let validation = formItem.onValidation else { continue }
             if validation() {
-                formItem.showSuccess()
+                formItem.onSuccess()
             } else {
-                formItem.showError()
+                formItem.onError()
             }
         }
     }
