@@ -10,8 +10,9 @@ import UIKit
 
 // MARK: - Picker Delegate
 extension PickerTextField: PickerDelegate {
-    func onSelectItem(value: String) {
+    public func onSelectItem(value: String) {
         self.text = value
+        pickerDelegate?.onSelect(value: value)
     }
 }
 
@@ -19,7 +20,9 @@ extension PickerTextField: PickerDelegate {
 open class PickerTextField: UITextField, UITextFieldDelegate {
 
     // MARK: - Properties
-    public var picker: Picker?
+    fileprivate var picker: Picker?
+
+    weak public var pickerDelegate: PickerTextFieldDelegate?
 
     // MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
@@ -45,11 +48,36 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
         setPicker()
     }
 
-    public func prepareViewComponent() {
+    @objc
+    public func donePressed() {
+        resignFirstResponder()
+        picker?.onClickDone(self)
+        pickerDelegate?.didSelect(value: text!)
+    }
+
+    @objc
+    public func cancelPressed() {
+        resignFirstResponder()
+        picker?.onClickCancel(self)
+        pickerDelegate?.didCancel(value: text!)
+    }
+
+    // MARK: - Private Methods
+    private func setPicker() {
+        guard let picker = self.picker else {
+            fatalError("Picker view must be initialized")
+        }
+
+        self.inputView = picker.pickerView
+        picker.delegate = self
+
+    }
+
+    private func prepareViewComponent() {
         addToolbar()
     }
 
-    public func addToolbar() {
+    fileprivate func addToolbar() {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.backgroundColor = UIColor.white
@@ -67,29 +95,5 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
 
         delegate = self
         inputAccessoryView = toolBar
-    }
-
-    @objc
-    public func donePressed() {
-        resignFirstResponder()
-        picker?.onClickDone(self)
-
-    }
-
-    @objc
-    public func cancelPressed() {
-        resignFirstResponder()
-        picker?.onClickCancel(self)
-    }
-
-    // MARK: - Private Methods
-    private func setPicker() {
-        guard let picker = self.picker else {
-            fatalError("Picker view must be initialized")
-        }
-
-        self.inputView = picker.pickerView
-        picker.delegate = self
-
     }
 }

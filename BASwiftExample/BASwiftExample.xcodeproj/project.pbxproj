@@ -33,6 +33,7 @@
 		B64F25252094608500BC569B /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25242094608500BC569B /* ServiceViewController.swift */; };
 		B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* ServiceViewModel.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
+		B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF8D20A4577F0052B8AF /* FormValidator.swift */; };
 		B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */; };
 		B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B699E9C520A08C0800FF42BB /* Product.storyboard */; };
 		B699E9C920A08F8200FF42BB /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C820A08F8200FF42BB /* FormManager.swift */; };
@@ -40,6 +41,8 @@
 		B6A807E32063868700E03C26 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E22063868700E03C26 /* MainViewController.swift */; };
 		B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E4206386D300E03C26 /* MainViewModel.swift */; };
 		B6A807E7206386DE00E03C26 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807E6206386DE00E03C26 /* MainModel.swift */; };
+		B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */; };
+		B6B31E4620A4878700C8D170 /* SwitchFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */; };
 		B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC442086475D00347053 /* AppCoordinator.swift */; };
 		B6C6BC47208647F100347053 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC46208647F100347053 /* Coordinator.swift */; };
 		B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */; };
@@ -62,6 +65,15 @@
 		B6CDBBBB20692213000DBAB3 /* SampleItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */; };
 		B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */; };
 		B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */; };
+		B6CF390F20A2C99E006FCD8A /* PickerFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF390E20A2C99E006FCD8A /* PickerFormItemView.swift */; };
+		B6CF391120A2CA3A006FCD8A /* PickerFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */; };
+		B6CF391320A2CACB006FCD8A /* DatePickerFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */; };
+		B6CF391520A2CAD6006FCD8A /* DatePickerFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */; };
+		B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */; };
+		B6D4195220A1F43300B59EE3 /* TextFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */; };
+		B6D4195420A1F44800B59EE3 /* TextFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */; };
+		B6D4195620A1F97500B59EE3 /* ButtonFormItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D4195520A1F97500B59EE3 /* ButtonFormItemView.xib */; };
+		B6D4195820A1F98D00B59EE3 /* ButtonFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4195720A1F98D00B59EE3 /* ButtonFormItemView.swift */; };
 		B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0AB204C281000110985 /* AppDelegate.swift */; };
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
@@ -108,6 +120,7 @@
 		B64F25242094608500BC569B /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		B64F25262094609100BC569B /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
+		B694FF8D20A4577F0052B8AF /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
 		B699E9C520A08C0800FF42BB /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		B699E9C820A08F8200FF42BB /* FormManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
@@ -115,6 +128,8 @@
 		B6A807E22063868700E03C26 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6A807E4206386D300E03C26 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B6A807E6206386DE00E03C26 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchFormItemView.swift; sourceTree = "<group>"; };
+		B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchFormItemView.xib; sourceTree = "<group>"; };
 		B6C6BC442086475D00347053 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B6C6BC46208647F100347053 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +152,15 @@
 		B6CDBBB920692213000DBAB3 /* SampleItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6CDBBBF206929AC000DBAB3 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
+		B6CF390E20A2C99E006FCD8A /* PickerFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerFormItemView.swift; sourceTree = "<group>"; };
+		B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerFormItemView.xib; sourceTree = "<group>"; };
+		B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerFormItemView.swift; sourceTree = "<group>"; };
+		B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerFormItemView.xib; sourceTree = "<group>"; };
+		B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormViewController.swift; sourceTree = "<group>"; };
+		B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormItemView.swift; sourceTree = "<group>"; };
+		B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFormItemView.xib; sourceTree = "<group>"; };
+		B6D4195520A1F97500B59EE3 /* ButtonFormItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFormItemView.xib; sourceTree = "<group>"; };
+		B6D4195720A1F98D00B59EE3 /* ButtonFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormItemView.swift; sourceTree = "<group>"; };
 		B6F4B0A8204C281000110985 /* BASwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0AB204C281000110985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F4B0B2204C281000110985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -260,6 +284,7 @@
 		B64F0764206D24EE007194B5 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				B6D4194D20A1880700B59EE3 /* CustomFormViewController.swift */,
 				B64F0767206D250C007194B5 /* FormViewController.swift */,
 				B64F0765206D2501007194B5 /* FormViewModel.swift */,
 				B699E9C720A08F6A00FF42BB /* Utils */,
@@ -296,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				B699E9C820A08F8200FF42BB /* FormManager.swift */,
+				B694FF8D20A4577F0052B8AF /* FormValidator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -357,6 +383,7 @@
 				B60BC0E2206BAA1E00A69F08 /* Dashboard */,
 				B6CDBBB220691D3F000DBAB3 /* Collection */,
 				B6CDBB9720691030000DBAB3 /* Detail */,
+				B6D4194820A1875C00B59EE3 /* Form */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +460,31 @@
 				B6CDBBC1206929B7000DBAB3 /* PickerViewModel.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		B6CF390D20A2C416006FCD8A /* FormItem */ = {
+			isa = PBXGroup;
+			children = (
+				B6D4195120A1F43300B59EE3 /* TextFormItemView.swift */,
+				B6D4195320A1F44800B59EE3 /* TextFormItemView.xib */,
+				B6D4195720A1F98D00B59EE3 /* ButtonFormItemView.swift */,
+				B6D4195520A1F97500B59EE3 /* ButtonFormItemView.xib */,
+				B6CF390E20A2C99E006FCD8A /* PickerFormItemView.swift */,
+				B6CF391020A2CA3A006FCD8A /* PickerFormItemView.xib */,
+				B6CF391220A2CACB006FCD8A /* DatePickerFormItemView.swift */,
+				B6CF391420A2CAD6006FCD8A /* DatePickerFormItemView.xib */,
+				B6B31E4320A4877600C8D170 /* SwitchFormItemView.swift */,
+				B6B31E4520A4878700C8D170 /* SwitchFormItemView.xib */,
+			);
+			path = FormItem;
+			sourceTree = "<group>";
+		};
+		B6D4194820A1875C00B59EE3 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				B6CF390D20A2C416006FCD8A /* FormItem */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		B6DE6E5B204C2990009B1718 /* Core */ = {
@@ -642,8 +694,13 @@
 				B6A807E12063864000E03C26 /* Main.storyboard in Resources */,
 				B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */,
 				B6616F8F205F922A00F81B4F /* brands.json in Resources */,
+				B6B31E4620A4878700C8D170 /* SwitchFormItemView.xib in Resources */,
 				B6CDBB9F2069104B000DBAB3 /* DetailItemTableViewCell.xib in Resources */,
 				B6CDBB9D2069104B000DBAB3 /* ItemTableViewCell.xib in Resources */,
+				B6D4195620A1F97500B59EE3 /* ButtonFormItemView.xib in Resources */,
+				B6CF391520A2CAD6006FCD8A /* DatePickerFormItemView.xib in Resources */,
+				B6D4195420A1F44800B59EE3 /* TextFormItemView.xib in Resources */,
+				B6CF391120A2CA3A006FCD8A /* PickerFormItemView.xib in Resources */,
 				B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */,
 				B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */,
 			);
@@ -794,6 +851,7 @@
 			files = (
 				B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */,
 				B60BC0EB206BD57A00A69F08 /* LoginViewController.swift in Sources */,
+				B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */,
 				B6A807E7206386DE00E03C26 /* MainModel.swift in Sources */,
 				B60BC0DB206BA58400A69F08 /* DashboardViewModel.swift in Sources */,
 				B60BC0E5206BAA3500A69F08 /* DashboardItemCollectionViewCell.swift in Sources */,
@@ -802,8 +860,10 @@
 				B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */,
 				B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */,
 				B6C6BC4B208649E100347053 /* DashboardCoordinator.swift in Sources */,
+				B6D4195220A1F43300B59EE3 /* TextFormItemView.swift in Sources */,
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
+				B6CF391320A2CACB006FCD8A /* DatePickerFormItemView.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
 				B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */,
 				B614D969206A89A300F97145 /* LocationViewController.swift in Sources */,
@@ -816,9 +876,12 @@
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
+				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
+				B6CF390F20A2C99E006FCD8A /* PickerFormItemView.swift in Sources */,
 				B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */,
 				B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */,
+				B6D4195820A1F98D00B59EE3 /* ButtonFormItemView.swift in Sources */,
 				B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
@@ -833,6 +896,7 @@
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
+				B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
 				B60BC0E1206BA9A900A69F08 /* DashboardCollectionAdapter.swift in Sources */,

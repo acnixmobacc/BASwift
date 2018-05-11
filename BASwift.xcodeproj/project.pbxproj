@@ -31,6 +31,9 @@
 		B68ED23A2065429400FD397F /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED2392065429400FD397F /* ContentManager.swift */; };
 		B68ED23E20654FB500FD397F /* ILoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23D20654FB500FD397F /* ILoadable.swift */; };
 		B68ED24020654FF500FD397F /* IContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23F20654FF500FD397F /* IContentable.swift */; };
+		B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF8B20A417C60052B8AF /* PickerTextFieldDelegate.swift */; };
+		B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF9520A47E4C0052B8AF /* IFormItemView.swift */; };
+		B694FF9820A47E4C0052B8AF /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF9620A47E4C0052B8AF /* FormView.swift */; };
 		B6A558482074C54700698AEA /* ServiceResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A558472074C54700698AEA /* ServiceResource.swift */; };
 		B6A5584A2074E74D00698AEA /* IEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A558492074E74D00698AEA /* IEntity.swift */; };
 		B6A5584C2074E77F00698AEA /* IWebServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5584B2074E77F00698AEA /* IWebServiceFactory.swift */; };
@@ -140,6 +143,9 @@
 		B68ED2392065429400FD397F /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		B68ED23D20654FB500FD397F /* ILoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoadable.swift; sourceTree = "<group>"; };
 		B68ED23F20654FF500FD397F /* IContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IContentable.swift; sourceTree = "<group>"; };
+		B694FF8B20A417C60052B8AF /* PickerTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextFieldDelegate.swift; sourceTree = "<group>"; };
+		B694FF9520A47E4C0052B8AF /* IFormItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFormItemView.swift; sourceTree = "<group>"; };
+		B694FF9620A47E4C0052B8AF /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		B6A558472074C54700698AEA /* ServiceResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResource.swift; sourceTree = "<group>"; };
 		B6A558492074E74D00698AEA /* IEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEntity.swift; sourceTree = "<group>"; };
 		B6A5584B2074E77F00698AEA /* IWebServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IWebServiceFactory.swift; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 		B68ED22E20651D4700FD397F /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				B694FF8B20A417C60052B8AF /* PickerTextFieldDelegate.swift */,
 				B6D7E6CC204A126B00A5D803 /* Picker.swift */,
 				B6002057206A3ADF00488AB4 /* DatePicker.swift */,
 				B6D7E6CF204A126B00A5D803 /* PickerTextField.swift */,
@@ -342,6 +349,15 @@
 				B6A807DD206381D900E03C26 /* LoadableView.swift */,
 			);
 			path = Loadable;
+			sourceTree = "<group>";
+		};
+		B694FF9420A47E4C0052B8AF /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				B694FF9520A47E4C0052B8AF /* IFormItemView.swift */,
+				B694FF9620A47E4C0052B8AF /* FormView.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		B6A5584D2074EEFD00698AEA /* Core */ = {
@@ -480,6 +496,7 @@
 		B6D7E67A204976BD00A5D803 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				B694FF9420A47E4C0052B8AF /* Form */,
 				B68ED23C20654F9E00FD397F /* Loadable */,
 				B68ED23B206542CD00FD397F /* ContentMessage */,
 				B68ED22B20651C7D00FD397F /* Alert */,
@@ -919,6 +936,7 @@
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
 				B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */,
 				B6B2E4D620724D8800E5FBB6 /* WebServiceFactory.swift in Sources */,
+				B694FF9820A47E4C0052B8AF /* FormView.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
 				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
 				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
@@ -930,6 +948,7 @@
 				B6C6BC4220863C3F00347053 /* KeyboardManager.swift in Sources */,
 				B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */,
 				B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */,
+				B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
 				B6D7E6C7204A05D000A5D803 /* BaseAlert.swift in Sources */,
 				B6A5584A2074E74D00698AEA /* IEntity.swift in Sources */,
@@ -951,6 +970,7 @@
 				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
 				B6D7E6A92049CAAB00A5D803 /* Constant.swift in Sources */,
 				B6F16DBC2080DBB1009A2848 /* NativeProgressOption.swift in Sources */,
+				B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,

@@ -92,4 +92,17 @@ class StringExtensionTest: XCTestCase {
         let value = "31212asfa412412"
         XCTAssertEqual(value.isDecimal, false)
     }
+    
+    func testIsMatchCorrect(){
+        let regex = "^[^<>!@#$%^&*()0-9]*$"
+        let value = "Burak"
+        XCTAssertTrue(value.isMatch(regex: regex))
+    }
+    
+    
+    func testIsMatchFalse(){
+        let regex = "^[^<>!@#$%^&*()0-9]*$"
+        let value = "Burak12"
+        XCTAssertFalse(value.isMatch(regex: regex))
+    }
 }

@@ -30,6 +30,10 @@ public extension String {
     }
 
     // MARK: - Methods
+    func isMatch(regex: String) -> Bool {
+        return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+
     func removeWhitespace() -> String {
         return self.replace(" ", replacement: "")
     }
