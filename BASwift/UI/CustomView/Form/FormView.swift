@@ -42,17 +42,17 @@ public class FormView: UIView {
         addHeightConstraint(toView: view)
         stackView.addArrangedSubview(view)
     }
-    
-    public func add(_ view:IFormItemView & UIView, at index:Int){
-        if index > stackView.arrangedSubviews.count{
+
+    public func add(_ view: IFormItemView & UIView, at index: Int) {
+        if index > stackView.arrangedSubviews.count {
             fatalError("Index out of range, stack view size = \(stackView.arrangedSubviews.count)")
         }
         addHeightConstraint(toView: view)
         stackView.insertArrangedSubview(view, at: index)
     }
-    
-    public func add(_ view:IFormItemView & UIView, after aView:IFormItemView & UIView){
-        guard let index = stackView.arrangedSubviews.index(of: aView) else{
+
+    public func add(_ view: IFormItemView & UIView, after aView: IFormItemView & UIView) {
+        guard let index = stackView.arrangedSubviews.index(of: aView) else {
             fatalError("Stack view doesn't contains \(aView)")
         }
         add(view, at: index + 1)
@@ -63,12 +63,12 @@ public class FormView: UIView {
             add(view)
         }
     }
-    
-    public func remove(_ view:IFormItemView & UIView){
+
+    public func remove(_ view: IFormItemView & UIView) {
         stackView.removeArrangedSubview(view)
         view.removeFromSuperview()
     }
-    
+
     public func validate() {
         for item in stackView.arrangedSubviews {
             guard let formItem = item as? IFormItemView else { continue }
@@ -89,12 +89,12 @@ public class FormView: UIView {
         setStackViewContraint()
     }
 
-    private func addHeightConstraint(toView view:IFormItemView & UIView){
+    private func addHeightConstraint(toView view: IFormItemView & UIView) {
         let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                                                   multiplier: 1, constant: view.height)
         view.addConstraint(heightConstraint)
     }
-    
+
     fileprivate func setScrollViewConstraint() {
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
