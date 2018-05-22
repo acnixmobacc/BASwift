@@ -19,6 +19,16 @@ class BrandObject : IEntity{
     }
 }
 
+class BrandList: IEntity{
+    var list: [Brand]
+    
+    required init(withData data: JSON) {
+        list = data.arrayValue.map{item in
+            return Brand.init(withData: item)
+        }
+    }
+}
+
 class Brand : IEntity{
     var id : String
     var name : String
