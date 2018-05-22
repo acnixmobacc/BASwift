@@ -30,8 +30,8 @@
 		B64ADD4C20936C7A00A2B931 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD4B20936C7A00A2B931 /* BaseViewModel.swift */; };
 		B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0765206D2501007194B5 /* FormViewModel.swift */; };
 		B64F0768206D250C007194B5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F0767206D250C007194B5 /* FormViewController.swift */; };
-		B64F25252094608500BC569B /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25242094608500BC569B /* ServiceViewController.swift */; };
-		B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* ServiceViewModel.swift */; };
+		B64F25252094608500BC569B /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25242094608500BC569B /* BrandViewController.swift */; };
+		B64F25272094609100BC569B /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* BrandViewModel.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
 		B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF8D20A4577F0052B8AF /* FormValidator.swift */; };
 		B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */; };
@@ -78,6 +78,23 @@
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
 		B6F4B0C1204C281000110985 /* BASwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0C0204C281000110985 /* BASwiftExampleTests.swift */; };
+		B6FC979B20B4347F005C8F73 /* AppDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */; };
+		B6FC979D20B43636005C8F73 /* IBridgeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */; };
+		B6FC979F20B43656005C8F73 /* IServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979E20B43656005C8F73 /* IServiceProvider.swift */; };
+		B6FC97A120B4366C005C8F73 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */; };
+		B6FC97A320B43678005C8F73 /* BridgeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A220B43678005C8F73 /* BridgeProvider.swift */; };
+		B6FC97AA20B4396F005C8F73 /* UserBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A920B4396F005C8F73 /* UserBridge.swift */; };
+		B6FC97AC20B43984005C8F73 /* ProductBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AB20B43984005C8F73 /* ProductBridge.swift */; };
+		B6FC97AE20B439D2005C8F73 /* CarServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */; };
+		B6FC97B020B439F6005C8F73 /* CampaignServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */; };
+		B6FC97B220B43D8A005C8F73 /* ServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */; };
+		B6FC97B620B43FFC005C8F73 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B520B43FFC005C8F73 /* Brand.swift */; };
+		B6FC97B920B4402F005C8F73 /* BrandList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B820B4402F005C8F73 /* BrandList.swift */; };
+		B6FC97BB20B4434B005C8F73 /* ICarServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */; };
+		B6FC97BF20B443BD005C8F73 /* ICampaignServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */; };
+		B6FC97C420B4442D005C8F73 /* IUserBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C320B4442D005C8F73 /* IUserBridge.swift */; };
+		B6FC97C720B44459005C8F73 /* IProductBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C620B44459005C8F73 /* IProductBridge.swift */; };
+		B6FC97C920B4453E005C8F73 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C820B4453E005C8F73 /* ServiceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +134,8 @@
 		B64ADD4B20936C7A00A2B931 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B64F0765206D2501007194B5 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		B64F0767206D250C007194B5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		B64F25242094608500BC569B /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
-		B64F25262094609100BC569B /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
+		B64F25242094608500BC569B /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
+		B64F25262094609100BC569B /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
 		B694FF8D20A4577F0052B8AF /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
 		B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
@@ -169,6 +186,23 @@
 		B6F4B0BC204C281000110985 /* BASwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BASwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0C0204C281000110985 /* BASwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASwiftExampleTests.swift; sourceTree = "<group>"; };
 		B6F4B0C2204C281000110985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataProvider.swift; sourceTree = "<group>"; };
+		B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBridgeProvider.swift; sourceTree = "<group>"; };
+		B6FC979E20B43656005C8F73 /* IServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceProvider.swift; sourceTree = "<group>"; };
+		B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		B6FC97A220B43678005C8F73 /* BridgeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeProvider.swift; sourceTree = "<group>"; };
+		B6FC97A920B4396F005C8F73 /* UserBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBridge.swift; sourceTree = "<group>"; };
+		B6FC97AB20B43984005C8F73 /* ProductBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBridge.swift; sourceTree = "<group>"; };
+		B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceAdapter.swift; sourceTree = "<group>"; };
+		B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignServiceAdapter.swift; sourceTree = "<group>"; };
+		B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAdapter.swift; sourceTree = "<group>"; };
+		B6FC97B520B43FFC005C8F73 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		B6FC97B820B4402F005C8F73 /* BrandList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandList.swift; sourceTree = "<group>"; };
+		B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICarServiceAdapter.swift; sourceTree = "<group>"; };
+		B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICampaignServiceAdapter.swift; sourceTree = "<group>"; };
+		B6FC97C320B4442D005C8F73 /* IUserBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserBridge.swift; sourceTree = "<group>"; };
+		B6FC97C620B44459005C8F73 /* IProductBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProductBridge.swift; sourceTree = "<group>"; };
+		B6FC97C820B4453E005C8F73 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		CE60562746C17D88AE15D417 /* Pods-BASwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,8 +329,9 @@
 		B64F25232094604B00BC569B /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B64F25242094608500BC569B /* ServiceViewController.swift */,
-				B64F25262094609100BC569B /* ServiceViewModel.swift */,
+				B64F25242094608500BC569B /* BrandViewController.swift */,
+				B64F25262094609100BC569B /* BrandViewModel.swift */,
+				B6FC97C820B4453E005C8F73 /* ServiceModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -490,6 +525,7 @@
 		B6DE6E5B204C2990009B1718 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC979920B4278D005C8F73 /* Service */,
 				B64ADD47209367FE00A2B931 /* Coordinator */,
 				B64ADD4020933D0F00A2B931 /* Utils */,
 				B64ADD3D20933CF400A2B931 /* Logger */,
@@ -575,6 +611,125 @@
 				B6F4B0C2204C281000110985 /* Info.plist */,
 			);
 			path = BASwiftExampleTests;
+			sourceTree = "<group>";
+		};
+		B6FC979920B4278D005C8F73 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97B320B43FE7005C8F73 /* Entities */,
+				B6FC97A820B43795005C8F73 /* Local */,
+				B6FC97A620B436DC005C8F73 /* API */,
+				B6FC97A520B436C7005C8F73 /* Web */,
+				B6FC97A420B436B6005C8F73 /* Bridge */,
+				B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B6FC97A420B436B6005C8F73 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */,
+				B6FC97A220B43678005C8F73 /* BridgeProvider.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		B6FC97A520B436C7005C8F73 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC979E20B43656005C8F73 /* IServiceProvider.swift */,
+				B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		B6FC97A620B436DC005C8F73 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97BD20B443AA005C8F73 /* Campaign */,
+				B6FC97BC20B44351005C8F73 /* Car */,
+				B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6FC97A820B43795005C8F73 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97C520B44444005C8F73 /* Product */,
+				B6FC97C120B4441A005C8F73 /* User */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		B6FC97B320B43FE7005C8F73 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97B420B43FEF005C8F73 /* Response */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B6FC97B420B43FEF005C8F73 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97C020B4440C005C8F73 /* User */,
+				B6FC97B720B44020005C8F73 /* Brand */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B6FC97B720B44020005C8F73 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97B820B4402F005C8F73 /* BrandList.swift */,
+				B6FC97B520B43FFC005C8F73 /* Brand.swift */,
+			);
+			path = Brand;
+			sourceTree = "<group>";
+		};
+		B6FC97BC20B44351005C8F73 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */,
+				B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		B6FC97BD20B443AA005C8F73 /* Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */,
+				B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */,
+			);
+			path = Campaign;
+			sourceTree = "<group>";
+		};
+		B6FC97C020B4440C005C8F73 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B6FC97C120B4441A005C8F73 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97C320B4442D005C8F73 /* IUserBridge.swift */,
+				B6FC97A920B4396F005C8F73 /* UserBridge.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B6FC97C520B44444005C8F73 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC97C620B44459005C8F73 /* IProductBridge.swift */,
+				B6FC97AB20B43984005C8F73 /* ProductBridge.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		DB9D914821EA36264B8EC35A /* Frameworks */ = {
@@ -864,19 +1019,26 @@
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
 				B6CF391320A2CACB006FCD8A /* DatePickerFormItemView.swift in Sources */,
+				B6FC97AE20B439D2005C8F73 /* CarServiceAdapter.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
-				B64F25272094609100BC569B /* ServiceViewModel.swift in Sources */,
+				B64F25272094609100BC569B /* BrandViewModel.swift in Sources */,
+				B6FC979D20B43636005C8F73 /* IBridgeProvider.swift in Sources */,
+				B6FC97A320B43678005C8F73 /* BridgeProvider.swift in Sources */,
 				B614D969206A89A300F97145 /* LocationViewController.swift in Sources */,
 				B6CDBBAC20691C12000DBAB3 /* SampleViewController.swift in Sources */,
 				B699E9C920A08F8200FF42BB /* FormManager.swift in Sources */,
 				B60BC0D9206BA57500A69F08 /* DashboardViewController.swift in Sources */,
 				B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */,
+				B6FC97C420B4442D005C8F73 /* IUserBridge.swift in Sources */,
+				B6FC97AC20B43984005C8F73 /* ProductBridge.swift in Sources */,
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
 				B64F0768206D250C007194B5 /* FormViewController.swift in Sources */,
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
+				B6FC97C720B44459005C8F73 /* IProductBridge.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
 				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
+				B6FC97C920B4453E005C8F73 /* ServiceModel.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
 				B6CF390F20A2C99E006FCD8A /* PickerFormItemView.swift in Sources */,
 				B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */,
@@ -886,20 +1048,30 @@
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
 				B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */,
+				B6FC97BB20B4434B005C8F73 /* ICarServiceAdapter.swift in Sources */,
 				B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */,
 				B60BC0ED206BD58A00A69F08 /* LoginViewModel.swift in Sources */,
+				B6FC97AA20B4396F005C8F73 /* UserBridge.swift in Sources */,
 				B64ADD4C20936C7A00A2B931 /* BaseViewModel.swift in Sources */,
+				B6FC97B920B4402F005C8F73 /* BrandList.swift in Sources */,
 				B64ADD46209367D700A2B931 /* CollectionCoordinator.swift in Sources */,
-				B64F25252094608500BC569B /* ServiceViewController.swift in Sources */,
+				B6FC97B620B43FFC005C8F73 /* Brand.swift in Sources */,
+				B64F25252094608500BC569B /* BrandViewController.swift in Sources */,
 				B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */,
+				B6FC97A120B4366C005C8F73 /* ServiceProvider.swift in Sources */,
+				B6FC979B20B4347F005C8F73 /* AppDataProvider.swift in Sources */,
 				B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */,
+				B6FC97B220B43D8A005C8F73 /* ServiceAdapter.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
 				B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
+				B6FC97BF20B443BD005C8F73 /* ICampaignServiceAdapter.swift in Sources */,
 				B60BC0E1206BA9A900A69F08 /* DashboardCollectionAdapter.swift in Sources */,
+				B6FC97B020B439F6005C8F73 /* CampaignServiceAdapter.swift in Sources */,
+				B6FC979F20B43656005C8F73 /* IServiceProvider.swift in Sources */,
 				B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
