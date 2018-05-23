@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol CarServiceAdapterProtocol {
-    func getBrands(onSuccess:@escaping (BrandList) -> Void, onError:@escaping (Error?) -> Void)
+    func getBrands(onSuccess:@escaping (BrandList) -> Void, onFailure:@escaping (Error?) -> Void)
 }

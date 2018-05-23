@@ -23,9 +23,11 @@ class UserBridge: UserBridgeProtocol {
         if !localUserDataProvider.user.isEmpty() {
             onSuccess(localUserDataProvider.user)
         } else {
-            userServiceAdapter.getUser(onSuccess: { response in
-                onSuccess(response)
-            }, onError: {error in
+            userServiceAdapter.getUser(onSuccess: {[weak self] user in
+                guard let strongSelf = self else { return }
+                strongSelf.localUserDataProvider.putUser(user: user)
+                onSuccess(user)
+            }, onFailure: {error in
                 onFailure(error)
             })
         }

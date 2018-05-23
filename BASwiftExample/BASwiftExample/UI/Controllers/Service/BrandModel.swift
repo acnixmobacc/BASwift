@@ -27,7 +27,7 @@ class BrandModel {
         carServiceAdapter.getBrands(onSuccess: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.delegate?.onGetBrandsSuccess()
-        }, onError: { [weak self] _ in
+        }, onFailure: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.delegate?.onGetBrandsFail()
         })

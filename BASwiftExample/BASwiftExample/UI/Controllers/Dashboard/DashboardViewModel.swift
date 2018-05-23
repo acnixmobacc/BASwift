@@ -10,4 +10,9 @@ import Foundation
 
 class DashboardViewModel: BaseViewModel {
 
+    private var model: DashboardModel
+
+    required init() {
+        model = DashboardModel()
+    }
 }

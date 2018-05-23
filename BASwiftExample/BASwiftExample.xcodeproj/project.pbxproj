@@ -51,6 +51,7 @@
 		B6C86C5C20B5489B0096551D /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */; };
 		B6C86C5F20B549AE0096551D /* LocalUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */; };
 		B6C86C6120B5538C0096551D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C6020B5538C0096551D /* LoginModel.swift */; };
+		B6C86C6320B55C800096551D /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C6220B55C800096551D /* DashboardModel.swift */; };
 		B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */; };
 		B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */; };
 		B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9420690FB4000DBAB3 /* DetailViewModel.swift */; };
@@ -154,6 +155,7 @@
 		B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
 		B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserDataProvider.swift; sourceTree = "<group>"; };
 		B6C86C6020B5538C0096551D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B6C86C6220B55C800096551D /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
 		B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableAdapter.swift; sourceTree = "<group>"; };
 		B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B6CDBB9420690FB4000DBAB3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				B60BC0D8206BA57500A69F08 /* DashboardViewController.swift */,
 				B60BC0DA206BA58400A69F08 /* DashboardViewModel.swift */,
+				B6C86C6220B55C800096551D /* DashboardModel.swift */,
 				B60BC0DF206BA98900A69F08 /* Utils */,
 			);
 			path = Dashboard;
@@ -1024,6 +1027,7 @@
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
+				B6C86C6320B55C800096551D /* DashboardModel.swift in Sources */,
 				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
 				B6FC97C920B4453E005C8F73 /* BrandModel.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,

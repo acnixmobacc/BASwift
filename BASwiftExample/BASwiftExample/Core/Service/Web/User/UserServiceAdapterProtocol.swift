@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol UserServiceAdapterProtocol {
-    func getUser(onSuccess : @escaping (User) -> Void, onError:@escaping (Error?) -> Void)
+    func getUser(onSuccess : @escaping (User) -> Void, onFailure:@escaping (Error?) -> Void)
 }
