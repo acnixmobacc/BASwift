@@ -30,8 +30,8 @@ class DashboardCoordinator: Coordinator {
     }
 
     @discardableResult
-    func showService() -> ServiceViewController {
-        let controller: ServiceViewController = instantiateMainStoryboardController()
+    func showService() -> BrandViewController {
+        let controller: BrandViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         navigationController.show(controller, sender: nil)
         return controller

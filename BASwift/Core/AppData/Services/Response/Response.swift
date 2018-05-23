@@ -16,6 +16,8 @@ public class Response<T: IEntity>: ResponseProtocol {
 
     public var httpStatusCode: Int?
 
+    public var status: Alamofire.Result<Any>
+
     public var data: Data?
 
     public var error: Error?
@@ -58,6 +60,7 @@ public class Response<T: IEntity>: ResponseProtocol {
         self.error = dataResponse.error
         self.timeline = dataResponse.timeline
         self.request = request
+        self.status = dataResponse.result
         self.entity = createEntity()
     }
 

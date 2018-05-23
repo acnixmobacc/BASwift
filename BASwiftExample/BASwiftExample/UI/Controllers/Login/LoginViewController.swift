@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
         loginButton.rx.tap.bind(onNext: { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.authenticateWithTouchID()
+            strongSelf.viewModel.login()
         }).disposed(by: disposeBag)
 
     }

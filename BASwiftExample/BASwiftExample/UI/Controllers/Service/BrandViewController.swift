@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ServiceViewController: BaseViewController<ServiceViewModel> {
+class BrandViewController: BaseViewController<BrandViewModel> {
     weak var coordinatorDelegate: DashboardCoordinatorDelegate?
 }
