@@ -47,6 +47,10 @@
 		B6C6BC47208647F100347053 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC46208647F100347053 /* Coordinator.swift */; };
 		B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */; };
 		B6C6BC4B208649E100347053 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC4A208649E100347053 /* DashboardCoordinator.swift */; };
+		B6C86C5820B5442A0096551D /* AppWebServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5720B5442A0096551D /* AppWebServiceProvider.swift */; };
+		B6C86C5C20B5489B0096551D /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */; };
+		B6C86C5F20B549AE0096551D /* LocalUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */; };
+		B6C86C6120B5538C0096551D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C6020B5538C0096551D /* LoginModel.swift */; };
 		B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */; };
 		B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */; };
 		B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9420690FB4000DBAB3 /* DetailViewModel.swift */; };
@@ -78,23 +82,18 @@
 		B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B2204C281000110985 /* Assets.xcassets */; };
 		B6F4B0B6204C281000110985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F4B0B4204C281000110985 /* LaunchScreen.storyboard */; };
 		B6F4B0C1204C281000110985 /* BASwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4B0C0204C281000110985 /* BASwiftExampleTests.swift */; };
-		B6FC979B20B4347F005C8F73 /* AppDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */; };
-		B6FC979D20B43636005C8F73 /* IBridgeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */; };
-		B6FC979F20B43656005C8F73 /* IServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC979E20B43656005C8F73 /* IServiceProvider.swift */; };
-		B6FC97A120B4366C005C8F73 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */; };
-		B6FC97A320B43678005C8F73 /* BridgeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A220B43678005C8F73 /* BridgeProvider.swift */; };
+		B6FC97A320B43678005C8F73 /* AppBridgeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A220B43678005C8F73 /* AppBridgeProvider.swift */; };
 		B6FC97AA20B4396F005C8F73 /* UserBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97A920B4396F005C8F73 /* UserBridge.swift */; };
-		B6FC97AC20B43984005C8F73 /* ProductBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AB20B43984005C8F73 /* ProductBridge.swift */; };
 		B6FC97AE20B439D2005C8F73 /* CarServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */; };
-		B6FC97B020B439F6005C8F73 /* CampaignServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */; };
 		B6FC97B220B43D8A005C8F73 /* ServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */; };
 		B6FC97B620B43FFC005C8F73 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B520B43FFC005C8F73 /* Brand.swift */; };
 		B6FC97B920B4402F005C8F73 /* BrandList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97B820B4402F005C8F73 /* BrandList.swift */; };
-		B6FC97BB20B4434B005C8F73 /* ICarServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */; };
-		B6FC97BF20B443BD005C8F73 /* ICampaignServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */; };
-		B6FC97C420B4442D005C8F73 /* IUserBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C320B4442D005C8F73 /* IUserBridge.swift */; };
-		B6FC97C720B44459005C8F73 /* IProductBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C620B44459005C8F73 /* IProductBridge.swift */; };
-		B6FC97C920B4453E005C8F73 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C820B4453E005C8F73 /* ServiceModel.swift */; };
+		B6FC97BB20B4434B005C8F73 /* CarServiceAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BA20B4434B005C8F73 /* CarServiceAdapterProtocol.swift */; };
+		B6FC97BF20B443BD005C8F73 /* UserServiceAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97BE20B443BD005C8F73 /* UserServiceAdapterProtocol.swift */; };
+		B6FC97C420B4442D005C8F73 /* UserBridgeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C320B4442D005C8F73 /* UserBridgeProtocol.swift */; };
+		B6FC97C920B4453E005C8F73 /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97C820B4453E005C8F73 /* BrandModel.swift */; };
+		B6FC97CB20B4566A005C8F73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97CA20B4566A005C8F73 /* User.swift */; };
+		B6FC97CD20B45756005C8F73 /* UserServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC97CC20B45756005C8F73 /* UserServiceAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +150,10 @@
 		B6C6BC46208647F100347053 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B6C6BC482086481600347053 /* AppCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B6C6BC4A208649E100347053 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		B6C86C5720B5442A0096551D /* AppWebServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWebServiceProvider.swift; sourceTree = "<group>"; };
+		B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserDataProvider.swift; sourceTree = "<group>"; };
+		B6C86C6020B5538C0096551D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableAdapter.swift; sourceTree = "<group>"; };
 		B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B6CDBB9420690FB4000DBAB3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -186,23 +189,18 @@
 		B6F4B0BC204C281000110985 /* BASwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BASwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4B0C0204C281000110985 /* BASwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASwiftExampleTests.swift; sourceTree = "<group>"; };
 		B6F4B0C2204C281000110985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataProvider.swift; sourceTree = "<group>"; };
-		B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBridgeProvider.swift; sourceTree = "<group>"; };
-		B6FC979E20B43656005C8F73 /* IServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceProvider.swift; sourceTree = "<group>"; };
-		B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
-		B6FC97A220B43678005C8F73 /* BridgeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeProvider.swift; sourceTree = "<group>"; };
+		B6FC97A220B43678005C8F73 /* AppBridgeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBridgeProvider.swift; sourceTree = "<group>"; };
 		B6FC97A920B4396F005C8F73 /* UserBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBridge.swift; sourceTree = "<group>"; };
-		B6FC97AB20B43984005C8F73 /* ProductBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBridge.swift; sourceTree = "<group>"; };
 		B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceAdapter.swift; sourceTree = "<group>"; };
-		B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignServiceAdapter.swift; sourceTree = "<group>"; };
 		B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAdapter.swift; sourceTree = "<group>"; };
 		B6FC97B520B43FFC005C8F73 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		B6FC97B820B4402F005C8F73 /* BrandList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandList.swift; sourceTree = "<group>"; };
-		B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICarServiceAdapter.swift; sourceTree = "<group>"; };
-		B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICampaignServiceAdapter.swift; sourceTree = "<group>"; };
-		B6FC97C320B4442D005C8F73 /* IUserBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserBridge.swift; sourceTree = "<group>"; };
-		B6FC97C620B44459005C8F73 /* IProductBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProductBridge.swift; sourceTree = "<group>"; };
-		B6FC97C820B4453E005C8F73 /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		B6FC97BA20B4434B005C8F73 /* CarServiceAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceAdapterProtocol.swift; sourceTree = "<group>"; };
+		B6FC97BE20B443BD005C8F73 /* UserServiceAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceAdapterProtocol.swift; sourceTree = "<group>"; };
+		B6FC97C320B4442D005C8F73 /* UserBridgeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBridgeProtocol.swift; sourceTree = "<group>"; };
+		B6FC97C820B4453E005C8F73 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
+		B6FC97CA20B4566A005C8F73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B6FC97CC20B45756005C8F73 /* UserServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceAdapter.swift; sourceTree = "<group>"; };
 		CE60562746C17D88AE15D417 /* Pods-BASwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +265,7 @@
 			children = (
 				B60BC0EA206BD57A00A69F08 /* LoginViewController.swift */,
 				B60BC0EC206BD58A00A69F08 /* LoginViewModel.swift */,
+				B6C86C6020B5538C0096551D /* LoginModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -331,7 +330,7 @@
 			children = (
 				B64F25242094608500BC569B /* BrandViewController.swift */,
 				B64F25262094609100BC569B /* BrandViewModel.swift */,
-				B6FC97C820B4453E005C8F73 /* ServiceModel.swift */,
+				B6FC97C820B4453E005C8F73 /* BrandModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -391,6 +390,14 @@
 				B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B6C86C5D20B548BC0096551D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		B6CDBB8E20690CCB000DBAB3 /* Detail */ = {
@@ -618,10 +625,8 @@
 			children = (
 				B6FC97B320B43FE7005C8F73 /* Entities */,
 				B6FC97A820B43795005C8F73 /* Local */,
-				B6FC97A620B436DC005C8F73 /* API */,
 				B6FC97A520B436C7005C8F73 /* Web */,
 				B6FC97A420B436B6005C8F73 /* Bridge */,
-				B6FC979A20B4347F005C8F73 /* AppDataProvider.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -629,8 +634,8 @@
 		B6FC97A420B436B6005C8F73 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC979C20B43636005C8F73 /* IBridgeProvider.swift */,
-				B6FC97A220B43678005C8F73 /* BridgeProvider.swift */,
+				B6FC97C120B4441A005C8F73 /* User */,
+				B6FC97A220B43678005C8F73 /* AppBridgeProvider.swift */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -638,27 +643,19 @@
 		B6FC97A520B436C7005C8F73 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC979E20B43656005C8F73 /* IServiceProvider.swift */,
-				B6FC97A020B4366C005C8F73 /* ServiceProvider.swift */,
+				B6FC97BC20B44351005C8F73 /* Car */,
+				B6FC97BD20B443AA005C8F73 /* User */,
+				B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */,
+				B6C86C5720B5442A0096551D /* AppWebServiceProvider.swift */,
 			);
 			path = Web;
-			sourceTree = "<group>";
-		};
-		B6FC97A620B436DC005C8F73 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B6FC97BD20B443AA005C8F73 /* Campaign */,
-				B6FC97BC20B44351005C8F73 /* Car */,
-				B6FC97B120B43D8A005C8F73 /* ServiceAdapter.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		B6FC97A820B43795005C8F73 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC97C520B44444005C8F73 /* Product */,
-				B6FC97C120B4441A005C8F73 /* User */,
+				B6C86C5D20B548BC0096551D /* User */,
+				B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -692,24 +689,25 @@
 		B6FC97BC20B44351005C8F73 /* Car */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC97BA20B4434B005C8F73 /* ICarServiceAdapter.swift */,
+				B6FC97BA20B4434B005C8F73 /* CarServiceAdapterProtocol.swift */,
 				B6FC97AD20B439D2005C8F73 /* CarServiceAdapter.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
 		};
-		B6FC97BD20B443AA005C8F73 /* Campaign */ = {
+		B6FC97BD20B443AA005C8F73 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC97BE20B443BD005C8F73 /* ICampaignServiceAdapter.swift */,
-				B6FC97AF20B439F6005C8F73 /* CampaignServiceAdapter.swift */,
+				B6FC97BE20B443BD005C8F73 /* UserServiceAdapterProtocol.swift */,
+				B6FC97CC20B45756005C8F73 /* UserServiceAdapter.swift */,
 			);
-			path = Campaign;
+			path = User;
 			sourceTree = "<group>";
 		};
 		B6FC97C020B4440C005C8F73 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC97CA20B4566A005C8F73 /* User.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -717,19 +715,10 @@
 		B6FC97C120B4441A005C8F73 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				B6FC97C320B4442D005C8F73 /* IUserBridge.swift */,
+				B6FC97C320B4442D005C8F73 /* UserBridgeProtocol.swift */,
 				B6FC97A920B4396F005C8F73 /* UserBridge.swift */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		B6FC97C520B44444005C8F73 /* Product */ = {
-			isa = PBXGroup;
-			children = (
-				B6FC97C620B44459005C8F73 /* IProductBridge.swift */,
-				B6FC97AB20B43984005C8F73 /* ProductBridge.swift */,
-			);
-			path = Product;
 			sourceTree = "<group>";
 		};
 		DB9D914821EA36264B8EC35A /* Frameworks */ = {
@@ -1022,56 +1011,55 @@
 				B6FC97AE20B439D2005C8F73 /* CarServiceAdapter.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
 				B64F25272094609100BC569B /* BrandViewModel.swift in Sources */,
-				B6FC979D20B43636005C8F73 /* IBridgeProvider.swift in Sources */,
-				B6FC97A320B43678005C8F73 /* BridgeProvider.swift in Sources */,
+				B6FC97A320B43678005C8F73 /* AppBridgeProvider.swift in Sources */,
 				B614D969206A89A300F97145 /* LocationViewController.swift in Sources */,
 				B6CDBBAC20691C12000DBAB3 /* SampleViewController.swift in Sources */,
 				B699E9C920A08F8200FF42BB /* FormManager.swift in Sources */,
 				B60BC0D9206BA57500A69F08 /* DashboardViewController.swift in Sources */,
 				B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */,
-				B6FC97C420B4442D005C8F73 /* IUserBridge.swift in Sources */,
-				B6FC97AC20B43984005C8F73 /* ProductBridge.swift in Sources */,
+				B6FC97C420B4442D005C8F73 /* UserBridgeProtocol.swift in Sources */,
+				B6C86C6120B5538C0096551D /* LoginModel.swift in Sources */,
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
 				B64F0768206D250C007194B5 /* FormViewController.swift in Sources */,
 				B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */,
-				B6FC97C720B44459005C8F73 /* IProductBridge.swift in Sources */,
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
 				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
-				B6FC97C920B4453E005C8F73 /* ServiceModel.swift in Sources */,
+				B6FC97C920B4453E005C8F73 /* BrandModel.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
 				B6CF390F20A2C99E006FCD8A /* PickerFormItemView.swift in Sources */,
 				B6CDBBC0206929AC000DBAB3 /* PickerViewController.swift in Sources */,
 				B6CDBB9520690FB4000DBAB3 /* DetailViewModel.swift in Sources */,
+				B6C86C5F20B549AE0096551D /* LocalUserDataProvider.swift in Sources */,
 				B6D4195820A1F98D00B59EE3 /* ButtonFormItemView.swift in Sources */,
 				B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
 				B6CDBBAE20691C49000DBAB3 /* SampleViewModel.swift in Sources */,
 				B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */,
-				B6FC97BB20B4434B005C8F73 /* ICarServiceAdapter.swift in Sources */,
+				B6FC97BB20B4434B005C8F73 /* CarServiceAdapterProtocol.swift in Sources */,
 				B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */,
 				B60BC0ED206BD58A00A69F08 /* LoginViewModel.swift in Sources */,
 				B6FC97AA20B4396F005C8F73 /* UserBridge.swift in Sources */,
+				B6FC97CB20B4566A005C8F73 /* User.swift in Sources */,
 				B64ADD4C20936C7A00A2B931 /* BaseViewModel.swift in Sources */,
 				B6FC97B920B4402F005C8F73 /* BrandList.swift in Sources */,
 				B64ADD46209367D700A2B931 /* CollectionCoordinator.swift in Sources */,
 				B6FC97B620B43FFC005C8F73 /* Brand.swift in Sources */,
 				B64F25252094608500BC569B /* BrandViewController.swift in Sources */,
 				B6CDBBC2206929B7000DBAB3 /* PickerViewModel.swift in Sources */,
-				B6FC97A120B4366C005C8F73 /* ServiceProvider.swift in Sources */,
-				B6FC979B20B4347F005C8F73 /* AppDataProvider.swift in Sources */,
 				B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */,
 				B6FC97B220B43D8A005C8F73 /* ServiceAdapter.swift in Sources */,
 				B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */,
 				B6A807E32063868700E03C26 /* MainViewController.swift in Sources */,
+				B6C86C5C20B5489B0096551D /* LocalDataProvider.swift in Sources */,
 				B6CDBBA720691B0C000DBAB3 /* UICustomSection.swift in Sources */,
 				B6B31E4420A4877600C8D170 /* SwitchFormItemView.swift in Sources */,
 				B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */,
+				B6FC97CD20B45756005C8F73 /* UserServiceAdapter.swift in Sources */,
 				B6A807E5206386D300E03C26 /* MainViewModel.swift in Sources */,
-				B6FC97BF20B443BD005C8F73 /* ICampaignServiceAdapter.swift in Sources */,
+				B6FC97BF20B443BD005C8F73 /* UserServiceAdapterProtocol.swift in Sources */,
+				B6C86C5820B5442A0096551D /* AppWebServiceProvider.swift in Sources */,
 				B60BC0E1206BA9A900A69F08 /* DashboardCollectionAdapter.swift in Sources */,
-				B6FC97B020B439F6005C8F73 /* CampaignServiceAdapter.swift in Sources */,
-				B6FC979F20B43656005C8F73 /* IServiceProvider.swift in Sources */,
 				B6C6BC492086481600347053 /* AppCoordinatorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

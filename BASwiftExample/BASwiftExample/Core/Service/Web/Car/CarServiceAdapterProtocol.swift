@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ICarServiceAdapter {
+public protocol CarServiceAdapterProtocol {
     func getBrands(onSuccess:@escaping (BrandList) -> Void, onError:@escaping (Error?) -> Void)
 }

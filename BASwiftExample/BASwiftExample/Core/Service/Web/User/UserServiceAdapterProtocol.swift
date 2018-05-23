@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ICampaignServiceAdapter {
-    func getCampaigns()
+public protocol UserServiceAdapterProtocol {
+    func getUser(onSuccess : @escaping (User) -> Void, onError:@escaping (Error?) -> Void)
 }

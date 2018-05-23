@@ -8,10 +8,11 @@
 
 import BASwift
 
-public class CarServiceAdapter: ServiceAdapter, ICarServiceAdapter {
+public class CarServiceAdapter: ServiceAdapter, CarServiceAdapterProtocol {
 
     enum Endpoint: String {
-        case brand = "/brand"
+        case brand = "/brand.json"
+        case detail = "/car_detail.json"
     }
 
     public func getBrands(onSuccess:@escaping (BrandList) -> Void, onError:@escaping (Error?) -> Void) {

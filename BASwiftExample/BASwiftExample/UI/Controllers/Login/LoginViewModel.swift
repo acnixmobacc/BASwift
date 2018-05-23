@@ -10,4 +10,26 @@ import Foundation
 
 class LoginViewModel: BaseViewModel {
 
+    private(set) var model: LoginModel
+
+    required init() {
+        model = LoginModel()
+        super.init()
+        model.delegate = self
+    }
+
+    func login() {
+        model.login()
+    }
+}
+
+extension LoginViewModel: LoginModelDelegate {
+    func onLoginSucceed(user: User) {
+        Logger.info("Login succeed")
+    }
+
+    func onLoginFailed() {
+        Logger.info("Login failed")
+    }
+
 }

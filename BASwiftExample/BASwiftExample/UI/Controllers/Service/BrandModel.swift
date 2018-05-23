@@ -15,12 +15,12 @@ protocol BrandModelDelegate: class {
 
 class BrandModel {
 
-    private(set) var carServiceAdapter: ICarServiceAdapter
+    private(set) var carServiceAdapter: CarServiceAdapterProtocol
 
     weak var delegate: BrandModelDelegate?
 
     init() {
-        carServiceAdapter = AppDataProvider.instance.serviceProvider.getCarServiceAdapter()
+        carServiceAdapter = AppWebServiceProvider.instance.carServiceAdapter
     }
 
     func getBrands() {

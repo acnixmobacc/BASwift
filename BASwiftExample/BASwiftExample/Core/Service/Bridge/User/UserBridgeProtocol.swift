@@ -8,6 +8,7 @@
 
 import Foundation
 
-public protocol IUserBridge {
+public protocol UserBridgeProtocol {
 
+    func getUser( onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error?) -> Void)
 }
