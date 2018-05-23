@@ -15,6 +15,8 @@ public protocol ResponseProtocol {
 
     var httpStatusCode: Int? { get }
 
+    var status: Alamofire.Result<Any> { get }
+
     var data: Data? { get }
 
     var error: Error? { get }
