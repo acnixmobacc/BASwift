@@ -23,7 +23,7 @@ public class CarServiceAdapter: ServiceAdapter, CarServiceAdapterProtocol {
                 onFailure(response.error)
                 return
             }
-            
+
             onSuccess(entity)
         })
     }

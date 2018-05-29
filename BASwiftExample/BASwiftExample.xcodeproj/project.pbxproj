@@ -22,6 +22,9 @@
 		B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC0EE206BD59A00A69F08 /* Login.storyboard */; };
 		B614D969206A89A300F97145 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614D968206A89A300F97145 /* LocationViewController.swift */; };
 		B614D96B206A89AF00F97145 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614D96A206A89AF00F97145 /* LocationViewModel.swift */; };
+		B6299C8A20BD5F3B00276C28 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6299C8920BD5F3B00276C28 /* LocalDataSource.swift */; };
+		B647856B20BC19C200025B06 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647856A20BC19C200025B06 /* RealmManager.swift */; };
+		B647856E20BC1ACC00025B06 /* RealmManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */; };
 		B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD3E20933D0500A2B931 /* Logger.swift */; };
 		B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD4120933D2300A2B931 /* AppConfigurator.swift */; };
 		B64ADD442093671A00A2B931 /* Adapter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64ADD432093671A00A2B931 /* Adapter.storyboard */; };
@@ -126,6 +129,9 @@
 		B60BC0EE206BD59A00A69F08 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B614D968206A89A300F97145 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B614D96A206A89AF00F97145 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		B6299C8920BD5F3B00276C28 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		B647856A20BC19C200025B06 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocol.swift; sourceTree = "<group>"; };
 		B64ADD3E20933D0500A2B931 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B64ADD4120933D2300A2B931 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		B64ADD432093671A00A2B931 /* Adapter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adapter.storyboard; sourceTree = "<group>"; };
@@ -282,6 +288,15 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		B647856C20BC1AB400025B06 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */,
+				B647856A20BC19C200025B06 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		B64ADD3D20933CF400A2B931 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +308,8 @@
 		B64ADD4020933D0F00A2B931 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B656360E20BD259B0029AA17 /* LocalDataSource */,
+				B647856C20BC1AB400025B06 /* Realm */,
 				B64ADD4120933D2300A2B931 /* AppConfigurator.swift */,
 			);
 			path = Utils;
@@ -336,6 +353,14 @@
 				B6FC97C820B4453E005C8F73 /* BrandModel.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B656360E20BD259B0029AA17 /* LocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B6299C8920BD5F3B00276C28 /* LocalDataSource.swift */,
+			);
+			path = LocalDataSource;
 			sourceTree = "<group>";
 		};
 		B6616F8A205F91D100F81B4F /* Resources */ = {
@@ -756,7 +781,6 @@
 				B6F4B0A5204C281000110985 /* Frameworks */,
 				B6F4B0A6204C281000110985 /* Resources */,
 				C2A9C6FD8E75598E54578C3A /* [CP] Embed Pods Frameworks */,
-				F47C4C52314CDC40656D4AB0 /* [CP] Copy Pods Resources */,
 				B64ADD4D2093704200A2B931 /* ShellScript */,
 			);
 			buildRules = (
@@ -776,8 +800,6 @@
 				B6F4B0B8204C281000110985 /* Sources */,
 				B6F4B0B9204C281000110985 /* Frameworks */,
 				B6F4B0BA204C281000110985 /* Resources */,
-				B0C73255B889E3483BDD64B5 /* [CP] Embed Pods Frameworks */,
-				5BE64B53E469DA659EF855AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -863,21 +885,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5BE64B53E469DA659EF855AF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8766490582B0DB6B71DF4A44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -894,21 +901,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0C73255B889E3483BDD64B5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B64ADD4D2093704200A2B931 /* ShellScript */ = {
@@ -952,6 +944,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BASwift/BASwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -963,6 +957,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BASwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -974,21 +970,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F47C4C52314CDC40656D4AB0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -996,12 +977,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B647856E20BC1ACC00025B06 /* RealmManagerProtocol.swift in Sources */,
 				B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */,
 				B60BC0EB206BD57A00A69F08 /* LoginViewController.swift in Sources */,
 				B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */,
 				B6A807E7206386DE00E03C26 /* MainModel.swift in Sources */,
 				B60BC0DB206BA58400A69F08 /* DashboardViewModel.swift in Sources */,
+				B6299C8A20BD5F3B00276C28 /* LocalDataSource.swift in Sources */,
 				B60BC0E5206BAA3500A69F08 /* DashboardItemCollectionViewCell.swift in Sources */,
+				B647856B20BC19C200025B06 /* RealmManager.swift in Sources */,
 				B64ADD4A20936C6F00A2B931 /* BaseViewController.swift in Sources */,
 				B6CDBBA520691AB1000DBAB3 /* UIItem.swift in Sources */,
 				B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */,
