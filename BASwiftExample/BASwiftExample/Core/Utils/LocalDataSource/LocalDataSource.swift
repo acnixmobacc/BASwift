@@ -21,6 +21,10 @@ class LocalDataSource<T: Object> {
         return realmManager.get(type: T.self)
     }
 
+    func getAll() -> [T] {
+        return realmManager.getAll(type: T.self)
+    }
+
     func get(withDefault defaultObj: T) -> T {
         return realmManager.get(type: T.self, defaultObj: defaultObj)
     }
@@ -35,6 +39,10 @@ class LocalDataSource<T: Object> {
 
     func remove(object: T) {
         realmManager.remove(object: object)
+    }
+
+    func removeAll() {
+        realmManager.remove(type: T.self)
     }
 
 }

@@ -16,10 +16,20 @@ public protocol RealmManagerProtocol {
 
     func get<T: Object>(type: T.Type) -> T?
 
+    func getAll<T: Object>(type: T.Type) -> [T]
+
     func get<T: Object>(type: T.Type, defaultObj: T) -> T
 
-    func add<T: Object>(object: T)
+    @discardableResult
+    func add<T: Object>(object: T) -> Bool
 
-    func remove<T: Object>(object: T)
+    @discardableResult
+    func remove<T: Object>(object: T) -> Bool
+
+    @discardableResult
+    func removeAll() -> Bool
+
+    @discardableResult
+    func remove<T: Object>(type: T.Type) -> Bool
 
 }
