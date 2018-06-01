@@ -10,7 +10,7 @@ import Foundation
 
 class BrandViewModel: BaseViewModel {
 
-    var view: BrandViewProtocol?
+    weak var view: BrandViewProtocol?
 
     private(set) var model: BrandModelProtocol
 

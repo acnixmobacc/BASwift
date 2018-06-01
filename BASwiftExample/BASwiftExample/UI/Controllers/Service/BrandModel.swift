@@ -10,7 +10,7 @@ import Foundation
 
 class BrandModel: BaseModel {
 
-    var viewModel: BrandViewModelProtocol?
+    weak var viewModel: BrandViewModelProtocol?
 
     private(set) var carServiceAdapter: CarServiceAdapterProtocol
 

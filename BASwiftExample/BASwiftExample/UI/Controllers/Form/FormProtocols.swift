@@ -37,3 +37,11 @@ protocol FormViewModelProtocol: class {
     func getCities() -> [String]
 
 }
+
+protocol FormModelProtocol: class {
+    var viewModel: FormViewModelProtocol? { get set }
+
+    func getCities() -> [String]
+
+    func getTown(forCity city: String) -> [String]
+}

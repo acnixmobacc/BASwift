@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol BrandViewProtocol {
+protocol BrandViewProtocol: class {
 
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()
 }
 
-protocol BrandViewModelProtocol {
+protocol BrandViewModelProtocol: class {
 
     var view: BrandViewProtocol? { get set }
 
@@ -26,7 +26,7 @@ protocol BrandViewModelProtocol {
     func onGetBrandsFail()
 }
 
-protocol BrandModelProtocol {
+protocol BrandModelProtocol: class {
     var viewModel: BrandViewModelProtocol? { get set }
 
     func getBrands()

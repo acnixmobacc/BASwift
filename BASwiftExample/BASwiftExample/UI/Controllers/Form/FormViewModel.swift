@@ -9,6 +9,9 @@ import RxSwift
 
 class FormViewModel: BaseViewModel {
     weak var view: FormViewProtocol?
+
+    private(set) var model: FormModelProtocol
+
     var username = Variable<String>("")
     var surname = Variable<String>("")
     var password = Variable<String>("")
@@ -18,29 +21,22 @@ class FormViewModel: BaseViewModel {
     var address = Variable<String>("")
     var phone = Variable<String>("")
 
-    fileprivate let cities = ["İstanbul", "Trabzon", "İzmir", "Ankara", "Artvin", "Mardin", "Diyarbakır"]
-    fileprivate let cityTownsMap = ["İstanbul": [],
-                                    "Trabzon": [],
-                                    "İzmir": [],
-                                    "Ankara": [],
-                                    "Artvin": [],
-                                    "Mardin": [],
-                                    "Diyarbakır": []]
-
-    func getTown(forCity city: String) -> [String] {
-        if let towns = cityTownsMap[city] as? [String] {
-            return towns
-        }
-
-        return []
+    required init() {
+        model = FormModel()
+        super.init()
+        model.viewModel = self
     }
 
 }
 
 extension FormViewModel: FormViewModelProtocol {
 
+    func getTown(forCity city: String) -> [String] {
+        return model.getTown(forCity: city)
+    }
+
     func getCities() -> [String] {
-        return cities
+        return model.getCities()
     }
 
     func onClickSave() {
