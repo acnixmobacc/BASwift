@@ -9,7 +9,7 @@
 import BASwift
 import UIKit
 
-class CustomFormViewController: BaseViewController<FormViewModel> {
+class CustomFormViewController: BaseViewController {
 
     // MARK: - Properties
     weak var coordinatorDelegate: LoginCoordinatorDelegate?

@@ -10,26 +10,29 @@ import Foundation
 
 class LoginViewModel: BaseViewModel {
 
-    private(set) var model: LoginModel
+    private(set) var model: LoginModelProtocol!
+
+    weak var view: LoginViewProtocol?
 
     required init() {
         model = LoginModel()
         super.init()
-        model.delegate = self
+        model.viewModel = self
     }
+
+}
+
+extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
         model.login()
     }
-}
 
-extension LoginViewModel: LoginModelDelegate {
     func onLoginSucceed(user: User) {
-        Logger.info("Login succeed")
+        view?.onLoginSucceed(user: user)
     }
 
     func onLoginFailed() {
-        Logger.info("Login failed")
+        view?.onLoginFailed()
     }
-
 }

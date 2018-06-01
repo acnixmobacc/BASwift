@@ -33,6 +33,8 @@ class DashboardCoordinator: Coordinator {
     func showService() -> BrandViewController {
         let controller: BrandViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
+        controller.viewModel = BrandViewModel()
+        controller.viewModel.view = controller
         navigationController.show(controller, sender: nil)
         return controller
     }

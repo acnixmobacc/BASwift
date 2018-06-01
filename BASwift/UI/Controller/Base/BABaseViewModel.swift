@@ -8,53 +8,12 @@
 
 import Foundation
 
-open class BABaseViewModel: BA_BaseViewModelProtocol {
-
+open class BABaseViewModel: BABaseViewModelProtocol {
     // MARK: - Properties
-    weak public var baseViewDelegate: BA_BaseViewProtocol?
+    weak public var baseViewDelegate: BABaseViewProtocol?
 
     // MARK: - Initialization
     required public init() {
 
     }
-
-    // MARK: - Methods
-    open func initWithData(data: [Any?]) {
-
-    }
-
-    // MARK: - View Model Lifecycle
-    open func onDidLoad() {
-
-    }
-
-    open func onWillAppear() {
-
-    }
-
-    open func onDidAppear() {
-
-    }
-
-    open func onWillDisappear() {
-
-    }
-
-    open func onDidDisappear() {
-
-    }
-
-    open func onWillLayoutSubviews() {
-
-    }
-
-    open func onDidLayoutSubviews() {
-
-    }
-
-    // MARK: - Completion
-    open func onBackCompletion(_ data: [Any?]?) {
-
-    }
-
 }

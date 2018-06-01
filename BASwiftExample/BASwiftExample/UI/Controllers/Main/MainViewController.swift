@@ -9,11 +9,12 @@
 import BASwift
 import UIKit
 
-class MainViewController: BaseViewController<MainViewModel> {
+class MainViewController: BaseViewController {
 
     weak var coordinatorDelegate: ProductCoordinatorDelegate?
 
     @IBOutlet weak private var childView: LoadableView!
+
     @IBOutlet weak private var childProgressButton: UIButton!
 
     override func viewDidAppear(_ animated: Bool) {

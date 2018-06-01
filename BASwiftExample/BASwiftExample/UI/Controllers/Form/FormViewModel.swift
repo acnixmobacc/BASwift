@@ -8,7 +8,7 @@
 import RxSwift
 
 class FormViewModel: BaseViewModel {
-
+    weak var view: FormViewProtocol?
     var username = Variable<String>("")
     var surname = Variable<String>("")
     var password = Variable<String>("")
@@ -27,9 +27,17 @@ class FormViewModel: BaseViewModel {
                                     "Mardin": [],
                                     "Diyarbakır": []]
 
-    override func onDidLoad() {
-        super.onDidLoad()
+    func getTown(forCity city: String) -> [String] {
+        if let towns = cityTownsMap[city] as? [String] {
+            return towns
+        }
+
+        return []
     }
+
+}
+
+extension FormViewModel: FormViewModelProtocol {
 
     func getCities() -> [String] {
         return cities
@@ -37,14 +45,6 @@ class FormViewModel: BaseViewModel {
 
     func onClickSave() {
         print("Click")
-    }
-
-    func getTown(forCity city: String) -> [String] {
-        if let towns = cityTownsMap[city] as? [String] {
-            return towns
-        }
-
-        return []
     }
 
 }

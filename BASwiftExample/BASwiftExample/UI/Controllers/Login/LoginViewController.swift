@@ -9,7 +9,7 @@ import BASwift
 import RxCocoa
 import RxSwift
 
-class LoginViewController: BaseViewController<LoginViewModel> {
+class LoginViewController: BaseViewController {
 
     // MARK: - UI Fields
     @IBOutlet weak private var usernameField: UITextField!
@@ -21,6 +21,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     @IBOutlet weak private var registerButton: UIButton!
 
     // MARK: - Properties
+    var viewModel: LoginViewModelProtocol!
+
     weak var coordinatorDelegate: LoginCoordinatorDelegate?
 
     lazy var touchIDManager: TouchIDManager = {
@@ -57,6 +59,18 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             guard let strongSelf = self else { return }
             strongSelf.showAlert(BaseAlert(message: error.localizedDescription))
         })
+    }
+
+}
+
+extension LoginViewController: LoginViewProtocol {
+
+    func onLoginSucceed(user: User) {
+        Logger.info("Login succeed")
+    }
+
+    func onLoginFailed() {
+        Logger.info("Login failed")
     }
 
 }

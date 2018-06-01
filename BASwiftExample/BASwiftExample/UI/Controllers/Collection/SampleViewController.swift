@@ -8,7 +8,7 @@
 
 import BASwift
 
-class SampleViewController: BaseViewController<SampleViewModel> {
+class SampleViewController: BaseViewController {
 
     // MARK: - UI Fields
     @IBOutlet weak private var collectionView: UICollectionView!

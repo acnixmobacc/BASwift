@@ -9,7 +9,8 @@
 import UIKit
 
 // MARK: - View Interface
-public protocol BA_BaseViewProtocol: class {
+public protocol BABaseViewProtocol: class {
+
     func onUpdateView()
 
     func showProgress()
@@ -22,27 +23,13 @@ public protocol BA_BaseViewProtocol: class {
 }
 
 // MARK: - View Model Interface
-public protocol BA_BaseViewModelProtocol: class {
+public protocol BABaseViewModelProtocol: class {
+
     init()
-
-    func initWithData(data: [Any?])
-
-    func onDidLoad()
-
-    func onWillAppear()
-
-    func onDidAppear()
-
-    func onWillDisappear()
-
-    func onDidDisappear()
-
-    func onWillLayoutSubviews()
-
-    func onDidLayoutSubviews()
 }
 
 // MARK: - Model Interface
-public protocol BA_BaseModelProtocol: class {
+public protocol BABaseModelProtocol: class {
 
+    init()
 }

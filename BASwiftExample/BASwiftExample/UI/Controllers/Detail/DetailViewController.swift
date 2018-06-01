@@ -9,7 +9,7 @@
 import BASwift
 import UIKit
 
-class DetailViewController: BaseViewController<DetailViewModel> {
+class DetailViewController: BaseViewController {
 
     // MARK: - Properties
     weak var coordinatorDelegate: CollectionCoordinatorDelegate?

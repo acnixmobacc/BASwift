@@ -8,6 +8,9 @@
 
 import Foundation
 
-open class BABaseModel: BA_BaseModelProtocol {
+open class  BABaseModel: BABaseModelProtocol {
 
+    public required init() {
+
+    }
 }

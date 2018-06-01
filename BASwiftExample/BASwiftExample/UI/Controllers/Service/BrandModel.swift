@@ -8,28 +8,29 @@
 
 import Foundation
 
-protocol BrandModelDelegate: class {
-    func onGetBrandsSuccess()
-    func onGetBrandsFail()
-}
+class BrandModel: BaseModel {
 
-class BrandModel {
+    var viewModel: BrandViewModelProtocol?
 
     private(set) var carServiceAdapter: CarServiceAdapterProtocol
 
-    weak var delegate: BrandModelDelegate?
-
-    init() {
+    required init() {
         carServiceAdapter = AppWebServiceProvider.instance.carServiceAdapter
+        super.init()
     }
+
+}
+
+extension BrandModel: BrandModelProtocol {
 
     func getBrands() {
         carServiceAdapter.getBrands(onSuccess: { [weak self] _ in
             guard let strongSelf = self else { return }
-            strongSelf.delegate?.onGetBrandsSuccess()
+            strongSelf.viewModel?.onGetBrandsSuccess()
         }, onFailure: { [weak self] _ in
             guard let strongSelf = self else { return }
-            strongSelf.delegate?.onGetBrandsFail()
+            strongSelf.viewModel?.onGetBrandsFail()
         })
     }
+
 }

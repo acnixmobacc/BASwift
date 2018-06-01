@@ -8,6 +8,24 @@
 
 import UIKit
 
-class BrandViewController: BaseViewController<BrandViewModel> {
+class BrandViewController: BaseViewController {
     weak var coordinatorDelegate: DashboardCoordinatorDelegate?
+
+    var viewModel: BrandViewModelProtocol!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.onDidLoad()
+    }
+}
+
+extension BrandViewController: BrandViewProtocol {
+    func onGetBrandsSuccess() {
+        Logger.debug("Success return")
+    }
+
+    func onGetBrandsFail() {
+        Logger.debug("Fail")
+    }
+
 }

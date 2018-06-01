@@ -10,26 +10,28 @@ import Foundation
 
 class BrandViewModel: BaseViewModel {
 
-    var model: BrandModel
+    var view: BrandViewProtocol?
+
+    private(set) var model: BrandModelProtocol
 
     required init() {
         model = BrandModel()
         super.init()
-        model.delegate = self
+        model.viewModel = self
     }
 
-    override func onDidLoad() {
-        super.onDidLoad()
-        model.getBrands()
-    }
 }
 
-extension BrandViewModel: BrandModelDelegate {
-    func onGetBrandsSuccess() {
+extension BrandViewModel: BrandViewModelProtocol {
+    func onDidLoad() {
+        model.getBrands()
+    }
 
+    func onGetBrandsSuccess() {
+        view?.onGetBrandsSuccess()
     }
 
     func onGetBrandsFail() {
-
+        view?.onGetBrandsFail()
     }
 }

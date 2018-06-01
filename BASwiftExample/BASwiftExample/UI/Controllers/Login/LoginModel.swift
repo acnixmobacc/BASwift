@@ -8,28 +8,27 @@
 
 import Foundation
 
-protocol LoginModelDelegate: class {
-    func onLoginSucceed(user: User)
+class LoginModel: BaseModel {
 
-    func onLoginFailed()
-}
-
-class LoginModel {
-    weak var delegate: LoginModelDelegate?
+    var viewModel: LoginViewModelProtocol?
 
     var userBridge: UserBridgeProtocol
 
-    init() {
+    required init() {
         self.userBridge = AppBridgeProvider.instance.userBridge
     }
+
+}
+
+extension LoginModel: LoginModelProtocol {
 
     func login() {
         userBridge.getUser(onSuccess: {[weak self] response in
             guard let strongSelf = self else { return }
-            strongSelf.delegate?.onLoginSucceed(user: response)
-        }, onFailure: {[weak self] _ in
-            guard let strongSelf = self else { return }
-            strongSelf.delegate?.onLoginFailed()
+            strongSelf.viewModel?.onLoginSucceed(user: response)
+            }, onFailure: {[weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModel?.onLoginFailed()
         })
     }
 }
