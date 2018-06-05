@@ -136,7 +136,8 @@ open class TableViewAdapter<T: Any> : NSObject, UITableViewDataSource, UITableVi
     }
 
     @available(iOS 11.0, *)
-    public func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    public func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+        -> UISwipeActionsConfiguration? {
         return nil
     }
 

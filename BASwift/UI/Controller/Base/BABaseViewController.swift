@@ -11,7 +11,6 @@ import UIKit
 open class BABaseViewController: UIViewController, BABaseViewProtocol {
 
     // MARK: - Properties
-
     lazy open var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager(forView: self.view)
     }()
@@ -28,17 +27,15 @@ open class BABaseViewController: UIViewController, BABaseViewProtocol {
 open class BABaseTabController: UITabBarController, BABaseViewProtocol {
 
     // MARK: - Properties
-
     lazy open var progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager(forView: self.view)
-        }()
+    }()
 
     lazy open var alertManager: IAlertManager = {[unowned self] in
         return AlertViewManager(withViewController: self)
-        }()
+    }()
 
     lazy open var contentManager: IContentManager = {[unowned self] in
         return ContentManager(withView: MessageView.fromNib())
-        }()
-
+    }()
 }

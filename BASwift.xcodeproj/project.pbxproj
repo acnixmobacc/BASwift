@@ -54,7 +54,7 @@
 		B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BABaseViewController.swift */; };
 		B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */; };
 		B6D7E6812049770700A5D803 /* BABaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BABaseModel.swift */; };
-		B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */; };
+		B6D7E686204977BA00A5D803 /* BABaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */; };
 		B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6882049782B00A5D803 /* String+BASwift.swift */; };
 		B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6892049782B00A5D803 /* Int+BASwift.swift */; };
 		B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */; };
@@ -170,7 +170,7 @@
 		B6D7E67C204976F300A5D803 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewModel.swift; sourceTree = "<group>"; };
 		B6D7E6802049770700A5D803 /* BABaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseModel.swift; sourceTree = "<group>"; };
-		B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA_BaseProtocols.swift; sourceTree = "<group>"; };
+		B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseProtocols.swift; sourceTree = "<group>"; };
 		B6D7E6882049782B00A5D803 /* String+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6892049782B00A5D803 /* Int+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E68A2049782C00A5D803 /* Float+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+BASwift.swift"; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 		B6D7E67B204976D200A5D803 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7E685204977BA00A5D803 /* BA_BaseProtocols.swift */,
+				B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */,
 				B6D7E67C204976F300A5D803 /* BABaseViewController.swift */,
 				B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */,
 				B6D7E6802049770700A5D803 /* BABaseModel.swift */,
@@ -975,7 +975,7 @@
 				B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */,
 				B6C6BC4220863C3F00347053 /* KeyboardManager.swift in Sources */,
 				B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */,
-				B6D7E686204977BA00A5D803 /* BA_BaseProtocols.swift in Sources */,
+				B6D7E686204977BA00A5D803 /* BABaseProtocols.swift in Sources */,
 				B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
 				B6D7E6C7204A05D000A5D803 /* BaseAlert.swift in Sources */,
