@@ -63,12 +63,18 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
             showCollection(type)
         case .location:
             showLocation()
+        case .disney:
+            showDisney()
         }
     }
 }
 
 // MARK: - Private Methods
 extension DashboardCoordinator {
+    private func showDisney() {
+
+    }
+
     private func showCollection(_ type: DashboardItemType) {
         let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController)
         appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)

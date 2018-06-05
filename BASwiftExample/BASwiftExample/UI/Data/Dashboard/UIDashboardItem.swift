@@ -16,6 +16,7 @@ enum DashboardItemType: String {
     case login = "Login"
     case form = "Form"
     case customForm = "CustomForm"
+    case disney
 }
 
 class UIDashboardItem: ICellData {

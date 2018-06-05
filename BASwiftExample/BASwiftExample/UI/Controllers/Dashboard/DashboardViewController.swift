@@ -16,7 +16,8 @@ class DashboardViewController: BaseViewController {
         return [UIDashboardItem(withType: .progress), UIDashboardItem(withType: .picker),
                 UIDashboardItem(withType: .collection), UIDashboardItem(withType: .table),
                 UIDashboardItem(withType: .location), UIDashboardItem(withType: .login),
-                UIDashboardItem(withType: .form), UIDashboardItem(withType: .customForm)]
+                UIDashboardItem(withType: .form), UIDashboardItem(withType: .customForm),
+                UIDashboardItem(withType: .disney)]
     }()
 
     @IBOutlet weak private var collectionView: UICollectionView!

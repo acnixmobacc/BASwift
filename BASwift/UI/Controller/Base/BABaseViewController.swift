@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BABaseViewController: UIViewController {
+open class BABaseViewController: UIViewController, BABaseViewProtocol {
 
     // MARK: - Properties
 
@@ -25,33 +25,20 @@ open class BABaseViewController: UIViewController {
     }()
 }
 
-// MARK: - BA_BaseViewProtocol
-extension BABaseViewController: BABaseViewProtocol {
+open class BABaseTabController: UITabBarController, BABaseViewProtocol {
 
-    public func onUpdateView() {
+    // MARK: - Properties
 
-    }
+    lazy open var progressManager: ILoadable = {[unowned self] in
+        return ProgressHUDManager(forView: self.view)
+        }()
 
-    public func showAlert(_ alert: BaseAlert) {
-        alertManager.showAlert(withAlert: alert)
-    }
+    lazy open var alertManager: IAlertManager = {[unowned self] in
+        return AlertViewManager(withViewController: self)
+        }()
 
-    public func showProgress() {
-        progressManager.showLoading()
-    }
+    lazy open var contentManager: IContentManager = {[unowned self] in
+        return ContentManager(withView: MessageView.fromNib())
+        }()
 
-    public func hideProgress() {
-        progressManager.hideLoading()
-    }
-
-    public func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
-        contentManager.showMessage(withMessage: message, handler: { [unowned self] in
-            self.contentManager.view.removeFromSuperview()
-            if let handler = handler {
-                handler()
-            }
-        })
-        contentManager.view.frame = self.view.frame
-        self.view.addSubview(contentManager.view)
-    }
 }

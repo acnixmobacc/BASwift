@@ -11,7 +11,11 @@ import UIKit
 // MARK: - View Interface
 public protocol BABaseViewProtocol: class {
 
-    func onUpdateView()
+    var progressManager: ILoadable { get }
+
+    var alertManager: IAlertManager { get }
+
+    var contentManager: IContentManager { get }
 
     func showProgress()
 
@@ -22,14 +26,37 @@ public protocol BABaseViewProtocol: class {
     func showContentMessage(withMessage message: String, handler:(() -> Void)?)
 }
 
+public extension BABaseViewProtocol where Self: UIViewController {
+    func showAlert(_ alert: BaseAlert) {
+        alertManager.showAlert(withAlert: alert)
+    }
+
+    func showProgress() {
+        progressManager.showLoading()
+    }
+
+    func hideProgress() {
+        progressManager.hideLoading()
+    }
+
+    func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
+        contentManager.showMessage(withMessage: message, handler: { [unowned self] in
+            self.contentManager.view.removeFromSuperview()
+            if let handler = handler {
+                handler()
+            }
+        })
+        contentManager.view.frame = self.view.frame
+        self.view.addSubview(contentManager.view)
+    }
+}
+
 // MARK: - View Model Interface
 public protocol BABaseViewModelProtocol: class {
-
     init()
 }
 
 // MARK: - Model Interface
 public protocol BABaseModelProtocol: class {
-
     init()
 }
