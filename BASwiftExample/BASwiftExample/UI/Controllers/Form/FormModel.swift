@@ -10,7 +10,7 @@ import Foundation
 
 class FormModel: BaseModel {
 
-    weak var viewModel: FormViewModelProtocol?
+    weak var viewModelDelegate: FormViewModelProtocol?
 
     fileprivate let cities = ["İstanbul", "Trabzon", "İzmir", "Ankara", "Artvin", "Mardin", "Diyarbakır"]
 

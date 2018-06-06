@@ -55,7 +55,7 @@ extension LoginCoordinator {
     private func presentLogin() -> UIViewController {
         let controller: LoginViewController = instantiateLoginStoryboardController()
         controller.viewModel = LoginViewModel()
-        controller.viewModel.view = controller
+        controller.viewModel.viewDelegate = controller
         controller.coordinatorDelegate = self
         start(withRootController: controller)
         return controller
@@ -79,7 +79,7 @@ extension LoginCoordinator {
     private func createFormViewController() -> FormViewController {
         let controller: FormViewController = instantiateLoginStoryboardController()
         controller.viewModel = FormViewModel()
-        controller.viewModel.view = controller
+        controller.viewModel.viewDelegate = controller
         controller.coordinatorDelegate = self
         return controller
     }

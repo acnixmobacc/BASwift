@@ -34,7 +34,7 @@ class DashboardCoordinator: Coordinator {
         let controller: BrandViewController = instantiateMainStoryboardController()
         controller.coordinatorDelegate = self
         controller.viewModel = BrandViewModel()
-        controller.viewModel.view = controller
+        controller.viewModel.viewDelegate = controller
         navigationController.show(controller, sender: nil)
         return controller
     }

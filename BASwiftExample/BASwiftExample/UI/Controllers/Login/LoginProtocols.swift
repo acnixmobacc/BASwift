@@ -15,7 +15,7 @@ protocol LoginViewProtocol: class {
 }
 
 protocol LoginViewModelProtocol: class {
-    var view: LoginViewProtocol? { get set }
+    var viewDelegate: LoginViewProtocol? { get set }
 
     func login()
 
@@ -25,7 +25,7 @@ protocol LoginViewModelProtocol: class {
 }
 
 protocol LoginModelProtocol: class {
-    var viewModel: LoginViewModelProtocol? { get set }
+    var viewModelDelegate: LoginViewModelProtocol? { get set }
 
     func login()
 }

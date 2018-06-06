@@ -7,16 +7,10 @@
 //
 
 import BASwift
-import SwiftyJSON
 
-class Brand: IEntity {
-    var id: String
-    var name: String
-    var logoURL: String
+class Brand: Codable {
 
-    required init(withData data: JSON) {
-        self.id = data["id"].stringValue
-        self.name = data["name"].stringValue
-        self.logoURL = data["logo"].stringValue
-    }
+    var id: String = ""
+    var name: String = ""
+    var logoURL: String = ""
 }

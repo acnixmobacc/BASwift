@@ -7,14 +7,11 @@
 //
 
 import BASwift
-import SwiftyJSON
 
-public class BrandList: IEntity {
+public class BrandList: Codable {
     var list: [Brand]
 
-    required public init(withData data: JSON) {
-        list = data["brands"].arrayValue.map {item in
-            return Brand(withData: item)
-        }
+    public required init(from decoder: Decoder) throws {
+        list = try JSONDecoder.toArray(from: decoder)
     }
 }

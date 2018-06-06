@@ -9,9 +9,6 @@
 import Foundation
 
 open class BABaseViewModel: BABaseViewModelProtocol {
-    // MARK: - Properties
-    weak public var baseViewDelegate: BABaseViewProtocol?
-
     // MARK: - Initialization
     required public init() {
 

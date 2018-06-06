@@ -10,7 +10,7 @@ import Foundation
 
 class BrandModel: BaseModel {
 
-    weak var viewModel: BrandViewModelProtocol?
+    weak var viewModelDelegate: BrandViewModelProtocol?
 
     private(set) var carServiceAdapter: CarServiceAdapterProtocol
 
@@ -26,10 +26,10 @@ extension BrandModel: BrandModelProtocol {
     func getBrands() {
         carServiceAdapter.getBrands(onSuccess: { [weak self] _ in
             guard let strongSelf = self else { return }
-            strongSelf.viewModel?.onGetBrandsSuccess()
+            strongSelf.viewModelDelegate?.onGetBrandsSuccess()
         }, onFailure: { [weak self] _ in
             guard let strongSelf = self else { return }
-            strongSelf.viewModel?.onGetBrandsFail()
+            strongSelf.viewModelDelegate?.onGetBrandsFail()
         })
     }
 

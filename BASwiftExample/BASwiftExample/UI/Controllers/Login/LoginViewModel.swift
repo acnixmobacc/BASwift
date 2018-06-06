@@ -12,12 +12,12 @@ class LoginViewModel: BaseViewModel {
 
     private(set) var model: LoginModelProtocol!
 
-    weak var view: LoginViewProtocol?
+    weak var viewDelegate: LoginViewProtocol?
 
     required init() {
         model = LoginModel()
         super.init()
-        model.viewModel = self
+        model.viewModelDelegate = self
     }
 
 }
@@ -25,15 +25,14 @@ class LoginViewModel: BaseViewModel {
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
-        view.
         model.login()
     }
 
     func onLoginSucceed(user: User) {
-        view?.onLoginSucceed(user: user)
+        viewDelegate?.onLoginSucceed(user: user)
     }
 
     func onLoginFailed() {
-        view?.onLoginFailed()
+        viewDelegate?.onLoginFailed()
     }
 }

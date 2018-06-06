@@ -8,7 +8,7 @@
 import RxSwift
 
 class FormViewModel: BaseViewModel {
-    weak var view: FormViewProtocol?
+    weak var viewDelegate: FormViewProtocol?
 
     private(set) var model: FormModelProtocol
 
@@ -24,7 +24,7 @@ class FormViewModel: BaseViewModel {
     required init() {
         model = FormModel()
         super.init()
-        model.viewModel = self
+        model.viewModelDelegate = self
     }
 
 }

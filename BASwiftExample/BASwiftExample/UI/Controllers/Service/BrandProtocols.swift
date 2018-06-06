@@ -17,7 +17,7 @@ protocol BrandViewProtocol: class {
 
 protocol BrandViewModelProtocol: class {
 
-    var view: BrandViewProtocol? { get set }
+    var viewDelegate: BrandViewProtocol? { get set }
 
     func onDidLoad()
 
@@ -27,7 +27,7 @@ protocol BrandViewModelProtocol: class {
 }
 
 protocol BrandModelProtocol: class {
-    var viewModel: BrandViewModelProtocol? { get set }
+    var viewModelDelegate: BrandViewModelProtocol? { get set }
 
     func getBrands()
 }

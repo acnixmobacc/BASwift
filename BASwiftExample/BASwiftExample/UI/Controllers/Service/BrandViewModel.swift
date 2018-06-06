@@ -10,14 +10,14 @@ import Foundation
 
 class BrandViewModel: BaseViewModel {
 
-    weak var view: BrandViewProtocol?
+    weak var viewDelegate: BrandViewProtocol?
 
     private(set) var model: BrandModelProtocol
 
     required init() {
         model = BrandModel()
         super.init()
-        model.viewModel = self
+        model.viewModelDelegate = self
     }
 
 }
@@ -28,10 +28,10 @@ extension BrandViewModel: BrandViewModelProtocol {
     }
 
     func onGetBrandsSuccess() {
-        view?.onGetBrandsSuccess()
+        viewDelegate?.onGetBrandsSuccess()
     }
 
     func onGetBrandsFail() {
-        view?.onGetBrandsFail()
+        viewDelegate?.onGetBrandsFail()
     }
 }

@@ -14,7 +14,7 @@ protocol FormViewProtocol: class {
 
 protocol FormViewModelProtocol: class {
 
-    var view: FormViewProtocol? { get set }
+    var viewDelegate: FormViewProtocol? { get set }
 
     var username: Variable<String> { get set }
 
@@ -39,7 +39,7 @@ protocol FormViewModelProtocol: class {
 }
 
 protocol FormModelProtocol: class {
-    var viewModel: FormViewModelProtocol? { get set }
+    var viewModelDelegate: FormViewModelProtocol? { get set }
 
     func getCities() -> [String]
 
