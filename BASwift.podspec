@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'Swinject', '~> 2.1.0'
   s.dependency 'NVActivityIndicatorView'
-  s.dependency 'SwiftyJSON', '~> 3.1'
   s.dependency 'Alamofire', '~> 4.4'
   s.dependency 'SDWebImage', '~> 4.0'
 end
