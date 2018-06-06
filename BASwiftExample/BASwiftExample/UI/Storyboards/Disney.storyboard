@@ -10,33 +10,77 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Rent-->
+        <scene sceneID="dql-U6-Gyb">
+            <objects>
+                <viewController storyboardIdentifier="RentViewController" id="6I3-GG-Msr" customClass="RentViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grF-Ev-sup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zs8-Fl-jxk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rent" id="mWM-5c-USO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3J-wK-JCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1359" y="574"/>
+        </scene>
+        <!--Cart-->
         <scene sceneID="IDz-zO-qEy">
             <objects>
-                <viewController id="hbt-vR-ntW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" id="hbt-vR-ntW" customClass="CartViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8L-4B-hYQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ER7-S7-wFU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LGh-0k-ytm"/>
+                    <tabBarItem key="tabBarItem" title="Cart" id="LGh-0k-ytm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtn-89-vHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-407" y="152"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="rUP-QR-iH6">
+        <!--Disney Product View Controller-->
+        <scene sceneID="0EV-ar-IHk">
             <objects>
-                <viewController id="dMy-xm-Ybj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2tx-YT-Yez">
+                <viewController storyboardIdentifier="DisneyProductViewController" id="3Pk-2L-iEc" customClass="DisneyProductViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OjJ-qI-v8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lQr-ZT-xkz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRM-c5-heh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="222"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="rUP-QR-iH6">
+            <objects>
+                <viewController storyboardIdentifier="InventoryViewController" id="dMy-xm-Ybj" customClass="InventoryViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2tx-YT-Yez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-up-dsZ">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="dMy-xm-Ybj" eventType="touchUpInside" id="Kea-qr-wjk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BBS-up-dsZ" firstAttribute="centerY" secondItem="2tx-YT-Yez" secondAttribute="centerY" id="03K-fZ-Tab"/>
+                            <constraint firstItem="BBS-up-dsZ" firstAttribute="centerX" secondItem="2tx-YT-Yez" secondAttribute="centerX" id="QXJ-YH-9uJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MBV-Eu-UtE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8C3-9k-7WX"/>
+                    <tabBarItem key="tabBarItem" title="Inventory" id="8C3-9k-7WX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUT-Y2-UOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,6 +98,7 @@
                     <connections>
                         <segue destination="dMy-xm-Ybj" kind="relationship" relationship="viewControllers" id="paL-37-xPq"/>
                         <segue destination="hbt-vR-ntW" kind="relationship" relationship="viewControllers" id="Z9s-XQ-Isr"/>
+                        <segue destination="6I3-GG-Msr" kind="relationship" relationship="viewControllers" id="lBk-nI-LJi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nZ-El-sn2" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,10 +9,14 @@
 import BASwift
 
 protocol DisneyCoordinatorDelegate: CoordinatorDelegate {
-    func showCart()
+    func showProductDetail()
 }
 
 class DisneyTabViewController: BABaseTabController {
 
     weak var coordinatorDelegate: DisneyCoordinatorDelegate?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

@@ -23,8 +23,22 @@ class DisneyCoordinator: Coordinator {
     func showDisney() -> DisneyTabViewController {
         let controller: DisneyTabViewController = instantiateDisneyStoryboardController()
         controller.coordinatorDelegate = self
+        setDisneyTabViewControlllerDelegation(controller)
+
         navigationController.show(controller, sender: nil)
         return controller
+    }
+
+    fileprivate func setDisneyTabViewControlllerDelegation(_ controller: DisneyTabViewController) {
+        for item in controller.childViewControllers {
+            if let cartController = item as? CartViewController {
+                cartController.coordinatorDelegate = self
+            } else if let rentViewController = item as? RentViewController {
+                rentViewController.coordinatorDelegate = self
+            } else if let inventoryViewController = item as? InventoryViewController {
+                inventoryViewController.coordinatorDelegate = self
+            }
+        }
     }
 
     private func instantiateDisneyStoryboardController<T: UIViewController>() -> T {
@@ -33,8 +47,10 @@ class DisneyCoordinator: Coordinator {
 }
 
 extension DisneyCoordinator: DisneyCoordinatorDelegate {
-    func showCart() {
-
+    func showProductDetail() {
+        let controller: DisneyProductViewController = instantiateDisneyStoryboardController()
+        controller.coordinatorDelegate = self
+        navigationController.show(controller, sender: nil)
     }
 
 }
