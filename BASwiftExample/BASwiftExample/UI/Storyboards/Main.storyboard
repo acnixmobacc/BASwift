@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="pvT-to-wYA">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="9vk-4D-MAW" customClass="DashboardViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ypR-W4-odT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-nf-xtA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yzg-T8-orV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mvR-nf-xtA" firstAttribute="top" secondItem="ifi-vl-WMp" secondAttribute="top" id="DJK-Z9-kG4"/>
+                            <constraint firstItem="mvR-nf-xtA" firstAttribute="leading" secondItem="ifi-vl-WMp" secondAttribute="leading" id="MH7-cZ-Zo3"/>
+                            <constraint firstItem="ifi-vl-WMp" firstAttribute="bottom" secondItem="mvR-nf-xtA" secondAttribute="bottom" id="k19-d2-flZ"/>
+                            <constraint firstItem="ifi-vl-WMp" firstAttribute="trailing" secondItem="mvR-nf-xtA" secondAttribute="trailing" id="saV-NK-OeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ifi-vl-WMp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="txQ-1g-5lI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mvR-nf-xtA" id="TBq-bh-1GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dha-m9-RK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="-27"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="vt2-7L-hTI">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" title="Picker" id="9rf-zI-FDJ" customClass="PickerViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybs-0U-xoO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfS-HZ-Ifn" customClass="PickerTextField" customModule="BASwift">
+                                <rect key="frame" x="8" y="50" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uOv-XO-sms"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-Nh-h8y" customClass="DatePickerTextField" customModule="BASwift">
+                                <rect key="frame" x="8" y="106" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GfS-HZ-Ifn" firstAttribute="top" secondItem="RIf-xB-K0K" secondAttribute="top" constant="30" id="CGp-ys-6zj"/>
+                            <constraint firstItem="GfS-HZ-Ifn" firstAttribute="leading" secondItem="RIf-xB-K0K" secondAttribute="leading" constant="8" id="Gj1-Gj-4Cg"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="top" secondItem="GfS-HZ-Ifn" secondAttribute="bottom" constant="16" id="hqF-fx-mP9"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="trailing" secondItem="GfS-HZ-Ifn" secondAttribute="trailing" id="iDn-Cx-S2k"/>
+                            <constraint firstItem="RIf-xB-K0K" firstAttribute="trailing" secondItem="GfS-HZ-Ifn" secondAttribute="trailing" constant="8" id="l0f-n4-E2D"/>
+                            <constraint firstItem="gCz-Nh-h8y" firstAttribute="leading" secondItem="GfS-HZ-Ifn" secondAttribute="leading" id="qSu-25-bEJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RIf-xB-K0K"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerField" destination="gCz-Nh-h8y" id="0Xl-K3-2jP"/>
+                        <outlet property="pickerField" destination="GfS-HZ-Ifn" id="aHn-Rj-ooq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lo6-Jb-aXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-27"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="as3-ZQ-Df2">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" title="Location" id="pRG-3W-TW4" customClass="LocationViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VjS-r4-phk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-kl-oTg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="kXU-2m-b77"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="leading" secondItem="Eds-6c-ho0" secondAttribute="leading" id="70g-Gr-MTh"/>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="top" secondItem="Eds-6c-ho0" secondAttribute="top" id="RlU-OL-YoW"/>
+                            <constraint firstItem="lv8-kl-oTg" firstAttribute="trailing" secondItem="Eds-6c-ho0" secondAttribute="trailing" id="jVz-kn-s5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eds-6c-ho0"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="lv8-kl-oTg" id="h7N-3f-RYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAg-Oe-rrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="-27"/>
+        </scene>
+        <!--Brand View Controller-->
+        <scene sceneID="xMO-jo-Kcf">
+            <objects>
+                <viewController storyboardIdentifier="BrandViewController" id="MFw-ec-AbG" customClass="BrandViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjb-q6-1fi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C1H-1u-q8M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vI2-IK-465" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="-27"/>
+        </scene>
+    </scenes>
+</document>

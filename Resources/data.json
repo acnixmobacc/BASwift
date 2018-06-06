@@ -1,0 +1,19 @@
+{
+    "brands" :[
+       {
+       "id" : "0",
+       "name" : "Toyota",
+       "logo" : "https://www.toyota.com.tr/images/toyota-logo.jpg"
+       },
+       {
+       "id" : "1",
+       "name" : "Renault",
+       "logo" : "http://logo-load.com/uploads/posts/2016-04/renault-logo.png"
+       },
+       {
+       "id" : "2",
+       "name" : "Opel",
+       "logo" : "http://www.stolesraceshop.com/wp-content/uploads/2015/07/opel_x.png"
+       }
+    ]
+}
