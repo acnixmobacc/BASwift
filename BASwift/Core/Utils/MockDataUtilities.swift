@@ -6,7 +6,7 @@
 //  Copyright © 2017 Burak Akkaya. All rights reserved.
 //
 
-import SwiftyJSON
+import Foundation
 
 public enum FileError: Error {
     case fileNotExist

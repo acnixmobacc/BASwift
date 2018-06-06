@@ -8,7 +8,6 @@
 
 import XCTest
 import BASwift
-import SwiftyJSON
 
 
 class MockDataUtilTests: XCTestCase {
@@ -29,7 +28,7 @@ class MockDataUtilTests: XCTestCase {
         super.tearDown()
     }
     
-    
+
     func testJSONDataFromFile(){
         MockDataUtilities.getData(fileName: "data", onSuccess: { (brandObj:BrandObject) in
             XCTAssertTrue(brandObj.brands[0].name == "Toyota" && brandObj.brands[0].id == "0")

@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 public class Service: ServiceProtocol {
 

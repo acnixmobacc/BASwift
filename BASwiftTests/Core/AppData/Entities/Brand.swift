@@ -7,8 +7,7 @@
 //
 
 import BASwift
-import SwiftyJSON
-
+import Foundation
 
 class BrandObject : Codable{
     var brands : [Brand] = []

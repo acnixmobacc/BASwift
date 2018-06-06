@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 public class Response<T: Codable>: ResponseProtocol {
 
@@ -28,20 +27,10 @@ public class Response<T: Codable>: ResponseProtocol {
 
     public var entity: T?
 
-    // MARK: - Methods
-    public func toJSON() -> JSON {
-        return cachedJSON
-    }
-
     public func toString(_ encoding: String.Encoding = .utf8) -> String? {
         guard let d = self.data else { return nil }
         return String(data: d, encoding: encoding)
     }
-
-    // MARK: - Private Properties
-    private lazy var cachedJSON: JSON = {
-        return JSON(data: self.data ?? Data())
-    }()
 
     // MARK: - Private Methods
     private func createEntity() -> T? {

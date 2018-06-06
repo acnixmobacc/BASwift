@@ -12,7 +12,6 @@ end
 
 def ui_pods
     pod 'NVActivityIndicatorView'
-    pod 'SwiftyJSON', '~> 3.1'
     pod 'Alamofire', '~> 4.4'
     pod 'SDWebImage', '~> 4.0'
 end

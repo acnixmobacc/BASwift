@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 public protocol ResponseProtocol {
 
@@ -24,8 +23,6 @@ public protocol ResponseProtocol {
     var timeline: Timeline { get }
 
     var request: RequestProtocol { get }
-
-    func toJSON() -> JSON
 
     func toString(_ encoding: String.Encoding) -> String?
 }

@@ -700,7 +700,6 @@
 				B6140F5D2049762A003BF29F /* Frameworks */,
 				B6140F5E2049762A003BF29F /* Resources */,
 				0D2B1469FEAA5A660ADD32C1 /* [CP] Embed Pods Frameworks */,
-				7B0856DA822BF68E83F848B2 /* [CP] Copy Pods Resources */,
 				B6A807E92063A2F900E03C26 /* ShellScript */,
 			);
 			buildRules = (
@@ -720,8 +719,6 @@
 				B6140F702049762A003BF29F /* Sources */,
 				B6140F712049762A003BF29F /* Frameworks */,
 				B6140F722049762A003BF29F /* Resources */,
-				55F8BAA4DF2296F23375E8E7 /* [CP] Embed Pods Frameworks */,
-				597DA5C05A592ADCBDB98E49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -807,7 +804,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -815,57 +811,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwift/Pods-BASwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55F8BAA4DF2296F23375E8E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		597DA5C05A592ADCBDB98E49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B0856DA822BF68E83F848B2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwift/Pods-BASwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A21E54B1168FDD39FBDFEF4E /* [CP] Check Pods Manifest.lock */ = {

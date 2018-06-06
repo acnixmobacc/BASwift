@@ -25,6 +25,7 @@ class LoginViewModel: BaseViewModel {
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
+        view.
         model.login()
     }
 
