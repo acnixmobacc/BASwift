@@ -19,7 +19,7 @@ protocol CollectionCoordinatorDelegate: CoordinatorDelegate {
 class CollectionCoordinator: Coordinator {
     // MARK: - Properties
     lazy var adapterStoryboard: UIStoryboard = {
-       return UIStoryboard(name: "Adapter", bundle: nil)
+       return UIStoryboard(name: AppStoryboard.adapter.name, bundle: nil)
     }()
 
     // MARK: - Methods

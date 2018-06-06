@@ -19,7 +19,7 @@ class LoginCoordinator: Coordinator {
 
     // MARK: - Properties
     lazy var loginStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Login", bundle: nil)
+        return UIStoryboard(name: AppStoryboard.login.name, bundle: nil)
     }()
 
     var loginNavigation: UINavigationController!

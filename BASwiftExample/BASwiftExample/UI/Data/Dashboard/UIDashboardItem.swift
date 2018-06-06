@@ -7,6 +7,19 @@
 //
 
 import BASwift
+
+enum AppStoryboard: String {
+    case main = "Main"
+    case login = "Login"
+    case adapter = "Adapter"
+    case product = "Product"
+    case disney = "Disney"
+
+    var name: String {
+        return self.rawValue
+    }
+}
+
 enum DashboardItemType: String {
     case progress = "Progress"
     case picker = "Picker"
@@ -16,7 +29,7 @@ enum DashboardItemType: String {
     case login = "Login"
     case form = "Form"
     case customForm = "CustomForm"
-    case disney
+    case disney = "Disney"
 }
 
 class UIDashboardItem: ICellData {

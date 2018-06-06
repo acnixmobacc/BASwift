@@ -16,7 +16,7 @@ class ProductCoordinator: Coordinator {
 
     // MARK: - Properties
     lazy var productStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Product", bundle: nil)
+        return UIStoryboard(name: AppStoryboard.product.name, bundle: nil)
     }()
 
     func start() {

@@ -16,7 +16,7 @@ class DashboardCoordinator: Coordinator {
 
     // MARK: - Properties
     lazy var mainStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Main", bundle: nil)
+        return UIStoryboard(name: AppStoryboard.main.name, bundle: nil)
     }()
 
     // MARK: - Methods
@@ -72,7 +72,10 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
 // MARK: - Private Methods
 extension DashboardCoordinator {
     private func showDisney() {
-
+        let disneyCoordinator = DisneyCoordinator(withNavigationController: self.navigationController)
+        appCoordinatorDelegate?.onPush(coordinator: disneyCoordinator)
+        disneyCoordinator.appCoordinatorDelegate = appCoordinatorDelegate
+        disneyCoordinator.start()
     }
 
     private func showCollection(_ type: DashboardItemType) {

@@ -8,6 +8,11 @@
 
 import BASwift
 
+protocol DisneyCoordinatorDelegate: CoordinatorDelegate {
+    func showCart()
+}
+
 class DisneyTabViewController: BABaseTabController {
 
+    weak var coordinatorDelegate: DisneyCoordinatorDelegate?
 }
