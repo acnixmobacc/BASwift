@@ -9,7 +9,7 @@
 import Alamofire
 import SwiftyJSON
 
-public class Response<T: IEntity>: ResponseProtocol {
+public class Response<T: Decodable>: ResponseProtocol {
 
     // MARK: - Properties
     public var httpResponse: HTTPURLResponse?
@@ -45,11 +45,16 @@ public class Response<T: IEntity>: ResponseProtocol {
 
     // MARK: - Private Methods
     private func createEntity() -> T? {
-        guard let _ = self.data else {
+        guard let data = self.data else {
             return nil
         }
 
-        return T(withData: toJSON())
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            print("Error: Couldn't decode data into \(T.self)")
+            return nil
+        }
     }
 
     // MARK: - Initializition

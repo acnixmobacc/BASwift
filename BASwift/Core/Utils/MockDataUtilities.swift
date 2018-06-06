@@ -25,7 +25,7 @@ public enum FileError: Error {
     }
 }
 
-open class MockDataUtilities {
+/*open class MockDataUtilities {
 
     // MARK: - Static Methods
     public static func getData<T: IEntity>(fileName: String, onSuccess: (T) -> Void,
@@ -78,4 +78,4 @@ open class MockDataUtilities {
             throw FileError.fileNotExist
         }
     }
-}
+}*/

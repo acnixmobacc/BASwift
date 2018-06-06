@@ -9,34 +9,26 @@
 import BASwift
 import SwiftyJSON
 
-class BrandObject : IEntity{
+class BrandObject : Decodable{
     var brands : [Brand]
-    
-    required init(withData data: JSON) {
-        brands = data["brands"].arrayValue.map{ item in
-            return Brand.init(withData: item)
-        }
-    }
 }
 
-class BrandList: IEntity{
+class BrandList: Decodable{
     var list: [Brand]
     
-    required init(withData data: JSON) {
-        list = data.arrayValue.map{item in
-            return Brand.init(withData: item)
+    required init(from decoder:Decoder) throws{
+        var brands : [Brand] = []
+        var container = try decoder.unkeyedContainer()
+        while !container.isAtEnd {
+            brands.append(try container.decode(Brand.self))
         }
+        self.list = brands
     }
 }
 
-class Brand : IEntity{
+class Brand : Decodable{
     var id : String
     var name : String
-    var logoURL : String
-    
-    required init(withData data: JSON) {
-        self.id = data["id"].stringValue
-        self.name = data["name"].stringValue
-        self.logoURL = data["logo"].stringValue
-    }
+    var logo : String
+
 }

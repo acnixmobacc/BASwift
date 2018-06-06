@@ -38,7 +38,6 @@
 		B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF9520A47E4C0052B8AF /* IFormItemView.swift */; };
 		B694FF9820A47E4C0052B8AF /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF9620A47E4C0052B8AF /* FormView.swift */; };
 		B6A558482074C54700698AEA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A558472074C54700698AEA /* Request.swift */; };
-		B6A5584A2074E74D00698AEA /* IEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A558492074E74D00698AEA /* IEntity.swift */; };
 		B6A5584C2074E77F00698AEA /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5584B2074E77F00698AEA /* ServiceProtocol.swift */; };
 		B6A558502074EF1700698AEA /* MockDataUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5584F2074EF1700698AEA /* MockDataUtilTests.swift */; };
 		B6A558572074EFBE00698AEA /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B6A558562074EFBE00698AEA /* data.json */; };
@@ -154,7 +153,6 @@
 		B694FF9520A47E4C0052B8AF /* IFormItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFormItemView.swift; sourceTree = "<group>"; };
 		B694FF9620A47E4C0052B8AF /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		B6A558472074C54700698AEA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		B6A558492074E74D00698AEA /* IEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEntity.swift; sourceTree = "<group>"; };
 		B6A5584B2074E77F00698AEA /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		B6A5584F2074EF1700698AEA /* MockDataUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataUtilTests.swift; sourceTree = "<group>"; };
 		B6A558562074EFBE00698AEA /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -556,7 +554,6 @@
 			isa = PBXGroup;
 			children = (
 				B6D7E6B82049E6A000A5D803 /* Services */,
-				B6D7E6B52049E64700A5D803 /* Entities */,
 			);
 			path = AppData;
 			sourceTree = "<group>";
@@ -590,22 +587,6 @@
 				B6D7E6C6204A05CF00A5D803 /* BaseAlert.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		B6D7E6B52049E64700A5D803 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				B6D7E6B62049E67D00A5D803 /* Response */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		B6D7E6B62049E67D00A5D803 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				B6A558492074E74D00698AEA /* IEntity.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		B6D7E6B82049E6A000A5D803 /* Services */ = {
@@ -979,7 +960,6 @@
 				B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */,
 				B6140F642049762A003BF29F /* AppDelegate.swift in Sources */,
 				B6D7E6C7204A05D000A5D803 /* BaseAlert.swift in Sources */,
-				B6A5584A2074E74D00698AEA /* IEntity.swift in Sources */,
 				B6F16DC02080E3CB009A2848 /* UICollectionViewCell+BASwift.swift in Sources */,
 				B6D7E6B22049CAAB00A5D803 /* UIColor+BASwift.swift in Sources */,
 				B67587D920B400B10062A284 /* Response.swift in Sources */,
