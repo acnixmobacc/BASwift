@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
+  s.summary          = 'BASwift Framework'
  
 
 #   s.description      = <<-DESC
@@ -10,7 +11,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/brkakkaya/baswift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Burak AKKAYA' => 'brk.akkaya@gmail.com' }
-  s.source           = { :git => 'https://github.com/brkakkaya/baswift', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/brkakkaya/baswift.git', :tag => s.version.to_s }
  
  `echo "4.0" > .swift-version`
 
