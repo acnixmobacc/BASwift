@@ -72,16 +72,16 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
 // MARK: - Private Methods
 extension DashboardCoordinator {
     private func showDisney() {
-        let disneyCoordinator = DisneyCoordinator(withNavigationController: self.navigationController)
+        let disneyCoordinator = DisneyCoordinator(withNavigationController: self.navigationController,
+                                                  appCoordinatorDelegate: appCoordinatorDelegate)
         appCoordinatorDelegate?.onPush(coordinator: disneyCoordinator)
-        disneyCoordinator.appCoordinatorDelegate = appCoordinatorDelegate
         disneyCoordinator.start()
     }
 
     private func showCollection(_ type: DashboardItemType) {
-        let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController)
+        let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController,
+                                                          appCoordinatorDelegate: appCoordinatorDelegate)
         appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)
-        collectionCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         collectionCoordinator.start(withType: type)
     }
 
@@ -92,7 +92,8 @@ extension DashboardCoordinator {
     }
 
     private func showProgress() {
-        let productCoordinator = ProductCoordinator(withNavigationController: self.navigationController)
+        let productCoordinator = ProductCoordinator(withNavigationController: self.navigationController,
+                                                    appCoordinatorDelegate: appCoordinatorDelegate)
         appCoordinatorDelegate?.onPush(coordinator: productCoordinator)
         productCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         productCoordinator.start()
@@ -100,9 +101,8 @@ extension DashboardCoordinator {
     }
 
     private func showAuthScreen(_ type: DashboardItemType) {
-        let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController)
+        let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController, appCoordinatorDelegate: appCoordinatorDelegate)
         appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
-        loginCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         loginCoordinator.start(withType: type)
     }
 

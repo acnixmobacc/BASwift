@@ -39,9 +39,9 @@ class ProductCoordinator: Coordinator {
 
 extension ProductCoordinator: ProductCoordinatorDelegate {
     func showService() {
-        let dashboardCoordinator = DashboardCoordinator(withNavigationController: self.navigationController)
+        let dashboardCoordinator = DashboardCoordinator(withNavigationController: self.navigationController,
+                                                        appCoordinatorDelegate: appCoordinatorDelegate)
         appCoordinatorDelegate?.onPush(coordinator: dashboardCoordinator)
-        dashboardCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
         dashboardCoordinator.start(withStartService: true)
     }
 }

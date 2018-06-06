@@ -31,8 +31,7 @@ class AppCoordinator: NSObject {
 
     // MARK: - Private Methods
     private func showDashboard() {
-        let dashboardCoordinator = DashboardCoordinator(withNavigationController: navigationController)
-        dashboardCoordinator.appCoordinatorDelegate = self
+        let dashboardCoordinator = DashboardCoordinator(withNavigationController: navigationController, appCoordinatorDelegate: self)
         dashboardCoordinator.start()
         childCoordinators.push(dashboardCoordinator)
     }

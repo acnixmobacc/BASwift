@@ -29,9 +29,10 @@ class Coordinator: NSObject {
     }
 
     // MARK: - Initialization
-    init(withNavigationController navigationController: UINavigationController) {
+    init(withNavigationController navigationController: UINavigationController, appCoordinatorDelegate: AppCoordinatorDelegate?) {
         self.navigationController = navigationController
         super.init()
+        self.appCoordinatorDelegate = appCoordinatorDelegate
         Logger.debug("Init \(self)")
     }
 
