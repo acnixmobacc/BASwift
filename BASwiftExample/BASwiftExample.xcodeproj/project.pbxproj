@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F9EF6F5A8B95103880CE42F /* Pods_BASwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457B3BEA548993D9D7468EFB /* Pods_BASwiftExample.framework */; };
-		4B4547BD521028AC0CA7A1B7 /* Pods_BASwiftExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDB1EF18F77EA472511080B /* Pods_BASwiftExampleTests.framework */; };
+		4A21315CDD45ED28A216BBFB /* Pods_BASwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588744170E0D99E3C933F16A /* Pods_BASwiftExample.framework */; };
+		86FC497E8B32239151F93BBE /* Pods_BASwiftExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4D75DF1938FB1059AE8D81 /* Pods_BASwiftExampleTests.framework */; };
 		B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60831082087918C009A5134 /* LoginCoordinator.swift */; };
 		B60BC0D9206BA57500A69F08 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC0D8206BA57500A69F08 /* DashboardViewController.swift */; };
 		B60BC0DE206BA71300A69F08 /* UIDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC0DD206BA71300A69F08 /* UIDashboardItem.swift */; };
@@ -117,11 +117,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		415B739CF58665BA7B10649F /* Pods-BASwiftExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		457B3BEA548993D9D7468EFB /* Pods_BASwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BASwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DC9440AB1C953B3188BF6D1 /* Pods-BASwiftExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9A3CCF2B126A5F0925EC8C39 /* Pods-BASwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
-		9EDB1EF18F77EA472511080B /* Pods_BASwiftExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BASwiftExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2810E5CC79526765623BD814 /* Pods-BASwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		588744170E0D99E3C933F16A /* Pods_BASwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BASwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EF2DD4C859580FC38F2FFB /* Pods-BASwiftExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7BA2EC546FC779CDE7B61D5 /* Pods-BASwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
 		B60831082087918C009A5134 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B60BC0D8206BA57500A69F08 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B60BC0DD206BA71300A69F08 /* UIDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDashboardItem.swift; sourceTree = "<group>"; };
@@ -221,7 +220,8 @@
 		B6FC97C820B4453E005C8F73 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
 		B6FC97CA20B4566A005C8F73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B6FC97CC20B45756005C8F73 /* UserServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceAdapter.swift; sourceTree = "<group>"; };
-		CE60562746C17D88AE15D417 /* Pods-BASwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		E3829BEC2975C8D3D0297892 /* Pods-BASwiftExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftExampleTests/Pods-BASwiftExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE4D75DF1938FB1059AE8D81 /* Pods_BASwiftExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BASwiftExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9EF6F5A8B95103880CE42F /* Pods_BASwiftExample.framework in Frameworks */,
+				4A21315CDD45ED28A216BBFB /* Pods_BASwiftExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B4547BD521028AC0CA7A1B7 /* Pods_BASwiftExampleTests.framework in Frameworks */,
+				86FC497E8B32239151F93BBE /* Pods_BASwiftExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,8 +689,8 @@
 				B6F4B0AA204C281000110985 /* BASwiftExample */,
 				B6F4B0BF204C281000110985 /* BASwiftExampleTests */,
 				B6F4B0A9204C281000110985 /* Products */,
-				FF6E0101B951AA4482F3229A /* Pods */,
-				DB9D914821EA36264B8EC35A /* Frameworks */,
+				FFE31E852DB37B4E216E4829 /* Pods */,
+				DDD0F52C9FBD54398765CBD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -823,22 +823,22 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		DB9D914821EA36264B8EC35A /* Frameworks */ = {
+		DDD0F52C9FBD54398765CBD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				457B3BEA548993D9D7468EFB /* Pods_BASwiftExample.framework */,
-				9EDB1EF18F77EA472511080B /* Pods_BASwiftExampleTests.framework */,
+				588744170E0D99E3C933F16A /* Pods_BASwiftExample.framework */,
+				EE4D75DF1938FB1059AE8D81 /* Pods_BASwiftExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF6E0101B951AA4482F3229A /* Pods */ = {
+		FFE31E852DB37B4E216E4829 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9A3CCF2B126A5F0925EC8C39 /* Pods-BASwiftExample.debug.xcconfig */,
-				CE60562746C17D88AE15D417 /* Pods-BASwiftExample.release.xcconfig */,
-				7DC9440AB1C953B3188BF6D1 /* Pods-BASwiftExampleTests.debug.xcconfig */,
-				415B739CF58665BA7B10649F /* Pods-BASwiftExampleTests.release.xcconfig */,
+				A7BA2EC546FC779CDE7B61D5 /* Pods-BASwiftExample.debug.xcconfig */,
+				2810E5CC79526765623BD814 /* Pods-BASwiftExample.release.xcconfig */,
+				E3829BEC2975C8D3D0297892 /* Pods-BASwiftExampleTests.debug.xcconfig */,
+				A1EF2DD4C859580FC38F2FFB /* Pods-BASwiftExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -850,12 +850,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6F4B0C5204C281000110985 /* Build configuration list for PBXNativeTarget "BASwiftExample" */;
 			buildPhases = (
-				8766490582B0DB6B71DF4A44 /* [CP] Check Pods Manifest.lock */,
+				553803C077ECFFB94FA9FEE5 /* [CP] Check Pods Manifest.lock */,
 				B6F4B0A4204C281000110985 /* Sources */,
 				B6F4B0A5204C281000110985 /* Frameworks */,
 				B6F4B0A6204C281000110985 /* Resources */,
-				C2A9C6FD8E75598E54578C3A /* [CP] Embed Pods Frameworks */,
 				B64ADD4D2093704200A2B931 /* ShellScript */,
+				B242CE2E7C49B0CFE2141CFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -870,7 +870,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6F4B0C8204C281000110985 /* Build configuration list for PBXNativeTarget "BASwiftExampleTests" */;
 			buildPhases = (
-				BB1A0985A1027C5791B2DFF9 /* [CP] Check Pods Manifest.lock */,
+				85E0638B074903E5105B59F6 /* [CP] Check Pods Manifest.lock */,
 				B6F4B0B8204C281000110985 /* Sources */,
 				B6F4B0B9204C281000110985 /* Frameworks */,
 				B6F4B0BA204C281000110985 /* Resources */,
@@ -960,7 +960,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8766490582B0DB6B71DF4A44 /* [CP] Check Pods Manifest.lock */ = {
+		553803C077ECFFB94FA9FEE5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -978,20 +978,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B64ADD4D2093704200A2B931 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		BB1A0985A1027C5791B2DFF9 /* [CP] Check Pods Manifest.lock */ = {
+		85E0638B074903E5105B59F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1009,7 +996,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2A9C6FD8E75598E54578C3A /* [CP] Embed Pods Frameworks */ = {
+		B242CE2E7C49B0CFE2141CFF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1024,7 +1011,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1037,13 +1023,25 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B64ADD4D2093704200A2B931 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1275,7 +1273,7 @@
 		};
 		B6F4B0C6204C281000110985 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A3CCF2B126A5F0925EC8C39 /* Pods-BASwiftExample.debug.xcconfig */;
+			baseConfigurationReference = A7BA2EC546FC779CDE7B61D5 /* Pods-BASwiftExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1292,7 +1290,7 @@
 		};
 		B6F4B0C7204C281000110985 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE60562746C17D88AE15D417 /* Pods-BASwiftExample.release.xcconfig */;
+			baseConfigurationReference = 2810E5CC79526765623BD814 /* Pods-BASwiftExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1309,7 +1307,7 @@
 		};
 		B6F4B0C9204C281000110985 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DC9440AB1C953B3188BF6D1 /* Pods-BASwiftExampleTests.debug.xcconfig */;
+			baseConfigurationReference = E3829BEC2975C8D3D0297892 /* Pods-BASwiftExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1327,7 +1325,7 @@
 		};
 		B6F4B0CA204C281000110985 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415B739CF58665BA7B10649F /* Pods-BASwiftExampleTests.release.xcconfig */;
+			baseConfigurationReference = A1EF2DD4C859580FC38F2FFB /* Pods-BASwiftExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
