@@ -9,26 +9,46 @@
 import BASwift
 import SwiftyJSON
 
-class BrandObject : Decodable{
-    var brands : [Brand]
+
+class BrandObject : Codable{
+    var brands : [Brand] = []
 }
 
-class BrandList: Decodable{
+class BrandList: Codable{
     var list: [Brand]
     
     required init(from decoder:Decoder) throws{
-        var brands : [Brand] = []
-        var container = try decoder.unkeyedContainer()
-        while !container.isAtEnd {
-            brands.append(try container.decode(Brand.self))
-        }
-        self.list = brands
+        self.list = try JSONDecoder.toArray(from: decoder)
     }
 }
 
-class Brand : Decodable{
-    var id : String
-    var name : String
-    var logo : String
+class Brand : Codable{
+    var id : String = ""
+    var name : String = ""
+    var logo : String = ""
 
 }
+
+class User : Codable{
+    var username:String = ""
+    var surname:String = ""
+    var tckn:String = ""
+    var favouriteBrands : [Brand] = []
+}
+
+class CarDetail: Codable{
+    var id:String = ""
+    var brandName:String = ""
+    var name:String = ""
+    var logoURL:String = ""
+    
+    
+    private enum CodingKeys: String, CodingKey{
+        case id
+        case brandName = "brand_name"
+        case name
+        case logoURL = "logo"
+    }
+}
+
+

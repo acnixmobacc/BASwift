@@ -16,7 +16,7 @@ public enum FileError: Error {
     public var message: String {
         switch self {
         case .contentsNotValid:
-            return "File contents not valid JSON"
+            return "File contents not valid"
         case .fileNotExist:
             return "File not exist"
         case .unknown:
@@ -25,57 +25,32 @@ public enum FileError: Error {
     }
 }
 
-/*open class MockDataUtilities {
+open class MockDataUtilities {
 
     // MARK: - Static Methods
-    public static func getData<T: IEntity>(fileName: String, onSuccess: (T) -> Void,
+    public static func getData<T: Codable>(fileName: String, onSuccess: (T) -> Void,
                                            onFailure:@escaping (FileError) -> Void) {
         do {
-            let data = try fileContentsToJSON(fileName)
-            onSuccess(T(withData: data))
-        } catch FileError.contentsNotValid {
-            onFailure(FileError.contentsNotValid)
+            let data = try fileContentsToData(fileName)
+            onSuccess(try JSONDecoder().decode(T.self, from: data))
         } catch FileError.fileNotExist {
             onFailure(FileError.fileNotExist)
-        } catch {
-            onFailure(FileError.unknown)
-        }
-    }
-
-    public static func getListData<T: IEntity>(fileName: String, onSuccess: ([T]) -> Void,
-                                               onFailure:@escaping (FileError) -> Void) {
-        do {
-            let data = try fileContentsToJSON(fileName)
-            let response = data.arrayValue.map({ item in
-                return T(withData: item)
-            })
-            onSuccess(response)
-        } catch FileError.contentsNotValid {
+        } catch DecodingError.dataCorrupted {
             onFailure(FileError.contentsNotValid)
-        } catch FileError.fileNotExist {
-            onFailure(FileError.fileNotExist)
         } catch {
             onFailure(FileError.unknown)
         }
     }
 
     // MARK: - Private Static Methods
-    private static func fileContentsToJSON(_ fileName: String) throws -> JSON {
+    private static func fileContentsToData(_ fileName: String) throws -> Data {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let text = try String(contentsOfFile: path, encoding: .utf8)
-                let json = JSON(parseJSON: text)
-
-                if json.type == .null {
-                    throw FileError.contentsNotValid
-                }
-
-                return json
-            } catch {
-                throw FileError.contentsNotValid
+            guard let data = NSData(contentsOfFile: path) as Data? else {
+                throw FileError.fileNotExist
             }
+            return data
         } else {
             throw FileError.fileNotExist
         }
     }
-}*/
+}

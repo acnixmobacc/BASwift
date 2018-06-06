@@ -24,7 +24,7 @@ public class Service: ServiceProtocol {
 
     // MARK: - Execute Methods
     @discardableResult
-    public func execute<T: Decodable>(request: Request, onResponse:@escaping (Response<T>) -> Void) -> DataRequest {
+    public func execute<T: Codable>(request: Request, onResponse:@escaping (Response<T>) -> Void) -> DataRequest {
 
         let dataRequest = createRequest(request)
 

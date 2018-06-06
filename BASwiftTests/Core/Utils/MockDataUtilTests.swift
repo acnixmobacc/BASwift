@@ -39,8 +39,8 @@ class MockDataUtilTests: XCTestCase {
     }
     
     func testJSONDataArrayFromFile(){
-        MockDataUtilities.getListData(fileName: "data_array", onSuccess: { (brand:[Brand]) in
-            XCTAssertTrue(brand[1].name == "Renault" && brand[1].id == "1")
+        MockDataUtilities.getData(fileName: "data_array", onSuccess: { (brand:BrandList) in
+            XCTAssertTrue(brand.list[1].name == "Renault" && brand.list[1].id == "1")
         }, onFailure: { _ in
             XCTFail("JSON converter fail")
         })

@@ -9,7 +9,7 @@
 import Alamofire
 import SwiftyJSON
 
-public class Response<T: Decodable>: ResponseProtocol {
+public class Response<T: Codable>: ResponseProtocol {
 
     // MARK: - Properties
     public var httpResponse: HTTPURLResponse?
