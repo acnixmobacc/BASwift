@@ -45,6 +45,9 @@
 		B64F25272094609100BC569B /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F25262094609100BC569B /* BrandViewModel.swift */; };
 		B6616F8F205F922A00F81B4F /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = B6616F8E205F922A00F81B4F /* brands.json */; };
 		B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF8D20A4577F0052B8AF /* FormValidator.swift */; };
+		B698F39820C93E7900A46CBE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698F39720C93E7900A46CBE /* User.swift */; };
+		B698F39A20C93ED800A46CBE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698F39920C93ED800A46CBE /* Team.swift */; };
+		B698F39C20C9402A00A46CBE /* RealmNestedObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698F39B20C9402A00A46CBE /* RealmNestedObjectTest.swift */; };
 		B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */; };
 		B699E9C620A08C0800FF42BB /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B699E9C520A08C0800FF42BB /* Product.storyboard */; };
 		B699E9C920A08F8200FF42BB /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699E9C820A08F8200FF42BB /* FormManager.swift */; };
@@ -157,6 +160,9 @@
 		B64F25262094609100BC569B /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		B6616F8E205F922A00F81B4F /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
 		B694FF8D20A4577F0052B8AF /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		B698F39720C93E7900A46CBE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B698F39920C93ED800A46CBE /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B698F39B20C9402A00A46CBE /* RealmNestedObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNestedObjectTest.swift; sourceTree = "<group>"; };
 		B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
 		B699E9C520A08C0800FF42BB /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		B699E9C820A08F8200FF42BB /* FormManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
@@ -411,6 +417,16 @@
 				B6616F8E205F922A00F81B4F /* brands.json */,
 			);
 			path = ServiceResponse;
+			sourceTree = "<group>";
+		};
+		B698F39620C93E4500A46CBE /* RealmNestedObject */ = {
+			isa = PBXGroup;
+			children = (
+				B698F39720C93E7900A46CBE /* User.swift */,
+				B698F39920C93ED800A46CBE /* Team.swift */,
+				B698F39B20C9402A00A46CBE /* RealmNestedObjectTest.swift */,
+			);
+			path = RealmNestedObject;
 			sourceTree = "<group>";
 		};
 		B699E9C720A08F6A00FF42BB /* Utils */ = {
@@ -716,6 +732,7 @@
 		B6F4B0BF204C281000110985 /* BASwiftExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				B698F39620C93E4500A46CBE /* RealmNestedObject */,
 				B6299C8D20BD8CE100276C28 /* LocalDataSource */,
 				B6F4B0C2204C281000110985 /* Info.plist */,
 			);
@@ -1132,8 +1149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B698F39820C93E7900A46CBE /* User.swift in Sources */,
+				B698F39C20C9402A00A46CBE /* RealmNestedObjectTest.swift in Sources */,
 				B6299C8F20BD8CF600276C28 /* LocalUser.swift in Sources */,
 				B6299C8C20BD8CC700276C28 /* LocalDataSourceTests.swift in Sources */,
+				B698F39A20C93ED800A46CBE /* Team.swift in Sources */,
 				B6E316E820BEAB550006E7A6 /* LocalBrands.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
