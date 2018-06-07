@@ -72,17 +72,11 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
 // MARK: - Private Methods
 extension DashboardCoordinator {
     private func showDisney() {
-        let disneyCoordinator = DisneyCoordinator(withNavigationController: self.navigationController,
-                                                  appCoordinatorDelegate: appCoordinatorDelegate)
-        appCoordinatorDelegate?.onPush(coordinator: disneyCoordinator)
-        disneyCoordinator.start()
+        appCoordinatorDelegate?.startDisneyCoordinator(navigationController: self.navigationController)
     }
 
     private func showCollection(_ type: DashboardItemType) {
-        let collectionCoordinator = CollectionCoordinator(withNavigationController: self.navigationController,
-                                                          appCoordinatorDelegate: appCoordinatorDelegate)
-        appCoordinatorDelegate?.onPush(coordinator: collectionCoordinator)
-        collectionCoordinator.start(withType: type)
+        appCoordinatorDelegate?.startCollectionCoordinator(navigationController: self.navigationController, type: type)
     }
 
     private func showPicker() {
@@ -92,18 +86,12 @@ extension DashboardCoordinator {
     }
 
     private func showProgress() {
-        let productCoordinator = ProductCoordinator(withNavigationController: self.navigationController,
-                                                    appCoordinatorDelegate: appCoordinatorDelegate)
-        appCoordinatorDelegate?.onPush(coordinator: productCoordinator)
-        productCoordinator.appCoordinatorDelegate = self.appCoordinatorDelegate
-        productCoordinator.start()
+       appCoordinatorDelegate?.startProductCoordinator(navigationController: self.navigationController)
 
     }
 
     private func showAuthScreen(_ type: DashboardItemType) {
-        let loginCoordinator = LoginCoordinator(withNavigationController: self.navigationController, appCoordinatorDelegate: appCoordinatorDelegate)
-        appCoordinatorDelegate?.onPush(coordinator: loginCoordinator)
-        loginCoordinator.start(withType: type)
+        appCoordinatorDelegate?.startAuthCoordinator(navigationController: self.navigationController, type: type)
     }
 
     private func showLocation() {

@@ -26,19 +26,52 @@ class AppCoordinator: NSObject {
 
     // MARK: - Methods
     func start() {
-        showDashboard()
+        showDashboard(navigationController: self.navigationController)
     }
 
     // MARK: - Private Methods
-    private func showDashboard() {
-        let dashboardCoordinator = DashboardCoordinator(withNavigationController: navigationController, appCoordinatorDelegate: self)
+    private func showDashboard(navigationController: UINavigationController) {
+        let dashboardCoordinator = DashboardCoordinator(withNavigationController: navigationController,
+                                                        appCoordinatorDelegate: self)
         dashboardCoordinator.start()
-        childCoordinators.push(dashboardCoordinator)
+        onPush(coordinator: dashboardCoordinator)
     }
 }
 
 // MARK: - AppCoordinator Delegate
 extension AppCoordinator: AppCoordinatorDelegate {
+
+    func startDashboardCoordinator(navigationController: UINavigationController) {
+        showDashboard(navigationController: navigationController)
+    }
+
+    func startDisneyCoordinator(navigationController: UINavigationController) {
+        let disneyCoordinator = DisneyCoordinator(withNavigationController: navigationController,
+                                                  appCoordinatorDelegate: self)
+        onPush(coordinator: disneyCoordinator)
+        disneyCoordinator.start()
+    }
+
+    func startCollectionCoordinator(navigationController: UINavigationController, type: DashboardItemType) {
+        let collectionCoordinator = CollectionCoordinator(withNavigationController: navigationController,
+                                                          appCoordinatorDelegate: self)
+        onPush(coordinator: collectionCoordinator)
+        collectionCoordinator.start(withType: type)
+    }
+
+    func startProductCoordinator(navigationController: UINavigationController) {
+        let productCoordinator = ProductCoordinator(withNavigationController: navigationController,
+                                                    appCoordinatorDelegate: self)
+        onPush(coordinator: productCoordinator)
+        productCoordinator.start()
+    }
+
+    func startAuthCoordinator(navigationController: UINavigationController, type: DashboardItemType) {
+        let loginCoordinator = LoginCoordinator(withNavigationController: navigationController,
+                                                appCoordinatorDelegate: self)
+        onPush(coordinator: loginCoordinator)
+        loginCoordinator.start(withType: type)
+    }
 
     func onPop() {
         let coordinator = childCoordinators.pop()
