@@ -79,7 +79,6 @@ extension LoginCoordinator {
     private func createFormViewController() -> FormViewController {
         let controller: FormViewController = instantiateLoginStoryboardController()
         controller.viewModel = FormViewModel()
-        controller.viewModel.viewDelegate = controller
         controller.coordinatorDelegate = self
         return controller
     }

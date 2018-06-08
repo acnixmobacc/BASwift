@@ -8,26 +8,32 @@
 
 import Foundation
 
-protocol BrandViewProtocol: class {
+// MARK: - View Protocols
+protocol BrandViewProtocol: BrandViewDelegate {}
 
+protocol BrandViewDelegate: class {
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()
 }
 
-protocol BrandViewModelProtocol: class {
+// MARK: - ViewModel Protocols
+protocol BrandViewModelProtocol: BrandViewModelDelegate {
 
-    var viewDelegate: BrandViewProtocol? { get set }
+    var viewDelegate: BrandViewDelegate? { get set }
 
     func onDidLoad()
+}
 
+protocol BrandViewModelDelegate: class {
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()
 }
 
+// MARK: - Model Protocols
 protocol BrandModelProtocol: class {
-    var viewModelDelegate: BrandViewModelProtocol? { get set }
+    var viewModelDelegate: BrandViewModelDelegate? { get set }
 
     func getBrands()
 }

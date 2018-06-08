@@ -8,9 +8,22 @@
 
 import Foundation
 
+extension LoginModel: LoginModelProtocol {
+
+    func login() {
+        userBridge.getUser(onSuccess: {[weak self] response in
+            guard let strongSelf = self else { return }
+            strongSelf.viewModelDelegate?.onLoginSucceed(user: response)
+            }, onFailure: {[weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModelDelegate?.onLoginFailed()
+        })
+    }
+}
+
 class LoginModel: BaseModel {
 
-    weak var viewModelDelegate: LoginViewModelProtocol?
+    weak var viewModelDelegate: LoginViewModelDelegate?
 
     var userBridge: UserBridgeProtocol
 
@@ -18,17 +31,4 @@ class LoginModel: BaseModel {
         self.userBridge = AppBridgeProvider.instance.userBridge
     }
 
-}
-
-extension LoginModel: LoginModelProtocol {
-
-    func login() {
-        userBridge.getUser(onSuccess: {[weak self] response in
-            guard let strongSelf = self else { return }
-            strongSelf.viewModelDelegate?.onLoginSucceed(user: response)
-        }, onFailure: {[weak self] _ in
-            guard let strongSelf = self else { return }
-            strongSelf.viewModelDelegate?.onLoginFailed()
-        })
-    }
 }

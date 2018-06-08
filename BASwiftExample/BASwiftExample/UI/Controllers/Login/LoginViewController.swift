@@ -9,6 +9,18 @@ import BASwift
 import RxCocoa
 import RxSwift
 
+extension LoginViewController: LoginViewProtocol {
+
+    func onLoginSucceed(user: User) {
+        Logger.info("Login succeed")
+    }
+
+    func onLoginFailed() {
+        Logger.info("Login failed")
+    }
+
+}
+
 class LoginViewController: BaseViewController {
 
     // MARK: - UI Fields
@@ -59,18 +71,6 @@ class LoginViewController: BaseViewController {
             guard let strongSelf = self else { return }
             strongSelf.showAlert(BaseAlert(message: error.localizedDescription))
         })
-    }
-
-}
-
-extension LoginViewController: LoginViewProtocol {
-
-    func onLoginSucceed(user: User) {
-        Logger.info("Login succeed")
-    }
-
-    func onLoginFailed() {
-        Logger.info("Login failed")
     }
 
 }

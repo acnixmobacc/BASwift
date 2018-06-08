@@ -24,7 +24,6 @@ class FormViewModel: BaseViewModel {
     required init() {
         model = FormModel()
         super.init()
-        model.viewModelDelegate = self
     }
 
 }

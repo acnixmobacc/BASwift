@@ -8,24 +8,31 @@
 
 import Foundation
 
-protocol LoginViewProtocol: class {
+// MARK: - View Interfaces
+protocol LoginViewProtocol: LoginViewDelegate {}
+
+protocol LoginViewDelegate: class {
     func onLoginSucceed(user: User)
 
     func onLoginFailed()
 }
 
-protocol LoginViewModelProtocol: class {
-    var viewDelegate: LoginViewProtocol? { get set }
+// MARK: - ViewModel Interfaces
+protocol LoginViewModelProtocol: LoginViewModelDelegate {
+    var viewDelegate: LoginViewDelegate? { get set }
 
     func login()
+}
 
+protocol LoginViewModelDelegate: class {
     func onLoginSucceed(user: User)
 
     func onLoginFailed()
 }
 
+// MARK: - Model Interfaces
 protocol LoginModelProtocol: class {
-    var viewModelDelegate: LoginViewModelProtocol? { get set }
+    var viewModelDelegate: LoginViewModelDelegate? { get set }
 
     func login()
 }

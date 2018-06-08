@@ -8,20 +8,6 @@
 
 import Foundation
 
-class LoginViewModel: BaseViewModel {
-
-    private(set) var model: LoginModelProtocol!
-
-    weak var viewDelegate: LoginViewProtocol?
-
-    required init() {
-        model = LoginModel()
-        super.init()
-        model.viewModelDelegate = self
-    }
-
-}
-
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
@@ -34,5 +20,18 @@ extension LoginViewModel: LoginViewModelProtocol {
 
     func onLoginFailed() {
         viewDelegate?.onLoginFailed()
+    }
+}
+
+class LoginViewModel: BaseViewModel {
+
+    private(set) var model: LoginModelProtocol!
+
+    weak var viewDelegate: LoginViewDelegate?
+
+    required init() {
+        model = LoginModel()
+        super.init()
+        model.viewModelDelegate = self
     }
 }
