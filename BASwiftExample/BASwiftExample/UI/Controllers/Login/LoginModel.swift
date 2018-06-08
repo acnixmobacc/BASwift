@@ -8,18 +8,6 @@
 
 import Foundation
 
-class LoginModel: BaseModel {
-
-    weak var viewModelDelegate: LoginViewModelProtocol?
-
-    var userBridge: UserBridgeProtocol
-
-    required init() {
-        self.userBridge = AppBridgeProvider.instance.userBridge
-    }
-
-}
-
 extension LoginModel: LoginModelProtocol {
 
     func login() {
@@ -31,4 +19,16 @@ extension LoginModel: LoginModelProtocol {
             strongSelf.viewModelDelegate?.onLoginFailed()
         })
     }
+}
+
+class LoginModel: BaseModel {
+
+    weak var viewModelDelegate: LoginViewModelDelegate?
+
+    var userBridge: UserBridgeProtocol
+
+    required init() {
+        self.userBridge = AppBridgeProvider.instance.userBridge
+    }
+
 }

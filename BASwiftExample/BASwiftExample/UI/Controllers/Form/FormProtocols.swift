@@ -6,15 +6,14 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
+import BASwift
 import RxSwift
 
-protocol FormViewProtocol: class {
+protocol FormViewProtocol: BABaseViewDelegate {
 
 }
 
 protocol FormViewModelProtocol: class {
-
-    var viewDelegate: FormViewProtocol? { get set }
 
     var username: Variable<String> { get set }
 
@@ -39,7 +38,6 @@ protocol FormViewModelProtocol: class {
 }
 
 protocol FormModelProtocol: class {
-    var viewModelDelegate: FormViewModelProtocol? { get set }
 
     func getCities() -> [String]
 

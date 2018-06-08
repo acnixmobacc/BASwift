@@ -9,13 +9,17 @@
 import UIKit
 
 // MARK: - View Interface
-public protocol BABaseViewProtocol: class {
+public protocol BABaseViewProtocol: BABaseViewDelegate {
 
     var progressManager: ILoadable { get }
 
     var alertManager: IAlertManager { get }
 
     var contentManager: IContentManager { get }
+
+}
+
+public protocol BABaseViewDelegate: class {
 
     func showProgress()
 

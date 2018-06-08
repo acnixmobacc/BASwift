@@ -6,28 +6,34 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import Foundation
+import BASwift
 
-protocol BrandViewProtocol: class {
+// MARK: - View Protocols
+protocol BrandViewProtocol: BrandViewDelegate {}
 
+protocol BrandViewDelegate: BABaseViewDelegate {
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()
 }
 
-protocol BrandViewModelProtocol: class {
+// MARK: - ViewModel Protocols
+protocol BrandViewModelProtocol: BrandViewModelDelegate {
 
-    var viewDelegate: BrandViewProtocol? { get set }
+    var viewDelegate: BrandViewDelegate? { get set }
 
     func onDidLoad()
+}
 
+protocol BrandViewModelDelegate: class {
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()
 }
 
+// MARK: - Model Protocols
 protocol BrandModelProtocol: class {
-    var viewModelDelegate: BrandViewModelProtocol? { get set }
+    var viewModelDelegate: BrandViewModelDelegate? { get set }
 
     func getBrands()
 }
