@@ -6,12 +6,12 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import Foundation
+import BASwift
 
 // MARK: - View Interfaces
 protocol LoginViewProtocol: LoginViewDelegate {}
 
-protocol LoginViewDelegate: class {
+protocol LoginViewDelegate: BABaseViewDelegate {
     func onLoginSucceed(user: User)
 
     func onLoginFailed()

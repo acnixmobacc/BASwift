@@ -14,9 +14,9 @@ extension LoginModel: LoginModelProtocol {
         userBridge.getUser(onSuccess: {[weak self] response in
             guard let strongSelf = self else { return }
             strongSelf.viewModelDelegate?.onLoginSucceed(user: response)
-            }, onFailure: {[weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.viewModelDelegate?.onLoginFailed()
+        }, onFailure: {[weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.viewModelDelegate?.onLoginFailed()
         })
     }
 }

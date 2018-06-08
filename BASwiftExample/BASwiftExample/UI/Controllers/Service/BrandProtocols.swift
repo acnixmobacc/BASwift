@@ -6,12 +6,12 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import Foundation
+import BASwift
 
 // MARK: - View Protocols
 protocol BrandViewProtocol: BrandViewDelegate {}
 
-protocol BrandViewDelegate: class {
+protocol BrandViewDelegate: BABaseViewDelegate {
     func onGetBrandsSuccess()
 
     func onGetBrandsFail()

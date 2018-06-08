@@ -11,6 +11,7 @@ import Foundation
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
+        viewDelegate?.showProgress()
         model.login()
     }
 
