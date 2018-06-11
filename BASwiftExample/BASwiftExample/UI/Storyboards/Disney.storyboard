@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="671" y="222"/>
         </scene>
-        <!--Inventory-->
+        <!--Inventory View Controller-->
         <scene sceneID="rUP-QR-iH6">
             <objects>
                 <viewController storyboardIdentifier="InventoryViewController" id="dMy-xm-Ybj" customClass="InventoryViewController" customModule="BASwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,11 +80,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MBV-Eu-UtE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inventory" id="8C3-9k-7WX"/>
+                    <navigationItem key="navigationItem" id="xuW-Kc-ctE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUT-Y2-UOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407" y="-512"/>
+            <point key="canvasLocation" x="532" y="-512.29385307346331"/>
         </scene>
         <!--Disney Tab View Controller-->
         <scene sceneID="uQt-if-WDo">
@@ -96,7 +96,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dMy-xm-Ybj" kind="relationship" relationship="viewControllers" id="paL-37-xPq"/>
+                        <segue destination="eZf-Gs-VgI" kind="relationship" relationship="viewControllers" id="paL-37-xPq"/>
                         <segue destination="hbt-vR-ntW" kind="relationship" relationship="viewControllers" id="Z9s-XQ-Isr"/>
                         <segue destination="6I3-GG-Msr" kind="relationship" relationship="viewControllers" id="lBk-nI-LJi"/>
                     </connections>
@@ -104,6 +104,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nZ-El-sn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1359" y="-180"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="Oap-oo-kI1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZf-Gs-VgI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inventory" id="8C3-9k-7WX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hFx-Pb-eFe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dMy-xm-Ybj" kind="relationship" relationship="rootViewController" id="7II-n1-I1v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-B6-M2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="-512.29385307346331"/>
         </scene>
     </scenes>
 </document>
