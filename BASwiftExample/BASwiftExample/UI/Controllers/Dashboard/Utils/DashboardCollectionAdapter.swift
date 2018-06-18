@@ -59,7 +59,7 @@ class DashboardCollectionAdapter: CollectionViewAdapter {
 
         let cell: DashboardItemCollectionViewCell = collectionView.dequeueCell(for: indexPath)
 
-        guard let data = data as? UIDashboardItem else {
+        guard let data: UIDashboardItem = getData(atIndexPath: indexPath) else {
             fatalError("Data type is invalid")
         }
 
@@ -76,7 +76,7 @@ class DashboardCollectionAdapter: CollectionViewAdapter {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         super.collectionView(collectionView, didSelectItemAt: indexPath)
 
-        guard let data = getData(atIndexPath: indexPath) as? UIDashboardItem else {
+        guard let data: UIDashboardItem = getData(atIndexPath: indexPath) else {
             fatalError("Data type is invalid")
         }
 
