@@ -8,7 +8,7 @@
 
 import BASwift
 
-class UIDetailItem: ICellData {
+class UIDetailItem {
     var title: String
     var description: String
 

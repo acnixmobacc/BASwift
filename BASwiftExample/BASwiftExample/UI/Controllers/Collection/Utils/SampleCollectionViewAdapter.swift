@@ -8,7 +8,14 @@
 
 import BASwift
 
-class SampleCollectionViewAdapter: CollectionViewAdapter<[UISampleItem]> {
+class SampleCollectionViewAdapter: CollectionViewAdapter {
+
+    var data: [Any]?
+
+    init(_ collectionView: UICollectionView, _ data: [Any]?) {
+        self.data = data
+        super.init(collectionView)
+    }
 
     override func registerNibs() {
         SampleItemCollectionViewCell.registerSelf(collectionView)
@@ -40,13 +47,9 @@ class SampleCollectionViewAdapter: CollectionViewAdapter<[UISampleItem]> {
         }
     }
 
-    func cellForSampleItem(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, data: ICellData) -> SampleItemCollectionViewCell {
+    func cellForSampleItem(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, data: Any?) -> SampleItemCollectionViewCell {
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SampleItemCollectionViewCell.className,
-                                                            for: indexPath) as? SampleItemCollectionViewCell
-            else {
-                fatalError("Cannot dequeue cell with identifier \(SampleItemCollectionViewCell.className)")
-        }
+        let cell: SampleItemCollectionViewCell = collectionView.dequeueCell(for: indexPath)
 
         return cell
 

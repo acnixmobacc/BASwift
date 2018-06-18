@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class ExpandableTableViewAdapter<T: Any> : TableViewAdapter<T> {
+open class ExpandableTableViewAdapter: TableViewAdapter {
 
     // MARK: - Methods
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

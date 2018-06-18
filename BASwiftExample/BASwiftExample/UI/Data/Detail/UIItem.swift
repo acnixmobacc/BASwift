@@ -8,7 +8,7 @@
 
 import BASwift
 
-class UIItem: ICellData {
+class UIItem: NSObject {
     var value: String
 
     init(_ value: String = "") {

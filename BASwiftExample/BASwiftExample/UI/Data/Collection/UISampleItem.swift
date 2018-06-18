@@ -8,7 +8,7 @@
 
 import BASwift
 
-class UISampleItem: ICellData {
+class UISampleItem: NSObject {
     var value: String
 
     init(_ value: String = "") {

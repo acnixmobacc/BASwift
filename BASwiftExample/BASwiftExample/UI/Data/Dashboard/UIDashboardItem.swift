@@ -32,7 +32,7 @@ enum DashboardItemType: String {
     case disney = "Disney"
 }
 
-class UIDashboardItem: ICellData {
+class UIDashboardItem: NSObject {
 
     var type: DashboardItemType
 

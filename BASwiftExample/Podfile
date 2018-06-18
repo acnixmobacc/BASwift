@@ -10,8 +10,8 @@ target 'BASwiftExample' do
   use_frameworks!
 
   # Pods for BASwiftExample
-  #pod 'BASwift', :path => "../"
-  pod 'BASwift', :git => 'https://github.com/brkakkaya/baswift.git'
+  pod 'BASwift', :path => "../"
+  #pod 'BASwift', :git => 'https://github.com/brkakkaya/baswift.git'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'SwiftLint'

@@ -32,7 +32,7 @@ open class BaseCollectionCellModel: BaseCellModel {
     }
 
     // MARK: - Initialization
-    public init(data: ICellData! = nil, cellHeight: CGFloat = 44, landscapeCellHeight: CGFloat! = nil,
+    public init(data: Any? = nil, cellHeight: CGFloat = 44, landscapeCellHeight: CGFloat! = nil,
                 cellWidth: CGFloat = 44, landscapeCellWidth: CGFloat! = nil, type: AnyClass) {
         _cellWidth = cellWidth
         _landscapeCellWidth = landscapeCellWidth

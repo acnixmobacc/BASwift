@@ -22,8 +22,8 @@ class SampleViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionAdapter = SampleCollectionViewAdapter(collectionView, data: [UISampleItem(), UISampleItem(),
-                                                                               UISampleItem(), UISampleItem()])
+        collectionAdapter = SampleCollectionViewAdapter(collectionView, [UISampleItem(), UISampleItem(),
+                                                                         UISampleItem(), UISampleItem()])
 
     }
 }
