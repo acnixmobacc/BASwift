@@ -59,7 +59,7 @@ class DashboardCollectionAdapter: CollectionViewAdapter {
 
         let cell: DashboardItemCollectionViewCell = collectionView.dequeueCell(for: indexPath)
 
-        guard let data: UIDashboardItem = getData(atIndexPath: indexPath) else {
+        guard let data = data as? UIDashboardItem else {
             fatalError("Data type is invalid")
         }
 

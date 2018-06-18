@@ -17,4 +17,12 @@ public extension UICollectionView {
 
         return cell
     }
+    
+    func dequeueReusableView<T:UICollectionReusableView>(_ kind:String, _ indexPath:IndexPath) -> T{
+        guard let headerView = self.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                     withReuseIdentifier: T.className,
+                                                                     for: indexPath) as? T else { fatalError("Cannot dequeue header") }
+    
+        return headerView
+    }
 }
