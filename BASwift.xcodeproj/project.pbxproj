@@ -24,6 +24,7 @@
 		B638D69820629A4200657087 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69720629A4200657087 /* UIView+XIB.swift */; };
 		B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69920629B5A00657087 /* DependencyManager.swift */; };
 		B63DA6E020C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */; };
+		B654F1E620D7E6E500397D86 /* UICollectionReusableView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654F1E520D7E6E500397D86 /* UICollectionReusableView+BASwift.swift */; };
 		B67587D920B400B10062A284 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67587D820B400B10062A284 /* Response.swift */; };
 		B67587DB20B400E00062A284 /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67587DA20B400E00062A284 /* ResponseProtocol.swift */; };
 		B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* IAlertView.swift */; };
@@ -141,6 +142,7 @@
 		B638D69720629A4200657087 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
 		B638D69920629B5A00657087 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+BASwift.swift"; sourceTree = "<group>"; };
+		B654F1E520D7E6E500397D86 /* UICollectionReusableView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+BASwift.swift"; sourceTree = "<group>"; };
 		B67587D820B400B10062A284 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B67587DA20B400E00062A284 /* ResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		B68ED22C20651D0C00FD397F /* IAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertView.swift; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
 				B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */,
 				B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */,
+				B654F1E520D7E6E500397D86 /* UICollectionReusableView+BASwift.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */,
 				B68ED23A2065429400FD397F /* ContentManager.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
+				B654F1E620D7E6E500397D86 /* UICollectionReusableView+BASwift.swift in Sources */,
 				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
 				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
