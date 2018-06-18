@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class TableViewAdapter : NSObject, UITableViewDataSource, UITableViewDelegate {
+open class TableViewAdapter: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Properties
     public var tableDataModel: BaseTableDataModel<BaseSectionModel> {
@@ -17,7 +17,6 @@ open class TableViewAdapter : NSObject, UITableViewDataSource, UITableViewDelega
     }
 
     public var tableView: UITableView
-
 
     // MARK: - Initialization
     public init(_ tableView: UITableView) {
@@ -45,15 +44,17 @@ open class TableViewAdapter : NSObject, UITableViewDataSource, UITableViewDelega
         return tableDataModel.sections[indexPath.section]
     }
 
-    open func getData(atIndexPath indexPath: IndexPath) -> Any! {
-        return tableDataModel.sections[indexPath.section].cellModels[indexPath.row].cellData
+    open func getData<T>(atIndexPath indexPath: IndexPath) -> T? {
+        guard let data = tableDataModel.sections[indexPath.section].cellModels[indexPath.row].cellData as? T else {
+            return nil
+        }
+        return data
     }
 
     open func resetData() {
         tableDataModel = BaseTableDataModel()
         setTableData()
     }
-
 
     // MARK: - UITableView Delegate & DataSource
     open func numberOfSections(in tableView: UITableView) -> Int {
