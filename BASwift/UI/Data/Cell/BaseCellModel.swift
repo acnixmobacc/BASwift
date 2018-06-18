@@ -19,7 +19,7 @@ open class BaseCellModel: NSObject {
     private var _cellHeight: CGFloat
 
     // MARK: - Properties
-    public var cellData: ICellData!
+    public var cellData: Any?
     public var type: AnyClass
     public var cellType: IXCellType
 
@@ -40,7 +40,7 @@ open class BaseCellModel: NSObject {
     }
 
     // MARK: - Initialization
-    public init(_ type: AnyClass, data: ICellData! = nil, cellHeight: CGFloat = 44,
+    public init(_ type: AnyClass, data: Any? = nil, cellHeight: CGFloat = 44,
                 landscapeCellHeight: CGFloat! = nil, cellType: IXCellType = .default) {
         _cellHeight = cellHeight
         _landscapeCellHeight = landscapeCellHeight

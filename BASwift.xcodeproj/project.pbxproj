@@ -50,6 +50,8 @@
 		B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* IProgressHUD.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* Service.swift */; };
 		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
+		B6C26C6920D7819D001CAD94 /* UITableView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */; };
+		B6C26C6B20D78280001CAD94 /* UICollectionView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */; };
 		B6C6BC4220863C3F00347053 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC4120863C3F00347053 /* KeyboardManager.swift */; };
 		B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BABaseViewController.swift */; };
 		B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */; };
@@ -85,7 +87,6 @@
 		B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */; };
 		B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */; };
 		B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */; };
-		B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E9204BF31F00A5D803 /* ICellData.swift */; };
 		B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F1204BF97000A5D803 /* LocationManager.swift */; };
 		B6D7E6F8204BF97100A5D803 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F2204BF97100A5D803 /* TableViewAdapter.swift */; };
 		B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */; };
@@ -166,6 +167,8 @@
 		B6A807F12063E17D00E03C26 /* IProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressHUD.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
+		B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BASwift.swift"; sourceTree = "<group>"; };
+		B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+BASwift.swift"; sourceTree = "<group>"; };
 		B6C6BC4120863C3F00347053 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		B6D7E67C204976F300A5D803 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
 		B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewModel.swift; sourceTree = "<group>"; };
@@ -201,7 +204,6 @@
 		B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionDataModel.swift; sourceTree = "<group>"; };
 		B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionModel.swift; sourceTree = "<group>"; };
 		B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseExpandableSectionModel.swift; sourceTree = "<group>"; };
-		B6D7E6E9204BF31F00A5D803 /* ICellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICellData.swift; sourceTree = "<group>"; };
 		B6D7E6F1204BF97000A5D803 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B6D7E6F2204BF97100A5D803 /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
@@ -536,6 +538,8 @@
 				B638D69720629A4200657087 /* UIView+XIB.swift */,
 				B6D7E6A52049CAAB00A5D803 /* UIView+BASwift.swift */,
 				B6D7E6A22049CAAB00A5D803 /* UIViewController+BASwift.swift */,
+				B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */,
+				B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -625,7 +629,6 @@
 		B6D7E6ED204BF3B000A5D803 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7E6E9204BF31F00A5D803 /* ICellData.swift */,
 				B6D7E6DB204BF2A600A5D803 /* BaseCellModel.swift */,
 				B6D7E6DC204BF2A600A5D803 /* BaseCollectionCellModel.swift */,
 			);
@@ -874,6 +877,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C26C6920D7819D001CAD94 /* UITableView+BASwift.swift in Sources */,
 				B6A5584C2074E77F00698AEA /* ServiceProtocol.swift in Sources */,
 				B6D7E6D8204A12D800A5D803 /* NVProgressHUD.swift in Sources */,
 				B6F16DBE2080DC4D009A2848 /* NVProgressOption.swift in Sources */,
@@ -928,6 +932,7 @@
 				B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
 				B6D7E6F8204BF97100A5D803 /* TableViewAdapter.swift in Sources */,
+				B6C26C6B20D78280001CAD94 /* UICollectionView+BASwift.swift in Sources */,
 				B68ED23620653CBB00FD397F /* MessageView.swift in Sources */,
 				B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */,
 				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
@@ -935,7 +940,6 @@
 				B6F16DBC2080DBB1009A2848 /* NativeProgressOption.swift in Sources */,
 				B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
-				B6D7E6EA204BF31F00A5D803 /* ICellData.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,

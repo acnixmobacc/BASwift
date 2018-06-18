@@ -9,7 +9,6 @@
 import BASwift
 
 class Brand: Codable {
-
     var id: String = ""
     var name: String = ""
     var logoURL: String = ""

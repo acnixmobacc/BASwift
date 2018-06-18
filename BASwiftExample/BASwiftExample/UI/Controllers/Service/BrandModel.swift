@@ -27,6 +27,7 @@ extension BrandModel: BrandModelProtocol {
         carServiceAdapter.getBrands(onSuccess: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.viewModelDelegate?.onGetBrandsSuccess()
+
         }, onFailure: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.viewModelDelegate?.onGetBrandsFail()

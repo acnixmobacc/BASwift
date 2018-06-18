@@ -30,7 +30,7 @@ class DashboardViewController: BaseViewController {
     }
 
     private func setupDashboard() {
-        collectionAdapter = DashboardCollectionAdapter(collectionView, data: menuItems)
+        collectionAdapter = DashboardCollectionAdapter(collectionView, menuItems)
         collectionAdapter?.delegate = self
     }
 }

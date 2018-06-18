@@ -25,7 +25,7 @@ class MainViewController: BaseViewController {
         childProgressButton.isSelected = !childProgressButton.isSelected
 
         childProgressButton.isSelected ? childView.showLoading() :
-            childView.hideLoading()
+        childView.hideLoading()
     }
 
     @IBAction func toServiceAction(_ sender: Any) {

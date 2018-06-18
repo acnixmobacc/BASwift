@@ -8,12 +8,19 @@
 
 import BASwift
 
-class DashboardCollectionAdapter: CollectionViewAdapter<[UIDashboardItem]> {
+class DashboardCollectionAdapter: CollectionViewAdapter {
 
     fileprivate let cellWidth: CGFloat = Device.Screen.size.width / 2 - 15
     fileprivate let cellHeight: CGFloat = 167
 
     weak var delegate: DashboardCollectionAdapterDelegate?
+
+    var data: [Any]?
+
+    init(_ collectionView: UICollectionView, _ data: [Any]?) {
+        self.data = data
+        super.init(collectionView)
+    }
 
     override func registerNibs() {
         DashboardItemCollectionViewCell.registerSelf(collectionView)
@@ -48,12 +55,9 @@ class DashboardCollectionAdapter: CollectionViewAdapter<[UIDashboardItem]> {
     }
 
     private func cellForDashboardItem(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath,
-                                      data: ICellData) -> DashboardItemCollectionViewCell {
+                                      data: Any?) -> DashboardItemCollectionViewCell {
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DashboardItemCollectionViewCell.className,
-                                                            for: indexPath) as? DashboardItemCollectionViewCell else {
-            return DashboardItemCollectionViewCell()
-        }
+        let cell: DashboardItemCollectionViewCell = collectionView.dequeueCell(for: indexPath)
 
         guard let data = data as? UIDashboardItem else {
             fatalError("Data type is invalid")

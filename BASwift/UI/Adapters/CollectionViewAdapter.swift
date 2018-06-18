@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
+open class CollectionViewAdapter : NSObject, UICollectionViewDataSource,
                                                 UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     // MARK: - Properties
     public var collectionData: BaseCollectionDataModel {
@@ -18,17 +18,14 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
     }
 
     public var collectionView: UICollectionView
-
-    public var data: T?
-
+    
     // MARK: - Initialization
-    public init(_ collectionView: UICollectionView, data: T?) {
+    public init(_ collectionView: UICollectionView) {
 
         self.collectionView = collectionView
         collectionData = BaseCollectionDataModel()
         super.init()
 
-        self.data = data
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
 
@@ -42,9 +39,6 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
 
     open func setCollectionData() {}
 
-    open func updateData(_ data: T?) {
-        setCollectionData()
-    }
 
     open func getCellModel(_ indexPath: IndexPath) -> BaseCellModel {
         return collectionData.sections[indexPath.section].cellModels[indexPath.row]
@@ -54,7 +48,7 @@ open class CollectionViewAdapter<T: Any> : NSObject, UICollectionViewDataSource,
         return collectionData.sections[indexPath.section]
     }
 
-    open func getData(atIndexPath indexPath: IndexPath) -> ICellData! {
+    open func getData(atIndexPath indexPath: IndexPath) -> Any? {
         return collectionData.sections[indexPath.section].cellModels[indexPath.row].cellData
     }
 

@@ -12,9 +12,16 @@ protocol DetailTableAdapterDelegate: class {
     func onSelectItem()
 }
 
-class DetailTableAdapter: TableViewAdapter<[ICellData]> {
+class DetailTableAdapter: TableViewAdapter {
 
     weak var delegate: DetailTableAdapterDelegate?
+
+    var data: [Any]?
+
+    init(_ tableView: UITableView, _ data: [Any]) {
+        self.data = data
+        super.init(tableView)
+    }
 
     override func registerNibs() {
         ItemTableViewCell.registerSelf(tableView)
@@ -27,14 +34,14 @@ class DetailTableAdapter: TableViewAdapter<[ICellData]> {
             return
         }
 
-        let detailCellModels: [ICellData] = data.filter { $0 is UIDetailItem }
-        let itemCellModels: [ICellData] = data.filter { $0 is UIItem }
+        let detailCellModels: [Any] = data.filter { $0 is UIDetailItem }
+        let itemCellModels: [Any] = data.filter { $0 is UIItem }
 
         tableDataModel.sections.append(getDetailSection(items: detailCellModels))
         tableDataModel.sections.append(getItemSection(items: itemCellModels))
     }
 
-    func getDetailSection(items: [ICellData]) -> UICustomSection {
+    func getDetailSection(items: [Any]) -> UICustomSection {
         let section: UICustomSection = UICustomSection(headerHeight: 44)
         for item in items {
             section.cellModels.append(getDetailCell(item: item))
@@ -42,7 +49,7 @@ class DetailTableAdapter: TableViewAdapter<[ICellData]> {
         return section
     }
 
-    func getItemSection(items: [ICellData]) -> BaseSectionModel {
+    func getItemSection(items: [Any]) -> BaseSectionModel {
         let section: BaseSectionModel = BaseSectionModel()
         for item in items {
             section.cellModels.append(getItemCell(item: item))
@@ -50,11 +57,11 @@ class DetailTableAdapter: TableViewAdapter<[ICellData]> {
         return section
     }
 
-    func getItemCell(item: ICellData) -> BaseCellModel {
+    func getItemCell(item: Any) -> BaseCellModel {
         return BaseCellModel(ItemTableViewCell.self, data: item)
     }
 
-    func getDetailCell(item: ICellData) -> BaseCellModel {
+    func getDetailCell(item: Any) -> BaseCellModel {
         return BaseCellModel(DetailItemTableViewCell.self, data: item)
     }
 
@@ -73,7 +80,7 @@ class DetailTableAdapter: TableViewAdapter<[ICellData]> {
     }
 
     func cellForItem(_ tableView: UITableView, cellForRowAt indexPath: IndexPath,
-                     withData data: ICellData?) -> ItemTableViewCell {
+                     withData data: Any?) -> ItemTableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.className,
                                                        for: indexPath) as? ItemTableViewCell else {
                 fatalError("Cannot dequeue cell with identifier \(ItemTableViewCell.className)")
@@ -83,7 +90,7 @@ class DetailTableAdapter: TableViewAdapter<[ICellData]> {
     }
 
     func cellForDetailItem(_ tableView: UITableView, cellForRowAt indexPath: IndexPath,
-                           withData data: ICellData?) -> DetailItemTableViewCell {
+                           withData data: Any?) -> DetailItemTableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailItemTableViewCell.className,
                                                        for: indexPath) as? DetailItemTableViewCell else {
                 fatalError("Cannot dequeue cell with identifier \(DetailItemTableViewCell.className)")
