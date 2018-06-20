@@ -28,16 +28,19 @@ public enum FileError: Error {
 open class MockDataUtilities {
 
     // MARK: - Static Methods
-    public static func getData<T: Codable>(fileName: String, onSuccess: (T) -> Void,
-                                           onFailure:@escaping (FileError) -> Void) {
+    public static func getData<T: Decodable>(fileName: String, onSuccess: (T) -> Void,
+                                             onFailure: ((FileError) -> Void)?) {
         do {
             let data = try fileContentsToData(fileName)
             onSuccess(try JSONDecoder().decode(T.self, from: data))
         } catch FileError.fileNotExist {
+            guard let onFailure = onFailure else { return }
             onFailure(FileError.fileNotExist)
         } catch DecodingError.dataCorrupted {
+            guard let onFailure = onFailure else { return }
             onFailure(FileError.contentsNotValid)
         } catch {
+            guard let onFailure = onFailure else { return }
             onFailure(FileError.unknown)
         }
     }

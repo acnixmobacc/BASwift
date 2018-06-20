@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public class Response<T: Codable>: ResponseProtocol {
+public class Response<T: Decodable>: ResponseProtocol {
 
     // MARK: - Properties
     public var httpResponse: HTTPURLResponse?
