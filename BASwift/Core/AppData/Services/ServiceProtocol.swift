@@ -14,6 +14,6 @@ public protocol ServiceProtocol {
 
     init(withConfig config: ServiceConfig)
 
-    func execute<T: Codable>(request: Request, onResponse:@escaping (Response<T>) -> Void) -> DataRequest
+    func execute<T: Decodable>(request: Request, onResponse:@escaping (Response<T>) -> Void) -> DataRequest
 
 }

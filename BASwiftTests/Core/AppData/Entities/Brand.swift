@@ -9,11 +9,11 @@
 import BASwift
 import Foundation
 
-class BrandObject : Codable{
+class BrandObject : Decodable{
     var brands : [Brand] = []
 }
 
-class BrandList: Codable{
+class BrandList: Decodable{
     var list: [Brand]
     
     required init(from decoder:Decoder) throws{
@@ -21,21 +21,21 @@ class BrandList: Codable{
     }
 }
 
-class Brand : Codable{
+class Brand : Decodable{
     var id : String = ""
     var name : String = ""
     var logo : String = ""
 
 }
 
-class User : Codable{
+class User : Decodable{
     var username:String = ""
     var surname:String = ""
     var tckn:String = ""
     var favouriteBrands : [Brand] = []
 }
 
-class CarDetail: Codable{
+class CarDetail: Decodable{
     var id:String = ""
     var brandName:String = ""
     var name:String = ""

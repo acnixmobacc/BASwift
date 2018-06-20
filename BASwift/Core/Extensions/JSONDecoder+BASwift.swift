@@ -9,7 +9,7 @@
 import Foundation
 
 public extension JSONDecoder {
-    static func toArray<T: Codable>(from decoder: Decoder) throws -> [T] {
+    static func toArray<T: Decodable>(from decoder: Decoder) throws -> [T] {
         var list: [T] = []
         var container = try decoder.unkeyedContainer()
         while !container.isAtEnd {
