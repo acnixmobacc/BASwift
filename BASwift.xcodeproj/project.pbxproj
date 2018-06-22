@@ -49,6 +49,7 @@
 		B6A807DE206381D900E03C26 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* LoadableView.swift */; };
 		B6A807ED2063D1F700E03C26 /* ProgressHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */; };
 		B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* IProgressHUD.swift */; };
+		B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF943120DD131200341E8C /* CaseIterable.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* Service.swift */; };
 		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
 		B6C26C6920D7819D001CAD94 /* UITableView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */; };
@@ -167,6 +168,7 @@
 		B6A807DD206381D900E03C26 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		B6A807EC2063D1F700E03C26 /* ProgressHUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDManager.swift; sourceTree = "<group>"; };
 		B6A807F12063E17D00E03C26 /* IProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IProgressHUD.swift; sourceTree = "<group>"; };
+		B6AF943120DD131200341E8C /* CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterable.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
 		B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BASwift.swift"; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			children = (
 				B6D7E6B32049E59400A5D803 /* MockDataUtilities.swift */,
 				B6D7E69F2049CAAA00A5D803 /* Constant.swift */,
+				B6AF943120DD131200341E8C /* CaseIterable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -945,6 +948,7 @@
 				B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
+				B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* IProgressHUD.swift in Sources */,
 				B68ED23420653C7300FD397F /* IContentManager.swift in Sources */,
