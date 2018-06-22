@@ -10,6 +10,8 @@ import UIKit
 
 public class FormView: UIView {
 
+    let FormViewAutomaticDimension: CGFloat = 0.0
+
     // MARK: - UIFields
     lazy public var scrollView: UIScrollView = {
         let instance = UIScrollView()
@@ -90,6 +92,10 @@ public class FormView: UIView {
     }
 
     private func addHeightConstraint(toView view: IFormItemView & UIView) {
+        if view.height == FormViewAutomaticDimension {
+            return
+        }
+
         let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                                                   multiplier: 1, constant: view.height)
         view.addConstraint(heightConstraint)
