@@ -10,7 +10,7 @@ import UIKit
 
 public class FormView: UIView {
 
-    let FormViewAutomaticDimension: CGFloat = 0.0
+    public let FormViewAutomaticDimension: CGFloat = 0.0
 
     // MARK: - UIFields
     lazy public var scrollView: UIScrollView = {
