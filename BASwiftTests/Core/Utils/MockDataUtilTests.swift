@@ -30,36 +30,14 @@ class MockDataUtilTests: XCTestCase {
     
 
     func testJSONDataFromFile(){
-        MockDataUtilities.getData(fileName: "data", onSuccess: { (brandObj:BrandObject) in
-            XCTAssertTrue(brandObj.brands[0].name == "Toyota" && brandObj.brands[0].id == "0")
-        }, onFailure: { _ in
-            XCTFail("JSON converter fail")
-        })
+        let brand : BrandObject = MockDataUtilities.getData(fileName: "data")
+        XCTAssertTrue(brand.brands[0].name == "Toyota" && brand.brands[0].id == "0")
     }
     
     func testJSONDataArrayFromFile(){
-        MockDataUtilities.getData(fileName: "data_array", onSuccess: { (brand:BrandList) in
-            XCTAssertTrue(brand.list[1].name == "Renault" && brand.list[1].id == "1")
-        }, onFailure: { _ in
-            XCTFail("JSON converter fail")
-        })
+        let brand: BrandList = MockDataUtilities.getData(fileName: "data_array")
+        XCTAssertTrue(brand.list[1].name == "Renault" && brand.list[1].id == "1")
     }
-    
-    func testFileNotExist(){
-        MockDataUtilities.getData(fileName: "notExistFileName", onSuccess: { (brandObj:BrandObject) in
-            XCTFail("Not Exist File Test Fail")
-        }, onFailure: { error in
-            XCTAssertTrue(error == FileError.fileNotExist)
-        })
-    }
-    
-    func testNotValidJSONFile(){
-        MockDataUtilities.getData(fileName: "not_valid", onSuccess: { (brandObj:BrandObject) in
-            XCTFail("Not Valid File Test Fail")
-        }, onFailure: { error in
-            XCTAssertTrue(error == FileError.contentsNotValid)
-        })
-    }
-    
+
 }
 
