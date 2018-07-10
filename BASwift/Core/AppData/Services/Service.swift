@@ -23,7 +23,7 @@ public class Service: ServiceProtocol {
 
     // MARK: - Execute Methods
     @discardableResult
-    public func execute<T: Decodable>(request: Request, onResponse:@escaping (Response<T>) -> Void) -> DataRequest {
+    public func execute<T: Decodable>(request: APIRequest, onResponse:@escaping (Response<T>) -> Void) -> DataRequest {
 
         let dataRequest = createRequest(request)
 
@@ -43,7 +43,7 @@ public class Service: ServiceProtocol {
         return configuration
     }
 
-    fileprivate func createRequest(_ request: Request) -> DataRequest {
+    fileprivate func createRequest(_ request: APIRequest) -> DataRequest {
         guard let url = URL(string: serviceConfig.baseURL + request.endpoint) else {
             fatalError("URL not valid")
         }

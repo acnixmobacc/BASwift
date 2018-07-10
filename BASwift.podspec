@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.1.9'
+  s.version          = '0.2.0'
   s.summary          = 'BASwift Framework'
  
 
@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
 # This fantastic view changes its color gradually makes your app look fantastic!
 #                        DESC
  
-  s.homepage         = 'https://github.com/brkakkaya/baswift'
+  s.homepage         = 'https://innersource.accenture.com/projects/IXMA/repos/baswift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Burak AKKAYA' => 'brk.akkaya@gmail.com' }
-  s.source           = { :git => 'https://github.com/brkakkaya/baswift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://burak.akkaya@innersource.accenture.com/scm/ixma/baswift', :tag => s.version.to_s }
  
  `echo "4.0" > .swift-version`
 

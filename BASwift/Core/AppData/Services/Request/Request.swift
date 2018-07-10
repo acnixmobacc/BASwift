@@ -12,7 +12,7 @@ public typealias JSONDictionary = [String: Any]?
 
 public typealias HeaderDictionary = [String: String]?
 
-public class Request: RequestProtocol {
+open class APIRequest: RequestProtocol {
 
     // MARK: - Properties
     public var endpoint: String
