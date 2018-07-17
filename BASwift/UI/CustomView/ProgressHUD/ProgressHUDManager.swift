@@ -32,11 +32,12 @@ open class ProgressHUDManager: ILoadable {
     private var dismissStrategy: ProgressStrategy.DismissStrategy
 
     // MARK: - Properties
-    public var progressHUD: IProgressHUD = BADependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
+    public var progressHUD: IProgressHUD
 
     // MARK: - Initialization
-    public init(forView view: UIView, dismissStrategy: ProgressStrategy.DismissStrategy = .immediately) {
+    public init(progressHud: IProgressHUD, forView view: UIView, dismissStrategy: ProgressStrategy.DismissStrategy = .immediately) {
         self.dismissStrategy = dismissStrategy
+        self.progressHUD = progressHud
         self.view = view
     }
 

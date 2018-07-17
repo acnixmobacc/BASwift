@@ -21,6 +21,27 @@ extension LoginViewController: LoginViewProtocol {
 
 }
 
+class CustomAlert: BaseAlert {
+    var cancelHandler: ((Any) -> Void)?
+
+    init(message: String, title: String, handler: ((Any) -> Void)?, cancelHandler: ((Any) -> Void)?) {
+        self.cancelHandler = cancelHandler
+        super.init(message: message, title: title, handler: handler)
+    }
+}
+class CustomAlertView: IAlertView {
+    func show(vc: UIViewController, alert: IAlert) {
+
+        let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: alert.handler))
+        if let alert = alert as? CustomAlert {
+            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: alert.cancelHandler))
+        }
+
+        vc.present(alertController, animated: true, completion: nil)
+    }
+}
+
 class LoginViewController: BaseViewController {
 
     // MARK: - UI Fields
@@ -41,6 +62,10 @@ class LoginViewController: BaseViewController {
         return TouchIDManager()
     }()
 
+    override lazy var alertManager: IAlertManager = {
+        return AlertViewManager(alertView: CustomAlertView(), with: self)
+    }()
+
     var disposeBag: DisposeBag = DisposeBag()
 
     // MARK: - View Controller Lifecycle
@@ -53,7 +78,10 @@ class LoginViewController: BaseViewController {
     private func setUIBindings() {
         registerButton.rx.tap.bind(onNext: { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.coordinatorDelegate?.showRegister()
+
+            strongSelf.showDialog()
+            //strongSelf.coordinatorDelegate?.showRegister()
+
         }).disposed(by: disposeBag)
 
         loginButton.rx.tap.bind(onNext: { [weak self] in
@@ -61,6 +89,14 @@ class LoginViewController: BaseViewController {
             strongSelf.viewModel.login()
         }).disposed(by: disposeBag)
 
+    }
+
+    func showDialog() {
+        alertManager.showAlert(withAlert: CustomAlert(message: "Message", title: "Title", handler: {_ in
+            Logger.debug("Debug handler")
+        }, cancelHandler: {_ in
+            Logger.debug("Cancel handler")
+        }))
     }
 
     func authenticateWithTouchID() {

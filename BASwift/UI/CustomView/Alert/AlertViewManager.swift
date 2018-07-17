@@ -11,24 +11,25 @@ import UIKit
 public protocol IAlertManager {
     var alertView: IAlertView { get set }
 
-    init(withViewController viewController: UIViewController)
+    init(alertView: IAlertView, with viewController: UIViewController)
 
-    func showAlert(withAlert alert: BaseAlert)
+    func showAlert(withAlert alert: IAlert)
 }
 
 open class AlertViewManager: IAlertManager {
     // MARK: - Properties
-    public var alertView: IAlertView = BADependencyManager.sharedInstance.container.resolve(IAlertView.self)!
+    public var alertView: IAlertView
 
     private var viewController: UIViewController?
 
     // MARK: - Initialization
-    public required init(withViewController viewController: UIViewController) {
+    public required init(alertView: IAlertView, with viewController: UIViewController) {
         self.viewController = viewController
+        self.alertView = alertView
     }
 
     // MARK: - Methods
-    public func showAlert(withAlert alert: BaseAlert) {
+    public func showAlert(withAlert alert: IAlert) {
         guard let viewController = self.viewController else {
             return
         }

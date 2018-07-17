@@ -17,7 +17,8 @@ class DetailViewController: BaseViewController {
     var tableViewAdapter: DetailTableAdapter?
 
     override lazy var progressManager: ILoadable = {[unowned self] in
-        return ProgressHUDManager(forView: self.view, dismissStrategy: .countable)
+        return ProgressHUDManager(progressHud: NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault),
+                                  forView: self.view, dismissStrategy: .countable)
     }()
 
     // MARK: - UI Fields

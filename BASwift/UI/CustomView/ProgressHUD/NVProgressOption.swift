@@ -18,9 +18,8 @@ open class NVProgressOptions: ProgressOptions {
     var color: UIColor
 
     // MARK: - Initialization
-    init(withFrame frame: CGRect = CGRect(x: 0, y: 0, width: 60, height: 60),
-         type: NVActivityIndicatorType = .ballGridPulse, color: UIColor = .white,
-         userInteractionEnabled: Bool = true) {
+    public init(withFrame frame: CGRect = CGRect(x: 0, y: 0, width: 60, height: 60),
+                type: NVActivityIndicatorType = .ballGridPulse, color: UIColor = .white, userInteractionEnabled: Bool = true) {
         self.type = type
         self.color = color
         self.userInteractionEnabled = userInteractionEnabled
@@ -28,7 +27,7 @@ open class NVProgressOptions: ProgressOptions {
     }
 
     // MARK: - Default Value
-    static let `nvProgressDefault`: ProgressOptions = {
+    public static let `nvProgressDefault`: ProgressOptions = {
         return NVProgressOptions()
     }()
 }
