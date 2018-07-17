@@ -22,7 +22,6 @@
 		B633D7BA2084EF27007A9BA6 /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7B92084EF27007A9BA6 /* StackTest.swift */; };
 		B633D7BC2084F196007A9BA6 /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633D7BB2084F196007A9BA6 /* TreeTest.swift */; };
 		B638D69820629A4200657087 /* UIView+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69720629A4200657087 /* UIView+XIB.swift */; };
-		B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B638D69920629B5A00657087 /* DependencyManager.swift */; };
 		B63DA6E020C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */; };
 		B654F1E620D7E6E500397D86 /* UICollectionReusableView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B654F1E520D7E6E500397D86 /* UICollectionReusableView+BASwift.swift */; };
 		B67587D920B400B10062A284 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67587D820B400B10062A284 /* Response.swift */; };
@@ -141,7 +140,6 @@
 		B633D7B92084EF27007A9BA6 /* StackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
 		B633D7BB2084F196007A9BA6 /* TreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
 		B638D69720629A4200657087 /* UIView+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XIB.swift"; sourceTree = "<group>"; };
-		B638D69920629B5A00657087 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+BASwift.swift"; sourceTree = "<group>"; };
 		B654F1E520D7E6E500397D86 /* UICollectionReusableView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+BASwift.swift"; sourceTree = "<group>"; };
 		B67587D820B400B10062A284 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -457,7 +455,6 @@
 		B6C6BC4020863C0D00347053 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B638D69920629B5A00657087 /* DependencyManager.swift */,
 				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
 				B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */,
 				B6C6BC4120863C3F00347053 /* KeyboardManager.swift */,
@@ -813,14 +810,12 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -907,7 +902,6 @@
 				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
-				B638D69A20629B5A00657087 /* DependencyManager.swift in Sources */,
 				B6B2E4D620724D8800E5FBB6 /* Service.swift in Sources */,
 				B694FF9820A47E4C0052B8AF /* FormView.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,

@@ -7,7 +7,6 @@ inhibit_all_warnings!
 
 def core_pods
     pod 'SwiftLint'
-    pod 'Swinject', '~> 2.1.0'
 end
 
 def ui_pods

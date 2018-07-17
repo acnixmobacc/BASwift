@@ -12,11 +12,11 @@ open class BABaseViewController: UIViewController, BABaseViewProtocol {
 
     // MARK: - Properties
     lazy open var progressManager: ILoadable = {[unowned self] in
-        return ProgressHUDManager(forView: self.view)
+        return ProgressHUDManager(progressHud: NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault), forView: self.view)
     }()
 
     lazy open var alertManager: IAlertManager = {[unowned self] in
-        return AlertViewManager(withViewController: self)
+        return AlertViewManager(alertView: BaseAlertView(), with: self)
     }()
 
     lazy open var contentManager: IContentManager = {[unowned self] in
@@ -28,11 +28,11 @@ open class BABaseTabController: UITabBarController, BABaseViewProtocol {
 
     // MARK: - Properties
     lazy open var progressManager: ILoadable = {[unowned self] in
-        return ProgressHUDManager(forView: self.view)
+        return ProgressHUDManager(progressHud: NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault), forView: self.view)
     }()
 
     lazy open var alertManager: IAlertManager = {[unowned self] in
-        return AlertViewManager(withViewController: self)
+        return AlertViewManager(alertView: BaseAlertView(), with: self)
     }()
 
     lazy open var contentManager: IContentManager = {[unowned self] in

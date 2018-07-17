@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol IAlertView {
-    func show(vc: UIViewController, alert: BaseAlert)
+    func show(vc: UIViewController, alert: IAlert)
 }

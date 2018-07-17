@@ -10,7 +10,7 @@ import UIKit
 
 public class LoadableView: UIView, ILoadable, IContentable {
     // MARK: - Properties
-    public var progressHUD = BADependencyManager.sharedInstance.container.resolve(IProgressHUD.self)!
+    public var progressHUD: IProgressHUD = NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault)
 
     lazy open var contentManager: IContentManager = {
         var messageView = MessageView.fromNib()
