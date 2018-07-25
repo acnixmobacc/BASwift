@@ -21,10 +21,13 @@ public extension Date {
     public static var yyyy_mm_dd_t_hh_mm_ss_z: String = "yyyy-MM-dd'T'HH:mm:ssZ"
 
     // MARK: - Initialization
-    init(fromText text: String, withFormat format: String) {
+    init?(fromText text: String, withFormat format: String) {
         let dateFormatter = Date.createFormatter(withDateFormat: format)
-        let d = dateFormatter.date(from: text)!
-        self = Date(timeInterval: 0, since: d)
+        guard let date = dateFormatter.date(from: text) else {
+            return nil
+        }
+
+        self = Date(timeInterval: 0, since: date)
     }
 
     // MARK: - Methods

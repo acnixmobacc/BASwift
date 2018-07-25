@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol  IAlert: class{
-    var message: String {get set}
-    var title: String {get set}
-    var handler: ((Any) -> Void)? {get set}
+public protocol  IAlert: class {
+    var message: String { get set }
+    var title: String { get set }
+    var handler: ((Any) -> Void)? { get set }
 }
 
-open class BaseAlert : IAlert{
+open class BaseAlert: IAlert {
     // MARK: - Properties
     public var message: String
     public var title: String
