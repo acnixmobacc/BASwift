@@ -20,7 +20,8 @@ open class BABaseViewController: UIViewController, BABaseViewProtocol {
     }()
 
     lazy open var contentManager: IContentManager = {[unowned self] in
-        return ContentManager(withView: MessageView.fromNib())
+        let bundle = Bundle(for: MessageView.self)
+        return ContentManager(withView: MessageView.fromNib(bundle: bundle))
     }()
 }
 
@@ -36,6 +37,7 @@ open class BABaseTabController: UITabBarController, BABaseViewProtocol {
     }()
 
     lazy open var contentManager: IContentManager = {[unowned self] in
-        return ContentManager(withView: MessageView.fromNib())
+        let bundle = Bundle(for: MessageView.self)
+        return ContentManager(withView: MessageView.fromNib(bundle: bundle))
     }()
 }

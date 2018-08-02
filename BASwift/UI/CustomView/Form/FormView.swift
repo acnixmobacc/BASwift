@@ -75,7 +75,7 @@ public class FormView: UIView {
         for item in stackView.arrangedSubviews {
             guard let formItem = item as? IFormItemView else { continue }
             guard let validation = formItem.onValidation else { continue }
-            if validation() {
+            if validation() == nil {
                 formItem.onSuccess()
             } else {
                 formItem.onError()
@@ -98,6 +98,7 @@ public class FormView: UIView {
 
         let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                                                   multiplier: 1, constant: view.height)
+        heightConstraint.priority = UILayoutPriority(rawValue: 999.0)
         view.addConstraint(heightConstraint)
     }
 
