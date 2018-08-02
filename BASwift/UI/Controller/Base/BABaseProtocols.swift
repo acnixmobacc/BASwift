@@ -11,11 +11,11 @@ import UIKit
 // MARK: - View Interface
 public protocol BABaseViewProtocol: BABaseViewDelegate {
 
-    var progressManager: ILoadable { get set}
+    var progressManager: ILoadable { get set }
 
-    var alertManager: IAlertManager { get set}
+    var alertManager: IAlertManager { get set }
 
-    var contentManager: IContentManager { get set}
+    var contentManager: IContentManager { get set }
 
 }
 
@@ -27,7 +27,9 @@ public protocol BABaseViewDelegate: class {
 
     func hideProgress()
 
-    func showContentMessage(withMessage message: String, handler:(() -> Void)?)
+    func showContentMessage(withMessage message: String, frame: CGRect, handler:(() -> Void)?)
+
+    func hideContentMessage()
 }
 
 public extension BABaseViewProtocol where Self: UIViewController {
@@ -43,15 +45,19 @@ public extension BABaseViewProtocol where Self: UIViewController {
         progressManager.hideLoading()
     }
 
-    func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
+    func showContentMessage(withMessage message: String, frame: CGRect, handler: (() -> Void)?) {
         contentManager.showMessage(withMessage: message, handler: { [unowned self] in
             self.contentManager.view.removeFromSuperview()
             if let handler = handler {
                 handler()
             }
         })
-        contentManager.view.frame = self.view.frame
+        contentManager.view.frame = frame
         self.view.addSubview(contentManager.view)
+    }
+
+    func hideContentMessage() {
+        contentManager.view.removeFromSuperview()
     }
 }
 
