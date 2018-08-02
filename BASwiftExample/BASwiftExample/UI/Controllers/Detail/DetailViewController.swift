@@ -16,10 +16,15 @@ class DetailViewController: BaseViewController {
 
     var tableViewAdapter: DetailTableAdapter?
 
-    override lazy var progressManager: ILoadable = {[unowned self] in
+    private lazy var _progressManager: ILoadable = {[unowned self] in
         return ProgressHUDManager(progressHud: NVProgressHUD(withOptions: NVProgressOptions.nvProgressDefault),
                                   forView: self.view, dismissStrategy: .countable)
     }()
+
+    override var progressManager: ILoadable {
+        get { return _progressManager }
+        set { _progressManager = newValue }
+    }
 
     // MARK: - UI Fields
     @IBOutlet weak private var tableView: UITableView!

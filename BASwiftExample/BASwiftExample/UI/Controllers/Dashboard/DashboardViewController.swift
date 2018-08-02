@@ -32,6 +32,7 @@ class DashboardViewController: BaseViewController {
     private func setupDashboard() {
         collectionAdapter = DashboardCollectionAdapter(collectionView, menuItems)
         collectionAdapter?.delegate = self
+        showContentMessage(withMessage: "Empty", handler: nil)
     }
 }
 

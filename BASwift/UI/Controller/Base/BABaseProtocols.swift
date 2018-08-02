@@ -11,11 +11,11 @@ import UIKit
 // MARK: - View Interface
 public protocol BABaseViewProtocol: BABaseViewDelegate {
 
-    var progressManager: ILoadable { get }
+    var progressManager: ILoadable { get set}
 
-    var alertManager: IAlertManager { get }
+    var alertManager: IAlertManager { get set}
 
-    var contentManager: IContentManager { get }
+    var contentManager: IContentManager { get set}
 
 }
 

@@ -25,16 +25,16 @@ public extension UIView {
     }
 
     // MARK: - Methods
-    class func fromNib(nibNameOrNil: String? = nil) -> Self {
-        return fromNib(nibNameOrNil: nibNameOrNil, type: self)
+    class func fromNib(bundle: Bundle = Bundle.main, nibNameOrNil: String? = nil) -> Self {
+        return fromNib(bundle: bundle, nibNameOrNil: nibNameOrNil, type: self)
     }
 
-    class func fromNib<T: UIView>(nibNameOrNil: String? = nil, type: T.Type) -> T {
-        let v: T? = fromNib(nibNameOrNil: nibNameOrNil, type: T.self)
+    class func fromNib<T: UIView>(bundle: Bundle = Bundle.main, nibNameOrNil: String? = nil, type: T.Type) -> T {
+        let v: T? = fromNib(bundle: bundle, nibNameOrNil: nibNameOrNil, type: T.self)
         return v!
     }
 
-    class func fromNib<T: UIView>(nibNameOrNil: String? = nil, type: T.Type) -> T? {
+    class func fromNib<T: UIView>(bundle: Bundle = Bundle.main, nibNameOrNil: String? = nil, type: T.Type) -> T? {
         var view: T?
         let name: String
         if let myNibName = nibNameOrNil {
@@ -43,7 +43,7 @@ public extension UIView {
             name = myNibName
         }
 
-        guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else {
+        guard let nibViews = bundle.loadNibNamed(name, owner: nil, options: nil) else {
             fatalError("Could not load nib")
         }
 

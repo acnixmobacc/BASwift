@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'BASwift Framework'
 
 
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'BASwift/Core/**/*.swift', 'BASwift/Core/**/**/*.swift', 'BASwift/Core/**/**/**/*.swift', 'BASwift/UI/**/*.swift', 'BASwift/UI/**/**/*.swift'
-
+  s.resources = 'BASwift/UI/**/*.xib', 'BASwift/UI/**/**/*.xib'
   s.dependency 'NVActivityIndicatorView'
   s.dependency 'Alamofire', '~> 4.4'
   s.dependency 'SDWebImage', '~> 4.0'

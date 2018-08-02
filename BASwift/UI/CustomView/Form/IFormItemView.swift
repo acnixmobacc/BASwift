@@ -13,9 +13,9 @@ public protocol IFormItemView {
 
     var height: CGFloat { get }
 
-    var onValidation: (() -> Bool)? { get }
+    var onValidation: (() -> Any?)? { get }
 
-    var onClick:(() -> Void)? { get }
+    var onClick: ((Any?) -> Void)? { get }
 
     var onChange: ((Any?) -> Void)? { get }
 
@@ -42,13 +42,13 @@ public extension IFormItemView {
         }
     }
 
-    var onValidation : (() -> Bool)? {
+    var onValidation : (() -> Any?)? {
         get {
             return nil
         }
     }
 
-    var onClick : (() -> Void)? {
+    var onClick: ((Any?) -> Void)? {
         get {
             return nil
         }
