@@ -27,7 +27,7 @@ public protocol BABaseViewDelegate: class {
 
     func hideProgress()
 
-    func showContentMessage(withMessage message: String, frame: CGRect, handler:(() -> Void)?)
+    func showContentMessage(withMessage message: String, handler:(() -> Void)?)
 
     func hideContentMessage()
 }
@@ -45,14 +45,14 @@ public extension BABaseViewProtocol where Self: UIViewController {
         progressManager.hideLoading()
     }
 
-    func showContentMessage(withMessage message: String, frame: CGRect, handler: (() -> Void)?) {
+    func showContentMessage(withMessage message: String, handler: (() -> Void)?) {
         contentManager.showMessage(withMessage: message, handler: { [unowned self] in
             self.contentManager.view.removeFromSuperview()
             if let handler = handler {
                 handler()
             }
         })
-        contentManager.view.frame = frame
+        contentManager.view.frame = self.view.bounds
         self.view.addSubview(contentManager.view)
     }
 
