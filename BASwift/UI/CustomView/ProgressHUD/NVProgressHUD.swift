@@ -48,8 +48,8 @@ open class NVProgressHUD: IProgressHUD {
 
     // MARK: - Private Methods
     private func startWithTransparentView(inView view: UIView) {
-        initTransparentView(withFrame: CGRect(x: 0, y: 0, width: view.frame.width,
-                                              height: view.frame.height))
+        initTransparentView(withFrame: CGRect(x: 0, y: 0, width: view.bounds.width,
+                                              height: view.bounds.height))
         transparentView?.addSubview(activityIndicator)
         view.addSubview(transparentView!)
     }
@@ -82,8 +82,8 @@ open class NVProgressHUD: IProgressHUD {
     }
 
     private func setActivityIndicatorCenterPoint() {
-        let centerX = (parentView?.frame.width)! / 2.0
-        let centerY = (parentView?.frame.height)! / 2.0
+        let centerX = (parentView?.bounds.width)! / 2.0
+        let centerY = (parentView?.bounds.height)! / 2.0
         activityIndicator.center = CGPoint(x: centerX, y: centerY)
     }
 

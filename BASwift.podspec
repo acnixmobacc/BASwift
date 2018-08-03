@@ -1,12 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.2.5'
+  s.version          = '0.2.5.1'
   s.summary          = 'BASwift Framework'
 
-
-#   s.description      = <<-DESC
-# This fantastic view changes its color gradually makes your app look fantastic!
-#                        DESC
 
   s.homepage         = 'https://innersource.accenture.com/projects/IXMA/repos/baswift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
