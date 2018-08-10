@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.2.5.3'
+  s.version          = '0.2.5.4'
   s.summary          = 'BASwift Framework'
 
 

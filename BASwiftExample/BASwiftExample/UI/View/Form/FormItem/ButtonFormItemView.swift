@@ -11,7 +11,7 @@ import BASwift
 class ButtonFormItemView: UIView, IFormItemView {
 
     // MARK: - Properties
-    var height: CGFloat = 60
+    var itemViewHeight: CGFloat = 60
 
     // MARK: - UI Field
     @IBOutlet weak private var button: UIButton!

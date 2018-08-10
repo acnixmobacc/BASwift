@@ -92,12 +92,12 @@ public class FormView: UIView {
     }
 
     private func addHeightConstraint(toView view: IFormItemView & UIView) {
-        if view.height == FormView.AutomaticDimension {
+        if view.itemViewHeight == FormView.AutomaticDimension {
             return
         }
 
         let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-                                                  multiplier: 1, constant: view.height)
+                                                  multiplier: 1, constant: view.itemViewHeight)
         heightConstraint.priority = UILayoutPriority(rawValue: 999.0)
         view.addConstraint(heightConstraint)
     }
