@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.2.5.2'
+  s.version          = '0.2.5.3'
   s.summary          = 'BASwift Framework'
 
 
@@ -20,4 +20,5 @@ Pod::Spec.new do |s|
   s.dependency 'Alamofire', '~> 4.4'
   s.dependency 'SDWebImage', '~> 4.0'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  s.static_framework = true
 end
