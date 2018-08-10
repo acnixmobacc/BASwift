@@ -11,7 +11,7 @@ import UIKit
 public protocol IFormItemView {
     var value: Any? { get }
 
-    var height: CGFloat { get }
+    var itemViewHeight: CGFloat { get }
 
     var onValidation: (() -> Any?)? { get }
 
@@ -36,7 +36,7 @@ public extension IFormItemView {
         }
     }
 
-    var height: CGFloat {
+    var itemViewHeight: CGFloat {
         get {
             return 44.0
         }
