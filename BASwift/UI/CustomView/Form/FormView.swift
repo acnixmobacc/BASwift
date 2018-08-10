@@ -12,6 +12,8 @@ public class FormView: UIView {
 
     public static let AutomaticDimension: CGFloat = 0.0
 
+    let spacing: CGFloat
+
     // MARK: - UIFields
     lazy public var scrollView: UIScrollView = {
         let instance = UIScrollView()
@@ -31,7 +33,16 @@ public class FormView: UIView {
 
     // MARK: - Initialization
     override public init(frame: CGRect) {
+        self.spacing = 0.0
         super.init(frame: frame)
+
+        setupUI()
+    }
+
+    public init(frame: CGRect, spacing: CGFloat = 0.0) {
+        self.spacing = spacing
+        super.init(frame: frame)
+
         setupUI()
     }
 
@@ -111,7 +122,7 @@ public class FormView: UIView {
 
     fileprivate func setStackViewContraint() {
 
-        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8).isActive = true
+        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: spacing).isActive = true
         stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
