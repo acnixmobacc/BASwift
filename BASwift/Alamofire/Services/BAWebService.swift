@@ -8,34 +8,34 @@
 
 import Alamofire
 
-public class Service: ServiceProtocol {
+public class BAWebService: BAServiceProtocol {
 
     // MARK: - Properties
-    public var serviceConfig: ServiceConfig
+    public var serviceConfig: BAWebServiceConfig
 
     private(set) var sessionManager: Alamofire.SessionManager
 
     // MARK: - Initialization
-    public required init(withConfig config: ServiceConfig) {
+    public required init(withConfig config: BAWebServiceConfig) {
         self.serviceConfig = config
-        self.sessionManager = Alamofire.SessionManager(configuration: Service.createURLSession(withConfig: config))
+        self.sessionManager = Alamofire.SessionManager(configuration: BAWebService.createURLSession(withConfig: config))
     }
 
     // MARK: - Execute Methods
     @discardableResult
-    public func execute<T: Decodable>(request: APIRequest, onResponse:@escaping (Response<T>) -> Void) -> DataRequest {
+    public func execute<T: Decodable>(request: BAServiceRequest, onResponse:@escaping (BAServiceResponse<T>) -> Void) -> DataRequest {
 
         let dataRequest = createRequest(request)
 
         dataRequest.validate().responseJSON(completionHandler: { dataResponse in
-            onResponse(Response(dataResponse: dataResponse, request: request))
+            onResponse(BAServiceResponse(dataResponse: dataResponse, request: request))
         })
 
         return dataRequest
     }
 
     // MARK: - Private Methods
-    fileprivate static func createURLSession(withConfig config: ServiceConfig) -> URLSessionConfiguration {
+    fileprivate static func createURLSession(withConfig config: BAWebServiceConfig) -> URLSessionConfiguration {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = config.timeout
         configuration.timeoutIntervalForResource = config.timeout
@@ -43,7 +43,7 @@ public class Service: ServiceProtocol {
         return configuration
     }
 
-    fileprivate func createRequest(_ request: APIRequest) -> DataRequest {
+    fileprivate func createRequest(_ request: BAServiceRequest) -> DataRequest {
         guard let url = URL(string: serviceConfig.baseURL + request.endpoint) else {
             fatalError("URL not valid")
         }

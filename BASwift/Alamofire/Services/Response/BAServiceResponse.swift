@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public class Response<T: Decodable>: ResponseProtocol {
+public class BAServiceResponse<T: Decodable>: BAServiceResponseProtocol {
 
     // MARK: - Properties
     public var httpResponse: HTTPURLResponse?
@@ -23,7 +23,7 @@ public class Response<T: Decodable>: ResponseProtocol {
 
     public var timeline: Timeline
 
-    public var request: RequestProtocol
+    public var request: BAServiceRequestProtocol
 
     public var entity: T?
 
@@ -47,7 +47,7 @@ public class Response<T: Decodable>: ResponseProtocol {
     }
 
     // MARK: - Initializition
-    public init(dataResponse: DataResponse<Any>, request: RequestProtocol) {
+    public init(dataResponse: DataResponse<Any>, request: BAServiceRequestProtocol) {
         self.data = dataResponse.data
         self.httpResponse = dataResponse.response
         self.httpStatusCode = dataResponse.response?.statusCode

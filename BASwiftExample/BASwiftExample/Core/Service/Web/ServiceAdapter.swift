@@ -9,9 +9,9 @@
 import BASwift
 
 public class ServiceAdapter {
-    var service: Service
+    var service: BAWebService
 
-    init(withService service: Service) {
+    init(withService service: BAWebService) {
         self.service = service
     }
 }

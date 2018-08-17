@@ -6,6 +6,7 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
+import BASwift
 import UIKit
 
 class BrandViewController: BaseViewController {

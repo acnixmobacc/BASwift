@@ -16,9 +16,9 @@ public class CarServiceAdapter: ServiceAdapter, CarServiceAdapterProtocol {
     }
 
     public func getBrands(onSuccess:@escaping (BrandList) -> Void, onFailure:@escaping (Error?) -> Void) {
-        let request: APIRequest = APIRequest(endpoint: Endpoint.brand.rawValue)
+        let request: BAServiceRequest = BAServiceRequest(endpoint: Endpoint.brand.rawValue)
 
-        service.execute(request: request, onResponse: {(response: Response<BrandList>) in
+        service.execute(request: request, onResponse: {(response: BAServiceResponse<BrandList>) in
             guard let entity = response.entity else {
                 onFailure(response.error)
                 return

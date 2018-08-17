@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public protocol ResponseProtocol {
+public protocol BAServiceResponseProtocol {
 
     var httpResponse: HTTPURLResponse? { get }
 
@@ -22,7 +22,7 @@ public protocol ResponseProtocol {
 
     var timeline: Timeline { get }
 
-    var request: RequestProtocol { get }
+    var request: BAServiceRequestProtocol { get }
 
     func toString(_ encoding: String.Encoding) -> String?
 }

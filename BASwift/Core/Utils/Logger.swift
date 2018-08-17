@@ -6,7 +6,7 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 import UIKit
 
-class Logger {
+open class Logger {
 
     // MARK: - Log Type
     enum LogType: String {
@@ -18,7 +18,7 @@ class Logger {
     }
 
     // MARK: - Properties
-    static var isEnable: Bool = true
+    public static var isEnable: Bool = true
 
     // MARK: - Class Methods
     fileprivate class func log(message: String, type: LogType) {
@@ -27,23 +27,23 @@ class Logger {
         }
 
     }
-    class func verbose(_ message: String) {
+    public class func verbose(_ message: String) {
         log(message: message, type: .verbose)
     }
 
-    class func debug(_ message: String) {
+    public class func debug(_ message: String) {
         log(message: message, type: .debug)
     }
 
-    class func info(_ message: String) {
+    public class func info(_ message: String) {
         log(message: message, type: .info)
     }
 
-    class func warning(_ message: String) {
+    public class func warning(_ message: String) {
         log(message: message, type: .warning)
     }
 
-    class func error(_ message: String) {
+    public class func error(_ message: String) {
         log(message: message, type: .error)
     }
 

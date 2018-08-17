@@ -20,7 +20,7 @@ public class MessageView: UIView, IMessageView {
     public var handler: (() -> Void)?
 
     // MARK: - UIElement
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
 
     // MARK: - UI Actions
     @IBAction func action(_ sender: UIButton) {

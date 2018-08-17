@@ -8,12 +8,6 @@
 import SDWebImage
 import UIKit
 
-// MARK: - Image View Loader
-public protocol ImageViewLoader {
-    func setImage(withURLString urlString: String, isShowIndicator: Bool)
-    func setImage(withURLString urlString: String, placeholder: UIImage, isShowIndicator: Bool)
-}
-
 // MARK: - UIImageView
 extension UIImageView: ImageViewLoader {
 

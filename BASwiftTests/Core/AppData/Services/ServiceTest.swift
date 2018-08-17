@@ -11,7 +11,7 @@ import BASwift
 
 class ServiceTest: XCTestCase {
 
-    var service : Service!
+    var service : BAWebService!
     var request2 : Request!
     var request1 : Request!
     var request3 : Request!
@@ -20,7 +20,7 @@ class ServiceTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        service = Service.init(withConfig: ServiceConfig.init(baseURL: "http://localhost:8000"))
+        service = BAWebService.init(withConfig: BAWebServiceConfig.init(baseURL: "http://localhost:8000"))
         request1 = Request(endpoint: "/brands.json")
         request2 = Request(endpoint: "/brandlist.json")
         request3 = Request(endpoint: "/user.json")

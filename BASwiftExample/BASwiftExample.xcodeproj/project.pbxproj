@@ -31,9 +31,6 @@
 		B6299C8A20BD5F3B00276C28 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6299C8920BD5F3B00276C28 /* LocalDataSource.swift */; };
 		B6299C8C20BD8CC700276C28 /* LocalDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6299C8B20BD8CC700276C28 /* LocalDataSourceTests.swift */; };
 		B6299C8F20BD8CF600276C28 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6299C8E20BD8CF600276C28 /* LocalUser.swift */; };
-		B647856B20BC19C200025B06 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647856A20BC19C200025B06 /* RealmManager.swift */; };
-		B647856E20BC1ACC00025B06 /* RealmManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */; };
-		B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD3E20933D0500A2B931 /* Logger.swift */; };
 		B64ADD4220933D2300A2B931 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD4120933D2300A2B931 /* AppConfigurator.swift */; };
 		B64ADD442093671A00A2B931 /* Adapter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64ADD432093671A00A2B931 /* Adapter.storyboard */; };
 		B64ADD46209367D700A2B931 /* CollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ADD45209367D700A2B931 /* CollectionCoordinator.swift */; };
@@ -146,9 +143,6 @@
 		B6299C8920BD5F3B00276C28 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		B6299C8B20BD8CC700276C28 /* LocalDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceTests.swift; sourceTree = "<group>"; };
 		B6299C8E20BD8CF600276C28 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
-		B647856A20BC19C200025B06 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocol.swift; sourceTree = "<group>"; };
-		B64ADD3E20933D0500A2B931 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B64ADD4120933D2300A2B931 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		B64ADD432093671A00A2B931 /* Adapter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Adapter.storyboard; sourceTree = "<group>"; };
 		B64ADD45209367D700A2B931 /* CollectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCoordinator.swift; sourceTree = "<group>"; };
@@ -324,28 +318,10 @@
 			path = LocalDataSource;
 			sourceTree = "<group>";
 		};
-		B647856C20BC1AB400025B06 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				B647856D20BC1ACC00025B06 /* RealmManagerProtocol.swift */,
-				B647856A20BC19C200025B06 /* RealmManager.swift */,
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
-		B64ADD3D20933CF400A2B931 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				B64ADD3E20933D0500A2B931 /* Logger.swift */,
-			);
-			path = Logger;
-			sourceTree = "<group>";
-		};
 		B64ADD4020933D0F00A2B931 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				B656360E20BD259B0029AA17 /* LocalDataSource */,
-				B647856C20BC1AB400025B06 /* Realm */,
 				B64ADD4120933D2300A2B931 /* AppConfigurator.swift */,
 			);
 			path = Utils;
@@ -652,7 +628,6 @@
 				B6FC979920B4278D005C8F73 /* Service */,
 				B64ADD47209367FE00A2B931 /* Coordinator */,
 				B64ADD4020933D0F00A2B931 /* Utils */,
-				B64ADD3D20933CF400A2B931 /* Logger */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -873,6 +848,7 @@
 				B6F4B0A6204C281000110985 /* Resources */,
 				B64ADD4D2093704200A2B931 /* ShellScript */,
 				B242CE2E7C49B0CFE2141CFF /* [CP] Embed Pods Frameworks */,
+				B4B4C01D50118680F08B294E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1021,7 +997,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BASwift/BASwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -1032,7 +1007,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BASwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -1043,6 +1017,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B4C01D50118680F08B294E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-resources.sh",
+				"${PODS_ROOT}/../../BASwift/Core/CustomView/ContentMessage/MessageView.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MessageView.nib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B64ADD4D2093704200A2B931 /* ShellScript */ = {
@@ -1065,14 +1057,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B647856E20BC1ACC00025B06 /* RealmManagerProtocol.swift in Sources */,
 				B64F0766206D2501007194B5 /* FormViewModel.swift in Sources */,
 				B60BC0EB206BD57A00A69F08 /* LoginViewController.swift in Sources */,
 				B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */,
 				B6299C8A20BD5F3B00276C28 /* LocalDataSource.swift in Sources */,
 				B60BC0E5206BAA3500A69F08 /* DashboardItemCollectionViewCell.swift in Sources */,
 				B6CD998320C804D8005D95E7 /* CartViewController.swift in Sources */,
-				B647856B20BC19C200025B06 /* RealmManager.swift in Sources */,
 				B64ADD4A20936C6F00A2B931 /* BaseViewController.swift in Sources */,
 				B6CD998120C804C9005D95E7 /* RentViewController.swift in Sources */,
 				B6CDBBA520691AB1000DBAB3 /* UIItem.swift in Sources */,
@@ -1114,7 +1104,6 @@
 				B6D4195820A1F98D00B59EE3 /* ButtonFormItemView.swift in Sources */,
 				B6C6BC452086475D00347053 /* AppCoordinator.swift in Sources */,
 				B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */,
-				B64ADD3F20933D0500A2B931 /* Logger.swift in Sources */,
 				B6248DE620C0053400BA8C6F /* FormProtocols.swift in Sources */,
 				B6FC97BB20B4434B005C8F73 /* CarServiceAdapterProtocol.swift in Sources */,
 				B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */,

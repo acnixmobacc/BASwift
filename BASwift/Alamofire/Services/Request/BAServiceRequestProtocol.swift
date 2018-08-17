@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public protocol RequestProtocol {
+public protocol BAServiceRequestProtocol {
     var endpoint: String { get }
 
     var header: HeaderDictionary { get }

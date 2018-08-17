@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public class ServiceConfig {
+public class BAWebServiceConfig {
 
     private(set) var baseURL: String
 

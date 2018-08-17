@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.2.5.5'
+  s.version          = '0.3.0'
   s.summary          = 'BASwift Framework'
 
 
@@ -13,12 +13,33 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
-
-  s.source_files = 'BASwift/Core/**/*.swift', 'BASwift/Core/**/**/*.swift', 'BASwift/Core/**/**/**/*.swift', 'BASwift/UI/**/*.swift', 'BASwift/UI/**/**/*.swift'
-  s.resources = 'BASwift/UI/**/*.xib', 'BASwift/UI/**/**/*.xib'
-  s.dependency 'NVActivityIndicatorView'
-  s.dependency 'Alamofire', '~> 4.4'
-  s.dependency 'SDWebImage', '~> 4.0'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.static_framework = true
+  s.default_subspec = 'Core'
+
+  s.subspec 'Alamofire' do |as|
+    as.source_files = 'BASwift/Alamofire/**/*.swift', 'BASwif/Alamofire/**/**/*.swift'
+    as.dependency 'Alamofire', '~> 4.4'
+    as.dependency "BASwift/Core"
+  end
+
+  s.subspec 'SDWebImage' do |ss|
+    ss.source_files = 'BASwift/SDWebImage/*.swift'
+    ss.dependency 'SDWebImage', '~> 4.0'
+    ss.dependency "BASwift/Core"
+  end
+
+  s.subspec 'Realm' do |ss|
+    ss.source_files = 'BASwift/Realm/*.swift'
+    ss.dependency 'RealmSwift'
+    ss.dependency "BASwift/Core"
+  end
+
+
+  s.subspec 'Core' do |cs|
+    cs.source_files = 'BASwift/Core/**/*.swift', 'BASwift/Core/**/**/*.swift', 'BASwift/Core/**/**/**/*.swift'
+    cs.resources = 'BASwift/Core/**/*.xib', 'BASwift/Core/**/**/*.xib'
+    cs.dependency 'NVActivityIndicatorView'
+  end
+
 end
