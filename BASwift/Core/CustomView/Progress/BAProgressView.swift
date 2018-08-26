@@ -8,16 +8,11 @@
 
 import UIKit
 
-public class BAProgressView: UIView, Loadable, IContentable {
+public class BAProgressView: UIView, Loadable {
+
     // MARK: - Properties
     lazy open var progressHUD: ProgressHUDProtocol = {
         return NVProgressHUD(withOptions: NVProgressHUDOptions.nvProgressDefault)
-    }()
-
-    lazy open var errorViewManager: ErrorViewManagerProtocol = {
-        var messageView = BAErrorView.fromNib()
-        messageView.frame = CGRect(origin: .zero, size: self.frame.size)
-        return ErrorViewManager(withView: messageView)
     }()
 
 }

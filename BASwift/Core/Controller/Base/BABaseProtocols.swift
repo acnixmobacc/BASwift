@@ -9,12 +9,9 @@
 import UIKit
 
 // MARK: - View Interface
-public protocol BABaseViewProtocol: BABaseViewDelegate, Loadable {
+public protocol BABaseViewProtocol: BABaseViewDelegate, Loadable, ErrorDisplayable {
 
     var alertManager: IAlertManager { get set }
-
-    var errorViewManager: ErrorViewManagerProtocol { get set }
-
 }
 
 public protocol BABaseViewDelegate: class {

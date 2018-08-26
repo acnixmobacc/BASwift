@@ -11,7 +11,7 @@ import UIKit
 public protocol  ErrorViewProtocol {
     var handler: (() -> Void)? { get set }
 
-    func showMessage(withMessage message: String)
+    func show(with message: String)
 }
 
 public class BAErrorView: UIView, ErrorViewProtocol {
@@ -30,7 +30,7 @@ public class BAErrorView: UIView, ErrorViewProtocol {
     }
 
     // MARK: - Methods
-    public func showMessage(withMessage message: String) {
+    public func show(with message: String) {
         messageLabel.text = message
     }
 }

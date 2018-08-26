@@ -34,11 +34,8 @@
 		B68BE55B21271C9800A991AE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BE55A21271C9700A991AE /* Logger.swift */; };
 		B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* IAlertView.swift */; };
 		B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22F20651FD100FD397F /* AlertViewManager.swift */; };
-		B68ED23420653C7300FD397F /* ErrorViewManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23320653C7300FD397F /* ErrorViewManagerProtocol.swift */; };
-		B68ED23620653CBB00FD397F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23520653CBB00FD397F /* MessageView.swift */; };
-		B68ED23820653D0200FD397F /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68ED23720653D0200FD397F /* MessageView.xib */; };
-		B68ED23A2065429400FD397F /* ErrorViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED2392065429400FD397F /* ErrorViewManager.swift */; };
-		B68ED24020654FF500FD397F /* IContentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23F20654FF500FD397F /* IContentable.swift */; };
+		B68ED23620653CBB00FD397F /* BAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23520653CBB00FD397F /* BAErrorView.swift */; };
+		B68ED23820653D0200FD397F /* BAErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68ED23720653D0200FD397F /* BAErrorView.xib */; };
 		B692595820B3025300443DF4 /* BAWebServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692595720B3025300443DF4 /* BAWebServiceConfig.swift */; };
 		B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF8B20A417C60052B8AF /* PickerTextFieldDelegate.swift */; };
 		B694FF9720A47E4C0052B8AF /* IFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694FF9520A47E4C0052B8AF /* IFormItemView.swift */; };
@@ -156,11 +153,8 @@
 		B68BE55A21271C9700A991AE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B68ED22C20651D0C00FD397F /* IAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertView.swift; sourceTree = "<group>"; };
 		B68ED22F20651FD100FD397F /* AlertViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewManager.swift; sourceTree = "<group>"; };
-		B68ED23320653C7300FD397F /* ErrorViewManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewManagerProtocol.swift; sourceTree = "<group>"; };
-		B68ED23520653CBB00FD397F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		B68ED23720653D0200FD397F /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
-		B68ED2392065429400FD397F /* ErrorViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewManager.swift; sourceTree = "<group>"; };
-		B68ED23F20654FF500FD397F /* IContentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IContentable.swift; sourceTree = "<group>"; };
+		B68ED23520653CBB00FD397F /* BAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAErrorView.swift; sourceTree = "<group>"; };
+		B68ED23720653D0200FD397F /* BAErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAErrorView.xib; sourceTree = "<group>"; };
 		B692595720B3025300443DF4 /* BAWebServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAWebServiceConfig.swift; sourceTree = "<group>"; };
 		B694FF8B20A417C60052B8AF /* PickerTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextFieldDelegate.swift; sourceTree = "<group>"; };
 		B694FF9520A47E4C0052B8AF /* IFormItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFormItemView.swift; sourceTree = "<group>"; };
@@ -323,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				B6A807DD206381D900E03C26 /* BAProgressView.swift */,
-				B68ED23F20654FF500FD397F /* IContentable.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -333,13 +326,6 @@
 			children = (
 			);
 			path = Alert;
-			sourceTree = "<group>";
-		};
-		B61B89542132255B0017FB54 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		B61B8955213225630017FB54 /* Location */ = {
@@ -439,11 +425,8 @@
 		B68ED23B206542CD00FD397F /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				B61B894B2131E0320017FB54 /* ErrorDisplayable.swift */,
-				B68ED23320653C7300FD397F /* ErrorViewManagerProtocol.swift */,
-				B68ED2392065429400FD397F /* ErrorViewManager.swift */,
-				B68ED23520653CBB00FD397F /* MessageView.swift */,
-				B68ED23720653D0200FD397F /* MessageView.xib */,
+				B68ED23520653CBB00FD397F /* BAErrorView.swift */,
+				B68ED23720653D0200FD397F /* BAErrorView.xib */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -542,7 +525,6 @@
 				B61B8957213225700017FB54 /* Keyboard */,
 				B61B8956213225690017FB54 /* TouchID */,
 				B61B8955213225630017FB54 /* Location */,
-				B61B89542132255B0017FB54 /* Error */,
 				B61B8953213225530017FB54 /* Alert */,
 			);
 			path = Managers;
@@ -648,6 +630,7 @@
 		B6D7E69D20497BFF00A5D803 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B61B894B2131E0320017FB54 /* ErrorDisplayable.swift */,
 				B61B894D2131F37A0017FB54 /* Loadable.swift */,
 				B68BE55A21271C9700A991AE /* Logger.swift */,
 				B68BE5512127045300A991AE /* ImageViewLoaderProtocol.swift */,
@@ -834,7 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */,
-				B68ED23820653D0200FD397F /* MessageView.xib in Resources */,
+				B68ED23820653D0200FD397F /* BAErrorView.xib in Resources */,
 				B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */,
 				B6A558572074EFBE00698AEA /* data.json in Resources */,
 				B6A5585B2074F46600698AEA /* not_valid.json in Resources */,
@@ -940,10 +923,8 @@
 				B6F16DBE2080DC4D009A2848 /* NVProgressHUDOptions.swift in Sources */,
 				B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */,
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
-				B68ED24020654FF500FD397F /* IContentable.swift in Sources */,
 				B6F4B09B204C264C00110985 /* BASNode.swift in Sources */,
 				B6A807DE206381D900E03C26 /* BAProgressView.swift in Sources */,
-				B68ED23A2065429400FD397F /* ErrorViewManager.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
 				B654F1E620D7E6E500397D86 /* UICollectionReusableView+BASwift.swift in Sources */,
 				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
@@ -991,7 +972,7 @@
 				B6D7E6F8204BF97100A5D803 /* TableViewAdapter.swift in Sources */,
 				B6C26C6B20D78280001CAD94 /* UICollectionView+BASwift.swift in Sources */,
 				B68BE55821271B1900A991AE /* RealmManager.swift in Sources */,
-				B68ED23620653CBB00FD397F /* MessageView.swift in Sources */,
+				B68ED23620653CBB00FD397F /* BAErrorView.swift in Sources */,
 				B6D7E6D1204A126B00A5D803 /* Picker.swift in Sources */,
 				B6D7E6E4204BF2A700A5D803 /* BaseTableDataModel.swift in Sources */,
 				B68BE55B21271C9800A991AE /* Logger.swift in Sources */,
@@ -1003,7 +984,6 @@
 				B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* ProgressHUDProtocol.swift in Sources */,
-				B68ED23420653C7300FD397F /* ErrorViewManagerProtocol.swift in Sources */,
 				B67587DB20B400E00062A284 /* BAServiceResponseProtocol.swift in Sources */,
 				B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */,
 				B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */,
