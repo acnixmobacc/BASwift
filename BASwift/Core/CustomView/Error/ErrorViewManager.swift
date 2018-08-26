@@ -8,19 +8,24 @@
 
 import UIKit
 
-open class ContentManager: IContentManager {
+open class ErrorViewManager: ErrorViewManagerProtocol {
 
     // MARK: - Properties
-    public var view: UIView & IMessageView
+    public var view: UIView & ErrorViewProtocol
 
     // MARK: - Initialization
-    required public init(withView view: UIView & IMessageView) {
+    required public init(withView view: UIView & ErrorViewProtocol) {
         self.view = view
     }
 
     // MARK: - Methods
-    public func showMessage(withMessage message: String, handler: (() -> Void)? = nil) {
+    public func showError(with message: String, handler: (() -> Void)? = nil) {
         self.view.showMessage(withMessage: message)
         self.view.handler = handler
+    }
+
+    public func hideError() {
+        self.view.removeFromSuperview()
+        self.view.handler = nil
     }
 }

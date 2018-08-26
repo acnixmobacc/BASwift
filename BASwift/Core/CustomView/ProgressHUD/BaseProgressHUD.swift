@@ -7,26 +7,26 @@
 //
 import UIKit
 
-public class BaseProgressHUD: IProgressHUD {
+public class BaseProgressHUD: ProgressHUDProtocol {
 
     // MARK: - Properties
     public var isLoading: Bool
 
-    public var options: ProgressOptions
+    public var options: ProgressHUDOptions
 
     var activityIndicator: UIActivityIndicatorView!
 
     var transparentView: UIView?
 
     // MARK: - Initialization
-    public required init(withOptions options: ProgressOptions) {
+    public required init(withOptions options: ProgressHUDOptions) {
         self.options = options
         self.isLoading = false
         setProgressOptions()
     }
 
     // MARK: - Methods
-    public func start(inView view: UIView) {
+    public func show(in view: UIView) {
         isLoading = true
         options.showTransparentView ? startWithTransparentView(inView: view)
             : startWithoutTransparentView(inView: view)
@@ -35,7 +35,7 @@ public class BaseProgressHUD: IProgressHUD {
         self.activityIndicator.startAnimating()
     }
 
-    public func stop() {
+    public func hide() {
         isLoading = false
         transparentView?.removeFromSuperview()
         self.activityIndicator.stopAnimating()
@@ -43,7 +43,7 @@ public class BaseProgressHUD: IProgressHUD {
 
     // MARK: - Private Methods
     private func setProgressOptions() {
-        guard let nativeProgressOption = options as? NativeProgressOptions else {
+        guard let nativeProgressOption = options as? NativeProgressHUDOptions else {
             fatalError("Option not for native indicatoır")
         }
         self.activityIndicator = UIActivityIndicatorView(frame: nativeProgressOption.frame)

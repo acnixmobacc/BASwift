@@ -1026,7 +1026,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-resources.sh",
-				"${PODS_ROOT}/../../BASwift/Core/CustomView/ContentMessage/MessageView.xib",
+				"${PODS_ROOT}/../../BASwift/Core/CustomView/Error/MessageView.xib",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

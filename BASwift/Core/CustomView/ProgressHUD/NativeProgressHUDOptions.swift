@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class NativeProgressOptions: ProgressOptions {
+open class NativeProgressHUDOptions: ProgressHUDOptions {
 
     // MARK: - Properties
     var style: UIActivityIndicatorViewStyle
@@ -21,8 +21,8 @@ open class NativeProgressOptions: ProgressOptions {
     }
 
     // MARK: - Default Value
-    static let `nativeDefault`: ProgressOptions = {
-        return NativeProgressOptions()
+    static let `nativeDefault`: ProgressHUDOptions = {
+        return NativeProgressHUDOptions()
     }()
 
 }

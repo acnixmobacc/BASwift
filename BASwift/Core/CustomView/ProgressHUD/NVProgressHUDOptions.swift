@@ -9,7 +9,7 @@
 import NVActivityIndicatorView
 import UIKit
 
-open class NVProgressOptions: ProgressOptions {
+open class NVProgressHUDOptions: ProgressHUDOptions {
     // MARK: - Properties
     var type: NVActivityIndicatorType
 
@@ -27,7 +27,7 @@ open class NVProgressOptions: ProgressOptions {
     }
 
     // MARK: - Default Value
-    public static let `nvProgressDefault`: ProgressOptions = {
-        return NVProgressOptions()
+    public static let `nvProgressDefault`: ProgressHUDOptions = {
+        return NVProgressHUDOptions()
     }()
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol IContentable {
-    var contentManager: IContentManager { get }
+    var errorViewManager: ErrorViewManagerProtocol { get }
 
     func showMessage(withMessage message: String, handler: (() -> Void)?)
 }
@@ -18,13 +18,13 @@ public protocol IContentable {
 public extension IContentable where Self: UIView {
 
     func showMessage(withMessage message: String, handler: (() -> Void)?) {
-        contentManager.showMessage(withMessage: message) {[unowned self] in
-            self.contentManager.view.removeFromSuperview()
+        errorViewManager.showError(with: message) {[unowned self] in
+            self.errorViewManager.view.removeFromSuperview()
             if let handler = handler {
                 handler()
             }
         }
 
-        self.addSubview(contentManager.view)
+        self.addSubview(errorViewManager.view)
     }
 }

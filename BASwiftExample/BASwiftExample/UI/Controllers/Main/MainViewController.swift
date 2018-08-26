@@ -13,7 +13,7 @@ class MainViewController: BaseViewController {
 
     weak var coordinatorDelegate: ProductCoordinatorDelegate?
 
-    @IBOutlet weak private var childView: LoadableView!
+    @IBOutlet weak private var childView: BAProgressView!
 
     @IBOutlet weak private var childProgressButton: UIButton!
 
@@ -24,8 +24,7 @@ class MainViewController: BaseViewController {
     @IBAction func stopChildProgress(_ sender: Any) {
         childProgressButton.isSelected = !childProgressButton.isSelected
 
-        childProgressButton.isSelected ? childView.showLoading() :
-        childView.hideLoading()
+        childProgressButton.isSelected ? childView.showProgress() : childView.hideProgress()
     }
 
     @IBAction func toServiceAction(_ sender: Any) {

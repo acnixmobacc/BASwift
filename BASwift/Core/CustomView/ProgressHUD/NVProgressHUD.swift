@@ -8,11 +8,11 @@
 import NVActivityIndicatorView
 import UIKit
 
-open class NVProgressHUD: IProgressHUD {
+open class NVProgressHUD: ProgressHUDProtocol {
     // MARK: - Properties
     public var isLoading: Bool
 
-    public var options: ProgressOptions
+    public var options: ProgressHUDOptions
 
     var activityIndicator: NVActivityIndicatorView!
 
@@ -21,14 +21,14 @@ open class NVProgressHUD: IProgressHUD {
     var transparentView: UIView?
 
     // MARK: - Initalization
-    public required init(withOptions options: ProgressOptions) {
+    public required init(withOptions options: ProgressHUDOptions) {
         self.options = options
         self.isLoading = false
         setActivityIndicatorOption()
     }
 
     // MARK: - Methods
-    public func start(inView view: UIView) {
+    public func show(in view: UIView) {
         parentView = view
         isLoading = true
         options.showTransparentView ? startWithTransparentView(inView: view)
@@ -38,7 +38,7 @@ open class NVProgressHUD: IProgressHUD {
 
     }
 
-    public func stop() {
+    public func hide() {
         isLoading = false
         transparentView?.removeFromSuperview()
         parentView?.isUserInteractionEnabled = true
@@ -59,7 +59,7 @@ open class NVProgressHUD: IProgressHUD {
     }
 
     private func setUserInteractionStatus() {
-        guard let nvOptions = options as? NVProgressOptions else {
+        guard let nvOptions = options as? NVProgressHUDOptions else {
             fatalError("Options not nvprogressoption")
         }
 
@@ -67,7 +67,7 @@ open class NVProgressHUD: IProgressHUD {
     }
 
     private func setActivityIndicatorOption() {
-        guard let nvOptions = options as? NVProgressOptions else {
+        guard let nvOptions = options as? NVProgressHUDOptions else {
             fatalError("Options not nvprogressoption")
         }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ProgressOptions {
+open class ProgressHUDOptions {
     // MARK: - Properties
     var frame: CGRect
 
@@ -22,7 +22,7 @@ open class ProgressOptions {
     }
 
     // MARK: - Default Value
-    static let `default`: ProgressOptions = {
-        return ProgressOptions()
+    static let `default`: ProgressHUDOptions = {
+        return ProgressHUDOptions()
     }()
 }

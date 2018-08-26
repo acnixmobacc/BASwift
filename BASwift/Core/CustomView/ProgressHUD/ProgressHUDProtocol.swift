@@ -8,16 +8,16 @@
 
 import UIKit
 
-public protocol IProgressHUD {
+public protocol ProgressHUDProtocol {
 
-    var options: ProgressOptions { get set }
+    var options: ProgressHUDOptions { get set }
 
     var isLoading: Bool { get }
 
-    init(withOptions options: ProgressOptions)
+    init(withOptions options: ProgressHUDOptions)
 
-    func start(inView view: UIView)
+    func show(in view: UIView)
 
-    func stop()
+    func hide()
 
 }

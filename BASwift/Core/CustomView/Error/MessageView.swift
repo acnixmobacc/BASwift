@@ -8,13 +8,13 @@
 
 import UIKit
 
-public protocol  IMessageView {
+public protocol  ErrorViewProtocol {
     var handler: (() -> Void)? { get set }
 
     func showMessage(withMessage message: String)
 }
 
-public class MessageView: UIView, IMessageView {
+public class BAErrorView: UIView, ErrorViewProtocol {
 
     // MARK: - Properties
     public var handler: (() -> Void)?
