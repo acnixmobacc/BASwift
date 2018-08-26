@@ -32,8 +32,7 @@
 		B68BE55821271B1900A991AE /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BE55621271B1900A991AE /* RealmManager.swift */; };
 		B68BE55921271B1900A991AE /* RealmManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BE55721271B1900A991AE /* RealmManagerProtocol.swift */; };
 		B68BE55B21271C9800A991AE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68BE55A21271C9700A991AE /* Logger.swift */; };
-		B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* IAlertView.swift */; };
-		B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22F20651FD100FD397F /* AlertViewManager.swift */; };
+		B68ED22D20651D0C00FD397F /* AlertViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED22C20651D0C00FD397F /* AlertViewProtocol.swift */; };
 		B68ED23620653CBB00FD397F /* BAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68ED23520653CBB00FD397F /* BAErrorView.swift */; };
 		B68ED23820653D0200FD397F /* BAErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68ED23720653D0200FD397F /* BAErrorView.xib */; };
 		B692595820B3025300443DF4 /* BAWebServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692595720B3025300443DF4 /* BAWebServiceConfig.swift */; };
@@ -49,6 +48,7 @@
 		B6A5585E2074FF3F00698AEA /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5585D2074FF3F00698AEA /* Brand.swift */; };
 		B6A807DE206381D900E03C26 /* BAProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* BAProgressView.swift */; };
 		B6A807F22063E17D00E03C26 /* ProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */; };
+		B6AF58BE213344C20000AD73 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF58BD213344C20000AD73 /* AlertDisplayable.swift */; };
 		B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF943120DD131200341E8C /* CaseIterable.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* BAWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* BAWebService.swift */; };
 		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
@@ -151,8 +151,7 @@
 		B68BE55621271B1900A991AE /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		B68BE55721271B1900A991AE /* RealmManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocol.swift; sourceTree = "<group>"; };
 		B68BE55A21271C9700A991AE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		B68ED22C20651D0C00FD397F /* IAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAlertView.swift; sourceTree = "<group>"; };
-		B68ED22F20651FD100FD397F /* AlertViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewManager.swift; sourceTree = "<group>"; };
+		B68ED22C20651D0C00FD397F /* AlertViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewProtocol.swift; sourceTree = "<group>"; };
 		B68ED23520653CBB00FD397F /* BAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAErrorView.swift; sourceTree = "<group>"; };
 		B68ED23720653D0200FD397F /* BAErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAErrorView.xib; sourceTree = "<group>"; };
 		B692595720B3025300443DF4 /* BAWebServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAWebServiceConfig.swift; sourceTree = "<group>"; };
@@ -168,6 +167,7 @@
 		B6A5585D2074FF3F00698AEA /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		B6A807DD206381D900E03C26 /* BAProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAProgressView.swift; sourceTree = "<group>"; };
 		B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDProtocol.swift; sourceTree = "<group>"; };
+		B6AF58BD213344C20000AD73 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		B6AF943120DD131200341E8C /* CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterable.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* BAWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAWebService.swift; sourceTree = "<group>"; };
 		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
@@ -403,8 +403,7 @@
 		B68ED22B20651C7D00FD397F /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				B68ED22F20651FD100FD397F /* AlertViewManager.swift */,
-				B68ED22C20651D0C00FD397F /* IAlertView.swift */,
+				B68ED22C20651D0C00FD397F /* AlertViewProtocol.swift */,
 				B6D7E6CD204A126B00A5D803 /* BaseAlertView.swift */,
 			);
 			path = Alert;
@@ -497,11 +496,11 @@
 		B6A807F02063E16600E03C26 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */,
-				B6F16DBB2080DBB1009A2848 /* NativeProgressHUDOptions.swift */,
 				B6F16DB92080DB8A009A2848 /* ProgressHUDOptions.swift */,
-				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
 				B6F16DBD2080DC4D009A2848 /* NVProgressHUDOptions.swift */,
+				B6F16DBB2080DBB1009A2848 /* NativeProgressHUDOptions.swift */,
+				B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */,
+				B6D7E6CB204A126B00A5D803 /* BaseProgressHUD.swift */,
 				B6D7E6D7204A12D800A5D803 /* NVProgressHUD.swift */,
 			);
 			path = ProgressHUD;
@@ -632,6 +631,7 @@
 			children = (
 				B61B894B2131E0320017FB54 /* ErrorDisplayable.swift */,
 				B61B894D2131F37A0017FB54 /* Loadable.swift */,
+				B6AF58BD213344C20000AD73 /* AlertDisplayable.swift */,
 				B68BE55A21271C9700A991AE /* Logger.swift */,
 				B68BE5512127045300A991AE /* ImageViewLoaderProtocol.swift */,
 				B6D7E6B32049E59400A5D803 /* MockDataUtilities.swift */,
@@ -936,6 +936,7 @@
 				B6A558482074C54700698AEA /* BAServiceRequest.swift in Sources */,
 				B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */,
 				B6D7E6902049782C00A5D803 /* Double+BASwift.swift in Sources */,
+				B6AF58BE213344C20000AD73 /* AlertDisplayable.swift in Sources */,
 				B6D7E6E2204BF2A700A5D803 /* BaseCellModel.swift in Sources */,
 				B6D7E6AB2049CAAB00A5D803 /* UITableViewCell+BASwift.swift in Sources */,
 				B6D7E6C5204A03D600A5D803 /* Device+Screen.swift in Sources */,
@@ -948,8 +949,7 @@
 				B600205A206A544D00488AB4 /* DatePickerTextField.swift in Sources */,
 				B6F4B09C204C264C00110985 /* BASTree.swift in Sources */,
 				B6D7E6AC2049CAAB00A5D803 /* UIViewController+BASwift.swift in Sources */,
-				B68ED22D20651D0C00FD397F /* IAlertView.swift in Sources */,
-				B68ED23020651FD100FD397F /* AlertViewManager.swift in Sources */,
+				B68ED22D20651D0C00FD397F /* AlertViewProtocol.swift in Sources */,
 				B6C6BC4220863C3F00347053 /* KeyboardManager.swift in Sources */,
 				B63DA6E020C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift in Sources */,
 				B6D7E686204977BA00A5D803 /* BABaseProtocols.swift in Sources */,

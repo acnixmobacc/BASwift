@@ -13,8 +13,6 @@ protocol AppCoordinatorDelegate: class {
 
     func onPush(coordinator: Coordinator)
 
-    func startDisneyCoordinator(navigationController: UINavigationController)
-
     func startCollectionCoordinator(navigationController: UINavigationController, type: DashboardItemType)
 
     func startProductCoordinator(navigationController: UINavigationController)

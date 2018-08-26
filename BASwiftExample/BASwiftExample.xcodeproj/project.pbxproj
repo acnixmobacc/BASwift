@@ -19,9 +19,6 @@
 		B60BC0EB206BD57A00A69F08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC0EA206BD57A00A69F08 /* LoginViewController.swift */; };
 		B60BC0ED206BD58A00A69F08 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC0EC206BD58A00A69F08 /* LoginViewModel.swift */; };
 		B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC0EE206BD59A00A69F08 /* Login.storyboard */; };
-		B60D210020C67F2A00B0A929 /* DisneyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D20FF20C67F2A00B0A929 /* DisneyCoordinator.swift */; };
-		B60D210320C6847300B0A929 /* DisneyTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D210220C6847300B0A929 /* DisneyTabViewController.swift */; };
-		B60D210720C6C79300B0A929 /* Disney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60D210620C6C79300B0A929 /* Disney.storyboard */; };
 		B614D969206A89A300F97145 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614D968206A89A300F97145 /* LocationViewController.swift */; };
 		B6248DDB20BFFBB700BA8C6F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6248DDA20BFFBB700BA8C6F /* BaseModel.swift */; };
 		B6248DDD20BFFE4700BA8C6F /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6248DDC20BFFE4700BA8C6F /* LoginProtocols.swift */; };
@@ -60,10 +57,6 @@
 		B6C86C5C20B5489B0096551D /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */; };
 		B6C86C5F20B549AE0096551D /* LocalUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */; };
 		B6C86C6120B5538C0096551D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86C6020B5538C0096551D /* LoginModel.swift */; };
-		B6CD997F20C80486005D95E7 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CD997E20C80486005D95E7 /* InventoryViewController.swift */; };
-		B6CD998120C804C9005D95E7 /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CD998020C804C9005D95E7 /* RentViewController.swift */; };
-		B6CD998320C804D8005D95E7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CD998220C804D8005D95E7 /* CartViewController.swift */; };
-		B6CD998720C80694005D95E7 /* DisneyProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CD998620C80694005D95E7 /* DisneyProductViewController.swift */; };
 		B6CDBB9120690D19000DBAB3 /* DetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */; };
 		B6CDBB9320690D1F000DBAB3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */; };
 		B6CDBB9C2069104B000DBAB3 /* DetailItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDBB982069104B000DBAB3 /* DetailItemTableViewCell.swift */; };
@@ -131,9 +124,6 @@
 		B60BC0EA206BD57A00A69F08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B60BC0EC206BD58A00A69F08 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B60BC0EE206BD59A00A69F08 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		B60D20FF20C67F2A00B0A929 /* DisneyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCoordinator.swift; sourceTree = "<group>"; };
-		B60D210220C6847300B0A929 /* DisneyTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyTabViewController.swift; sourceTree = "<group>"; };
-		B60D210620C6C79300B0A929 /* Disney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Disney.storyboard; sourceTree = "<group>"; };
 		B614D968206A89A300F97145 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B6248DDA20BFFBB700BA8C6F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B6248DDC20BFFE4700BA8C6F /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
@@ -172,10 +162,6 @@
 		B6C86C5B20B5489B0096551D /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
 		B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserDataProvider.swift; sourceTree = "<group>"; };
 		B6C86C6020B5538C0096551D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B6CD997E20C80486005D95E7 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
-		B6CD998020C804C9005D95E7 /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
-		B6CD998220C804D8005D95E7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		B6CD998620C80694005D95E7 /* DisneyProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyProductViewController.swift; sourceTree = "<group>"; };
 		B6CDBB9020690D19000DBAB3 /* DetailTableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableAdapter.swift; sourceTree = "<group>"; };
 		B6CDBB9220690D1E000DBAB3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B6CDBB982069104B000DBAB3 /* DetailItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -288,16 +274,6 @@
 				B6C86C6020B5538C0096551D /* LoginModel.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		B60D210120C67F4700B0A929 /* Disney */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD998520C8065F005D95E7 /* Product */,
-				B6CD998420C80653005D95E7 /* Tabs */,
-				B60D210220C6847300B0A929 /* DisneyTabViewController.swift */,
-			);
-			path = Disney;
 			sourceTree = "<group>";
 		};
 		B614D967206A898E00F97145 /* Location */ = {
@@ -421,7 +397,6 @@
 				B60BC0EE206BD59A00A69F08 /* Login.storyboard */,
 				B64ADD432093671A00A2B931 /* Adapter.storyboard */,
 				B699E9C520A08C0800FF42BB /* Product.storyboard */,
-				B60D210620C6C79300B0A929 /* Disney.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -441,7 +416,6 @@
 				B60831082087918C009A5134 /* LoginCoordinator.swift */,
 				B64ADD45209367D700A2B931 /* CollectionCoordinator.swift */,
 				B699E9C320A08BB600FF42BB /* ProductCoordinator.swift */,
-				B60D20FF20C67F2A00B0A929 /* DisneyCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -452,48 +426,6 @@
 				B6C86C5E20B549AE0096551D /* LocalUserDataProvider.swift */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		B6CD997B20C80460005D95E7 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD998220C804D8005D95E7 /* CartViewController.swift */,
-			);
-			path = Cart;
-			sourceTree = "<group>";
-		};
-		B6CD997C20C8046F005D95E7 /* Rent */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD998020C804C9005D95E7 /* RentViewController.swift */,
-			);
-			path = Rent;
-			sourceTree = "<group>";
-		};
-		B6CD997D20C80475005D95E7 /* Inventory */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD997E20C80486005D95E7 /* InventoryViewController.swift */,
-			);
-			path = Inventory;
-			sourceTree = "<group>";
-		};
-		B6CD998420C80653005D95E7 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD997D20C80475005D95E7 /* Inventory */,
-				B6CD997C20C8046F005D95E7 /* Rent */,
-				B6CD997B20C80460005D95E7 /* Cart */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		B6CD998520C8065F005D95E7 /* Product */ = {
-			isa = PBXGroup;
-			children = (
-				B6CD998620C80694005D95E7 /* DisneyProductViewController.swift */,
-			);
-			path = Product;
 			sourceTree = "<group>";
 		};
 		B6CDBB8E20690CCB000DBAB3 /* Detail */ = {
@@ -669,7 +601,6 @@
 				B64F25232094604B00BC569B /* Service */,
 				B6CDBB8E20690CCB000DBAB3 /* Detail */,
 				B6A807E8206386E200E03C26 /* Main */,
-				B60D210120C67F4700B0A929 /* Disney */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -936,7 +867,6 @@
 				B6D4195620A1F97500B59EE3 /* ButtonFormItemView.xib in Resources */,
 				B6CF391520A2CAD6006FCD8A /* DatePickerFormItemView.xib in Resources */,
 				B6D4195420A1F44800B59EE3 /* TextFormItemView.xib in Resources */,
-				B60D210720C6C79300B0A929 /* Disney.storyboard in Resources */,
 				B6CF391120A2CA3A006FCD8A /* PickerFormItemView.xib in Resources */,
 				B6F4B0B3204C281000110985 /* Assets.xcassets in Resources */,
 				B60BC0EF206BD59A00A69F08 /* Login.storyboard in Resources */,
@@ -1026,11 +956,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BASwiftExample/Pods-BASwiftExample-resources.sh",
-				"${PODS_ROOT}/../../BASwift/Core/CustomView/Error/MessageView.xib",
+				"${PODS_ROOT}/../../BASwift/Core/CustomView/Error/BAErrorView.xib",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MessageView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BAErrorView.nib",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1062,9 +992,7 @@
 				B694FF8E20A4577F0052B8AF /* FormValidator.swift in Sources */,
 				B6299C8A20BD5F3B00276C28 /* LocalDataSource.swift in Sources */,
 				B60BC0E5206BAA3500A69F08 /* DashboardItemCollectionViewCell.swift in Sources */,
-				B6CD998320C804D8005D95E7 /* CartViewController.swift in Sources */,
 				B64ADD4A20936C6F00A2B931 /* BaseViewController.swift in Sources */,
-				B6CD998120C804C9005D95E7 /* RentViewController.swift in Sources */,
 				B6CDBBA520691AB1000DBAB3 /* UIItem.swift in Sources */,
 				B60831092087918C009A5134 /* LoginCoordinator.swift in Sources */,
 				B699E9C420A08BB600FF42BB /* ProductCoordinator.swift in Sources */,
@@ -1073,7 +1001,6 @@
 				B6D4195220A1F43300B59EE3 /* TextFormItemView.swift in Sources */,
 				B6CDBBB120691D30000DBAB3 /* SampleCollectionViewAdapter.swift in Sources */,
 				B6CDBBA220691A9B000DBAB3 /* UIDetailItem.swift in Sources */,
-				B60D210320C6847300B0A929 /* DisneyTabViewController.swift in Sources */,
 				B6CF391320A2CACB006FCD8A /* DatePickerFormItemView.swift in Sources */,
 				B6FC97AE20B439D2005C8F73 /* CarServiceAdapter.swift in Sources */,
 				B60BC0E8206BB4BC00A69F08 /* DashboardCollectionAdapterDelegate.swift in Sources */,
@@ -1082,11 +1009,9 @@
 				B614D969206A89A300F97145 /* LocationViewController.swift in Sources */,
 				B6CDBBAC20691C12000DBAB3 /* SampleViewController.swift in Sources */,
 				B699E9C920A08F8200FF42BB /* FormManager.swift in Sources */,
-				B60D210020C67F2A00B0A929 /* DisneyCoordinator.swift in Sources */,
 				B6248DDD20BFFE4700BA8C6F /* LoginProtocols.swift in Sources */,
 				B60BC0D9206BA57500A69F08 /* DashboardViewController.swift in Sources */,
 				B6CDBBB720691D75000DBAB3 /* UISampleItem.swift in Sources */,
-				B6CD998720C80694005D95E7 /* DisneyProductViewController.swift in Sources */,
 				B6FC97C420B4442D005C8F73 /* UserBridgeProtocol.swift in Sources */,
 				B6C86C6120B5538C0096551D /* LoginModel.swift in Sources */,
 				B6CDBB9E2069104B000DBAB3 /* ItemTableViewCell.swift in Sources */,
@@ -1095,7 +1020,6 @@
 				B6F4B0AC204C281000110985 /* AppDelegate.swift in Sources */,
 				B6C6BC47208647F100347053 /* Coordinator.swift in Sources */,
 				B6D4194E20A1880700B59EE3 /* CustomFormViewController.swift in Sources */,
-				B6CD997F20C80486005D95E7 /* InventoryViewController.swift in Sources */,
 				B6FC97C920B4453E005C8F73 /* BrandModel.swift in Sources */,
 				B6CDBBBA20692213000DBAB3 /* SampleItemCollectionViewCell.swift in Sources */,
 				B6CF390F20A2C99E006FCD8A /* PickerFormItemView.swift in Sources */,

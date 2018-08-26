@@ -38,9 +38,8 @@ public extension Loadable where Self: UIView {
     }
 }
 
-public extension Loadable where Self: UIViewController {
-
-    func showProgress() {
-        progressHUD.show(in: self.view)
-    }
-}
+//public extension Loadable where Self: BABaseViewController {
+//    func showProgress() {
+//        progressHUD.show(in: self.view)
+//    }
+//}

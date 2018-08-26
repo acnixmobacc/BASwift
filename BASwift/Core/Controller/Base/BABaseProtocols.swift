@@ -9,25 +9,9 @@
 import UIKit
 
 // MARK: - View Interface
-public protocol BABaseViewProtocol: BABaseViewDelegate, Loadable, ErrorDisplayable {
+public protocol BABaseViewProtocol: BABaseViewDelegate, ErrorDisplayable {}
 
-    var alertManager: IAlertManager { get set }
-}
-
-public protocol BABaseViewDelegate: class {
-
-    func showProgress()
-
-    func showAlert(_ alert: BaseAlert)
-
-    func hideProgress()
-}
-
-public extension BABaseViewProtocol where Self: UIViewController {
-    func showAlert(_ alert: BaseAlert) {
-        alertManager.showAlert(withAlert: alert)
-    }
-}
+public protocol BABaseViewDelegate: Loadable, AlertDisplayable { }
 
 // MARK: - View Model Interface
 public protocol BABaseViewModelProtocol: class {

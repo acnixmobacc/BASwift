@@ -7,7 +7,7 @@
 //
 import UIKit
 
-open class BaseAlertView: IAlertView {
+open class BaseAlertView: AlertViewProtocol {
 
     // MARK: - Methods
     public func show(vc: UIViewController, alert: IAlert) {

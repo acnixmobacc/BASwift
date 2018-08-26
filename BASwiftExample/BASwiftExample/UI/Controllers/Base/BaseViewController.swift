@@ -8,7 +8,7 @@
 
 import BASwift
 
-class BaseViewController: BABaseViewController {
+public class BaseViewController: BABaseViewController {
 
     deinit {
         Logger.debug("Deinit \(self)")

@@ -18,26 +18,26 @@ public protocol ErrorDisplayable: class {
 
 }
 
-public extension ErrorDisplayable where Self: UIViewController {
-
-    func showError(with message: String, frame: CGRect? = nil, retry: (() -> Void)?) {
-
-        errorView.show(with: message)
-        errorView.handler = retry
-
-        guard let contentViewFrame = frame else {
-            errorView.frame = self.view.bounds
-            self.view.addSubview(errorView)
-            return
-        }
-
-        errorView.frame = contentViewFrame
-        self.view.addSubview(errorView)
-
-    }
-
-    func hideError() {
-        errorView.removeFromSuperview()
-    }
-
-}
+//public extension ErrorDisplayable where Self: BABaseViewController {
+//
+//    func showError(with message: String, frame: CGRect? = nil, retry: (() -> Void)?) {
+//
+//        errorView.show(with: message)
+//        errorView.handler = retry
+//
+//        guard let contentViewFrame = frame else {
+//            errorView.frame = self.view.bounds
+//            self.view.addSubview(errorView)
+//            return
+//        }
+//
+//        errorView.frame = contentViewFrame
+//        self.view.addSubview(errorView)
+//
+//    }
+//
+//    func hideError() {
+//        errorView.removeFromSuperview()
+//    }
+//
+//}

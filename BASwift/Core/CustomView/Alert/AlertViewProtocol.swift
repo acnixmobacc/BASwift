@@ -8,6 +8,6 @@
 
 import UIKit
 
-public protocol IAlertView {
+public protocol AlertViewProtocol {
     func show(vc: UIViewController, alert: IAlert)
 }

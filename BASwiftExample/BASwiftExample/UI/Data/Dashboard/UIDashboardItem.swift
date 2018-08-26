@@ -13,7 +13,6 @@ enum AppStoryboard: String {
     case login = "Login"
     case adapter = "Adapter"
     case product = "Product"
-    case disney = "Disney"
 
     var name: String {
         return self.rawValue
@@ -29,7 +28,6 @@ enum DashboardItemType: String {
     case login = "Login"
     case form = "Form"
     case customForm = "CustomForm"
-    case disney = "Disney"
 }
 
 class UIDashboardItem: NSObject {
