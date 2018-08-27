@@ -32,4 +32,9 @@ open class PullableTableViewAdapter: TableViewAdapter {
     open func pull() {
         pullableDelegate?.onPull()
     }
+
+    @objc
+    open func stopPull() {
+        refresher.endRefreshing()
+    }
 }

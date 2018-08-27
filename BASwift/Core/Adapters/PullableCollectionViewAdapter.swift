@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PullableCollectionViewAdapter: CollectionViewAdapter {
+open class PullableCollectionViewAdapter: CollectionViewAdapter {
 
     // MARK: - Properties
     public let refresher: UIRefreshControl
@@ -31,5 +31,10 @@ class PullableCollectionViewAdapter: CollectionViewAdapter {
     @objc
     open func pull() {
         pullableDelegate?.onPull()
+    }
+
+    @objc
+    open func stopPull() {
+        refresher.endRefreshing()
     }
 }

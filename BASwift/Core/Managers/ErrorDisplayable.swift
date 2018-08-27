@@ -17,3 +17,24 @@ public protocol ErrorDisplayable: class {
     func hideError()
 
 }
+
+public extension ErrorDisplayable where Self: UIView {
+    func showError(with message: String, frame: CGRect?, retry: (() -> Void)?) {
+        errorView.removeFromSuperview()
+        errorView.show(with: message)
+        errorView.handler = retry
+
+        guard let contentViewFrame = frame else {
+            errorView.frame = self.bounds
+            self.addSubview(errorView)
+            return
+        }
+
+        errorView.frame = contentViewFrame
+        self.addSubview(errorView)
+    }
+
+    func hideError() {
+        errorView.removeFromSuperview()
+    }
+}
