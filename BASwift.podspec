@@ -29,10 +29,10 @@ Pod::Spec.new do |s|
     ss.dependency "BASwift/Core"
   end
 
-  s.subspec 'Realm' do |ss|
-    ss.source_files = 'BASwift/Realm/*.swift'
-    ss.dependency 'RealmSwift'
-    ss.dependency "BASwift/Core"
+  s.subspec 'Realm' do |rs|
+    rs.source_files = 'BASwift/Realm/*.swift'
+    rs.dependency 'RealmSwift'
+    rs.dependency "BASwift/Core"
   end
 
 
