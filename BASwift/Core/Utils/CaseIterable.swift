@@ -12,6 +12,7 @@ public protocol CaseIterable {
     associatedtype AllCases: Collection where AllCases.Element == Self
     static var allCases: AllCases { get }
 }
+
 public extension CaseIterable where Self: Hashable {
     static var allCases: [Self] {
         return [Self](AnySequence { () -> AnyIterator<Self> in
