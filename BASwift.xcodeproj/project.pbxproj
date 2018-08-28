@@ -10,6 +10,8 @@
 		8328C6A09180C5A393446EE9 /* Pods_BASwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A99AF4C1002E5D1029AC47E /* Pods_BASwift.framework */; };
 		B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6002057206A3ADF00488AB4 /* DatePicker.swift */; };
 		B600205A206A544D00488AB4 /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6002059206A544D00488AB4 /* DatePickerTextField.swift */; };
+		B6044E8D21355A1D0030B6DF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044E8C21355A1D0030B6DF /* Storyboarded.swift */; };
+		B6044E8F213566E90030B6DF /* NSObject+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */; };
 		B6140F642049762A003BF29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F632049762A003BF29F /* AppDelegate.swift */; };
 		B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6A2049762A003BF29F /* Assets.xcassets */; };
 		B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6C2049762A003BF29F /* LaunchScreen.storyboard */; };
@@ -128,6 +130,8 @@
 		994615D20FCD98BF84CCBDCC /* Pods-BASwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BASwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BASwiftTests/Pods-BASwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6002057206A3ADF00488AB4 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B6002059206A544D00488AB4 /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
+		B6044E8C21355A1D0030B6DF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+BASwift.swift"; sourceTree = "<group>"; };
 		B6140F602049762A003BF29F /* BASwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6140F632049762A003BF29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6140F6A2049762A003BF29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 		B6C6BC4020863C0D00347053 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B6044E8C21355A1D0030B6DF /* Storyboarded.swift */,
 				B61B894D2131F37A0017FB54 /* Loadable.swift */,
 				B6479C452133DFB800E6B38F /* Pullable.swift */,
 				B61B894B2131E0320017FB54 /* ErrorDisplayable.swift */,
@@ -607,6 +612,7 @@
 				B6D7E6892049782B00A5D803 /* Int+BASwift.swift */,
 				B6D7E6882049782B00A5D803 /* String+BASwift.swift */,
 				B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */,
+				B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -926,6 +932,7 @@
 				B6D7E6E3204BF2A700A5D803 /* BaseCollectionCellModel.swift in Sources */,
 				B6F4B09B204C264C00110985 /* BASNode.swift in Sources */,
 				B6A807DE206381D900E03C26 /* BAProgressView.swift in Sources */,
+				B6044E8F213566E90030B6DF /* NSObject+BASwift.swift in Sources */,
 				B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */,
 				B654F1E620D7E6E500397D86 /* UICollectionReusableView+BASwift.swift in Sources */,
 				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
@@ -969,6 +976,7 @@
 				B68BE5522127045300A991AE /* ImageViewLoaderProtocol.swift in Sources */,
 				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
 				B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */,
+				B6044E8D21355A1D0030B6DF /* Storyboarded.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
 				B6D7E6F8204BF97100A5D803 /* TableViewAdapter.swift in Sources */,
 				B6C26C6B20D78280001CAD94 /* UICollectionView+BASwift.swift in Sources */,

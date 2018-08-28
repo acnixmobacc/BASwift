@@ -11,12 +11,8 @@ import UIKit
 public extension UIViewController {
 
     // MARK: - Static Properties
-    static var className: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last!
-    }
-
-    static var identifier: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last!
+    class var identifier: String {
+        return className
     }
 
     func setBackgroundColor(fromImage image: UIImage) {

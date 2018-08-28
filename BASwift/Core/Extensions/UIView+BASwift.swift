@@ -22,11 +22,6 @@ public extension UIView {
         }
     }
 
-    // MARK: - Static Properties
-    static var className: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last!
-    }
-
     // MARK: - Safe Area Anchors
     var safeTopAnchor: NSLayoutYAxisAnchor {
         if #available(iOS 11.0, *) {
