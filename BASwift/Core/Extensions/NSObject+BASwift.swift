@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSObject {
+public extension NSObject {
     // MARK: - Static Properties
     @objc class var className: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
