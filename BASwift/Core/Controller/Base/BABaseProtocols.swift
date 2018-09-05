@@ -14,11 +14,7 @@ public protocol BABaseViewProtocol: BABaseViewDelegate, ErrorDisplayable {}
 public protocol BABaseViewDelegate: Loadable, AlertDisplayable { }
 
 // MARK: - View Model Interface
-public protocol BABaseViewModelProtocol: class {
-    init()
-}
+public protocol BABaseViewModelProtocol: class {}
 
 // MARK: - Model Interface
-public protocol BABaseModelProtocol: class {
-    init()
-}
+public protocol BABaseModelProtocol: class {}

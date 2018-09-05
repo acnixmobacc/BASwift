@@ -61,8 +61,6 @@
 		B6C26C6B20D78280001CAD94 /* UICollectionView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */; };
 		B6C6BC4220863C3F00347053 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C6BC4120863C3F00347053 /* KeyboardManager.swift */; };
 		B6D7E67D204976F300A5D803 /* BABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67C204976F300A5D803 /* BABaseViewController.swift */; };
-		B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */; };
-		B6D7E6812049770700A5D803 /* BABaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6802049770700A5D803 /* BABaseModel.swift */; };
 		B6D7E686204977BA00A5D803 /* BABaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */; };
 		B6D7E68D2049782C00A5D803 /* String+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6882049782B00A5D803 /* String+BASwift.swift */; };
 		B6D7E68E2049782C00A5D803 /* Int+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6892049782B00A5D803 /* Int+BASwift.swift */; };
@@ -185,8 +183,6 @@
 		B6C26C6A20D78280001CAD94 /* UICollectionView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+BASwift.swift"; sourceTree = "<group>"; };
 		B6C6BC4120863C3F00347053 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		B6D7E67C204976F300A5D803 /* BABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewController.swift; sourceTree = "<group>"; };
-		B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseViewModel.swift; sourceTree = "<group>"; };
-		B6D7E6802049770700A5D803 /* BABaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseModel.swift; sourceTree = "<group>"; };
 		B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BABaseProtocols.swift; sourceTree = "<group>"; };
 		B6D7E6882049782B00A5D803 /* String+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BASwift.swift"; sourceTree = "<group>"; };
 		B6D7E6892049782B00A5D803 /* Int+BASwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+BASwift.swift"; sourceTree = "<group>"; };
@@ -587,8 +583,6 @@
 			children = (
 				B6D7E685204977BA00A5D803 /* BABaseProtocols.swift */,
 				B6D7E67C204976F300A5D803 /* BABaseViewController.swift */,
-				B6D7E67E204976FF00A5D803 /* BABaseViewModel.swift */,
-				B6D7E6802049770700A5D803 /* BABaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -938,7 +932,6 @@
 				B6002058206A3ADF00488AB4 /* DatePicker.swift in Sources */,
 				B6F4B09A204C264C00110985 /* BASQueue.swift in Sources */,
 				B6D7E6E5204BF2A700A5D803 /* BaseCollectionSectionModel.swift in Sources */,
-				B6D7E67F204976FF00A5D803 /* BABaseViewModel.swift in Sources */,
 				B6D7E6D2204A126B00A5D803 /* BaseAlertView.swift in Sources */,
 				B6F16DBA2080DB8B009A2848 /* ProgressHUDOptions.swift in Sources */,
 				B6A558482074C54700698AEA /* BAServiceRequest.swift in Sources */,
@@ -1003,7 +996,6 @@
 				B692595820B3025300443DF4 /* BAWebServiceConfig.swift in Sources */,
 				B6FC979620B4231A005C8F73 /* BAServiceRequestProtocol.swift in Sources */,
 				B6D7E68F2049782C00A5D803 /* Float+BASwift.swift in Sources */,
-				B6D7E6812049770700A5D803 /* BABaseModel.swift in Sources */,
 				B68BE55921271B1900A991AE /* RealmManagerProtocol.swift in Sources */,
 				B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */,
 				B61B894C2131E0320017FB54 /* ErrorDisplayable.swift in Sources */,
