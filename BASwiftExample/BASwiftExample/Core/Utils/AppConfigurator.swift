@@ -6,7 +6,7 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
-import Foundation
+import BASwift
 
 class AppConfigurator {
 

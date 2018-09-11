@@ -29,7 +29,8 @@ class CustomAlert: BaseAlert {
         super.init(message: message, title: title, handler: handler)
     }
 }
-class CustomAlertView: IAlertView {
+
+class CustomAlertView: AlertViewProtocol {
     func show(vc: UIViewController, alert: IAlert) {
 
         let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: UIAlertControllerStyle.alert)
@@ -62,8 +63,8 @@ class LoginViewController: BaseViewController {
         return TouchIDManager()
     }()
 
-    override lazy var alertManager: IAlertManager = {
-        return AlertViewManager(alertView: CustomAlertView(), with: self)
+    override lazy var alertView: AlertViewProtocol = {
+        return CustomAlertView()
     }()
 
     var disposeBag: DisposeBag = DisposeBag()
@@ -92,7 +93,7 @@ class LoginViewController: BaseViewController {
     }
 
     func showDialog() {
-        alertManager.showAlert(withAlert: CustomAlert(message: "Message", title: "Title", handler: {_ in
+        showAlert(with: CustomAlert(message: "Message", title: "Title", handler: {_ in
             Logger.debug("Debug handler")
         }, cancelHandler: {_ in
             Logger.debug("Cancel handler")
@@ -105,8 +106,7 @@ class LoginViewController: BaseViewController {
             strongSelf.coordinatorDelegate?.dismiss()
         }, errorBlock: {[weak self] error in
             guard let strongSelf = self else { return }
-            strongSelf.showAlert(BaseAlert(message: error.localizedDescription))
+            strongSelf.showAlert(with: BaseAlert(message: error.localizedDescription))
         })
     }
-
 }

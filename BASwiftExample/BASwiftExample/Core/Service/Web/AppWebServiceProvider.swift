@@ -14,12 +14,12 @@ public class AppWebServiceProvider {
 
     private(set) var userServiceAdapter: UserServiceAdapterProtocol
 
-    private(set) var service: Service
+    private(set) var service: BAWebService
 
     static let instance: AppWebServiceProvider = AppWebServiceProvider()
 
     private init() {
-        self.service = Service(withConfig: ServiceConfig(baseURL: "http://localhost:8000"))
+        self.service = BAWebService(withConfig: BAWebServiceConfig(baseURL: "http://localhost:8000"))
         self.carServiceAdapter = CarServiceAdapter(withService: service)
         self.userServiceAdapter = UserServiceAdapter(withService: service)
     }

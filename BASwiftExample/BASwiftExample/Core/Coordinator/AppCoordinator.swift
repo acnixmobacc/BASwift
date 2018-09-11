@@ -45,13 +45,6 @@ extension AppCoordinator: AppCoordinatorDelegate {
         showDashboard(navigationController: navigationController)
     }
 
-    func startDisneyCoordinator(navigationController: UINavigationController) {
-        let disneyCoordinator = DisneyCoordinator(withNavigationController: navigationController,
-                                                  appCoordinatorDelegate: self)
-        onPush(coordinator: disneyCoordinator)
-        disneyCoordinator.start()
-    }
-
     func startCollectionCoordinator(navigationController: UINavigationController, type: DashboardItemType) {
         let collectionCoordinator = CollectionCoordinator(withNavigationController: navigationController,
                                                           appCoordinatorDelegate: self)

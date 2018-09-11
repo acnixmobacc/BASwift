@@ -13,6 +13,7 @@ def ui_pods
     pod 'NVActivityIndicatorView'
     pod 'Alamofire', '~> 4.4'
     pod 'SDWebImage', '~> 4.0'
+    pod 'RealmSwift'
 end
 
 target 'BASwift' do

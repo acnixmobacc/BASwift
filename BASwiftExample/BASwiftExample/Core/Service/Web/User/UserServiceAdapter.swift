@@ -15,9 +15,9 @@ public class UserServiceAdapter: ServiceAdapter, UserServiceAdapterProtocol {
     }
 
     public func getUser(onSuccess : @escaping (User) -> Void, onFailure: @escaping (Error?) -> Void) {
-        let request = APIRequest(endpoint: Endpoint.user.rawValue)
+        let request = BAServiceRequest(endpoint: Endpoint.user.rawValue)
 
-        service.execute(request: request, onResponse: {(response: Response<User>) in
+        service.execute(request: request, onResponse: {(response: BAServiceResponse<User>) in
             guard let entity = response.entity else {
                 onFailure(response.error)
                 return

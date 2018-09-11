@@ -11,11 +11,13 @@ target 'BASwiftExample' do
 
   # Pods for BASwiftExample
   pod 'BASwift', :path => "../"
+  pod 'BASwift/SDWebImage', :path => "../"
+  pod 'BASwift/Alamofire', :path => "../"
+  pod 'BASwift/Realm', :path => "../"
   #pod 'BASwift', :git => 'https://github.com/brkakkaya/baswift.git'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'SwiftLint'
-  pod 'RealmSwift'
 
   target 'BASwiftExampleTests' do
     inherit! :search_paths
