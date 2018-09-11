@@ -15,10 +15,13 @@ open class KeyboardManager: NSObject {
 
     var oldBottomContentInset: CGFloat
 
+    private let bottomMargin: CGFloat
+
     // MARK: - Initialization
-    public init(withScrollView scrollView: UIScrollView) {
+    public init(withScrollView scrollView: UIScrollView, bottomMargin: CGFloat = 0.0) {
         self.scrollView = scrollView
         self.oldBottomContentInset = scrollView.contentInset.bottom
+        self.bottomMargin = bottomMargin
         super.init()
     }
 
@@ -38,7 +41,7 @@ open class KeyboardManager: NSObject {
     func keyboardWillShow(_ notification: Notification) {
         if let userInfo = notification.userInfo, let value = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue {
             let keyboardFrame = value.cgRectValue
-            let contentInset = UIEdgeInsets(top: scrollView.contentInset.top, left: 0.0, bottom: keyboardFrame.height, right: 0.0)
+            let contentInset = UIEdgeInsets(top: scrollView.contentInset.top, left: 0.0, bottom: keyboardFrame.height + bottomMargin, right: 0.0)
             setTableViewEdgeInset(contentInset)
         }
     }
