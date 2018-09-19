@@ -20,8 +20,8 @@ class LocationViewController: BaseViewController {
 
     weak var coordinatorDelegate: DashboardCoordinatorDelegate?
 
-    lazy var locationManager: LocationManager = {
-        return LocationManager(withMapView: mapView)
+    lazy var locationManager: BALocationManager = {
+        return BALocationManager(withMapView: mapView)
     }()
 
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class LocationViewController: BaseViewController {
     }
 }
 
-extension LocationViewController: LocationManagerDelegate {
+extension LocationViewController: BALocationManagerDelegate {
 
     func onUserLocationUpdate(_ location: CLLocationCoordinate2D) {
         locationManager.zoomUserLocation()

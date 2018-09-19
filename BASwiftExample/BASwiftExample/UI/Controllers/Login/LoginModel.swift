@@ -27,7 +27,7 @@ class LoginModel: BaseModel {
 
     var userBridge: UserBridgeProtocol
 
-    required init() {
+    override init() {
         self.userBridge = AppBridgeProvider.instance.userBridge
     }
 

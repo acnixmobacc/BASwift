@@ -30,7 +30,7 @@ class LoginViewModel: BaseViewModel {
 
     weak var viewDelegate: LoginViewDelegate?
 
-    required init() {
+    override init() {
         model = LoginModel()
         super.init()
         model.viewModelDelegate = self

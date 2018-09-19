@@ -92,7 +92,7 @@
 		B6D7E6E6204BF2A700A5D803 /* BaseCollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */; };
 		B6D7E6E7204BF2A700A5D803 /* BaseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */; };
 		B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */; };
-		B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F1204BF97000A5D803 /* LocationManager.swift */; };
+		B6D7E6F7204BF97100A5D803 /* BALocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F1204BF97000A5D803 /* BALocationManager.swift */; };
 		B6D7E6F8204BF97100A5D803 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F2204BF97100A5D803 /* TableViewAdapter.swift */; };
 		B6D7E6F9204BF97100A5D803 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */; };
 		B6D7E6FA204BF97100A5D803 /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */; };
@@ -214,7 +214,7 @@
 		B6D7E6DF204BF2A700A5D803 /* BaseCollectionDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionDataModel.swift; sourceTree = "<group>"; };
 		B6D7E6E0204BF2A700A5D803 /* BaseSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSectionModel.swift; sourceTree = "<group>"; };
 		B6D7E6E1204BF2A700A5D803 /* BaseExpandableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseExpandableSectionModel.swift; sourceTree = "<group>"; };
-		B6D7E6F1204BF97000A5D803 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B6D7E6F1204BF97000A5D803 /* BALocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BALocationManager.swift; sourceTree = "<group>"; };
 		B6D7E6F2204BF97100A5D803 /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		B6D7E6F3204BF97100A5D803 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
 		B6D7E6F4204BF97100A5D803 /* TouchIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDManager.swift; sourceTree = "<group>"; };
@@ -330,7 +330,7 @@
 		B61B8955213225630017FB54 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7E6F1204BF97000A5D803 /* LocationManager.swift */,
+				B6D7E6F1204BF97000A5D803 /* BALocationManager.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -967,7 +967,7 @@
 				B6D7E6E8204BF2A700A5D803 /* BaseExpandableSectionModel.swift in Sources */,
 				B6D7E6B02049CAAB00A5D803 /* UIImageView+SDWebImage.swift in Sources */,
 				B68BE5522127045300A991AE /* ImageViewLoaderProtocol.swift in Sources */,
-				B6D7E6F7204BF97100A5D803 /* LocationManager.swift in Sources */,
+				B6D7E6F7204BF97100A5D803 /* BALocationManager.swift in Sources */,
 				B6F4B09E204C264C00110985 /* BASLinkedList.swift in Sources */,
 				B6044E8D21355A1D0030B6DF /* Storyboarded.swift in Sources */,
 				B6D7E6C2204A03D600A5D803 /* Device+OS.swift in Sources */,
