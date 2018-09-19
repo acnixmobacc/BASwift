@@ -8,7 +8,7 @@
 
 import BASwift
 
-class BaseModel: BABaseModel {
+class BaseModel: BABaseModelProtocol {
 
     deinit {
         Logger.debug("Deinit \(self)")

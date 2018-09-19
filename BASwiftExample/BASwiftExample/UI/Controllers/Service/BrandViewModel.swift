@@ -14,7 +14,7 @@ class BrandViewModel: BaseViewModel {
 
     private(set) var model: BrandModelProtocol
 
-    required init() {
+    override init() {
         model = BrandModel()
         super.init()
         model.viewModelDelegate = self

@@ -9,17 +9,17 @@
 import MapKit
 import UIKit
 
-public protocol LocationManagerDelegate: class {
+public protocol BALocationManagerDelegate: class {
     func onUserLocationUpdate(_ location: CLLocationCoordinate2D)
 }
 
-open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
+open class BALocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
     // MARK: - Static Variables
     fileprivate static let annotationID = "Pin"
 
     // MARK: - Properties
-    public weak var delegate: LocationManagerDelegate?
+    public weak var delegate: BALocationManagerDelegate?
 
     private var locationManager: CLLocationManager = CLLocationManager()
 
@@ -141,7 +141,7 @@ open class LocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDelega
             return nil
         }
 
-        let pinIdent = LocationManager.annotationID
+        let pinIdent = BALocationManager.annotationID
 
         var pinView: MKPinAnnotationView
 

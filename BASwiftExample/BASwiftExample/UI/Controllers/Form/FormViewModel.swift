@@ -21,7 +21,7 @@ class FormViewModel: BaseViewModel {
     var address = Variable<String>("")
     var phone = Variable<String>("")
 
-    required init() {
+    override init() {
         model = FormModel()
         super.init()
     }

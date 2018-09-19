@@ -14,7 +14,7 @@ class BrandModel: BaseModel {
 
     private(set) var carServiceAdapter: CarServiceAdapterProtocol
 
-    required init() {
+    override init() {
         carServiceAdapter = AppWebServiceProvider.instance.carServiceAdapter
         super.init()
     }
