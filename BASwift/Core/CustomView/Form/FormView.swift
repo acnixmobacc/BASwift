@@ -27,7 +27,7 @@ public class FormView: UIView {
         instance.translatesAutoresizingMaskIntoConstraints = false
         instance.axis = .vertical
         instance.distribution = .equalSpacing
-        instance.spacing = 8.0
+        instance.spacing = spacing
         return instance
     }()
 
