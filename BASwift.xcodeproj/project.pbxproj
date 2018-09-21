@@ -12,6 +12,7 @@
 		B600205A206A544D00488AB4 /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6002059206A544D00488AB4 /* DatePickerTextField.swift */; };
 		B6044E8D21355A1D0030B6DF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044E8C21355A1D0030B6DF /* Storyboarded.swift */; };
 		B6044E8F213566E90030B6DF /* NSObject+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */; };
+		B6064FA921551A2100310682 /* Encodable+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6064FA821551A2100310682 /* Encodable+BASwift.swift */; };
 		B6140F642049762A003BF29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6140F632049762A003BF29F /* AppDelegate.swift */; };
 		B6140F6B2049762A003BF29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6A2049762A003BF29F /* Assets.xcassets */; };
 		B6140F6E2049762A003BF29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6140F6C2049762A003BF29F /* LaunchScreen.storyboard */; };
@@ -130,6 +131,7 @@
 		B6002059206A544D00488AB4 /* DatePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		B6044E8C21355A1D0030B6DF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+BASwift.swift"; sourceTree = "<group>"; };
+		B6064FA821551A2100310682 /* Encodable+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+BASwift.swift"; sourceTree = "<group>"; };
 		B6140F602049762A003BF29F /* BASwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6140F632049762A003BF29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6140F6A2049762A003BF29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -548,7 +550,6 @@
 				B6D7E678204976AC00A5D803 /* Controller */,
 				B6D7E67A204976BD00A5D803 /* CustomView */,
 				B6D7E6872049780000A5D803 /* Adapters */,
-				B6D7E6842049775F00A5D803 /* AppData */,
 				B6D7E6BD204A03BC00A5D803 /* Device */,
 				B6F4B094204C264C00110985 /* DataStructures */,
 				B6D7E6832049774200A5D803 /* Extensions */,
@@ -607,15 +608,9 @@
 				B6D7E6882049782B00A5D803 /* String+BASwift.swift */,
 				B63DA6DF20C7CCDC0054B9C7 /* JSONDecoder+BASwift.swift */,
 				B6044E8E213566E90030B6DF /* NSObject+BASwift.swift */,
+				B6064FA821551A2100310682 /* Encodable+BASwift.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B6D7E6842049775F00A5D803 /* AppData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AppData;
 			sourceTree = "<group>";
 		};
 		B6D7E6872049780000A5D803 /* Adapters */ = {
@@ -944,6 +939,7 @@
 				B6B2E4D620724D8800E5FBB6 /* BAWebService.swift in Sources */,
 				B694FF9820A47E4C0052B8AF /* FormView.swift in Sources */,
 				B6D7E6AA2049CAAB00A5D803 /* NSMutableAttributedString+BASwift.swift in Sources */,
+				B6064FA921551A2100310682 /* Encodable+BASwift.swift in Sources */,
 				B6D7E6AF2049CAAB00A5D803 /* UIView+BASwift.swift in Sources */,
 				B6F4B09D204C264C00110985 /* BASStack.swift in Sources */,
 				B61B894E2131F37A0017FB54 /* Loadable.swift in Sources */,
