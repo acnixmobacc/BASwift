@@ -11,6 +11,8 @@ import UIKit
 public protocol IFormItemView {
     var value: Any? { get }
 
+    var isValid: Bool? { get }
+    
     var itemViewHeight: CGFloat { get }
 
     var onValidation: (() -> Any?)? { get }
@@ -32,6 +34,12 @@ public protocol IFormItemView {
 public extension IFormItemView {
     var value: Any? {
         get {
+            return nil
+        }
+    }
+    
+    var isValid:Bool?{
+        get{
             return nil
         }
     }
