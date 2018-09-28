@@ -12,7 +12,7 @@ public protocol IFormItemView {
     var value: Any? { get }
 
     var isValid: Bool? { get }
-    
+
     var itemViewHeight: CGFloat { get }
 
     var onValidation: (() -> Any?)? { get }
@@ -37,9 +37,9 @@ public extension IFormItemView {
             return nil
         }
     }
-    
-    var isValid:Bool?{
-        get{
+
+    var isValid: Bool? {
+        get {
             return nil
         }
     }
