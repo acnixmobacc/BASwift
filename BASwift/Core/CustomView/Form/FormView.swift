@@ -82,6 +82,13 @@ public class FormView: UIView {
         view.removeFromSuperview()
     }
 
+    public func removeAll(){
+        for item in stackView.arrangedSubviews{
+            stackView.removeArrangedSubview(item)
+            item.removeFromSuperview()
+        }
+    }
+    
     public func validate() {
         for item in stackView.arrangedSubviews {
             guard let formItem = item as? IFormItemView else { continue }
