@@ -11,8 +11,8 @@ import UIKit
 // MARK: - Toolbar Options
 public struct ToolbarOptions {
     public let barStyle: UIBarStyle
-    public let backgroundColor: UIColor
     public let tintColor: UIColor
+    public let barTintColor: UIColor?
     public let isTranslucent: Bool
     public let doneButtonStyle: UIBarButtonItemStyle
     public let doneButtonTintColor: UIColor
@@ -21,12 +21,13 @@ public struct ToolbarOptions {
     public let cancelButtonTintColor: UIColor
     public let cancelButtonText: String
 
-    public init(barStyle: UIBarStyle = .default, backgroundColor: UIColor = .white, tintColor: UIColor = .lightGray, isTranslucent: Bool = true,
-                doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonTintColor: UIColor = .black, doneButtonText: String = "Tamam",
-                cancelButtonStyle: UIBarButtonItemStyle = .done, cancelButtonTintColor: UIColor = .black, cancelButtonText: String = "Vazgeç") {
+    public init(barStyle: UIBarStyle = .default, tintColor: UIColor = .clear, barTintColor: UIColor? = nil,
+                isTranslucent: Bool = false, doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonTintColor: UIColor = .black,
+                doneButtonText: String = "Tamam", cancelButtonStyle: UIBarButtonItemStyle = .done, cancelButtonTintColor: UIColor = .black,
+                cancelButtonText: String = "Vazgeç") {
         self.barStyle = barStyle
-        self.backgroundColor = backgroundColor
         self.tintColor = tintColor
+        self.barTintColor = barTintColor
         self.isTranslucent = isTranslucent
         self.doneButtonStyle = doneButtonStyle
         self.doneButtonTintColor = doneButtonTintColor
@@ -37,7 +38,7 @@ public struct ToolbarOptions {
     }
 
     public static let `default` : ToolbarOptions = {
-        return ToolbarOptions()
+        return ToolbarOptions(tintColor: .lightGray, barTintColor: .white, isTranslucent: true)
     }()
 }
 
@@ -117,9 +118,9 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
     fileprivate func addToolbar() {
         let toolBar = UIToolbar()
         toolBar.barStyle = toolbarOptions.barStyle
-        toolBar.backgroundColor = toolbarOptions.backgroundColor
         toolBar.isTranslucent = toolbarOptions.isTranslucent
         toolBar.tintColor = toolbarOptions.tintColor
+        toolBar.barTintColor = toolbarOptions.barTintColor
         let doneButton = UIBarButtonItem(title: toolbarOptions.doneButtonText, style: toolbarOptions.doneButtonStyle,
                                          target: self, action: #selector(donePressed))
         doneButton.tintColor = toolbarOptions.doneButtonTintColor
