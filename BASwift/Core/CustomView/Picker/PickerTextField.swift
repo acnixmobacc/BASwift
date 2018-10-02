@@ -8,6 +8,35 @@
 
 import UIKit
 
+// MARK: - Toolbar Options
+public struct ToolbarOptions {
+    public let barStyle: UIBarStyle
+    public let backgroundColor: UIColor
+    public let tintColor: UIColor
+    public let isTranslucent: Bool
+    public let doneButtonStyle: UIBarButtonItemStyle
+    public let doneButtonText: String
+    public let cancelButtonStyle: UIBarButtonItemStyle
+    public let cancelButtonText: String
+
+    public init(barStyle: UIBarStyle = .default, backgroundColor: UIColor = .white, tintColor: UIColor = .lightGray, isTranslucent: Bool = true,
+                doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonText: String = "Tamam", cancelButtonStyle: UIBarButtonItemStyle = .done,
+                cancelButtonText: String = "Vazgeç") {
+        self.barStyle = barStyle
+        self.backgroundColor = backgroundColor
+        self.tintColor = tintColor
+        self.isTranslucent = isTranslucent
+        self.doneButtonStyle = doneButtonStyle
+        self.doneButtonText = doneButtonText
+        self.cancelButtonStyle = cancelButtonStyle
+        self.cancelButtonText = cancelButtonText
+    }
+
+    public static let `default` : ToolbarOptions = {
+        return ToolbarOptions()
+    }()
+}
+
 // MARK: - Picker Delegate
 extension PickerTextField: PickerDelegate {
     public func onSelectItem(value: String) {
@@ -23,6 +52,10 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
     fileprivate var picker: Picker?
 
     weak public var pickerDelegate: PickerTextFieldDelegate?
+
+    open var toolbarOptions: ToolbarOptions {
+        return ToolbarOptions.default
+    }
 
     // MARK: - Initialization
     required public init?(coder aDecoder: NSCoder) {
@@ -79,13 +112,13 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
 
     fileprivate func addToolbar() {
         let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.backgroundColor = UIColor.white
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.lightGray
-        let doneButton = UIBarButtonItem(title: "Tamam", style: UIBarButtonItemStyle.done,
+        toolBar.barStyle = toolbarOptions.barStyle
+        toolBar.backgroundColor = toolbarOptions.backgroundColor
+        toolBar.isTranslucent = toolbarOptions.isTranslucent
+        toolBar.tintColor = toolbarOptions.tintColor
+        let doneButton = UIBarButtonItem(title: toolbarOptions.doneButtonText, style: toolbarOptions.doneButtonStyle,
                                          target: self, action: #selector(donePressed))
-        let cancelButton = UIBarButtonItem(title: "Vazgeç", style: UIBarButtonItemStyle.plain,
+        let cancelButton = UIBarButtonItem(title: toolbarOptions.cancelButtonText, style: toolbarOptions.cancelButtonStyle,
                                            target: self, action: #selector(cancelPressed))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,
                                           target: nil, action: nil)

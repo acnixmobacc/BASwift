@@ -35,36 +35,34 @@ public extension Date {
         let formatter = Date.createFormatter(withDateFormat: format)
         return formatter.string(from: self)
     }
-    
-    //MARK: - Compenents
-    func getYear() -> Int{
+
+    // MARK: - Compenents
+    func getYear() -> Int {
         let calendar = Calendar.current
         return calendar.component(.year, from: self)
     }
-    
-    func getMonth() -> Int{
+
+    func getMonth() -> Int {
         let calendar = Calendar.current
         return calendar.component(.month, from: self)
     }
-    
-    func getDay() -> Int{
+
+    func getDay() -> Int {
         let calendar = Calendar.current
         return calendar.component(.day, from: self)
     }
-    
+
     func getMonthAsMMMFormat() -> String {
         let df = DateFormatter()
         df.setLocalizedDateFormatFromTemplate("MMM")
         return df.string(from: self)
     }
-   
+
     // MARK: - Private Methods
     fileprivate static func createFormatter(withDateFormat dateFormat: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
         return formatter
     }
-    
-    
 
 }
