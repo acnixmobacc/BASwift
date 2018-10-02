@@ -15,20 +15,24 @@ public struct ToolbarOptions {
     public let tintColor: UIColor
     public let isTranslucent: Bool
     public let doneButtonStyle: UIBarButtonItemStyle
+    public let doneButtonTintColor: UIColor
     public let doneButtonText: String
     public let cancelButtonStyle: UIBarButtonItemStyle
+    public let cancelButtonTintColor: UIColor
     public let cancelButtonText: String
 
     public init(barStyle: UIBarStyle = .default, backgroundColor: UIColor = .white, tintColor: UIColor = .lightGray, isTranslucent: Bool = true,
-                doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonText: String = "Tamam", cancelButtonStyle: UIBarButtonItemStyle = .done,
-                cancelButtonText: String = "Vazgeç") {
+                doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonTintColor: UIColor = .black, doneButtonText: String = "Tamam",
+                cancelButtonStyle: UIBarButtonItemStyle = .done, cancelButtonTintColor: UIColor = .black, cancelButtonText: String = "Vazgeç") {
         self.barStyle = barStyle
         self.backgroundColor = backgroundColor
         self.tintColor = tintColor
         self.isTranslucent = isTranslucent
         self.doneButtonStyle = doneButtonStyle
+        self.doneButtonTintColor = doneButtonTintColor
         self.doneButtonText = doneButtonText
         self.cancelButtonStyle = cancelButtonStyle
+        self.cancelButtonTintColor = cancelButtonTintColor
         self.cancelButtonText = cancelButtonText
     }
 
@@ -118,8 +122,10 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
         toolBar.tintColor = toolbarOptions.tintColor
         let doneButton = UIBarButtonItem(title: toolbarOptions.doneButtonText, style: toolbarOptions.doneButtonStyle,
                                          target: self, action: #selector(donePressed))
+        doneButton.tintColor = toolbarOptions.doneButtonTintColor
         let cancelButton = UIBarButtonItem(title: toolbarOptions.cancelButtonText, style: toolbarOptions.cancelButtonStyle,
                                            target: self, action: #selector(cancelPressed))
+        cancelButton.tintColor = toolbarOptions.cancelButtonTintColor
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,
                                           target: nil, action: nil)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
