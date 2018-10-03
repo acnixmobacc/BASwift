@@ -6,13 +6,44 @@
 //  Copyright © 2018 Burak Akkaya. All rights reserved.
 //
 
+import BASwift
 import Foundation
 
-class FormValidator {
+class ValidationResult: ValidationResultProtocol {
+    var errorMessage: String
 
-    class func isValidUsername(value: String) -> Bool {
+    init(errorMessage: String) {
+        self.errorMessage = errorMessage
+    }
+}
+
+class UsernameRule: ValidationRuleProtocol {
+    var validationResult: ValidationResultProtocol? = {
+        return ValidationResult(errorMessage: "This field must be contains only characters")
+    }()
+
+    func validate(value: Any?) -> Bool {
+        guard let text = value as? String else {
+            return false
+        }
+
         let pattern = "^[^<>!@#$%^&*()0-9]*$"
-        return value.isMatch(regex: pattern)
+
+        return text.isMatch(regex: pattern)
+    }
+}
+
+class RequiredRule: ValidationRuleProtocol {
+    var validationResult: ValidationResultProtocol? = {
+        return ValidationResult(errorMessage: "This field is required")
+    }()
+
+    func validate(value: Any?) -> Bool {
+        guard let text = value as? String else {
+            return false
+        }
+
+        return !text.isEmpty
     }
 
 }

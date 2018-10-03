@@ -15,8 +15,7 @@ class TextFormItemView: UIView, IFormItemView {
         return textField.text
     }
 
-    // MARK: - Block Methods
-    var onValidation: (() -> Bool)?
+    var validationRules: [ValidationRuleProtocol]?
 
     // MARK: - UI Fields
     @IBOutlet weak private var textField: UITextField!

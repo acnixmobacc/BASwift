@@ -13,6 +13,8 @@ class ButtonFormItemView: UIView, IFormItemView {
     // MARK: - Properties
     var itemViewHeight: CGFloat = 60
 
+    var validationRules: [ValidationRuleProtocol]?
+
     // MARK: - UI Field
     @IBOutlet weak private var button: UIButton!
 

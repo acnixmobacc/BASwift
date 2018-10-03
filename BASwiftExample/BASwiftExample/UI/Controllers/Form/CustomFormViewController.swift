@@ -44,9 +44,10 @@ class CustomFormViewController: BaseViewController {
 }
 
 extension CustomFormViewController: FormManagerDelegate {
-    func onDone(errorStack: BASStack<String>) {
-        if !errorStack.isEmpty {
-            showAlert(with: BaseAlert(message: errorStack.toString(), title: "Validation Error", handler: nil))
+    func onDone(error: ValidationResultProtocol?) {
+        if let validationResult = error {
+            showAlert(with: BaseAlert(message: validationResult.errorMessage, title: "Validation Error", handler: nil))
         }
     }
+
 }
