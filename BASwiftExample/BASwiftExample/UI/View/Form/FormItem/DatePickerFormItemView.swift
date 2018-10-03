@@ -9,6 +9,8 @@
 import BASwift
 
 class DatePickerFormItemView: UIView, IFormItemView {
+    // MARK: - Properties
+    var validationRules: [ValidationRuleProtocol]?
 
     // MARK: - Block
     var didChange: ((Any?) -> Void)?

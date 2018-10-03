@@ -13,6 +13,8 @@ class PickerFormItemView: UIView, IFormItemView {
     // MARK: - Properties
     fileprivate let cities = ["İstanbul", "Trabzon", "İzmir", "Ankara", "Artvin", "Mardin", "Diyarbakır"]
 
+    var validationRules: [ValidationRuleProtocol]?
+
     // MARK: - Block
     var didChange: ((Any?) -> Void)?
 

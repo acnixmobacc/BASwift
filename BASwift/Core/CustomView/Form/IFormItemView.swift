@@ -8,14 +8,22 @@
 
 import UIKit
 
+public protocol ValidationResultProtocol: Error {
+    var errorMessage: String { get set }
+}
+
+public protocol ValidationRuleProtocol {
+    var validationResult: ValidationResultProtocol? { get set }
+
+    func validate(value: Any?) -> Bool
+}
+
 public protocol IFormItemView {
     var value: Any? { get }
 
-    var isValid: Bool? { get }
+    var validationRules: [ValidationRuleProtocol]? { get set }
 
     var itemViewHeight: CGFloat { get }
-
-    var onValidation: (() -> Any?)? { get }
 
     var onClick: ((Any?) -> Void)? { get }
 
@@ -25,20 +33,13 @@ public protocol IFormItemView {
 
     var didCancel: ((Any?) -> Void)? { get }
 
-    func onSuccess()
-
-    func onError()
+    func validate() -> ValidationResultProtocol?
 }
 
 // swiftlint:disable implicit_getter
 public extension IFormItemView {
-    var value: Any? {
-        get {
-            return nil
-        }
-    }
 
-    var isValid: Bool? {
+    var value: Any? {
         get {
             return nil
         }
@@ -47,12 +48,6 @@ public extension IFormItemView {
     var itemViewHeight: CGFloat {
         get {
             return 44.0
-        }
-    }
-
-    var onValidation : (() -> Any?)? {
-        get {
-            return nil
         }
     }
 
@@ -80,12 +75,18 @@ public extension IFormItemView {
         }
     }
 
-    func onSuccess() {
+    func validate() -> ValidationResultProtocol? {
+        guard let rules = self.validationRules else {
+            return nil
+        }
 
-    }
+        for rule in rules {
+            if !rule.validate(value: self.value) {
+                return rule.validationResult
+            }
+        }
 
-    func onError() {
-
+        return nil
     }
 
 }

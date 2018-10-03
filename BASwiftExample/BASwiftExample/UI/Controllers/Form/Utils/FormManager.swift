@@ -9,7 +9,7 @@
 import BASwift
 
 protocol FormManagerDelegate: class {
-    func onDone(errorStack: BASStack<String>)
+    func onDone(error: ValidationResultProtocol?)
 }
 
 public class FormManager {
@@ -21,17 +21,17 @@ public class FormManager {
 
     public var formView: FormView
 
-    var errorStack: BASStack<String>
-
     // MARK: - Form Items
     private lazy var usernameItem: TextFormItemView = {
         let instance = TextFormItemView.fromNib()
+        instance.validationRules = [UsernameRule(), RequiredRule()]
         instance.setupUI(placeholder: "Name")
         return instance
     }()
 
     private lazy var surnameItem: TextFormItemView = {
         let instance = TextFormItemView.fromNib()
+        instance.validationRules = [UsernameRule(), RequiredRule()]
         instance.setupUI(placeholder: "Surname")
         return instance
     }()
@@ -93,7 +93,6 @@ public class FormManager {
     init(withView view: UIView) {
         self.parentView = view
         self.formView = FormView(frame: self.parentView.frame)
-        self.errorStack = BASStack()
     }
 
     // MARK: - Methods
@@ -103,18 +102,11 @@ public class FormManager {
         formView.add([usernameItem, surnameItem, passwordItem, birthdateItem, cityItem, switchButtonItem, saveButtonItem])
         setSwitchButtonItem()
     }
-
-    func validate() {
-        errorStack.removeAll()
-        formView.validate()
-    }
 }
 
 // MARK: - Private Methods
 private extension FormManager {
     func setFormItemUI() {
-        setUsernameItem()
-        setSurnameItem()
         setCityItem()
         setBirthdateItem()
         setSaveButtonItem()
@@ -152,30 +144,6 @@ private extension FormManager {
         }
     }
 
-    func setUsernameItem() {
-        usernameItem.onValidation = { [weak self]  in
-            guard let strongSelf = self else { return false }
-            guard let value = strongSelf.usernameItem.value as? String else { return false }
-            let isValid = FormValidator.isValidUsername(value: value)
-            if !isValid {
-                strongSelf.errorStack.push("Username is not valid")
-            }
-            return isValid
-        }
-    }
-
-    func setSurnameItem() {
-        surnameItem.onValidation = { [weak self]  in
-            guard let strongSelf = self else { return false }
-            guard let value = strongSelf.surnameItem.value as? String else { return false }
-            let isValid = FormValidator.isValidUsername(value: value)
-            if !isValid {
-                strongSelf.errorStack.push("Surname is not valid")
-            }
-            return isValid
-        }
-    }
-
     func setCityItem() {
         cityItem.didChange = { value in
             guard let city = value as? String else { return }
@@ -194,8 +162,7 @@ private extension FormManager {
         saveButtonItem.onClick = {[weak self] in
             guard let strongSelf = self else { return }
             strongSelf.parentView.endEditing(true)
-            strongSelf.validate()
-            strongSelf.delegate?.onDone(errorStack: strongSelf.errorStack)
+            strongSelf.delegate?.onDone(error: strongSelf.formView.validate())
         }
     }
 

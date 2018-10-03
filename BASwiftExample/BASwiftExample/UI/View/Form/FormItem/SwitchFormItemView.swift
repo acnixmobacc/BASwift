@@ -9,6 +9,7 @@
 import BASwift
 
 class SwitchFormItemView: UIView, IFormItemView {
+    var validationRules: [ValidationRuleProtocol]?
 
     // MARK: - Properties
     var value: Any? {

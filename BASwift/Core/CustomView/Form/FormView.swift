@@ -89,16 +89,14 @@ public class FormView: UIView {
         }
     }
 
-    public func validate() {
+    public func validate() -> ValidationResultProtocol? {
         for item in stackView.arrangedSubviews {
             guard let formItem = item as? IFormItemView else { continue }
-            guard let validation = formItem.onValidation else { continue }
-            if validation() == nil {
-                formItem.onSuccess()
-            } else {
-                formItem.onError()
+            if let validationResult = formItem.validate() {
+                return validationResult
             }
         }
+        return nil
     }
 
     // MARK: - Private Methods
