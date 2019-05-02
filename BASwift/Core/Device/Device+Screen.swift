@@ -30,11 +30,11 @@ public extension Device.Screen {
             return .unknown
         }
     }
-    static public var isLandscape: Bool {
+    static var isLandscape: Bool {
         return ( UIApplication.shared.statusBarOrientation == .landscapeLeft
             || UIApplication.shared.statusBarOrientation == .landscapeRight )
     }
-    static public var isPortrait: Bool {
+    static var isPortrait: Bool {
         return !Device.Screen.isLandscape
     }
 }
@@ -50,11 +50,11 @@ public extension Device.Screen {
         case inches_9_7 = 9.7
         case inches_12_9 = 12.9
     }
-    static public var size: CGSize {
+    static var size: CGSize {
         let size = UIScreen.main.bounds.size
         return size
     }
-    static public var inch: Inch {
+    static var inch: Inch {
         let size = UIScreen.main.bounds.size
         let height = max(size.width, size.height)
         switch height {
@@ -88,7 +88,7 @@ public extension Device.Screen {
         case x3 = 3.0
         case unknown = 0
     }
-    static public var scale: Scale {
+    static var scale: Scale {
         let scale = UIScreen.main.scale
         switch scale {
         case 1.0:

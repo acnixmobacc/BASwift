@@ -4,10 +4,10 @@ Pod::Spec.new do |s|
   s.summary          = 'BASwift Framework'
 
 
-  s.homepage         = 'https://innersource.accenture.com/projects/IXMA/repos/baswift'
+  s.homepage         = 'https://github.com/brkakkaya/BASwift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Burak AKKAYA' => 'brk.akkaya@gmail.com' }
-  s.source           = { :git => 'https://burak.akkaya@innersource.accenture.com/scm/ixma/baswift', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/brkakkaya/BASwift.git', :tag => s.version.to_s }
 
  `echo "4.0" > .swift-version`
 
