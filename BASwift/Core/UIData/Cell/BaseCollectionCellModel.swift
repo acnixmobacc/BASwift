@@ -24,7 +24,7 @@ open class BaseCollectionCellModel: BaseCellModel {
     }
 
     var cellWidth: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeCellWidth
         } else {
             return _cellWidth

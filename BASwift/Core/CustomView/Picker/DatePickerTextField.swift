@@ -56,11 +56,11 @@ open class DatePickerTextField: UITextField, UITextFieldDelegate {
         toolBar.backgroundColor = UIColor.white
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.lightGray
-        let doneButton = UIBarButtonItem(title: "Tamam", style: UIBarButtonItemStyle.done,
+        let doneButton = UIBarButtonItem(title: "Tamam", style: UIBarButtonItem.Style.done,
                                          target: self, action: #selector(donePressed))
-        let cancelButton = UIBarButtonItem(title: "Vazgeç", style: UIBarButtonItemStyle.plain,
+        let cancelButton = UIBarButtonItem(title: "Vazgeç", style: UIBarButtonItem.Style.plain,
                                            target: self, action: #selector(cancelPressed))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,
                                           target: nil, action: nil)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

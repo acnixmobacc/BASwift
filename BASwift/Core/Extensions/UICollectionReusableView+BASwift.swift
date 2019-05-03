@@ -12,11 +12,11 @@ public extension UICollectionReusableView {
     // MARK: - Static Methods
     static func registerHeader(_ collectionView: UICollectionView?) {
         let nib = UINib(nibName: self.className, bundle: nil)
-        collectionView?.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.className)
+        collectionView?.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.className)
     }
 
     static func registerFooter(_ collectionView: UICollectionView?) {
         let nib = UINib(nibName: self.className, bundle: nil)
-        collectionView?.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: self.className)
+        collectionView?.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: self.className)
     }
 }

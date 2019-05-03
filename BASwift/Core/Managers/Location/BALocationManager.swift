@@ -164,15 +164,15 @@ open class BALocationManager: NSObject, CLLocationManagerDelegate, MKMapViewDele
     }
 
     public func showPins(_ annotations: [MKAnnotation]) {
-        var zoomRect: MKMapRect = MKMapRectNull
+        var zoomRect: MKMapRect = MKMapRect.null
 
         for annotation in annotations {
-            let point = MKMapPointForCoordinate(annotation.coordinate)
-            let pointRect = MKMapRectMake(point.x, point.y, 0, 0)
-            if MKMapRectIsNull(zoomRect) {
+            let point = MKMapPoint(annotation.coordinate)
+            let pointRect = MKMapRect(x: point.x, y: point.y, width: 0, height: 0)
+            if zoomRect.isNull {
                 zoomRect = pointRect
             } else {
-                zoomRect = MKMapRectUnion(zoomRect, pointRect)
+                zoomRect = zoomRect.union(pointRect)
             }
         }
 

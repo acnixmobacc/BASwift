@@ -32,7 +32,7 @@ open class BaseCellModel: NSObject {
     }
 
     public var cellHeight: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeCellHeight
         } else {
             return _cellHeight

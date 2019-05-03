@@ -11,11 +11,11 @@ import UIKit
 open class NativeProgressHUDOptions: ProgressHUDOptions {
 
     // MARK: - Properties
-    var style: UIActivityIndicatorViewStyle
+    var style: UIActivityIndicatorView.Style
 
     // MARK: - Initialization
     init(withFrame frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
-         withStyle style: UIActivityIndicatorViewStyle = .white) {
+         withStyle style: UIActivityIndicatorView.Style = .white) {
         self.style = style
         super.init(withFrame: frame)
     }

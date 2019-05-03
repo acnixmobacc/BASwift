@@ -13,7 +13,7 @@ public extension NSMutableAttributedString {
     // MARK: - Methods
     @discardableResult
     func bold(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
+        let attrs: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key.font: font]
         let boldString = NSMutableAttributedString(string: "\(text)", attributes: attrs)
         self.append(boldString)
         return self
@@ -21,7 +21,7 @@ public extension NSMutableAttributedString {
 
     @discardableResult
     func normal(_ text: String, size: CGFloat, font: UIFont) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
+        let attrs: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key.font: font]
         let normal = NSMutableAttributedString(string: "\(text)", attributes: attrs)
         self.append(normal)
         return self

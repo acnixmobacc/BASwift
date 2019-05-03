@@ -28,7 +28,7 @@ open class BaseSectionModel: NSObject {
     }
 
     public var headerHeight: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeHeaderHeight
         } else {
             return _headerHeight
@@ -44,7 +44,7 @@ open class BaseSectionModel: NSObject {
     }
 
     public var footerHeight: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeFooterHeight
         } else {
             return _footerHeight

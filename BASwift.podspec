@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Burak AKKAYA' => 'brk.akkaya@gmail.com' }
   s.source           = { :git => 'https://github.com/brkakkaya/BASwift.git', :tag => s.version.to_s }
 
- `echo "4.0" > .swift-version`
+ `echo "4.2" > .swift-version`
 
   s.ios.deployment_target = '9.0'
   s.requires_arc = true

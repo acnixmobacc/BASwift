@@ -28,7 +28,7 @@ open class BaseCollectionSectionModel: BaseSectionModel {
     }
 
     var headerWidth: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeHeaderWidth
         } else {
             return _headerWidth
@@ -44,7 +44,8 @@ open class BaseCollectionSectionModel: BaseSectionModel {
     }
 
     var footerWidth: CGFloat {
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+
+        if(UIDevice.current.orientation.isLandscape) {
             return landscapeFooterWidth
         } else {
             return _footerWidth
