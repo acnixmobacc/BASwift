@@ -27,19 +27,22 @@ open class KeyboardManager: NSObject {
 
     // MARK: - Observing Methods
     public func startObservingKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: .UIKeyboardDidHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)),
+                                               name: UIResponder.keyboardDidHideNotification, object: nil)
     }
 
     public func stopObservingKeyboard() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+
     }
 
     // MARK: - Keyboard Handler Methods
     @objc
     func keyboardWillShow(_ notification: Notification) {
-        if let userInfo = notification.userInfo, let value = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue {
+        if let userInfo = notification.userInfo, let value = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue {
             let keyboardFrame = value.cgRectValue
             let contentInset = UIEdgeInsets(top: scrollView.contentInset.top, left: 0.0, bottom: keyboardFrame.height + bottomMargin, right: 0.0)
             setTableViewEdgeInset(contentInset)

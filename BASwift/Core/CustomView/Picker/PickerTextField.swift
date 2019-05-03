@@ -14,16 +14,16 @@ public struct ToolbarOptions {
     public let tintColor: UIColor
     public let barTintColor: UIColor?
     public let isTranslucent: Bool
-    public let doneButtonStyle: UIBarButtonItemStyle
+    public let doneButtonStyle: UIBarButtonItem.Style
     public let doneButtonTintColor: UIColor
     public let doneButtonText: String
-    public let cancelButtonStyle: UIBarButtonItemStyle
+    public let cancelButtonStyle: UIBarButtonItem.Style
     public let cancelButtonTintColor: UIColor
     public let cancelButtonText: String
 
     public init(barStyle: UIBarStyle = .default, tintColor: UIColor = .clear, barTintColor: UIColor? = nil,
-                isTranslucent: Bool = false, doneButtonStyle: UIBarButtonItemStyle = .done, doneButtonTintColor: UIColor = .black,
-                doneButtonText: String = "Tamam", cancelButtonStyle: UIBarButtonItemStyle = .done, cancelButtonTintColor: UIColor = .black,
+                isTranslucent: Bool = false, doneButtonStyle: UIBarButtonItem.Style = .done, doneButtonTintColor: UIColor = .black,
+                doneButtonText: String = "Tamam", cancelButtonStyle: UIBarButtonItem.Style = .done, cancelButtonTintColor: UIColor = .black,
                 cancelButtonText: String = "Vazgeç") {
         self.barStyle = barStyle
         self.tintColor = tintColor
@@ -127,7 +127,7 @@ open class PickerTextField: UITextField, UITextFieldDelegate {
         let cancelButton = UIBarButtonItem(title: toolbarOptions.cancelButtonText, style: toolbarOptions.cancelButtonStyle,
                                            target: self, action: #selector(cancelPressed))
         cancelButton.tintColor = toolbarOptions.cancelButtonTintColor
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,
                                           target: nil, action: nil)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

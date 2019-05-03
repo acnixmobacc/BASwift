@@ -47,7 +47,7 @@ public class BaseProgressHUD: ProgressHUDProtocol {
             fatalError("Option not for native indicatoır")
         }
         self.activityIndicator = UIActivityIndicatorView(frame: nativeProgressOption.frame)
-        self.activityIndicator.activityIndicatorViewStyle = nativeProgressOption.style
+        self.activityIndicator.style = nativeProgressOption.style
     }
 
     private func initTransparentView(withFrame frame: CGRect = .zero) {
