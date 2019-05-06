@@ -10,7 +10,7 @@ import UIKit
 open class BaseAlertView: AlertViewProtocol {
 
     // MARK: - Methods
-    public func show(vc: UIViewController, alert: IAlert) {
+    open func show(vc: UIViewController, alert: IAlert) {
         let alertController = UIAlertController(title: alert.title, message: alert.message,
                                                 preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: alert.handler))

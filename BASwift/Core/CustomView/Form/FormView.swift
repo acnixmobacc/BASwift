@@ -22,7 +22,7 @@ public class FormView: UIView {
         return instance
     }()
 
-    lazy var stackView: UIStackView = {
+    open lazy var stackView: UIStackView = {
         let instance = UIStackView()
         instance.translatesAutoresizingMaskIntoConstraints = false
         instance.axis = .vertical

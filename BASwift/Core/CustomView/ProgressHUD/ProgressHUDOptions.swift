@@ -12,7 +12,7 @@ open class ProgressHUDOptions {
     // MARK: - Properties
     var frame: CGRect
 
-    var showTransparentView: Bool
+    open var showTransparentView: Bool
 
     // MARK: - Initialization
     init(withFrame frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 100),
