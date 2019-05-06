@@ -9,6 +9,8 @@ import UIKit
 
 open class BaseAlertView: AlertViewProtocol {
 
+    public init(){ }
+    
     // MARK: - Methods
     open func show(vc: UIViewController, alert: IAlert) {
         let alertController = UIAlertController(title: alert.title, message: alert.message,
