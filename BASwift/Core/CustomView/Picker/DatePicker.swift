@@ -14,11 +14,11 @@ open class DatePicker: NSObject {
     private var _pickerView: UIDatePicker!
 
     // MARK: - Properties
-    weak var delegate: PickerDelegate?
+    open weak var delegate: PickerDelegate?
 
     var dateFormat: String
 
-    var pickerView: UIDatePicker! {
+    open var pickerView: UIDatePicker! {
         get {
             if _pickerView == nil {
                 _pickerView = UIDatePicker()
@@ -35,7 +35,7 @@ open class DatePicker: NSObject {
 
     var lastSelectedDate: Date?
 
-    var value: String {
+    open var value: String {
         get {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = self.dateFormat
