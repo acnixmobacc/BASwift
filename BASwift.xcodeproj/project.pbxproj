@@ -55,7 +55,6 @@
 		B6A807DE206381D900E03C26 /* BAProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807DD206381D900E03C26 /* BAProgressView.swift */; };
 		B6A807F22063E17D00E03C26 /* ProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */; };
 		B6AF58BE213344C20000AD73 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF58BD213344C20000AD73 /* AlertDisplayable.swift */; };
-		B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF943120DD131200341E8C /* CaseIterable.swift */; };
 		B6B2E4D620724D8800E5FBB6 /* BAWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2E4D520724D8800E5FBB6 /* BAWebService.swift */; };
 		B6BCFA49207F973000EA9A05 /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */; };
 		B6C26C6920D7819D001CAD94 /* UITableView+BASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */; };
@@ -178,7 +177,6 @@
 		B6A807DD206381D900E03C26 /* BAProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAProgressView.swift; sourceTree = "<group>"; };
 		B6A807F12063E17D00E03C26 /* ProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDProtocol.swift; sourceTree = "<group>"; };
 		B6AF58BD213344C20000AD73 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
-		B6AF943120DD131200341E8C /* CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterable.swift; sourceTree = "<group>"; };
 		B6B2E4D520724D8800E5FBB6 /* BAWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAWebService.swift; sourceTree = "<group>"; };
 		B6BCFA48207F973000EA9A05 /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
 		B6C26C6820D7819D001CAD94 /* UITableView+BASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BASwift.swift"; sourceTree = "<group>"; };
@@ -628,7 +626,6 @@
 		B6D7E69D20497BFF00A5D803 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B6AF943120DD131200341E8C /* CaseIterable.swift */,
 				B68BE5512127045300A991AE /* ImageViewLoaderProtocol.swift */,
 				B6D7E6B32049E59400A5D803 /* MockDataUtilities.swift */,
 				B68BE55A21271C9700A991AE /* Logger.swift */,
@@ -980,7 +977,6 @@
 				B694FF8C20A417C60052B8AF /* PickerTextFieldDelegate.swift in Sources */,
 				B6D7E6B42049E59400A5D803 /* MockDataUtilities.swift in Sources */,
 				B6D7E6D4204A126B00A5D803 /* PickerTextField.swift in Sources */,
-				B6AF943220DD131200341E8C /* CaseIterable.swift in Sources */,
 				B6D7E6FC204BF97100A5D803 /* ExpandableTableViewAdapter.swift in Sources */,
 				B6A807F22063E17D00E03C26 /* ProgressHUDProtocol.swift in Sources */,
 				B67587DB20B400E00062A284 /* BAServiceResponseProtocol.swift in Sources */,

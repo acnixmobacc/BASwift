@@ -126,7 +126,7 @@ public class FormView: UIView {
     }
 
     fileprivate func setStackViewContraint() {
-
+        
         stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: spacing).isActive = true
         stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true

@@ -33,8 +33,6 @@ open class ExpandableTableViewAdapter: TableViewAdapter {
         let expandCellIndexPath = IndexPath(row: section.collapsedCellModels.count - 1,
                                             section: indexPath.section)
 
-        tableView.reloadRows(at: [expandCellIndexPath], with: .fade)
-
         var indexPaths = [IndexPath]()
 
         for i in section.collapsedCellModels.count..<section.expandedCellModels.count {
