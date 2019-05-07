@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BASwift'
-  s.version          = '0.3.6'
+  s.version          = '0.3.7'
   s.summary          = 'BASwift Framework'
 
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-  s.static_framework = true
+  s.ios.frameworks = 'UIKit', 'Foundation'
   s.default_subspec = 'Core'
 
   s.subspec 'Alamofire' do |as|
